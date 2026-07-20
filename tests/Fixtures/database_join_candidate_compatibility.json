@@ -1,0 +1,9 @@
+{
+  "basis": "identifier_namespace",
+  "semantic_keys": [
+    "test_semantic_keys"
+  ],
+  "weak_column_matches": [
+    "test_weak_column_matches"
+  ]
+}

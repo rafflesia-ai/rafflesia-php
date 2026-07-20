@@ -1,0 +1,16 @@
+{
+  "catalog": "test_catalog",
+  "dry_run": true,
+  "extra_args": [
+    "test_extra_args"
+  ],
+  "input_file_name": "Test",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "name": "Test",
+  "output_dir": "test_output_dir",
+  "shard_count": 1,
+  "store_root": "test_store_root",
+  "threads": 1,
+  "version": "test_version"
+}

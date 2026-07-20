@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "created_at": "test_created_at",
+      "email": "test@example.com",
+      "expires_at": "test_expires_at",
+      "id": "01234",
+      "role": "test_role",
+      "state": "test_state"
+    }
+  ],
+  "error": {
+    "code": "test_code",
+    "details": {},
+    "message": "test_message"
+  },
+  "ok": true
+}

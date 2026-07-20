@@ -1,0 +1,30 @@
+{
+  "variants": [
+    {
+      "feature_neighbors": [
+        {
+          "distance_bp": 1,
+          "feature_id": "feature_id_01234",
+          "feature_type": "test_feature_type",
+          "overlaps": true
+        }
+      ],
+      "variant": {
+        "alt": "test_alt",
+        "chrom": "test_chrom",
+        "id": "01234",
+        "pos": 1,
+        "ref": "test_ref"
+      },
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ]
+    }
+  ]
+}

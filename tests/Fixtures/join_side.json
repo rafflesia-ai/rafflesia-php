@@ -1,0 +1,7 @@
+{
+  "database": "test_database",
+  "relation": "test_relation",
+  "relation_digest": "test_relation_digest",
+  "release": "test_release",
+  "release_digest": "test_release_digest"
+}

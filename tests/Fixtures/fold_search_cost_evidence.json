@@ -1,0 +1,36 @@
+{
+  "backend": "test_backend",
+  "byte_reduction_fraction": 1,
+  "cache_state": "test_cache_state",
+  "calibration_id": "calibration_id_01234",
+  "calibration_modes": [
+    "test_calibration_modes"
+  ],
+  "calibration_query_count": 1,
+  "calibration_repeat_count": 1,
+  "calibration_rung_count": 1,
+  "calibration_status": "test_calibration_status",
+  "calibration_target_count_max": 1,
+  "calibration_target_count_min": 1,
+  "data_read_semantics": "test_data_read_semantics",
+  "effective_shard_count": 1,
+  "estimate_method": "test_estimate_method",
+  "estimated_cpu_seconds": 1,
+  "estimated_peak_rss_mb": 1,
+  "estimated_wall_ms": 1,
+  "logical_target_db_bytes": 1,
+  "materialization_reduction_fraction": 1,
+  "model_version": "test_model_version",
+  "object_read_reduction_fraction": 1,
+  "planned_exact_shard_count": 1,
+  "planned_materialized_bytes": 1,
+  "planned_object_bytes": 1,
+  "planned_object_read_count": 1,
+  "query_count": 1,
+  "target_record_count": 1,
+  "target_record_count_estimated": true,
+  "target_shard_count": 1,
+  "warnings": [
+    "test_warnings"
+  ]
+}

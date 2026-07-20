@@ -1,0 +1,12 @@
+{
+  "alignment": {
+    "aligned_length": 1,
+    "rmsd": 1,
+    "seq_id": 1,
+    "tm_score_query_normalized": 1,
+    "tm_score_target_normalized": 1
+  },
+  "executed": true,
+  "query_id": "query_id_01234",
+  "target_id": "target_id_01234"
+}

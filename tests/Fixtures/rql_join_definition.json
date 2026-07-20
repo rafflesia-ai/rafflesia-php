@@ -1,0 +1,41 @@
+{
+  "activation": "always",
+  "evidence_digest": "evidence_digest_01234",
+  "evidence_requirement": "observed",
+  "key_variant": "primary",
+  "left_source": "test_left_source",
+  "on": [
+    {
+      "all": [],
+      "any": [],
+      "column": "test_column",
+      "compare_column": "test_compare_column",
+      "compare_source": "test_compare_source",
+      "exists": {
+        "key_variant": "primary",
+        "left_source": "test_left_source",
+        "relationship_id": "relationship_id_01234",
+        "right_source": "test_right_source",
+        "where": []
+      },
+      "not": {},
+      "not_exists": {
+        "key_variant": "primary",
+        "left_source": "test_left_source",
+        "relationship_id": "relationship_id_01234",
+        "right_source": "test_right_source",
+        "where": []
+      },
+      "operator": "eq",
+      "parameter": "test_parameter",
+      "source": "test_source",
+      "value": {},
+      "values": [
+        {}
+      ]
+    }
+  ],
+  "relationship_id": "relationship_id_01234",
+  "right_source": "test_right_source",
+  "type": "inner"
+}

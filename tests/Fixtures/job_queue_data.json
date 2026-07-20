@@ -1,0 +1,94 @@
+{
+  "active": [
+    {
+      "completed_at": "test_completed_at",
+      "group": "test_group",
+      "is_orphaned": true,
+      "job_id": "job_id_01234",
+      "last_error": "test_last_error",
+      "last_failed_at": "test_last_failed_at",
+      "max_retry": 1,
+      "next_process_at": "test_next_process_at",
+      "payload_hash": "test_payload_hash",
+      "queue": "test_queue",
+      "retried": 1,
+      "state": "test_state",
+      "task_id": "task_id_01234",
+      "type": "test_type"
+    }
+  ],
+  "pending": [
+    {
+      "completed_at": "test_completed_at",
+      "group": "test_group",
+      "is_orphaned": true,
+      "job_id": "job_id_01234",
+      "last_error": "test_last_error",
+      "last_failed_at": "test_last_failed_at",
+      "max_retry": 1,
+      "next_process_at": "test_next_process_at",
+      "payload_hash": "test_payload_hash",
+      "queue": "test_queue",
+      "retried": 1,
+      "state": "test_state",
+      "task_id": "task_id_01234",
+      "type": "test_type"
+    }
+  ],
+  "queue": {
+    "active": 1,
+    "aggregating": 1,
+    "archived": 1,
+    "completed": 1,
+    "failed": 1,
+    "failed_total": 1,
+    "groups": 1,
+    "latency_ms": 1,
+    "memory_usage_bytes": 1,
+    "paused": true,
+    "pending": 1,
+    "processed": 1,
+    "processed_total": 1,
+    "queue": "test_queue",
+    "retry": 1,
+    "scheduled": 1,
+    "size": 1,
+    "snapshot_at": "test_snapshot_at"
+  },
+  "retry": [
+    {
+      "completed_at": "test_completed_at",
+      "group": "test_group",
+      "is_orphaned": true,
+      "job_id": "job_id_01234",
+      "last_error": "test_last_error",
+      "last_failed_at": "test_last_failed_at",
+      "max_retry": 1,
+      "next_process_at": "test_next_process_at",
+      "payload_hash": "test_payload_hash",
+      "queue": "test_queue",
+      "retried": 1,
+      "state": "test_state",
+      "task_id": "task_id_01234",
+      "type": "test_type"
+    }
+  ],
+  "scheduled": [
+    {
+      "completed_at": "test_completed_at",
+      "group": "test_group",
+      "is_orphaned": true,
+      "job_id": "job_id_01234",
+      "last_error": "test_last_error",
+      "last_failed_at": "test_last_failed_at",
+      "max_retry": 1,
+      "next_process_at": "test_next_process_at",
+      "payload_hash": "test_payload_hash",
+      "queue": "test_queue",
+      "retried": 1,
+      "state": "test_state",
+      "task_id": "task_id_01234",
+      "type": "test_type"
+    }
+  ]
+}

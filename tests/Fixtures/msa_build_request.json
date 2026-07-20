@@ -1,0 +1,16 @@
+{
+  "backend": "mafft",
+  "cache_mode": "use",
+  "dry_run": true,
+  "extra_args": [
+    "test_extra_args"
+  ],
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "inputs": [
+    "test_inputs"
+  ],
+  "output_dir": "test_output_dir",
+  "strategy": "auto",
+  "threads": 1
+}

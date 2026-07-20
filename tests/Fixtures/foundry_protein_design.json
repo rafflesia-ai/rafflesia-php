@@ -1,0 +1,10 @@
+{
+  "id": "01234",
+  "index": 1,
+  "mean_log_probability": 1,
+  "object": "test_object",
+  "position_log_probabilities": [
+    1
+  ],
+  "sequence": "test_sequence"
+}

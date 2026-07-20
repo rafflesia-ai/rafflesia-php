@@ -1,0 +1,22 @@
+{
+  "alignment_type": "test_alignment_type",
+  "command": [
+    "test_command"
+  ],
+  "exhaustive_search": true,
+  "format_output": [
+    "test_format_output"
+  ],
+  "gpu": true,
+  "kmer_size": 1,
+  "lddt_threshold": 1,
+  "limit": 1,
+  "max_seqs": 1,
+  "prefilter_mode": "test_prefilter_mode",
+  "preserves_backend_order": true,
+  "result_order": "test_result_order",
+  "sensitivity": 1,
+  "sort_by_structure_bits": true,
+  "threads": 1,
+  "tmscore_threshold": 1
+}

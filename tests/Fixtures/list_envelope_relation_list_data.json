@@ -1,0 +1,206 @@
+{
+  "data": [
+    {
+      "data": {
+        "data": [
+          {
+            "capabilities": {
+              "can_aggregate": true,
+              "can_filter": true,
+              "can_join": true,
+              "can_project": true
+            },
+            "column_semantics": {
+              "key": {
+                "allowed_values": [
+                  "test_allowed_values"
+                ],
+                "coordinate_system": "test_coordinate_system",
+                "description": "test_description",
+                "examples": [
+                  "test_examples"
+                ],
+                "identifier_namespace": "identifier_namespace_01234",
+                "null_meaning": "test_null_meaning",
+                "unit": "test_unit",
+                "value_kind": "identifier"
+              }
+            },
+            "columns": [
+              {
+                "is_nullable": true,
+                "name": "Test",
+                "ordinal": 1,
+                "type": "test_type"
+              }
+            ],
+            "default_order": [
+              "test_default_order"
+            ],
+            "description": "test_description",
+            "domain": "test_domain",
+            "entity_type": "test_entity_type",
+            "evidence_relationship_contracts": [
+              {
+                "assertion_evidence_columns": [
+                  "assertion_evidence_columns_01234"
+                ],
+                "contract_digest": "test_contract_digest",
+                "description": "test_description",
+                "kind": "sequence_similarity",
+                "method_column": "test_method_column",
+                "metrics": [
+                  {
+                    "column": "test_column",
+                    "description": "test_description",
+                    "direction": "minimum",
+                    "maximum": 1,
+                    "method_columns": [
+                      "test_method_columns"
+                    ],
+                    "minimum": 1,
+                    "unit": "test_unit"
+                  }
+                ],
+                "object_column": "test_object_column",
+                "qualifier_columns": [
+                  "test_qualifier_columns"
+                ],
+                "scopes": [
+                  {
+                    "alignment_id_column": "alignment_id_column_01234",
+                    "kind": "whole_entity",
+                    "object_domain_instance_column": "test_object_domain_instance_column",
+                    "object_end_column": "test_object_end_column",
+                    "object_start_column": "test_object_start_column",
+                    "subject_domain_instance_column": "test_subject_domain_instance_column",
+                    "subject_end_column": "test_subject_end_column",
+                    "subject_start_column": "test_subject_start_column"
+                  }
+                ],
+                "status": "candidate",
+                "subject_column": "test_subject_column"
+              }
+            ],
+            "grain": "test_grain",
+            "id": "01234",
+            "identifier_fields": {
+              "key": "test_value"
+            },
+            "name": "Test",
+            "object": "test_object",
+            "ontology_digest": "test_ontology_digest",
+            "ontology_version": "test_ontology_version",
+            "primary_key": {
+              "columns": [
+                "test_columns"
+              ],
+              "namespace": "Test"
+            },
+            "quality_notes": [
+              "test_quality_notes"
+            ],
+            "recommended_filters": [
+              "test_recommended_filters"
+            ],
+            "relationships": [
+              {
+                "alt_local_columns": [
+                  "test_alt_local_columns"
+                ],
+                "alt_remote_columns": [
+                  "test_alt_remote_columns"
+                ],
+                "cardinality": "one_to_one",
+                "coordinate_notes": "test_coordinate_notes",
+                "definition_source": "declared",
+                "id": "01234",
+                "is_lossy": true,
+                "is_range_mapping": true,
+                "local_columns": [
+                  "test_local_columns"
+                ],
+                "relation": "test_relation",
+                "remote_columns": [
+                  "test_remote_columns"
+                ]
+              }
+            ],
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1,
+            "url": "https://example.com"
+          }
+        ],
+        "has_more": true,
+        "next_cursor": "test_next_cursor",
+        "object": "test_object",
+        "url": "https://example.com"
+      },
+      "error": {
+        "code": "test_code",
+        "details": {
+          "key": {}
+        },
+        "doc_url": "https://example.com",
+        "message": "test_message",
+        "param": "test_param",
+        "type": "invalid_request_error"
+      },
+      "evidence": {
+        "duration_ms": 1,
+        "input_refs": [
+          "test_input_refs"
+        ],
+        "object_refs": [
+          "test_object_refs"
+        ],
+        "output_refs": [
+          "test_output_refs"
+        ],
+        "row_count": 1,
+        "warnings_count": 1
+      },
+      "ok": true,
+      "provenance": {
+        "cache_hit": true,
+        "created_at": "test_created_at",
+        "database_snapshots": [
+          {
+            "digest": "test_digest",
+            "kind": "test_kind",
+            "name": "Test",
+            "version": "test_version"
+          }
+        ],
+        "generated_object_ids": [
+          "generated_object_ids_01234"
+        ],
+        "input_hash": "test_input_hash",
+        "operation": "test_operation",
+        "parameters_hash": "test_parameters_hash",
+        "request_id": "request_id_01234",
+        "server_version": "test_server_version",
+        "tool_versions": [
+          {
+            "name": "Test",
+            "path": "test_path",
+            "version": "test_version"
+          }
+        ]
+      },
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ]
+    }
+  ],
+  "list_metadata": {
+    "before": null,
+    "after": null
+  }
+}

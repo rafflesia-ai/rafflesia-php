@@ -1,0 +1,231 @@
+{
+  "data": {
+    "contact_count": 1,
+    "contacts": [
+      {
+        "closest_ligand_atom_name": "Test",
+        "closest_residue_atom_name": "closest_residue_atom_name_01234",
+        "contact_atom_pair_count": 1,
+        "interaction": "test_interaction",
+        "ligand": {
+          "assembly_id": "assembly_id_01234",
+          "atom_count": 1,
+          "auth_chain_id": "auth_chain_id_01234",
+          "auth_position": 1,
+          "chain_id": "chain_id_01234",
+          "entity_id": "entity_id_01234",
+          "insertion_code": "test_insertion_code",
+          "label_chain_id": "label_chain_id_01234",
+          "label_position": 1,
+          "ligand_id": "ligand_id_01234",
+          "model_id": "model_id_01234",
+          "position": 1,
+          "residue": "residue_01234",
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "ligand_id": "ligand_id_01234",
+        "min_distance_angstrom": 1,
+        "residue": {
+          "assembly_id": "assembly_id_01234",
+          "auth_chain_id": "auth_chain_id_01234",
+          "auth_position": 1,
+          "chain_id": "chain_id_01234",
+          "entity_id": "entity_id_01234",
+          "insertion_code": "test_insertion_code",
+          "label_chain_id": "label_chain_id_01234",
+          "label_position": 1,
+          "model_id": "model_id_01234",
+          "position": 1,
+          "residue": "residue_01234"
+        },
+        "residue_plddt": 1
+      }
+    ],
+    "hydrogen_bond_count": 1,
+    "is_ligand_filtered": true,
+    "is_truncated": true,
+    "ligand_count": 1,
+    "ligands": [
+      {
+        "assembly_id": "assembly_id_01234",
+        "atom_count": 1,
+        "auth_chain_id": "auth_chain_id_01234",
+        "auth_position": 1,
+        "chain_id": "chain_id_01234",
+        "entity_id": "entity_id_01234",
+        "insertion_code": "test_insertion_code",
+        "label_chain_id": "label_chain_id_01234",
+        "label_position": 1,
+        "ligand_id": "ligand_id_01234",
+        "model_id": "model_id_01234",
+        "position": 1,
+        "residue": "residue_01234",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    ],
+    "neighbor_count": 1,
+    "neighbors": [
+      {
+        "distance_angstrom": 1,
+        "interaction": "test_interaction",
+        "ligand": {
+          "assembly_id": "assembly_id_01234",
+          "atom_count": 1,
+          "auth_chain_id": "auth_chain_id_01234",
+          "auth_position": 1,
+          "chain_id": "chain_id_01234",
+          "entity_id": "entity_id_01234",
+          "insertion_code": "test_insertion_code",
+          "label_chain_id": "label_chain_id_01234",
+          "label_position": 1,
+          "ligand_id": "ligand_id_01234",
+          "model_id": "model_id_01234",
+          "position": 1,
+          "residue": "residue_01234",
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "ligand_atom_name": "Test",
+        "ligand_atom_serial": 1,
+        "ligand_id": "ligand_id_01234",
+        "radius_angstrom": 1,
+        "residue": {
+          "assembly_id": "assembly_id_01234",
+          "auth_chain_id": "auth_chain_id_01234",
+          "auth_position": 1,
+          "chain_id": "chain_id_01234",
+          "entity_id": "entity_id_01234",
+          "insertion_code": "test_insertion_code",
+          "label_chain_id": "label_chain_id_01234",
+          "label_position": 1,
+          "model_id": "model_id_01234",
+          "position": 1,
+          "residue": "residue_01234"
+        },
+        "residue_atom_name": "residue_atom_name_01234",
+        "residue_atom_serial": 1,
+        "residue_neighbor_count": 1,
+        "residue_plddt": 1
+      }
+    ],
+    "radius": 1,
+    "relation": {
+      "columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "object": "relation_artifact",
+      "object_refs": [
+        "test_object_refs"
+      ],
+      "preview": {
+        "columns": [
+          "test_columns"
+        ],
+        "content_hash": "test_content_hash",
+        "database": "test_database",
+        "engine": "test_engine",
+        "limit": 1,
+        "order_by": [
+          "test_order_by"
+        ],
+        "relation": "test_relation",
+        "release": "test_release",
+        "returned_row_count": 1,
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "schema_columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "schema_ref": "test_schema_ref"
+      },
+      "relation": "test_relation",
+      "release": "test_release",
+      "row_count": 1,
+      "schema_ref": "test_schema_ref"
+    },
+    "returned_neighbor_count": 1,
+    "structure_id": "structure_id_01234"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

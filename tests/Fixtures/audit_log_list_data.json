@@ -1,0 +1,57 @@
+{
+  "logs": [
+    {
+      "actor": {
+        "api_key_id": "api_key_id_01234",
+        "auth_method": "test_auth_method",
+        "credential_id": "credential_id_01234",
+        "email": "test@example.com",
+        "environment_id": "environment_id_01234",
+        "environment_name": "Test",
+        "environment_type": "test_environment_type",
+        "key_name": "Test",
+        "key_prefix": "test_key_prefix",
+        "organization_id": "organization_id_01234",
+        "user_id": "user_id_01234"
+      },
+      "audit_log_id": "audit_log_id_01234",
+      "created_at": "test_created_at",
+      "duration_ms": 1,
+      "error_code": "test_error_code",
+      "evidence": {
+        "duration_ms": 1,
+        "input_refs": [
+          "test_input_refs"
+        ],
+        "object_refs": [
+          "test_object_refs"
+        ],
+        "output_refs": [
+          "test_output_refs"
+        ],
+        "row_count": 1,
+        "warnings_count": 1
+      },
+      "finished_at": "test_finished_at",
+      "input_hash": "test_input_hash",
+      "is_ok": true,
+      "metadata": {
+        "key": {}
+      },
+      "method": "test_method",
+      "operation": "test_operation",
+      "parameters_hash": "test_parameters_hash",
+      "path": "test_path",
+      "query_string": "test_query_string",
+      "request_body": {},
+      "request_id": "request_id_01234",
+      "request_size_bytes": 1,
+      "response_size_bytes": 1,
+      "route_path": "test_route_path",
+      "started_at": "test_started_at",
+      "status_code": 1,
+      "warning_count": 1
+    }
+  ],
+  "row_count": 1
+}

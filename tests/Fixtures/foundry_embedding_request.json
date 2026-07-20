@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "sequence": "test_sequence",
+      "structure_object_id": "structure_object_id_01234",
+      "three_di_sequence": "test_three_di_sequence"
+    }
+  ],
+  "layer": "test_layer",
+  "output_format": "json",
+  "pooling": "mean"
+}

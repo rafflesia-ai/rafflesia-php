@@ -1,0 +1,12 @@
+{
+  "auth_position": 1,
+  "chain_id": "chain_id_01234",
+  "observed_b_factor": 1,
+  "position": 1,
+  "predicted_b_factor": 1,
+  "predicted_msf": 1,
+  "residue": "residue_01234",
+  "x": 1,
+  "y": 1,
+  "z": 1
+}

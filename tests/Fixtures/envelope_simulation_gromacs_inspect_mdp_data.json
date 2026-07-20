@@ -1,0 +1,122 @@
+{
+  "data": {
+    "duplicate_keys": [
+      "test_duplicate_keys"
+    ],
+    "invalid_lines": [
+      1
+    ],
+    "mdp": {
+      "content_type": "test_content_type",
+      "diagnostics": {
+        "content_type_source": "test_content_type_source",
+        "decode_elapsed_ms": 1,
+        "is_local": true,
+        "is_remote": true,
+        "max_read_bytes": 1,
+        "object_size_bytes": 1,
+        "read_elapsed_ms": 1,
+        "read_source": "test_read_source",
+        "requested_bytes": 1,
+        "resolve_elapsed_ms": 1,
+        "resolve_source": "test_resolve_source",
+        "returned_bytes": 1,
+        "total_elapsed_ms": 1,
+        "used_range_read": true,
+        "was_size_bounded": true
+      },
+      "line_count": 1,
+      "object_id": "object_id_01234",
+      "sha256": "test_sha256",
+      "size_bytes": 1
+    },
+    "parameter_count": 1,
+    "parameters": [
+      {
+        "is_duplicate": true,
+        "line_number": 1,
+        "name": "Test",
+        "value": "test_value"
+      }
+    ],
+    "schema_version": "test_schema_version",
+    "settings": {
+      "compressed_output_step_interval": 1,
+      "constraints": "test_constraints",
+      "coulomb_type": "test_coulomb_type",
+      "cutoff_scheme": "test_cutoff_scheme",
+      "duration_ps": 1,
+      "integrator": "test_integrator",
+      "neighbor_search_step_interval": 1,
+      "pressure_coupling": "test_pressure_coupling",
+      "reference_pressure_bar": "test_reference_pressure_bar",
+      "reference_temperature_kelvin": "test_reference_temperature_kelvin",
+      "step_count": 1,
+      "temperature_coupling": "test_temperature_coupling",
+      "temperature_groups": "test_temperature_groups",
+      "time_step_ps": 1,
+      "vdw_type": "test_vdw_type"
+    }
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

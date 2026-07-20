@@ -1,0 +1,27 @@
+{
+  "concurrency": 1,
+  "db": "test_db",
+  "index_id": "index_id_01234",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "kmer_size": 1,
+  "manifest_object_id": "manifest_object_id_01234",
+  "manifest_path": "test_manifest_path",
+  "max_hits": 1,
+  "max_object_bytes_per_query": 1,
+  "max_object_reads_per_query": 1,
+  "min_identity": 1,
+  "min_mean_overlap_fraction": 1,
+  "name": "Test",
+  "payload_block_size": 1,
+  "posting_block_size": 1,
+  "queries_path": "test_queries_path",
+  "require_zero_materialization": true,
+  "rerank_alignment": true,
+  "store_artifact": true,
+  "use_block_cache": true,
+  "version": "test_version",
+  "wal_object_ids": [
+    "wal_object_ids_01234"
+  ]
+}

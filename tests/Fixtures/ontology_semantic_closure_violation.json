@@ -1,0 +1,12 @@
+{
+  "axis": "identifier_namespace",
+  "component_id": "component_id_01234",
+  "key_node_ids": [
+    "key_node_ids_01234"
+  ],
+  "message": "test_message",
+  "position": 1,
+  "values": [
+    "test_values"
+  ]
+}

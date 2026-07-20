@@ -1,0 +1,13 @@
+{
+  "args": [
+    "test_args"
+  ],
+  "elapsed_ms": 1,
+  "error": "test_error",
+  "executable": "test_executable",
+  "exit_code": 1,
+  "is_success": true,
+  "timed_out": true,
+  "timeout_ms": 1,
+  "working_dir": "test_working_dir"
+}

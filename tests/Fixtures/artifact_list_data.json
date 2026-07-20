@@ -1,0 +1,41 @@
+{
+  "data": [
+    {
+      "artifact_id": "artifact_id_01234",
+      "binding_id": "binding_id_01234",
+      "database": "test_database",
+      "filename": "Test",
+      "format": "parquet",
+      "id": "01234",
+      "object": "registry_artifact",
+      "object_ref": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "observed_columns": [
+        "test_observed_columns"
+      ],
+      "organization_id": "organization_id_01234",
+      "published_at": "test_published_at",
+      "relation": "test_relation",
+      "relation_digest": "test_relation_digest",
+      "release": "test_release",
+      "release_digest": "test_release_digest",
+      "resource_group_id": "resource_group_id_01234",
+      "row_count": 1,
+      "schema_version": "test_schema_version",
+      "sha256": "test_sha256",
+      "size_bytes": 1
+    }
+  ],
+  "has_more": true,
+  "object": "list"
+}

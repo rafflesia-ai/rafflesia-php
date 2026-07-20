@@ -1,0 +1,10 @@
+{
+  "bytes_read": 1,
+  "candidate_observations": 1,
+  "duplicate_candidate_observations": 1,
+  "feature_kind": "test_feature_kind",
+  "new_candidate_observations": 1,
+  "new_candidates_per_mb": 1,
+  "posting_object_reads": 1,
+  "tokens_read": 1
+}

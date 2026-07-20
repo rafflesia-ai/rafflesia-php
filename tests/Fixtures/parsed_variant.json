@@ -1,0 +1,17 @@
+{
+  "is_valid": true,
+  "mutant_aa": "test_mutant_aa",
+  "mutation_type": "missense",
+  "position": 1,
+  "raw": "test_raw",
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ],
+  "wildtype_aa": "test_wildtype_aa"
+}

@@ -1,0 +1,16 @@
+{
+  "formula": "from_component_size * to_component_size",
+  "from_component_id": "from_component_id_01234",
+  "from_component_size": 1,
+  "from_relation": "test_from_relation",
+  "id": "01234",
+  "is_already_reachable": true,
+  "object": "ontology_connectivity_impact",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "reachable_pair_gain": 1,
+  "safety": "identity_safe",
+  "to_component_id": "to_component_id_01234",
+  "to_component_size": 1,
+  "to_relation": "test_to_relation"
+}

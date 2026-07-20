@@ -1,0 +1,34 @@
+{
+  "argument_count": 1,
+  "executable": "test_executable",
+  "index": 1,
+  "inputs": [
+    {
+      "command_index": 1,
+      "format": "test_format",
+      "is_dynamic": true,
+      "line_number": 1,
+      "normalized_path": "test_normalized_path",
+      "path": "test_path",
+      "role": "test_role",
+      "source_flag": "test_source_flag"
+    }
+  ],
+  "kind": "test_kind",
+  "line_number": 1,
+  "outputs": [
+    {
+      "command_index": 1,
+      "format": "test_format",
+      "is_dynamic": true,
+      "line_number": 1,
+      "normalized_path": "test_normalized_path",
+      "path": "test_path",
+      "role": "test_role",
+      "source_flag": "test_source_flag"
+    }
+  ],
+  "raw": "test_raw",
+  "stage": "test_stage",
+  "subcommand": "test_subcommand"
+}

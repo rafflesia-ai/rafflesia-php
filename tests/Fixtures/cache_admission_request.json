@@ -1,0 +1,31 @@
+{
+  "candidate_object_ids": [
+    "candidate_object_ids_01234"
+  ],
+  "candidate_ref": "candidate_ref_01234",
+  "estimated_size_bytes": 1,
+  "expected_reuse_count": 1,
+  "max_bytes": 1,
+  "namespace": "Test",
+  "older_than_seconds": 1,
+  "pinned_paths": [
+    "test_pinned_paths"
+  ],
+  "policy": {
+    "max_age_seconds": 1,
+    "max_bytes": 1,
+    "namespace": "Test",
+    "older_than_seconds": 1,
+    "pinned_paths": [
+      "test_pinned_paths"
+    ],
+    "pinned_shards": [
+      "test_pinned_shards"
+    ]
+  },
+  "priority": 1,
+  "require_free_capacity": true,
+  "target_dir": "test_target_dir",
+  "workload": "test_workload",
+  "workload_profile": "test_workload_profile"
+}

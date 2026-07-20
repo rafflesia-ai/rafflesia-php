@@ -1,0 +1,11 @@
+{
+  "column": "test_column",
+  "name": "Test",
+  "operator": "test_operator",
+  "path": "test_path",
+  "source": "test_source",
+  "value": {},
+  "values": [
+    {}
+  ]
+}

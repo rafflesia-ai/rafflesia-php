@@ -1,0 +1,17 @@
+{
+  "a_auth_chain_id": "a_auth_chain_id_01234",
+  "a_auth_position": 1,
+  "a_chain_id": "a_chain_id_01234",
+  "a_position": 1,
+  "a_residue": "a_residue_01234",
+  "b_auth_chain_id": "b_auth_chain_id_01234",
+  "b_auth_position": 1,
+  "b_chain_id": "b_chain_id_01234",
+  "b_position": 1,
+  "b_residue": "b_residue_01234",
+  "class": "test_class",
+  "is_cis": true,
+  "is_xaa_pro": true,
+  "omega_deg": 1,
+  "planarity_deviation_deg": 1
+}

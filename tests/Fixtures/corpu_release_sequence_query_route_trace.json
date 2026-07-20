@@ -1,0 +1,18 @@
+{
+  "document_frequency": 1,
+  "estimated_score_per_mb": 1,
+  "feature_kind": "test_feature_kind",
+  "inverse_document_frequency": 1,
+  "is_common_seed": true,
+  "phase": "test_phase",
+  "planner_score": 1,
+  "position_count": 1,
+  "posting_bytes": 1,
+  "posting_object_count": 1,
+  "posting_object_uris": [
+    "https://example.com"
+  ],
+  "query_bin": 1,
+  "query_position_count": 1,
+  "token": "test_token"
+}

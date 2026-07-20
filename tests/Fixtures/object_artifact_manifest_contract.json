@@ -1,0 +1,21 @@
+{
+  "artifact_identity": [
+    "artifact_identity_01234"
+  ],
+  "collection_identity": [
+    "collection_identity_01234"
+  ],
+  "deterministic_hash": "test_deterministic_hash",
+  "layout_semantics": "test_layout_semantics",
+  "manifest_kind": "test_manifest_kind",
+  "required_fields": [
+    "test_required_fields"
+  ],
+  "schema_version": "test_schema_version",
+  "shard_identity": [
+    "shard_identity_01234"
+  ],
+  "supported_object_store": [
+    "test_supported_object_store"
+  ]
+}

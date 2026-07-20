@@ -1,0 +1,29 @@
+{
+  "aliases": [
+    "test_aliases"
+  ],
+  "column_count": 1,
+  "description": "test_description",
+  "domain": "test_domain",
+  "entity_type": "test_entity_type",
+  "grain": "test_grain",
+  "id": "01234",
+  "matched_fields": [
+    "test_matched_fields"
+  ],
+  "matched_term_count": 1,
+  "matched_terms": [
+    "test_matched_terms"
+  ],
+  "name": "Test",
+  "object": "ontology_relation",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "primary_key": [
+    "test_primary_key"
+  ],
+  "relationship_count": 1,
+  "schema_hash": "test_schema_hash",
+  "schema_version": 1,
+  "url": "https://example.com"
+}

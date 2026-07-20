@@ -1,0 +1,10 @@
+{
+  "candidate_shard_ids": [
+    "candidate_shard_ids_01234"
+  ],
+  "fell_back_to_all_shards": true,
+  "nprobe": 1,
+  "routing_executed": true,
+  "searched_shard_count": 1,
+  "total_shard_count": 1
+}

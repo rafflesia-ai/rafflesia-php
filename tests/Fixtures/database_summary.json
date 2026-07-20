@@ -1,0 +1,12 @@
+{
+  "byte_count": 1,
+  "database": "test_database",
+  "id": "01234",
+  "latest_release": "test_latest_release",
+  "object": "database",
+  "queryable_release_count": 1,
+  "relation_count": 1,
+  "release_count": 1,
+  "row_count": 1,
+  "url": "https://example.com"
+}

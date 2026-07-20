@@ -1,0 +1,82 @@
+{
+  "base_ontology_digest": "test_base_ontology_digest",
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "isolations": [
+    {
+      "candidate_relations": [
+        "candidate_relations_01234"
+      ],
+      "classification": "test_classification",
+      "reason": "test_reason",
+      "relation": "test_relation"
+    }
+  ],
+  "key_families": [
+    {
+      "anchor": {
+        "cardinality": "one_to_one",
+        "coordinate_notes": "test_coordinate_notes",
+        "remote_columns": [
+          "test_remote_columns"
+        ],
+        "review_digest": "test_review_digest",
+        "review_id": "review_id_01234",
+        "semantic_basis": "test_semantic_basis",
+        "to_relation": "test_to_relation"
+      },
+      "columns": [
+        "test_columns"
+      ],
+      "name": "Test",
+      "relation": "test_relation"
+    }
+  ],
+  "relations": [
+    {
+      "aliases": [
+        "test_aliases"
+      ],
+      "columns": [
+        {
+          "allowed_values": [
+            "test_allowed_values"
+          ],
+          "coordinate_system": "test_coordinate_system",
+          "description": "test_description",
+          "examples": [
+            "test_examples"
+          ],
+          "identifier_namespace": "identifier_namespace_01234",
+          "is_nullable": true,
+          "name": "Test",
+          "null_meaning": "test_null_meaning",
+          "ordinal": 1,
+          "type": "test_type",
+          "unit": "test_unit",
+          "value_kind": "test_value_kind"
+        }
+      ],
+      "default_order": [
+        "test_default_order"
+      ],
+      "description": "test_description",
+      "domain": "test_domain",
+      "entity_type": "test_entity_type",
+      "grain": "test_grain",
+      "name": "Test",
+      "partition_scope": "test_partition_scope",
+      "primary_key": [
+        "test_primary_key"
+      ],
+      "quality_notes": [
+        "test_quality_notes"
+      ],
+      "recommended_filters": [
+        "test_recommended_filters"
+      ],
+      "row_scope_column": "test_row_scope_column",
+      "schema_version": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "certification_id": "certification_id_01234",
+  "database": "test_database",
+  "is_complete": true,
+  "relationship_variant_count": 1,
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "unavailable_count": 1
+}

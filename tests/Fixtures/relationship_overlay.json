@@ -1,0 +1,26 @@
+{
+  "relation": "test_relation",
+  "relationships": [
+    {
+      "alt_local_columns": [
+        "test_alt_local_columns"
+      ],
+      "alt_remote_columns": [
+        "test_alt_remote_columns"
+      ],
+      "cardinality": "one_to_one",
+      "coordinate_notes": "test_coordinate_notes",
+      "definition_source": "declared",
+      "id": "01234",
+      "is_lossy": true,
+      "is_range_mapping": true,
+      "local_columns": [
+        "test_local_columns"
+      ],
+      "relation": "test_relation",
+      "remote_columns": [
+        "test_remote_columns"
+      ]
+    }
+  ]
+}

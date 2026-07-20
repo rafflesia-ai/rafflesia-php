@@ -1,0 +1,8 @@
+{
+  "catalog": "test_catalog",
+  "limit": 1,
+  "nprobe": 1,
+  "query_id": "query_id_01234",
+  "routing_db": "test_routing_db",
+  "store_root": "test_store_root"
+}

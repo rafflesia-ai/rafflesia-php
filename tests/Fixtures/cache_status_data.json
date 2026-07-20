@@ -1,0 +1,78 @@
+{
+  "active_lease_count": 1,
+  "active_lease_pinned_count": 1,
+  "age_basis": "test_age_basis",
+  "eligible_size_bytes": 1,
+  "eviction_candidate_count": 1,
+  "eviction_candidate_size_bytes": 1,
+  "file_count": 1,
+  "files": [
+    {
+      "is_eligible": true,
+      "is_pinned": true,
+      "mod_time_unix": 1,
+      "path": "test_path",
+      "rel_path": "test_rel_path",
+      "size_bytes": 1
+    }
+  ],
+  "namespace": "Test",
+  "namespace_usage": [
+    {
+      "active_lease_count": 1,
+      "active_lease_pinned_count": 1,
+      "eligible_size_bytes": 1,
+      "file_count": 1,
+      "namespace": "Test",
+      "pinned_size_bytes": 1,
+      "target_dir": "test_target_dir",
+      "total_size_bytes": 1
+    }
+  ],
+  "pinned_size_bytes": 1,
+  "policy": {
+    "max_age_seconds": 1,
+    "max_bytes": 1,
+    "namespace": "Test",
+    "older_than_seconds": 1,
+    "pinned_paths": [
+      "test_pinned_paths"
+    ],
+    "pinned_shards": [
+      "test_pinned_shards"
+    ]
+  },
+  "reasons": [
+    "test_reasons"
+  ],
+  "remaining_size_bytes": 1,
+  "schema_version": "test_schema_version",
+  "status": "test_status",
+  "storage_backend": "test_storage_backend",
+  "store_root": "test_store_root",
+  "target_dir": "test_target_dir",
+  "total_size_bytes": 1,
+  "workload_profile": {
+    "algorithm": "test_algorithm",
+    "block_size_bytes": 1,
+    "cache_mode": "test_cache_mode",
+    "default_limit": 1,
+    "default_nprobe": 1,
+    "description": "test_description",
+    "max_blocks_per_query": 1,
+    "max_materialized_bytes_per_query": 1,
+    "max_object_bytes_per_query": 1,
+    "max_object_reads_per_query": 1,
+    "min_byte_reduction_fraction": 1,
+    "min_hit_overlap_fraction": 1,
+    "min_recall_at_1": 1,
+    "min_recall_at_10": 1,
+    "min_recall_at_100": 1,
+    "name": "Test",
+    "require_benchmark": true,
+    "require_exact_verification": true,
+    "require_routing": true,
+    "require_zero_materialization": true,
+    "workload": "test_workload"
+  }
+}

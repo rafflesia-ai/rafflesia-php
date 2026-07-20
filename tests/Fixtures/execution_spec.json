@@ -1,0 +1,8 @@
+{
+  "command": [
+    "test_command"
+  ],
+  "mode": "test_mode",
+  "model": "test_model",
+  "reasoning_effort": "test_reasoning_effort"
+}

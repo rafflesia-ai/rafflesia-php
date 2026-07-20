@@ -1,0 +1,173 @@
+{
+  "data": {
+    "backend": "test_backend",
+    "cache_decision": "test_cache_decision",
+    "manifest_object_id": "manifest_object_id_01234",
+    "manifest_path": "test_manifest_path",
+    "plan": {
+      "block_count": 1,
+      "budget": {
+        "is_configured": true,
+        "is_within_budget": true,
+        "max_blocks": 1,
+        "max_exact_shards": 1,
+        "max_materialized_bytes": 1,
+        "max_object_bytes": 1,
+        "max_object_reads": 1,
+        "planned_block_count": 1,
+        "planned_exact_shard_count": 1,
+        "planned_materialized_bytes": 1,
+        "planned_object_bytes": 1,
+        "planned_object_read_count": 1,
+        "planned_uses_routing": true,
+        "reasons": [
+          "test_reasons"
+        ],
+        "require_routing": true,
+        "require_zero_materialization": true
+      },
+      "key_mode": "test_key_mode",
+      "manifest_object_id": "manifest_object_id_01234",
+      "payload_selection": "test_payload_selection",
+      "planned_materialized_bytes": 1,
+      "planned_object_bytes": 1,
+      "planned_object_read_count": 1,
+      "query_key": "test_query_key",
+      "reads": [
+        {
+          "block_index": 1,
+          "end_key": "test_end_key",
+          "object_id": "object_id_01234",
+          "object_key": "test_object_key",
+          "range_length_bytes": 1,
+          "range_offset_bytes": 1,
+          "role": "test_role",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "start_key": "test_start_key",
+          "storage_backend": "test_storage_backend"
+        }
+      ],
+      "root_object_id": "root_object_id_01234",
+      "segment_id": "segment_id_01234",
+      "selected_block_count": 1
+    },
+    "query": {
+      "atom_count": 1,
+      "chain_count": 1,
+      "format": "test_format",
+      "geometry_minhash": [
+        "test_geometry_minhash"
+      ],
+      "geometry_token_count": 1,
+      "has_plddt_like_b_factor": true,
+      "query_id": "query_id_01234",
+      "residue_count": 1,
+      "sort_key": "test_sort_key"
+    },
+    "query_id": "query_id_01234",
+    "reads": [
+      {
+        "block_index": 1,
+        "end_key": "test_end_key",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "range_length_bytes": 1,
+        "range_offset_bytes": 1,
+        "role": "test_role",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "start_key": "test_start_key",
+        "storage_backend": "test_storage_backend"
+      }
+    ],
+    "reasons": [
+      "test_reasons"
+    ],
+    "ref": "test_ref",
+    "workload_profile": {
+      "algorithm": "test_algorithm",
+      "block_size_bytes": 1,
+      "cache_mode": "test_cache_mode",
+      "default_limit": 1,
+      "default_nprobe": 1,
+      "description": "test_description",
+      "max_blocks_per_query": 1,
+      "max_materialized_bytes_per_query": 1,
+      "max_object_bytes_per_query": 1,
+      "max_object_reads_per_query": 1,
+      "min_byte_reduction_fraction": 1,
+      "min_hit_overlap_fraction": 1,
+      "min_recall_at_1": 1,
+      "min_recall_at_10": 1,
+      "min_recall_at_100": 1,
+      "name": "Test",
+      "require_benchmark": true,
+      "require_exact_verification": true,
+      "require_routing": true,
+      "require_zero_materialization": true,
+      "workload": "test_workload"
+    }
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

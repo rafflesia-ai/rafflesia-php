@@ -1,0 +1,19 @@
+{
+  "a_auth_chain_id": "a_auth_chain_id_01234",
+  "a_auth_position": 1,
+  "a_chain_id": "a_chain_id_01234",
+  "a_position": 1,
+  "a_residue": "a_residue_01234",
+  "a_ring_name": "Test",
+  "b_auth_chain_id": "b_auth_chain_id_01234",
+  "b_auth_position": 1,
+  "b_chain_id": "b_chain_id_01234",
+  "b_position": 1,
+  "b_residue": "b_residue_01234",
+  "b_ring_name": "Test",
+  "centroid_distance_angstrom": 1,
+  "geometry": "test_geometry",
+  "interplanar_angle_deg": 1,
+  "lateral_offset_angstrom": 1,
+  "same_chain": true
+}

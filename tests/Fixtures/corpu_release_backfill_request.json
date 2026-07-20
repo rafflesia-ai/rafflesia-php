@@ -1,0 +1,7 @@
+{
+  "corpus": "test_corpus",
+  "dry_run": true,
+  "limit": 1,
+  "object_store_root": "test_object_store_root",
+  "publish_aliases": true
+}

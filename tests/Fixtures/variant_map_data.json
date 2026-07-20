@@ -1,0 +1,90 @@
+{
+  "chain": "test_chain",
+  "relation": {
+    "columns": [
+      {
+        "is_nullable": true,
+        "name": "Test",
+        "ordinal": 1,
+        "type": "test_type"
+      }
+    ],
+    "content_hash": "test_content_hash",
+    "database": "test_database",
+    "object": "relation_artifact",
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "preview": {
+      "columns": [
+        "test_columns"
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "engine": "test_engine",
+      "limit": 1,
+      "order_by": [
+        "test_order_by"
+      ],
+      "relation": "test_relation",
+      "release": "test_release",
+      "returned_row_count": 1,
+      "row_count": 1,
+      "rows": [
+        {
+          "key": {}
+        }
+      ],
+      "schema_columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "schema_ref": "test_schema_ref"
+    },
+    "relation": "test_relation",
+    "release": "test_release",
+    "row_count": 1,
+    "schema_ref": "test_schema_ref"
+  },
+  "sequence_id": "sequence_id_01234",
+  "sequence_length": 1,
+  "structure_id": "structure_id_01234",
+  "target_id": "target_id_01234",
+  "variants": [
+    {
+      "is_valid": true,
+      "mutant_aa": "test_mutant_aa",
+      "mutation_type": "test_mutation_type",
+      "raw": "test_raw",
+      "sequence_position": 1,
+      "structure_chain_id": "structure_chain_id_01234",
+      "structure_residue_aa": "structure_residue_aa_01234",
+      "structure_residue_index": 1,
+      "structure_residue_number": 1,
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ],
+      "wildtype_aa": "test_wildtype_aa",
+      "wildtype_matches": true
+    }
+  ],
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "affinity_binder_id": "affinity_binder_id_01234",
+  "constraints": {},
+  "entities": [
+    {
+      "ccd": [
+        "test_ccd"
+      ],
+      "id": "01234",
+      "modifications": [
+        {
+          "ccd": "test_ccd",
+          "position": 1
+        }
+      ],
+      "sequence": "test_sequence",
+      "smiles": "test_smiles",
+      "type": "protein"
+    }
+  ],
+  "idempotency_key": "idempotency_key_01234",
+  "max_retries": 1,
+  "max_template_date": "test_max_template_date",
+  "metadata": {
+    "key": "test_value"
+  },
+  "model": "test_model",
+  "model_type": "test_model_type",
+  "msa_inputs": [
+    {
+      "chain_id": "chain_id_01234",
+      "database_id": "database_id_01234",
+      "database_release_id": "database_release_id_01234",
+      "manifest_object_id": "manifest_object_id_01234",
+      "object_id": "object_id_01234"
+    }
+  ],
+  "msa_mode": "single_sequence",
+  "msa_server_url": "https://example.com",
+  "num_diffusion_samples": 1,
+  "num_loops": 1,
+  "num_models": 1,
+  "num_recycles": 1,
+  "num_sampling_steps": 1,
+  "num_seeds": 1,
+  "pair_mode": "unpaired",
+  "predict_affinity": true,
+  "random_seed": 1,
+  "relax_top_n": 1,
+  "templates": true,
+  "timeout_ms": 1
+}

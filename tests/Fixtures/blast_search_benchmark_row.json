@@ -1,0 +1,17 @@
+{
+  "baseline_elapsed_ms": 1,
+  "baseline_hit_count": 1,
+  "hit_overlap_fraction": 1,
+  "mean_rank_delta": 1,
+  "object_native_elapsed_ms": 1,
+  "object_native_hit_count": 1,
+  "overlap_count": 1,
+  "query": "test_query",
+  "recall_at_1": 1,
+  "recall_at_10": 1,
+  "seed_routing_elapsed_ms": 1,
+  "seed_routing_hit_count": 1,
+  "seed_routing_hit_overlap_fraction": 1,
+  "seed_routing_recall_at_1": 1,
+  "seed_routing_recall_at_10": 1
+}

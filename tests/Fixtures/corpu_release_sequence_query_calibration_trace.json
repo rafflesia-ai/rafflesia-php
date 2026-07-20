@@ -1,0 +1,25 @@
+{
+  "object_reads_by_family": {
+    "key": 1
+  },
+  "object_upper_bound_by_family": {
+    "key": 1
+  },
+  "planned_common_seed_route_count": 1,
+  "planned_object_upper_bound_score_mean": 1,
+  "planned_object_upper_bound_score_sum": 1,
+  "planned_query_bin_count": 1,
+  "planned_route_count": 1,
+  "planned_route_score_mean": 1,
+  "planned_route_score_sum": 1,
+  "planner_mode": "test_planner_mode",
+  "query_bin_count": 1,
+  "query_class": "test_query_class",
+  "route_hit_count": 1,
+  "selected_routes_by_family": {
+    "key": 1
+  },
+  "selected_routes_by_query_bin": {
+    "key": 1
+  }
+}

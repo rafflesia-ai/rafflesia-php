@@ -1,0 +1,8 @@
+{
+  "manifest_object_id": "manifest_object_id_01234",
+  "ref": "test_ref",
+  "require_catalog": true,
+  "require_relation": true,
+  "source": "test_source",
+  "version": "test_version"
+}

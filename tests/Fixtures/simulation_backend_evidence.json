@@ -1,0 +1,8 @@
+{
+  "backend": "test_backend",
+  "error": "test_error",
+  "executable": "test_executable",
+  "is_available": true,
+  "requested_backend": "test_requested_backend",
+  "version": "test_version"
+}

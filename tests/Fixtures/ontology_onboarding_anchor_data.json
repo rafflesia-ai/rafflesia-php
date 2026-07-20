@@ -1,0 +1,69 @@
+{
+  "example_inherited_paths": [
+    [
+      "test_example_inherited_paths"
+    ]
+  ],
+  "forward": {
+    "cardinality": "test_cardinality",
+    "coordinate_notes": "test_coordinate_notes",
+    "from_relation": "test_from_relation",
+    "local_columns": [
+      "test_local_columns"
+    ],
+    "remote_columns": [
+      "test_remote_columns"
+    ],
+    "review_digest": "test_review_digest",
+    "review_id": "review_id_01234",
+    "semantic_basis": "test_semantic_basis",
+    "to_relation": "test_to_relation"
+  },
+  "identity_safe_delta": {
+    "affected_relation_count": 1,
+    "affected_relations": [
+      "test_affected_relations"
+    ],
+    "from_component_id": "from_component_id_01234",
+    "from_component_size": 1,
+    "is_affected_relations_complete": true,
+    "is_already_reachable": true,
+    "materialized_pair_write_count": 1,
+    "reachable_pair_gain": 1,
+    "requires_full_rebuild": true,
+    "result_component_id": "result_component_id_01234",
+    "result_component_size": 1,
+    "safety": "identity_safe",
+    "to_component_id": "to_component_id_01234",
+    "to_component_size": 1,
+    "touched_component_count": 1,
+    "update_mode": "incremental_union"
+  },
+  "identity_safe_direct_pair_gain": 1,
+  "identity_safe_transitive_pair_gain": 1,
+  "key_family": "test_key_family",
+  "review_digest": "test_review_digest",
+  "review_id": "review_id_01234",
+  "strict_delta": {
+    "affected_relation_count": 1,
+    "affected_relations": [
+      "test_affected_relations"
+    ],
+    "from_component_id": "from_component_id_01234",
+    "from_component_size": 1,
+    "is_affected_relations_complete": true,
+    "is_already_reachable": true,
+    "materialized_pair_write_count": 1,
+    "reachable_pair_gain": 1,
+    "requires_full_rebuild": true,
+    "result_component_id": "result_component_id_01234",
+    "result_component_size": 1,
+    "safety": "identity_safe",
+    "to_component_id": "to_component_id_01234",
+    "to_component_size": 1,
+    "touched_component_count": 1,
+    "update_mode": "incremental_union"
+  },
+  "strict_direct_pair_gain": 1,
+  "strict_transitive_pair_gain": 1
+}

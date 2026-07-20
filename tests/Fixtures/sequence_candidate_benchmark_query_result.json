@@ -1,0 +1,19 @@
+{
+  "candidate_count": 1,
+  "elapsed_ms": 1,
+  "hit_count": 1,
+  "object_bytes_fetched": 1,
+  "object_read_count": 1,
+  "passed": true,
+  "query_id": "query_id_01234",
+  "query_length": 1,
+  "reasons": [
+    "test_reasons"
+  ],
+  "recall_at_k": 1,
+  "top_hit_id": "top_hit_id_01234",
+  "top_hit_identity": 1,
+  "warnings": [
+    "test_warnings"
+  ]
+}

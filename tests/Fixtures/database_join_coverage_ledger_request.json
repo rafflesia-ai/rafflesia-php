@@ -1,0 +1,112 @@
+{
+  "candidate_cells": [
+    {
+      "budget": {
+        "max_bytes_scanned": 1,
+        "max_rows_scanned": 1,
+        "timeout_ms": 1
+      },
+      "budget_profile": "interactive",
+      "from_database": "test_from_database",
+      "from_relations": [
+        "test_from_relations"
+      ],
+      "from_release": "test_from_release",
+      "max_candidates": 1,
+      "ontology_digest": "test_ontology_digest",
+      "to_database": "test_to_database",
+      "to_relations": [
+        "test_to_relations"
+      ],
+      "to_release": "test_to_release"
+    }
+  ],
+  "certification_cells": [
+    {
+      "budget": {
+        "max_bytes_scanned": 1,
+        "max_rows_scanned": 1,
+        "timeout_ms": 1
+      },
+      "dataset_name": "Test",
+      "dataset_version": "test_dataset_version",
+      "from_database": "test_from_database",
+      "from_release": "test_from_release",
+      "ontology_digest": "test_ontology_digest",
+      "safety": "all",
+      "to_database": "test_to_database",
+      "to_release": "test_to_release"
+    }
+  ],
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "drift_cells": [
+    {
+      "baseline_from_release": "test_baseline_from_release",
+      "baseline_to_release": "test_baseline_to_release",
+      "budget": {
+        "max_bytes_scanned": 1,
+        "max_rows_scanned": 1,
+        "timeout_ms": 1
+      },
+      "candidate_from_release": "candidate_from_release_01234",
+      "candidate_to_release": "candidate_to_release_01234",
+      "dataset_name": "Test",
+      "dataset_version": "test_dataset_version",
+      "from_database": "test_from_database",
+      "ontology_digest": "test_ontology_digest",
+      "safety": "all",
+      "to_database": "test_to_database"
+    }
+  ],
+  "external_review_measurements": [
+    {
+      "evidence_digest": "evidence_digest_01234",
+      "evidence_reference": "evidence_reference_01234",
+      "participant_id": "participant_id_01234",
+      "participant_kind": "scientist",
+      "protocol_version": "test_protocol_version"
+    }
+  ],
+  "ontology_digest": "test_ontology_digest",
+  "path_cells": [
+    {
+      "budget": {
+        "max_bytes_scanned": 1,
+        "max_rows_scanned": 1,
+        "timeout_ms": 1
+      },
+      "dataset_name": "Test",
+      "dataset_version": "test_dataset_version",
+      "edges": [
+        {
+          "from_source": "test_from_source",
+          "key_variant": "primary",
+          "relationship_id": "relationship_id_01234",
+          "to_source": "test_to_source"
+        }
+      ],
+      "ontology_digest": "test_ontology_digest",
+      "sources": [
+        {
+          "database": "test_database",
+          "name": "Test",
+          "release": "test_release"
+        }
+      ]
+    }
+  ],
+  "unsafe_controls": [
+    {
+      "expected_outcome": "admitted",
+      "from_database": "test_from_database",
+      "from_release": "test_from_release",
+      "key_variant": "primary",
+      "name": "Test",
+      "relationship_id": "relationship_id_01234",
+      "safety": "all",
+      "to_database": "test_to_database",
+      "to_release": "test_to_release"
+    }
+  ]
+}

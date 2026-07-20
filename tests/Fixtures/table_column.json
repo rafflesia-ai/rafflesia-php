@@ -1,0 +1,6 @@
+{
+  "is_nullable": true,
+  "name": "Test",
+  "ordinal": 1,
+  "type": "test_type"
+}

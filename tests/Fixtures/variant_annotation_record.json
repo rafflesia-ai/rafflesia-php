@@ -1,0 +1,26 @@
+{
+  "source_annotations": [
+    {
+      "allele_fraction": 1,
+      "source": "test_source",
+      "source_accession": "test_source_accession",
+      "source_classification": "test_source_classification"
+    }
+  ],
+  "variant": {
+    "alt": "test_alt",
+    "chrom": "test_chrom",
+    "id": "01234",
+    "pos": 1,
+    "ref": "test_ref"
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

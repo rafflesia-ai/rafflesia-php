@@ -1,0 +1,10 @@
+{
+  "config_id": "config_id_01234",
+  "id": "01234",
+  "name": "Test",
+  "partition": "test_partition",
+  "record_count": 1,
+  "shard_ids": [
+    "shard_ids_01234"
+  ]
+}

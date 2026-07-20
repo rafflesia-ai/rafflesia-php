@@ -1,0 +1,33 @@
+{
+  "archive_artifact_manifest_object_id": "archive_artifact_manifest_object_id_01234",
+  "archive_artifact_manifest_path": "test_archive_artifact_manifest_path",
+  "database": "test_database",
+  "include_extensions": [
+    "test_include_extensions"
+  ],
+  "include_path_substrings": [
+    "test_include_path_substrings"
+  ],
+  "inventory_object_id": "inventory_object_id_01234",
+  "inventory_path": "test_inventory_path",
+  "max_pairs": 1,
+  "output_format": "json",
+  "output_relation": "test_output_relation",
+  "partition_by": [
+    "test_partition_by"
+  ],
+  "preview_limit": 1,
+  "query_path_substrings": [
+    "test_query_path_substrings"
+  ],
+  "query_sample_regex": "test_query_sample_regex",
+  "relation": "test_relation",
+  "release": "test_release",
+  "sort_by": [
+    "test_sort_by"
+  ],
+  "target_path_substrings": [
+    "test_target_path_substrings"
+  ],
+  "target_sample_regex": "test_target_sample_regex"
+}

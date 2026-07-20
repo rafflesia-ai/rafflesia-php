@@ -1,0 +1,26 @@
+{
+  "above_threshold_voxel_count": 1,
+  "geometry_sampling_stride": 1,
+  "geometry_threshold": 1,
+  "weighted_density_centroid": [
+    1
+  ],
+  "weighted_principal_axes": [
+    {
+      "direction": [
+        1
+      ],
+      "direction_canonicalization": "test_direction_canonicalization",
+      "eigenvalue_angstrom2": 1,
+      "is_direction_flipped": true,
+      "rank": 1,
+      "rms_angstrom": 1
+    }
+  ],
+  "world_bounds_maximum": [
+    1
+  ],
+  "world_bounds_minimum": [
+    1
+  ]
+}

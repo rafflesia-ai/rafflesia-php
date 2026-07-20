@@ -1,0 +1,96 @@
+{
+  "data": {
+    "profiles": [
+      {
+        "artifacts": [
+          {
+            "allowed_hosts": [
+              "test_allowed_hosts"
+            ],
+            "allowed_path_prefixes": [
+              "test_allowed_path_prefixes"
+            ],
+            "artifact_kind": "test_artifact_kind",
+            "compression": "test_compression",
+            "consumer_object_field": "test_consumer_object_field",
+            "consumer_parameters": {
+              "key": "test_value"
+            },
+            "consumer_primitive": "test_consumer_primitive",
+            "content_type": "test_content_type",
+            "description": "test_description",
+            "example_url": "https://example.com",
+            "expected_relation": "test_expected_relation",
+            "format": "test_format",
+            "parser": "test_parser",
+            "recommended_import_mode": "test_recommended_import_mode"
+          }
+        ],
+        "description": "test_description",
+        "official_docs_url": "https://example.com",
+        "source": "test_source"
+      }
+    ]
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

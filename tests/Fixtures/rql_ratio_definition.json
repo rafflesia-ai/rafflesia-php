@@ -1,0 +1,11 @@
+{
+  "alias": "test_alias",
+  "denominator": "test_denominator",
+  "description": "test_description",
+  "name": "Test",
+  "null_behavior": "null",
+  "numerator": "test_numerator",
+  "scale": 1,
+  "unit": "test_unit",
+  "zero_behavior": "null"
+}

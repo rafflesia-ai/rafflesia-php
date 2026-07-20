@@ -1,0 +1,17 @@
+{
+  "content_type_source": "test_content_type_source",
+  "decode_elapsed_ms": 1,
+  "is_local": true,
+  "is_remote": true,
+  "max_read_bytes": 1,
+  "object_size_bytes": 1,
+  "read_elapsed_ms": 1,
+  "read_source": "test_read_source",
+  "requested_bytes": 1,
+  "resolve_elapsed_ms": 1,
+  "resolve_source": "test_resolve_source",
+  "returned_bytes": 1,
+  "total_elapsed_ms": 1,
+  "used_range_read": true,
+  "was_size_bounded": true
+}

@@ -1,0 +1,15 @@
+{
+  "attrs": {
+    "key": "test_value"
+  },
+  "id": "01234",
+  "residues": [
+    {
+      "aa": "test_aa",
+      "ca": [
+        1
+      ],
+      "index": 1
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "error_count": 1,
+  "issues": [
+    {
+      "code": "test_code",
+      "message": "test_message",
+      "path": "test_path",
+      "severity": "test_severity"
+    }
+  ],
+  "schema_version": "test_schema_version",
+  "valid": true,
+  "warning_count": 1
+}

@@ -1,0 +1,26 @@
+{
+  "aliases": [
+    "test_aliases"
+  ],
+  "compiler_version": "test_compiler_version",
+  "created_at": "test_created_at",
+  "database_id": "database_id_01234",
+  "explanation_calibration_count": 1,
+  "id": "01234",
+  "is_explanation_calibration_available": true,
+  "is_query_context_profile_available": true,
+  "manifest_sha256": "test_manifest_sha256",
+  "object": "test_object",
+  "query_context_profile_artifact_sha256": "test_query_context_profile_artifact_sha256",
+  "query_context_profile_artifact_uri": "https://example.com",
+  "query_context_profile_kind": "test_query_context_profile_kind",
+  "record_count": 1,
+  "residue_count": 1,
+  "searchable_sequence_channel_ids": [
+    "searchable_sequence_channel_ids_01234"
+  ],
+  "status": "test_status",
+  "verifier_model_ids": [
+    "verifier_model_ids_01234"
+  ]
+}

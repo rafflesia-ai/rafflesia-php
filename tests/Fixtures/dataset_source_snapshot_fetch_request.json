@@ -1,0 +1,11 @@
+{
+  "artifact_kind": "test_artifact_kind",
+  "expected_etag": "test_expected_etag",
+  "expected_md5": "test_expected_md5",
+  "expected_sha256": "test_expected_sha256",
+  "expected_size_bytes": 1,
+  "max_bytes": 1,
+  "source": "test_source",
+  "url": "https://example.com",
+  "version": "test_version"
+}

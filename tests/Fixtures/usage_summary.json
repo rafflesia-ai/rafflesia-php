@@ -1,0 +1,9 @@
+{
+  "currency": "test_currency",
+  "event_count": 1,
+  "meter": "homology_query",
+  "product": "dandelion",
+  "quantity": "test_quantity",
+  "rated_amount_microusd": 1,
+  "unit": "test_unit"
+}

@@ -1,0 +1,21 @@
+{
+  "baseline_elapsed_ms": 1,
+  "baseline_hit_count": 1,
+  "block_cache_hits": 1,
+  "block_cache_misses": 1,
+  "candidate_count": 1,
+  "directory_bytes_fetched": 1,
+  "materialized_db_bytes": 1,
+  "object_bytes_fetched": 1,
+  "object_read_count": 1,
+  "overlap_count": 1,
+  "overlap_fraction": 1,
+  "payload_blocks_fetched": 1,
+  "payload_bytes_fetched": 1,
+  "posting_blocks_fetched": 1,
+  "posting_bytes_fetched": 1,
+  "query": "test_query",
+  "seed_elapsed_ms": 1,
+  "seed_hit_count": 1,
+  "wal_record_count": 1
+}

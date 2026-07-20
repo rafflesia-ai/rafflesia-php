@@ -1,0 +1,14 @@
+{
+  "defaults": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "description": "test_description",
+  "maximums": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "name": "Test"
+}

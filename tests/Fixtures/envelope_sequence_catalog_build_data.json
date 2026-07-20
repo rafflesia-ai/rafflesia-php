@@ -1,0 +1,183 @@
+{
+  "data": {
+    "catalog_id": "catalog_id_01234",
+    "content_sha256": "test_content_sha256",
+    "dataset_name": "Test",
+    "dataset_version": "test_dataset_version",
+    "entries": [
+      {
+        "aliases": [
+          "test_aliases"
+        ],
+        "header": "test_header",
+        "header_first_token": "test_header_first_token",
+        "length": 1,
+        "sequence_id": "sequence_id_01234",
+        "sha256": "test_sha256"
+      }
+    ],
+    "fasta_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "manifest": {
+      "catalog_id": "catalog_id_01234",
+      "content_sha256": "test_content_sha256",
+      "created_at": "test_created_at",
+      "dataset_name": "Test",
+      "dataset_version": "test_dataset_version",
+      "entries": [
+        {
+          "aliases": [
+            "test_aliases"
+          ],
+          "header": "test_header",
+          "header_first_token": "test_header_first_token",
+          "length": 1,
+          "sequence_id": "sequence_id_01234",
+          "sha256": "test_sha256"
+        }
+      ],
+      "fasta_object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "kind": "test_kind",
+      "manifest_version": 1,
+      "name": "Test",
+      "sequence_count": 1,
+      "source_database_snapshot": {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      },
+      "source_object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "source_object_id": "source_object_id_01234",
+      "source_path": "test_source_path",
+      "source_tool_version": {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      },
+      "version": "test_version"
+    },
+    "manifest_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "name": "Test",
+    "sequence_count": 1,
+    "source_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "source_object_id": "source_object_id_01234",
+    "source_path": "test_source_path",
+    "version": "test_version"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

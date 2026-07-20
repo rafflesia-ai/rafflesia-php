@@ -1,0 +1,19 @@
+{
+  "block_size_bytes": 1,
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "name": "Test",
+  "publish": true,
+  "ref": "test_ref",
+  "source_manifest_object_ids": [
+    "source_manifest_object_ids_01234"
+  ],
+  "source_manifest_paths": [
+    "test_source_manifest_paths"
+  ],
+  "source_refs": [
+    "test_source_refs"
+  ],
+  "store_feature_object": true,
+  "version": "test_version"
+}

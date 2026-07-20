@@ -1,0 +1,23 @@
+{
+  "aligned_length": 1,
+  "aligned_residues": 1,
+  "alignment_identity": 1,
+  "alignment_score": 1,
+  "bits": 1,
+  "evalue": 1,
+  "id": "01234",
+  "lddt": 1,
+  "pair_geometry_component_count": 1,
+  "pair_geometry_max_component_size": 1,
+  "pair_geometry_shared_count": 1,
+  "query_tm_score": 1,
+  "query_token_count": 1,
+  "rank_key": "test_rank_key",
+  "rerank_backend": "test_rerank_backend",
+  "rmsd_angstrom": 1,
+  "sequence_identity": 1,
+  "sequence_len": 1,
+  "shared_token_count": 1,
+  "target_tm_score": 1,
+  "verified": true
+}

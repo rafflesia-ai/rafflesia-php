@@ -1,0 +1,88 @@
+{
+  "database": "test_database",
+  "duplicate_primary_id_count": 1,
+  "format": "test_format",
+  "parser": "test_parser",
+  "record_count": 1,
+  "ref": "test_ref",
+  "relation": {
+    "columns": [
+      {
+        "is_nullable": true,
+        "name": "Test",
+        "ordinal": 1,
+        "type": "test_type"
+      }
+    ],
+    "content_hash": "test_content_hash",
+    "database": "test_database",
+    "object": "relation_artifact",
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "preview": {
+      "columns": [
+        "test_columns"
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "engine": "test_engine",
+      "limit": 1,
+      "order_by": [
+        "test_order_by"
+      ],
+      "relation": "test_relation",
+      "release": "test_release",
+      "returned_row_count": 1,
+      "row_count": 1,
+      "rows": [
+        {
+          "key": {}
+        }
+      ],
+      "schema_columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "schema_ref": "test_schema_ref"
+    },
+    "relation": "test_relation",
+    "release": "test_release",
+    "row_count": 1,
+    "schema_ref": "test_schema_ref"
+  },
+  "release": "test_release",
+  "sequence_catalog_id": "sequence_catalog_id_01234",
+  "sequence_catalog_manifest_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "source": "test_source",
+  "source_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "source_sha256": "test_source_sha256",
+  "source_size_bytes": 1,
+  "version": "test_version"
+}

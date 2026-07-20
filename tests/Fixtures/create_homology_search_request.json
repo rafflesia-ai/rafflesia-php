@@ -1,0 +1,17 @@
+{
+  "background": true,
+  "database_id": "database_id_01234",
+  "database_release_alias": "test_database_release_alias",
+  "database_release_id": "database_release_id_01234",
+  "metadata": {
+    "key": {}
+  },
+  "mode": "test_mode",
+  "parameters": {},
+  "query": {
+    "kind": "protein_sequence",
+    "sequence": "test_sequence"
+  },
+  "query_context_id": "query_context_id_01234",
+  "search_profile": "test_search_profile"
+}

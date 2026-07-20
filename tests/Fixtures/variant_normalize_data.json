@@ -1,0 +1,80 @@
+{
+  "assembly": "test_assembly",
+  "relation": {
+    "columns": [
+      {
+        "is_nullable": true,
+        "name": "Test",
+        "ordinal": 1,
+        "type": "test_type"
+      }
+    ],
+    "content_hash": "test_content_hash",
+    "database": "test_database",
+    "object": "relation_artifact",
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "preview": {
+      "columns": [
+        "test_columns"
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "engine": "test_engine",
+      "limit": 1,
+      "order_by": [
+        "test_order_by"
+      ],
+      "relation": "test_relation",
+      "release": "test_release",
+      "returned_row_count": 1,
+      "row_count": 1,
+      "rows": [
+        {
+          "key": {}
+        }
+      ],
+      "schema_columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "schema_ref": "test_schema_ref"
+    },
+    "relation": "test_relation",
+    "release": "test_release",
+    "row_count": 1,
+    "schema_ref": "test_schema_ref"
+  },
+  "variants": [
+    {
+      "normalized": {
+        "alt": "test_alt",
+        "chrom": "test_chrom",
+        "id": "01234",
+        "pos": 1,
+        "ref": "test_ref"
+      },
+      "original": {
+        "alt": "test_alt",
+        "chrom": "test_chrom",
+        "id": "01234",
+        "pos": 1,
+        "ref": "test_ref"
+      },
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ]
+    }
+  ]
+}

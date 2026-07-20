@@ -1,0 +1,14 @@
+{
+  "alignment_length": 1,
+  "bits": 1,
+  "evalue": "test_evalue",
+  "fraction_ident": 1,
+  "gap_opens": 1,
+  "mismatches": 1,
+  "query_end": 1,
+  "query_id": "query_id_01234",
+  "query_start": 1,
+  "target_end": 1,
+  "target_id": "target_id_01234",
+  "target_start": 1
+}

@@ -1,0 +1,18 @@
+{
+  "baseline_module_digest": "test_baseline_module_digest",
+  "baseline_module_id": "baseline_module_id_01234",
+  "change_count": 1,
+  "changes": [
+    {
+      "after": {},
+      "before": {},
+      "category": "identity",
+      "kind": "added",
+      "path": "test_path"
+    }
+  ],
+  "is_changed": true,
+  "module_digest": "test_module_digest",
+  "module_id": "module_id_01234",
+  "object": "rql_semantic_diff"
+}

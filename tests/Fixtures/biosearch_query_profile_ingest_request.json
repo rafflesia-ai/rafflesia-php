@@ -1,0 +1,8 @@
+{
+  "allow_duplicate": true,
+  "dry_run": true,
+  "expected_row_count": 1,
+  "ingest_mode": "fail_if_exists",
+  "insert_chunk_bytes": 1,
+  "path": "test_path"
+}

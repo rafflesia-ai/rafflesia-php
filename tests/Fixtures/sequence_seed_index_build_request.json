@@ -1,0 +1,12 @@
+{
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "kmer_size": 1,
+  "name": "Test",
+  "payload_block_size": 1,
+  "payload_lite": true,
+  "posting_block_size": 1,
+  "version": "test_version"
+}

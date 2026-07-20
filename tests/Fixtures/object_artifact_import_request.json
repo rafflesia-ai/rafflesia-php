@@ -1,0 +1,29 @@
+{
+  "allow_incomplete": true,
+  "archive_inventory_object_id": "archive_inventory_object_id_01234",
+  "archive_inventory_path": "test_archive_inventory_path",
+  "archive_required_member_paths": [
+    "test_archive_required_member_paths"
+  ],
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "dependency_manifest_ids": [
+    "dependency_manifest_ids_01234"
+  ],
+  "is_collection": true,
+  "kind": "test_kind",
+  "layout_prefix": "test_layout_prefix",
+  "license": "test_license",
+  "marker_paths": [
+    "test_marker_paths"
+  ],
+  "mount_path": "test_mount_path",
+  "name": "Test",
+  "output_dir": "test_output_dir",
+  "path": "test_path",
+  "shard_size_bytes": 1,
+  "source_uri": "https://example.com",
+  "tool_name": "Test",
+  "tool_version": "test_tool_version",
+  "version": "test_version"
+}

@@ -1,0 +1,17 @@
+{
+  "baseline_from_release": "test_baseline_from_release",
+  "baseline_to_release": "test_baseline_to_release",
+  "budget": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "candidate_from_release": "candidate_from_release_01234",
+  "candidate_to_release": "candidate_to_release_01234",
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "from_database": "test_from_database",
+  "ontology_digest": "test_ontology_digest",
+  "safety": "all",
+  "to_database": "test_to_database"
+}

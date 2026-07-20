@@ -1,0 +1,10 @@
+{
+  "fanout_join_ids": [
+    "fanout_join_ids_01234"
+  ],
+  "input_grain": [
+    "test_input_grain"
+  ],
+  "measurement": "test_measurement",
+  "protection": "not_declared"
+}

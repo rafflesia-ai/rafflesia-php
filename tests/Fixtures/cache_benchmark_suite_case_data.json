@@ -1,0 +1,83 @@
+{
+  "benchmark": {
+    "cold_cache_hit_count": 1,
+    "cold_cache_miss_count": 1,
+    "cold_object_read_bytes": 1,
+    "cold_object_read_count": 1,
+    "db": "test_db",
+    "evict_first": true,
+    "manifest_id": "manifest_id_01234",
+    "manifest_object_id": "manifest_object_id_01234",
+    "object_storage_backends": [
+      "test_object_storage_backends"
+    ],
+    "pack_access_mode": "test_pack_access_mode",
+    "pressure_max_bytes": 1,
+    "program": "test_program",
+    "query": "test_query",
+    "ref": "test_ref",
+    "run_pressure": true,
+    "segment_roles": [
+      "test_segment_roles"
+    ],
+    "shards": [
+      "test_shards"
+    ],
+    "steps": [
+      {
+        "all_cache_hits": true,
+        "cache_hit_bytes": 1,
+        "cache_hit_count": 1,
+        "cache_miss_bytes": 1,
+        "cache_miss_count": 1,
+        "elapsed_ms": 1,
+        "file_count": 1,
+        "hit_count": 1,
+        "lock_wait_ms": 1,
+        "materialize_db_ms": 1,
+        "name": "Test",
+        "object_read_bytes": 1,
+        "object_read_count": 1,
+        "object_storage_backends": [
+          "test_object_storage_backends"
+        ],
+        "pack_access_mode": "test_pack_access_mode",
+        "remaining_size_bytes": 1,
+        "remote_read_metrics": {
+          "block_cache_hits": 1,
+          "block_cache_misses": 1,
+          "http_bytes_read": 1,
+          "http_full_read_request_count": 1,
+          "http_range_request_count": 1,
+          "http_request_count": 1,
+          "sequence_bytes_read": 1,
+          "sequence_read_count": 1
+        },
+        "removed_count": 1,
+        "resolve_query_ms": 1,
+        "search_ms": 1,
+        "selected_size_bytes": 1,
+        "shard_count": 1,
+        "status": "test_status",
+        "store_output_ms": 1,
+        "total_size_bytes": 1,
+        "warning_count": 1
+      }
+    ],
+    "target_dir": "test_target_dir",
+    "total_elapsed_ms": 1,
+    "total_lock_wait_ms": 1,
+    "verify": true,
+    "warm_cache_hit_count": 1,
+    "warm_cache_miss_count": 1,
+    "warm_object_read_bytes": 1,
+    "warm_object_read_count": 1,
+    "workload": "test_workload"
+  },
+  "name": "Test",
+  "passed": true,
+  "reasons": [
+    "test_reasons"
+  ],
+  "workload": "test_workload"
+}

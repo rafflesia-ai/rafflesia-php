@@ -1,0 +1,8 @@
+{
+  "cutoff_angstrom": 1,
+  "query_structure_id": "query_structure_id_01234",
+  "target_structure_id": "target_structure_id_01234",
+  "thresholds": [
+    1
+  ]
+}

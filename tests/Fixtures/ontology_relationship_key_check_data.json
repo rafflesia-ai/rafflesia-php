@@ -1,0 +1,22 @@
+{
+  "bytes_scanned": 1,
+  "columns": [
+    "test_columns"
+  ],
+  "duplicate_key_group_count": 1,
+  "evidence_digest": "evidence_digest_01234",
+  "evidence_uri": "evidence_uri_01234",
+  "evidence_warning": "evidence_warning_01234",
+  "is_cache_hit": true,
+  "is_result_truncated": true,
+  "max_bytes_scanned": 1,
+  "max_rows_per_key": 1,
+  "max_rows_scanned": 1,
+  "query_digest": "test_query_digest",
+  "relation": "test_relation",
+  "rows_scanned": 1,
+  "side": "local",
+  "status": "verified",
+  "timeout_ms": 1,
+  "unavailable_reason": "test_unavailable_reason"
+}

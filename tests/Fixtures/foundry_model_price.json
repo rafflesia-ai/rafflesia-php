@@ -1,0 +1,6 @@
+{
+  "currency": "test_currency",
+  "display": "test_display",
+  "unit": "test_unit",
+  "unit_amount_microusd": 1
+}

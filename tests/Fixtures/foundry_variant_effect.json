@@ -1,0 +1,12 @@
+{
+  "alternate": "test_alternate",
+  "id": "01234",
+  "index": 1,
+  "log_likelihood_ratio": 1,
+  "model_log_likelihood_ratios": [
+    1
+  ],
+  "object": "test_object",
+  "position": 1,
+  "reference": "test_reference"
+}

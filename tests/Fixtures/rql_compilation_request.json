@@ -1,0 +1,112 @@
+{
+  "allow_unverified_joins": true,
+  "baseline_module": "test_baseline_module",
+  "baseline_source_text": "test_baseline_source_text",
+  "budget": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "budget_profile": "interactive",
+  "cursor": "test_cursor",
+  "declaration_only": true,
+  "dialect": "rafflesia_sql_2026_07_13",
+  "dimensions": [
+    "test_dimensions"
+  ],
+  "evidence_ledger": {
+    "comparison_cursor": "test_comparison_cursor",
+    "comparison_limit": 1,
+    "cursor": "test_cursor",
+    "evidence_profiles": [
+      {
+        "name": "Test",
+        "overrides": [
+          {
+            "criterion_index": 1,
+            "relationship_name": "Test",
+            "threshold": 1
+          }
+        ]
+      }
+    ],
+    "limit": 1,
+    "profile_cursor": "test_profile_cursor",
+    "profile_limit": 1,
+    "relationship_comparisons": [
+      {
+        "left_relationship": "test_left_relationship",
+        "name": "Test",
+        "right_relationship": "test_right_relationship"
+      }
+    ],
+    "relationship_names": [
+      "Test"
+    ],
+    "threshold_sweeps": [
+      {
+        "criterion_index": 1,
+        "relationship_name": "Test",
+        "thresholds": [
+          1
+        ]
+      }
+    ]
+  },
+  "expected_output_contract_digest": "test_expected_output_contract_digest",
+  "filters": [
+    {
+      "all": [],
+      "any": [],
+      "name": "Test",
+      "not": {},
+      "operator": "eq",
+      "value": {},
+      "values": [
+        {}
+      ]
+    }
+  ],
+  "join_evidence_policy": "advisory",
+  "limit": 1,
+  "measurements": [
+    "test_measurements"
+  ],
+  "module": "test_module",
+  "ontology_digest": "test_ontology_digest",
+  "order_by": [
+    {
+      "alias": "test_alias",
+      "column": "test_column",
+      "direction": "asc",
+      "source": "test_source"
+    }
+  ],
+  "parameters": {
+    "key": {}
+  },
+  "ratios": [
+    "test_ratios"
+  ],
+  "set_operations": [
+    {
+      "operator": "union_all",
+      "sources": [
+        {
+          "database": "test_database",
+          "name": "Test",
+          "release": "test_release"
+        }
+      ]
+    }
+  ],
+  "source_text": "test_source_text",
+  "sources": [
+    {
+      "database": "test_database",
+      "name": "Test",
+      "release": "test_release"
+    }
+  ],
+  "strict_joins": true
+}

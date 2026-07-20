@@ -1,0 +1,72 @@
+{
+  "is_catalog_backed": true,
+  "metadata": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "is_local": true,
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "record_refs": [
+      {
+        "field_path": "test_field_path",
+        "record_id": "record_id_01234",
+        "record_kind": "test_record_kind",
+        "record_path": "test_record_path"
+      }
+    ],
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "object_id": "object_id_01234",
+  "producing_run_count": 1,
+  "producing_runs": [
+    {
+      "cache_hit": true,
+      "created_at": "test_created_at",
+      "database_snapshots": [
+        {
+          "digest": "test_digest",
+          "kind": "test_kind",
+          "name": "Test",
+          "version": "test_version"
+        }
+      ],
+      "input_hash": "test_input_hash",
+      "operation_id": "operation_id_01234",
+      "parameters_hash": "test_parameters_hash",
+      "status": "test_status",
+      "tool_run_id": "tool_run_id_01234",
+      "tool_versions": [
+        {
+          "name": "Test",
+          "path": "test_path",
+          "version": "test_version"
+        }
+      ]
+    }
+  ],
+  "record_refs": [
+    {
+      "field_path": "test_field_path",
+      "record_id": "record_id_01234",
+      "record_kind": "test_record_kind",
+      "record_path": "test_record_path"
+    }
+  ]
+}

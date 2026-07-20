@@ -1,0 +1,105 @@
+{
+  "database": "test_database",
+  "empirical_check_count": 1,
+  "empirical_mode": "bounded",
+  "empirical_unavailable_count": 1,
+  "empirically_contradicted_join_count": 1,
+  "empirically_verified_join_count": 1,
+  "id": "01234",
+  "missing_relation_count": 1,
+  "object": "ontology_release_coverage",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "physical_drift_relation_count": 1,
+  "physical_unmeasured_relation_count": 1,
+  "physical_verified_relation_count": 1,
+  "published_fraction": 1,
+  "published_relation_count": 1,
+  "queryable_fraction": 1,
+  "queryable_relation_count": 1,
+  "relations": [
+    {
+      "byte_count": 1,
+      "domain": "test_domain",
+      "expected_schema_hash": "test_expected_schema_hash",
+      "expected_schema_version": 1,
+      "is_published": true,
+      "is_queryable": true,
+      "is_schema_current": true,
+      "missing_physical_columns": [
+        "test_missing_physical_columns"
+      ],
+      "object": "ontology_release_coverage_relation",
+      "object_status": "reachable",
+      "object_unavailable_reason": "test_object_unavailable_reason",
+      "observed_schema_hash": "test_observed_schema_hash",
+      "observed_schema_version": 1,
+      "physical_check_unavailable_reason": "test_physical_check_unavailable_reason",
+      "physical_schema_status": "verified",
+      "relation": "test_relation",
+      "row_count": 1,
+      "status": "queryable",
+      "unavailable_reason": "test_unavailable_reason",
+      "undeclared_physical_columns": [
+        "test_undeclared_physical_columns"
+      ]
+    }
+  ],
+  "relationship_evidence": [
+    {
+      "bytes_scanned": 1,
+      "cardinality": "test_cardinality",
+      "checks": [
+        {
+          "bytes_scanned": 1,
+          "columns": [
+            "test_columns"
+          ],
+          "duplicate_key_group_count": 1,
+          "evidence_digest": "evidence_digest_01234",
+          "evidence_uri": "evidence_uri_01234",
+          "evidence_warning": "evidence_warning_01234",
+          "is_cache_hit": true,
+          "is_result_truncated": true,
+          "max_bytes_scanned": 1,
+          "max_rows_per_key": 1,
+          "max_rows_scanned": 1,
+          "query_digest": "test_query_digest",
+          "relation": "test_relation",
+          "rows_scanned": 1,
+          "side": "local",
+          "status": "verified",
+          "timeout_ms": 1,
+          "unavailable_reason": "test_unavailable_reason"
+        }
+      ],
+      "from_relation": "test_from_relation",
+      "is_cardinality_observed": true,
+      "object": "ontology_relationship_evidence",
+      "query_count": 1,
+      "relationship_id": "relationship_id_01234",
+      "rows_scanned": 1,
+      "status": "verified",
+      "to_relation": "test_to_relation",
+      "unavailable_reason": "test_unavailable_reason"
+    }
+  ],
+  "release": "test_release",
+  "schema_current_relation_count": 1,
+  "schema_outdated_relation_count": 1,
+  "scope_domains": [
+    "test_scope_domains"
+  ],
+  "scope_relations": [
+    "test_scope_relations"
+  ],
+  "scoped_relation_count": 1,
+  "strict_join_count": 1,
+  "unavailable_relation_count": 1,
+  "unknown_published_relation_count": 1,
+  "unknown_published_relations": [
+    "test_unknown_published_relations"
+  ],
+  "unreachable_object_relation_count": 1,
+  "url": "https://example.com"
+}

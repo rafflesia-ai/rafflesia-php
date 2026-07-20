@@ -1,0 +1,11 @@
+{
+  "alias": "test_alias",
+  "all": [],
+  "any": [],
+  "not": {},
+  "operator": "eq",
+  "value": {},
+  "values": [
+    {}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "close": true,
+  "query_index": 1,
+  "query_residue": "query_residue_01234",
+  "target_index": 1,
+  "target_residue": "target_residue_01234"
+}

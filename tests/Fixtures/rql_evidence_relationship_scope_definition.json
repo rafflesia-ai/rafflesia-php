@@ -1,0 +1,31 @@
+{
+  "alignment": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "kind": "whole_entity",
+  "object_domain_instance": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "object_end": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "object_start": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "subject_domain_instance": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "subject_end": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "subject_start": {
+    "column": "test_column",
+    "source": "test_source"
+  }
+}

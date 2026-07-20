@@ -1,0 +1,216 @@
+{
+  "artifact_count": 1,
+  "artifacts": [
+    {
+      "archive_path": "test_archive_path",
+      "artifact_kind": "test_artifact_kind",
+      "association_id": "association_id_01234",
+      "extension": "test_extension",
+      "group_key": "test_group_key",
+      "map_id": "map_id_01234",
+      "message": "test_message",
+      "name": "Test",
+      "object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "status": "test_status",
+      "structure_id": "structure_id_01234"
+    }
+  ],
+  "association_candidate_count": 1,
+  "association_candidates": [
+    {
+      "group_key": "test_group_key",
+      "map_count": 1,
+      "maps": [
+        {
+          "archive_path": "test_archive_path",
+          "map_id": "map_id_01234",
+          "name": "Test",
+          "object_id": "object_id_01234",
+          "structure_id": "structure_id_01234"
+        }
+      ],
+      "method": "test_method",
+      "status": "test_status",
+      "structure_count": 1,
+      "structures": [
+        {
+          "archive_path": "test_archive_path",
+          "map_id": "map_id_01234",
+          "name": "Test",
+          "object_id": "object_id_01234",
+          "structure_id": "structure_id_01234"
+        }
+      ]
+    }
+  ],
+  "association_count": 1,
+  "associations": [
+    {
+      "association_id": "association_id_01234",
+      "created_at": "test_created_at",
+      "map_id": "map_id_01234",
+      "metadata": {
+        "key": "test_value"
+      },
+      "method": "test_method",
+      "model_id": "model_id_01234",
+      "source": "test_source",
+      "source_url": "https://example.com",
+      "structure_id": "structure_id_01234"
+    }
+  ],
+  "failure_count": 1,
+  "imported_map_count": 1,
+  "imported_maps": [
+    {
+      "emdb_id": "emdb_id_01234",
+      "format": "test_format",
+      "header": {
+        "axis_order": [
+          1
+        ],
+        "cell_angles": [
+          1
+        ],
+        "cell_angstrom": [
+          1
+        ],
+        "columns": 1,
+        "endian": "test_endian",
+        "grid_columns": 1,
+        "grid_rows": 1,
+        "grid_sections": 1,
+        "header_only": true,
+        "header_size_bytes": 1,
+        "machine_stamp": "test_machine_stamp",
+        "max_density": 1,
+        "mean_density": 1,
+        "min_density": 1,
+        "mode": 1,
+        "origin_angstrom": [
+          1
+        ],
+        "parser": {
+          "format": "test_format",
+          "name": "Test",
+          "version": "test_version"
+        },
+        "rms_density": 1,
+        "rows": 1,
+        "sections": 1,
+        "space_group_number": 1,
+        "symmetry_bytes": 1,
+        "voxel_size_angstrom": [
+          1
+        ]
+      },
+      "map_id": "map_id_01234",
+      "metadata": {
+        "key": "test_value"
+      },
+      "object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "retrieved_at": "test_retrieved_at",
+      "source": "test_source",
+      "source_url": "https://example.com"
+    }
+  ],
+  "imported_structure_count": 1,
+  "imported_structures": [
+    {
+      "format": "test_format",
+      "metadata": {
+        "key": "test_value"
+      },
+      "model_version": "test_model_version",
+      "object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "pae_object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "source": "test_source",
+      "source_url": "https://example.com",
+      "structure_id": "structure_id_01234",
+      "target_id": "target_id_01234"
+    }
+  ],
+  "include_kinds": [
+    "test_include_kinds"
+  ],
+  "include_path_substrings": [
+    "test_include_path_substrings"
+  ],
+  "inventory_object_id": "inventory_object_id_01234",
+  "inventory_path": "test_inventory_path",
+  "manifest_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "manifest_path": "test_manifest_path",
+  "map_candidate_count": 1,
+  "output_dir": "test_output_dir",
+  "structure_candidate_count": 1,
+  "table_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "table_path": "test_table_path"
+}

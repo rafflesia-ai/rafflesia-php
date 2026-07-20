@@ -1,0 +1,14 @@
+{
+  "cardinality": "test_cardinality",
+  "coordinate_notes": "test_coordinate_notes",
+  "from_relation": "test_from_relation",
+  "is_lossy": true,
+  "is_range_mapping": true,
+  "local_columns": [
+    "test_local_columns"
+  ],
+  "remote_columns": [
+    "test_remote_columns"
+  ],
+  "to_relation": "test_to_relation"
+}

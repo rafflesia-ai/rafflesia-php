@@ -1,0 +1,7 @@
+{
+  "error": "test_error",
+  "is_installed": true,
+  "is_required": true,
+  "name": "Test",
+  "version": "test_version"
+}

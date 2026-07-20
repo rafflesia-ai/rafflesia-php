@@ -1,0 +1,8 @@
+{
+  "auth_chain_id": "auth_chain_id_01234",
+  "chain_id": "chain_id_01234",
+  "dssp": "test_dssp",
+  "residue_count": 1,
+  "sequence": "test_sequence",
+  "simple": "test_simple"
+}

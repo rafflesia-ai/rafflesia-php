@@ -1,0 +1,298 @@
+{
+  "data": {
+    "active": {
+      "activated_at": "test_activated_at",
+      "benchmark": {
+        "benchmark_id": "benchmark_id_01234",
+        "byte_reduction_fraction": 1,
+        "eligible_query_count": 1,
+        "mean_hit_overlap_fraction": 1,
+        "nprobe": 1,
+        "object_read_reduction_fraction": 1,
+        "passed": true,
+        "query_count": 1,
+        "recall_at_1": 1,
+        "recall_at_10": 1,
+        "recall_at_100": 1,
+        "routed_exact_hit_count": 1,
+        "routed_exact_verified": true,
+        "routed_materialized_bytes": 1,
+        "routed_range_bytes_fetched": 1,
+        "routed_range_read_count": 1,
+        "routed_selected_block_bytes": 1,
+        "segment_id": "segment_id_01234"
+      },
+      "benchmark_object_id": "benchmark_object_id_01234",
+      "benchmark_passed": true,
+      "block_bytes": 1,
+      "block_count": 1,
+      "block_map_object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "block_map_object_id": "block_map_object_id_01234",
+      "dataset_id": "dataset_id_01234",
+      "dataset_version_number": 1,
+      "generation_id": "generation_id_01234",
+      "generation_status": "test_generation_status",
+      "manifest_object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "manifest_object_id": "manifest_object_id_01234",
+      "name": "Test",
+      "policy": {
+        "benchmark_object_id": "benchmark_object_id_01234",
+        "kind": "test_kind",
+        "max_blocks_per_query": 1,
+        "max_materialized_bytes_per_query": 1,
+        "max_object_bytes_per_query": 1,
+        "max_object_reads_per_query": 1,
+        "min_byte_reduction_fraction": 1,
+        "min_hit_overlap_fraction": 1,
+        "min_recall_at_1": 1,
+        "min_recall_at_10": 1,
+        "min_recall_at_100": 1,
+        "passed": true,
+        "reasons": [
+          "test_reasons"
+        ],
+        "require_benchmark": true,
+        "require_exact_verification": true,
+        "require_zero_materialization": true,
+        "schema_version": "test_schema_version",
+        "workload_profile": "test_workload_profile"
+      },
+      "published_at": "test_published_at",
+      "record_count": 1,
+      "ref": "test_ref",
+      "retired_at": "test_retired_at",
+      "search_benchmark": {
+        "benchmark_id": "benchmark_id_01234",
+        "byte_reduction_fraction": 1,
+        "eligible_query_count": 1,
+        "manifest_id": "manifest_id_01234",
+        "mean_hit_overlap_fraction": 1,
+        "nprobe": 1,
+        "object_native_exact_hit_count": 1,
+        "object_native_exact_verified": true,
+        "object_native_materialized_bytes": 1,
+        "object_native_object_bytes": 1,
+        "object_native_object_read_count": 1,
+        "object_native_range_bytes_fetched": 1,
+        "object_native_range_read_count": 1,
+        "object_native_selected_block_bytes": 1,
+        "object_native_selected_block_count": 1,
+        "passed": true,
+        "query_count": 1,
+        "recall_at_1": 1,
+        "recall_at_10": 1,
+        "recall_at_100": 1,
+        "segment_manifest_object_id": "segment_manifest_object_id_01234",
+        "segment_ref": "test_segment_ref"
+      },
+      "search_benchmark_object_id": "search_benchmark_object_id_01234",
+      "search_benchmark_passed": true,
+      "segment_id": "segment_id_01234",
+      "superseded_by_ref": "test_superseded_by_ref",
+      "supersedes_ref": "test_supersedes_ref",
+      "version": "test_version",
+      "workload_profile": "test_workload_profile"
+    },
+    "records": [
+      {
+        "activated_at": "test_activated_at",
+        "benchmark": {
+          "benchmark_id": "benchmark_id_01234",
+          "byte_reduction_fraction": 1,
+          "eligible_query_count": 1,
+          "mean_hit_overlap_fraction": 1,
+          "nprobe": 1,
+          "object_read_reduction_fraction": 1,
+          "passed": true,
+          "query_count": 1,
+          "recall_at_1": 1,
+          "recall_at_10": 1,
+          "recall_at_100": 1,
+          "routed_exact_hit_count": 1,
+          "routed_exact_verified": true,
+          "routed_materialized_bytes": 1,
+          "routed_range_bytes_fetched": 1,
+          "routed_range_read_count": 1,
+          "routed_selected_block_bytes": 1,
+          "segment_id": "segment_id_01234"
+        },
+        "benchmark_object_id": "benchmark_object_id_01234",
+        "benchmark_passed": true,
+        "block_bytes": 1,
+        "block_count": 1,
+        "block_map_object": {
+          "bucket": "test_bucket",
+          "content_type": "test_content_type",
+          "kind": "test_kind",
+          "object_id": "object_id_01234",
+          "object_key": "test_object_key",
+          "path": "test_path",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "storage_backend": "test_storage_backend",
+          "uri": "https://example.com"
+        },
+        "block_map_object_id": "block_map_object_id_01234",
+        "dataset_id": "dataset_id_01234",
+        "dataset_version_number": 1,
+        "generation_id": "generation_id_01234",
+        "generation_status": "test_generation_status",
+        "manifest_object": {
+          "bucket": "test_bucket",
+          "content_type": "test_content_type",
+          "kind": "test_kind",
+          "object_id": "object_id_01234",
+          "object_key": "test_object_key",
+          "path": "test_path",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "storage_backend": "test_storage_backend",
+          "uri": "https://example.com"
+        },
+        "manifest_object_id": "manifest_object_id_01234",
+        "name": "Test",
+        "policy": {
+          "benchmark_object_id": "benchmark_object_id_01234",
+          "kind": "test_kind",
+          "max_blocks_per_query": 1,
+          "max_materialized_bytes_per_query": 1,
+          "max_object_bytes_per_query": 1,
+          "max_object_reads_per_query": 1,
+          "min_byte_reduction_fraction": 1,
+          "min_hit_overlap_fraction": 1,
+          "min_recall_at_1": 1,
+          "min_recall_at_10": 1,
+          "min_recall_at_100": 1,
+          "passed": true,
+          "reasons": [
+            "test_reasons"
+          ],
+          "require_benchmark": true,
+          "require_exact_verification": true,
+          "require_zero_materialization": true,
+          "schema_version": "test_schema_version",
+          "workload_profile": "test_workload_profile"
+        },
+        "published_at": "test_published_at",
+        "record_count": 1,
+        "ref": "test_ref",
+        "retired_at": "test_retired_at",
+        "search_benchmark": {
+          "benchmark_id": "benchmark_id_01234",
+          "byte_reduction_fraction": 1,
+          "eligible_query_count": 1,
+          "manifest_id": "manifest_id_01234",
+          "mean_hit_overlap_fraction": 1,
+          "nprobe": 1,
+          "object_native_exact_hit_count": 1,
+          "object_native_exact_verified": true,
+          "object_native_materialized_bytes": 1,
+          "object_native_object_bytes": 1,
+          "object_native_object_read_count": 1,
+          "object_native_range_bytes_fetched": 1,
+          "object_native_range_read_count": 1,
+          "object_native_selected_block_bytes": 1,
+          "object_native_selected_block_count": 1,
+          "passed": true,
+          "query_count": 1,
+          "recall_at_1": 1,
+          "recall_at_10": 1,
+          "recall_at_100": 1,
+          "segment_manifest_object_id": "segment_manifest_object_id_01234",
+          "segment_ref": "test_segment_ref"
+        },
+        "search_benchmark_object_id": "search_benchmark_object_id_01234",
+        "search_benchmark_passed": true,
+        "segment_id": "segment_id_01234",
+        "superseded_by_ref": "test_superseded_by_ref",
+        "supersedes_ref": "test_supersedes_ref",
+        "version": "test_version",
+        "workload_profile": "test_workload_profile"
+      }
+    ],
+    "row_count": 1
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

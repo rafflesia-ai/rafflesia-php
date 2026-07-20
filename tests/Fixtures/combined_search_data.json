@@ -1,0 +1,64 @@
+{
+  "backend": "test_backend",
+  "domain": "test_domain",
+  "failed_source_count": 1,
+  "hit_count": 1,
+  "hits": [
+    {
+      "domain": "test_domain",
+      "position": 1,
+      "record_id": "record_id_01234",
+      "score": 1,
+      "score_kind": "test_score_kind",
+      "sources": [
+        {
+          "corpus": "test_corpus",
+          "detail": {},
+          "domain": "test_domain",
+          "family": "test_family",
+          "index_version": "test_index_version",
+          "manifest_generation": 1,
+          "namespace": "Test",
+          "position": 1,
+          "release_id": "release_id_01234",
+          "role": "test_role",
+          "score": 1,
+          "score_kind": "test_score_kind",
+          "source": "test_source"
+        }
+      ]
+    }
+  ],
+  "max_hits": 1,
+  "partial": true,
+  "promotion_candidates": [
+    {
+      "domain": "test_domain",
+      "index_version": "test_index_version",
+      "namespace": "Test",
+      "reason": "test_reason",
+      "target_family": "test_target_family"
+    }
+  ],
+  "raw_hit_count": 1,
+  "requested_source_count": 1,
+  "sources": [
+    {
+      "corpus": "test_corpus",
+      "domain": "test_domain",
+      "elapsed_ms": 1,
+      "error": "test_error",
+      "family": "test_family",
+      "hit_count": 1,
+      "index_version": "test_index_version",
+      "manifest_generation": 1,
+      "namespace": "Test",
+      "object_bytes_fetched": 1,
+      "object_read_count": 1,
+      "ok": true,
+      "release_id": "release_id_01234",
+      "role": "test_role"
+    }
+  ],
+  "succeeded_source_count": 1
+}

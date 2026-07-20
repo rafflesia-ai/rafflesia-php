@@ -1,0 +1,18 @@
+{
+  "gates": [
+    {
+      "detail": "test_detail",
+      "gate": "test_gate",
+      "status": "test_status",
+      "values": {
+        "key": {}
+      }
+    }
+  ],
+  "ok": true,
+  "record_count": 1,
+  "ref": "test_ref",
+  "relation": "test_relation",
+  "source": "test_source",
+  "version": "test_version"
+}

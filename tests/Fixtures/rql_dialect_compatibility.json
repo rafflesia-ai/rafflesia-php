@@ -1,0 +1,7 @@
+{
+  "dialect": "test_dialect",
+  "is_readable": true,
+  "is_writable": true,
+  "migration_kind": "none",
+  "status": "current"
+}

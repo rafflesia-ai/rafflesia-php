@@ -1,0 +1,16 @@
+{
+  "audit_digest": "test_audit_digest",
+  "criteria_digest": "test_criteria_digest",
+  "evidence_database": "evidence_database_01234",
+  "evidence_release": "evidence_release_01234",
+  "evidence_source": "evidence_source_01234",
+  "kind": "sequence_similarity",
+  "missing_evidence_policy": "reject",
+  "name": "Test",
+  "ontology_contract_digest": "test_ontology_contract_digest",
+  "relationship_digest": "test_relationship_digest",
+  "scope_kind": "whole_entity",
+  "set_operation_index": 1,
+  "set_operation_operator": "base",
+  "status": "candidate"
+}

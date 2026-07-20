@@ -1,0 +1,8 @@
+{
+  "code": "test_code",
+  "is_retryable": true,
+  "message": "test_message",
+  "request_id": "request_id_01234",
+  "status_code": 1,
+  "type": "test_type"
+}

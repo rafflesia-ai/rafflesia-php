@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "alternate": "test_alternate",
+      "id": "01234",
+      "index": 1,
+      "log_likelihood_ratio": 1,
+      "model_log_likelihood_ratios": [
+        1
+      ],
+      "object": "test_object",
+      "position": 1,
+      "reference": "test_reference"
+    }
+  ],
+  "model_id": "model_id_01234",
+  "model_release": "test_model_release",
+  "object": "test_object",
+  "provider_request_id": "provider_request_id_01234",
+  "scoring_method": "test_scoring_method",
+  "usage": {
+    "residue_count": 1,
+    "sequence_count": 1,
+    "variant_count": 1
+  }
+}

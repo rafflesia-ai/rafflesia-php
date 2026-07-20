@@ -1,0 +1,10 @@
+{
+  "operator": "union_all",
+  "sources": [
+    {
+      "database": "test_database",
+      "name": "Test",
+      "release": "test_release"
+    }
+  ]
+}

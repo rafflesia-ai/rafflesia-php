@@ -1,0 +1,47 @@
+{
+  "compaction_elapsed_ms": 1,
+  "completed_at": "test_completed_at",
+  "discovery_elapsed_ms": 1,
+  "export_elapsed_ms": 1,
+  "import_elapsed_ms": 1,
+  "manifest_elapsed_ms": 1,
+  "object_elapsed_ms": 1,
+  "started_at": "test_started_at",
+  "structure_timings": [
+    {
+      "error_code": "test_error_code",
+      "error_message": "test_error_message",
+      "export_elapsed_ms": 1,
+      "failure_count": 1,
+      "import_elapsed_ms": 1,
+      "row_count": 1,
+      "source_path": "test_source_path",
+      "status": "test_status",
+      "structure_id": "structure_id_01234",
+      "table_artifact_count": 1,
+      "table_timings": [
+        {
+          "elapsed_ms": 1,
+          "error_code": "test_error_code",
+          "error_message": "test_error_message",
+          "row_count": 1,
+          "status": "test_status",
+          "table_name": "Test"
+        }
+      ],
+      "target_id": "target_id_01234",
+      "total_elapsed_ms": 1
+    }
+  ],
+  "table_timings": [
+    {
+      "elapsed_ms": 1,
+      "failure_count": 1,
+      "row_count": 1,
+      "structure_count": 1,
+      "table_artifact_count": 1,
+      "table_name": "Test"
+    }
+  ],
+  "total_elapsed_ms": 1
+}

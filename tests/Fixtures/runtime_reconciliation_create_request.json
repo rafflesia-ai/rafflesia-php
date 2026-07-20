@@ -1,0 +1,19 @@
+{
+  "observations": [
+    {
+      "binding_digest": "test_binding_digest",
+      "build_id": "build_id_01234",
+      "credential_ref": "test_credential_ref",
+      "database_id": "database_id_01234",
+      "database_release_id": "database_release_id_01234",
+      "deployment_id": "deployment_id_01234",
+      "detail": "test_detail",
+      "kind": "dandelion",
+      "observed_at": "test_observed_at",
+      "release_id": "release_id_01234",
+      "repository_id": "repository_id_01234",
+      "status": "ready"
+    }
+  ],
+  "resource_group_id": "resource_group_id_01234"
+}

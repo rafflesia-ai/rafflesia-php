@@ -1,0 +1,6 @@
+{
+  "database": "test_database",
+  "name": "Test",
+  "relation": "test_relation",
+  "release": "test_release"
+}

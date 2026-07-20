@@ -1,0 +1,8 @@
+{
+  "is_pagination_stable": true,
+  "is_result_key_unique": true,
+  "is_valid": true,
+  "object": "rql_runtime_contract_validation",
+  "output_contract_digest": "test_output_contract_digest",
+  "validated_row_count": 1
+}

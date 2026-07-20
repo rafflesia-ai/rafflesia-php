@@ -1,0 +1,23 @@
+{
+  "baseline_cardinality_status": "test_baseline_cardinality_status",
+  "baseline_evidence_digest": "baseline_evidence_digest_01234",
+  "baseline_key_overlap_status": "test_baseline_key_overlap_status",
+  "baseline_measurement_id": "baseline_measurement_id_01234",
+  "baseline_observation_status": "test_baseline_observation_status",
+  "candidate_cardinality_status": "candidate_cardinality_status_01234",
+  "candidate_evidence_digest": "candidate_evidence_digest_01234",
+  "candidate_key_overlap_status": "candidate_key_overlap_status_01234",
+  "candidate_measurement_id": "candidate_measurement_id_01234",
+  "candidate_observation_status": "candidate_observation_status_01234",
+  "cardinality_change": "unchanged",
+  "from_matched_row_fraction_delta": 1,
+  "has_regression": true,
+  "is_delta_available": true,
+  "joined_row_count_delta": 1,
+  "key_variant": "test_key_variant",
+  "matched_distinct_key_count_delta": 1,
+  "observation_change": "unchanged",
+  "overlap_change": "unchanged",
+  "relationship_id": "relationship_id_01234",
+  "to_matched_row_fraction_delta": 1
+}

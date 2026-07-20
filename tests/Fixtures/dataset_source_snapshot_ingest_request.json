@@ -1,0 +1,9 @@
+{
+  "allow_duplicate": true,
+  "dry_run": true,
+  "ingest_mode": "fail_if_exists",
+  "manifest_object_id": "manifest_object_id_01234",
+  "ref": "test_ref",
+  "source": "test_source",
+  "version": "test_version"
+}

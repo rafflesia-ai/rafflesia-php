@@ -1,0 +1,9 @@
+{
+  "corpus": "test_corpus",
+  "include_evidence_channels": true,
+  "include_manifest": true,
+  "include_runtime_contract": true,
+  "object_store_root": "test_object_store_root",
+  "ref": "test_ref",
+  "release_id": "release_id_01234"
+}

@@ -1,0 +1,7 @@
+{
+  "allow_network": true,
+  "emdb_id": "emdb_id_01234",
+  "include_volume": true,
+  "max_download_bytes": 1,
+  "volume_source_url": "https://example.com"
+}

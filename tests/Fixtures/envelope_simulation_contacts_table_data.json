@@ -1,0 +1,172 @@
+{
+  "data": {
+    "backend": {
+      "backend": "test_backend",
+      "error": "test_error",
+      "executable": "test_executable",
+      "is_available": true,
+      "requested_backend": "test_requested_backend",
+      "version": "test_version"
+    },
+    "contact_pair_count": 1,
+    "end_frame": 1,
+    "frame_count": 1,
+    "is_pair_limit_reached": true,
+    "method": "test_method",
+    "radius_angstrom": 1,
+    "relation": {
+      "columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "object": "relation_artifact",
+      "object_refs": [
+        "test_object_refs"
+      ],
+      "preview": {
+        "columns": [
+          "test_columns"
+        ],
+        "content_hash": "test_content_hash",
+        "database": "test_database",
+        "engine": "test_engine",
+        "limit": 1,
+        "order_by": [
+          "test_order_by"
+        ],
+        "relation": "test_relation",
+        "release": "test_release",
+        "returned_row_count": 1,
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "schema_columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "schema_ref": "test_schema_ref"
+      },
+      "relation": "test_relation",
+      "release": "test_release",
+      "row_count": 1,
+      "schema_ref": "test_schema_ref"
+    },
+    "row_count": 1,
+    "selected_frame_count": 1,
+    "selection_a": "test_selection_a",
+    "selection_b": "test_selection_b",
+    "start_frame": 1,
+    "stride": 1,
+    "topology": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "format": "test_format",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "trajectory": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "format": "test_format",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "trajectory_id": "trajectory_id_01234",
+    "trajectory_manifest_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    }
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

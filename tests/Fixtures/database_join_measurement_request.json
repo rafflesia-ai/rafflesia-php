@@ -1,0 +1,14 @@
+{
+  "budget": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "from_database": "test_from_database",
+  "from_release": "test_from_release",
+  "key_variant": "primary",
+  "ontology_digest": "test_ontology_digest",
+  "relationship_id": "relationship_id_01234",
+  "to_database": "test_to_database",
+  "to_release": "test_to_release"
+}

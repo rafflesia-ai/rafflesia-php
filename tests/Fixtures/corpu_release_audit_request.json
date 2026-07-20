@@ -1,0 +1,7 @@
+{
+  "audit_object_id": "audit_object_id_01234",
+  "corpus": "test_corpus",
+  "object_store_root": "test_object_store_root",
+  "ref": "test_ref",
+  "release_id": "release_id_01234"
+}

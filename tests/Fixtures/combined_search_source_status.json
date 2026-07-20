@@ -1,0 +1,16 @@
+{
+  "corpus": "test_corpus",
+  "domain": "test_domain",
+  "elapsed_ms": 1,
+  "error": "test_error",
+  "family": "test_family",
+  "hit_count": 1,
+  "index_version": "test_index_version",
+  "manifest_generation": 1,
+  "namespace": "Test",
+  "object_bytes_fetched": 1,
+  "object_read_count": 1,
+  "ok": true,
+  "release_id": "release_id_01234",
+  "role": "test_role"
+}

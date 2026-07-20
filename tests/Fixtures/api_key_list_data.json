@@ -1,0 +1,19 @@
+{
+  "api_keys": [
+    {
+      "created_at": "2023-01-01T00:00:00.000Z",
+      "description": "test_description",
+      "environment_id": "environment_id_01234",
+      "environment_name": "Test",
+      "environment_type": "test_environment_type",
+      "expires_at": "2023-01-01T00:00:00.000Z",
+      "id": "01234",
+      "is_active": true,
+      "key_prefix": "test_key_prefix",
+      "last_used_at": "2023-01-01T00:00:00.000Z",
+      "name": "Test",
+      "organization_id": "organization_id_01234",
+      "revoked_at": "2023-01-01T00:00:00.000Z"
+    }
+  ]
+}

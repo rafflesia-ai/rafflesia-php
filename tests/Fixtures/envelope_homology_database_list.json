@@ -1,0 +1,90 @@
+{
+  "data": {
+    "data": [
+      {
+        "default_release_alias": "test_default_release_alias",
+        "default_release_id": "default_release_id_01234",
+        "description": "test_description",
+        "display_name": "Test",
+        "id": "01234",
+        "modes": [
+          "test_modes"
+        ],
+        "molecule_type": "test_molecule_type",
+        "object": "test_object",
+        "query_kinds": [
+          "test_query_kinds"
+        ],
+        "slug": "test_slug",
+        "source_dataset": "test_source_dataset",
+        "source_license": "test_source_license",
+        "source_provider": "source_provider_01234",
+        "source_version": "test_source_version"
+      }
+    ],
+    "has_more": true,
+    "object": "test_object",
+    "url": "https://example.com"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

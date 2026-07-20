@@ -1,0 +1,18 @@
+{
+  "anchor": {
+    "cardinality": "one_to_one",
+    "coordinate_notes": "test_coordinate_notes",
+    "remote_columns": [
+      "test_remote_columns"
+    ],
+    "review_digest": "test_review_digest",
+    "review_id": "review_id_01234",
+    "semantic_basis": "test_semantic_basis",
+    "to_relation": "test_to_relation"
+  },
+  "columns": [
+    "test_columns"
+  ],
+  "name": "Test",
+  "relation": "test_relation"
+}

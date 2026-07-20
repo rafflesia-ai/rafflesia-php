@@ -1,0 +1,28 @@
+{
+  "adjacent_copy_atom_clash_count": 1,
+  "adjacent_copy_atom_clash_fraction": 1,
+  "adjacent_copy_atom_pair_count": 1,
+  "atom_above_threshold_count": 1,
+  "atom_above_threshold_fraction": 1,
+  "copy_mean_density_z_stddev": 1,
+  "copy_mean_sampled_density_z": [
+    1
+  ],
+  "density_threshold": 1,
+  "density_threshold_source": "test_density_threshold_source",
+  "expected_sample_count": 1,
+  "geometry_probe_score": 1,
+  "mean_copy_above_threshold_fraction": 1,
+  "mean_copy_mean_density_z": 1,
+  "mean_sampled_density": 1,
+  "mean_sampled_density_z": 1,
+  "minimum_adjacent_copy_atom_distance_angstrom": 1,
+  "minimum_copy_above_threshold_fraction": 1,
+  "minimum_copy_mean_density_z": 1,
+  "minimum_copy_sample_fraction": 1,
+  "objective": 1,
+  "outside_map_fraction": 1,
+  "sample_fraction": 1,
+  "sampled_atom_count": 1,
+  "sampled_atom_name": "Test"
+}

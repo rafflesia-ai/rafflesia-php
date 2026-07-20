@@ -1,0 +1,23 @@
+{
+  "alt_local_columns": [
+    "test_alt_local_columns"
+  ],
+  "alt_remote_columns": [
+    "test_alt_remote_columns"
+  ],
+  "cardinality": "test_cardinality",
+  "coordinate_notes": "test_coordinate_notes",
+  "from_relation": "test_from_relation",
+  "is_review_provenance_complete": true,
+  "local_columns": [
+    "test_local_columns"
+  ],
+  "relationship_id": "relationship_id_01234",
+  "remote_columns": [
+    "test_remote_columns"
+  ],
+  "review_digest": "test_review_digest",
+  "review_id": "review_id_01234",
+  "semantic_basis": "test_semantic_basis",
+  "to_relation": "test_to_relation"
+}

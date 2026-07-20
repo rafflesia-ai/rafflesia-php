@@ -1,0 +1,5 @@
+{
+  "manifest_path": "test_manifest_path",
+  "ref": "test_ref",
+  "target_dir": "test_target_dir"
+}

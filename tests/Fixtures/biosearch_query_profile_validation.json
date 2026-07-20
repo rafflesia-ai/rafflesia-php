@@ -1,0 +1,19 @@
+{
+  "kind": "test_kind",
+  "max_observed_result_set_ids": 1,
+  "max_observed_result_set_path": "test_max_observed_result_set_path",
+  "max_result_set_ids": 1,
+  "profile_kind": "test_profile_kind",
+  "profile_version": 1,
+  "required_path_count": 1,
+  "required_paths": [
+    "test_required_paths"
+  ],
+  "result_set_modes": {
+    "key": 1
+  },
+  "row_count": 1,
+  "warnings": [
+    "test_warnings"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "check_blocks": true,
+  "index_id": "index_id_01234",
+  "manifest_object_id": "manifest_object_id_01234",
+  "manifest_path": "test_manifest_path",
+  "name": "Test",
+  "version": "test_version"
+}

@@ -1,0 +1,12 @@
+{
+  "auth_chain_id": "auth_chain_id_01234",
+  "auth_position": 1,
+  "chain_id": "chain_id_01234",
+  "chi1_deg": 1,
+  "chi1_is_staggered": true,
+  "chi1_rotamer": "test_chi1_rotamer",
+  "chi2_deg": 1,
+  "insertion_code": "test_insertion_code",
+  "position": 1,
+  "residue": "residue_01234"
+}

@@ -1,0 +1,7 @@
+{
+  "code": "test_code",
+  "message": "test_message",
+  "observed_value": 1,
+  "reference_value": 1,
+  "severity": "test_severity"
+}

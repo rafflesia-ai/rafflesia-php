@@ -1,0 +1,8 @@
+{
+  "detail": "test_detail",
+  "gate": "test_gate",
+  "status": "test_status",
+  "values": {
+    "key": {}
+  }
+}

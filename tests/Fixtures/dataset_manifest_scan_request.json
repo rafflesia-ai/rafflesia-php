@@ -1,0 +1,12 @@
+{
+  "dataset_name": "Test",
+  "failure_free": true,
+  "limit": 1,
+  "require_tables": [
+    "test_require_tables"
+  ],
+  "root": "test_root",
+  "sort": "modified",
+  "version_contains": "test_version_contains",
+  "version_prefix": "test_version_prefix"
+}

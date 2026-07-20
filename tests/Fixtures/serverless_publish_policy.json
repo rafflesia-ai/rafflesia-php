@@ -1,0 +1,22 @@
+{
+  "benchmark_object_id": "benchmark_object_id_01234",
+  "kind": "test_kind",
+  "max_blocks_per_query": 1,
+  "max_materialized_bytes_per_query": 1,
+  "max_object_bytes_per_query": 1,
+  "max_object_reads_per_query": 1,
+  "min_byte_reduction_fraction": 1,
+  "min_hit_overlap_fraction": 1,
+  "min_recall_at_1": 1,
+  "min_recall_at_10": 1,
+  "min_recall_at_100": 1,
+  "passed": true,
+  "reasons": [
+    "test_reasons"
+  ],
+  "require_benchmark": true,
+  "require_exact_verification": true,
+  "require_zero_materialization": true,
+  "schema_version": "test_schema_version",
+  "workload_profile": "test_workload_profile"
+}

@@ -1,0 +1,9 @@
+{
+  "idempotency_key": "idempotency_key_01234",
+  "input": {
+    "key": {}
+  },
+  "max_retries": 1,
+  "operation": "test_operation",
+  "timeout_ms": 1
+}

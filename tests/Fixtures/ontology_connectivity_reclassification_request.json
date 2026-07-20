@@ -1,0 +1,10 @@
+{
+  "cardinality": "one_to_one",
+  "coordinate_notes": "test_coordinate_notes",
+  "is_lossy": true,
+  "is_range_mapping": true,
+  "relationship_id": "relationship_id_01234",
+  "review_digest": "test_review_digest",
+  "review_id": "review_id_01234",
+  "semantic_basis": "test_semantic_basis"
+}

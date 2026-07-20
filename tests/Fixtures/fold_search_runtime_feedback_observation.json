@@ -1,0 +1,21 @@
+{
+  "database": "test_database",
+  "estimated_wall_ms": 1,
+  "high_drift_observation_count": 1,
+  "high_drift_ratio_threshold": 1,
+  "high_drift_repeat_threshold": 1,
+  "index_ref": "test_index_ref",
+  "manifest_id": "manifest_id_01234",
+  "manifest_object_id": "manifest_object_id_01234",
+  "observation_status": "test_observation_status",
+  "observed_wall_ms": 1,
+  "planner_bias": "test_planner_bias",
+  "requires_explicit_full_scan": true,
+  "runtime_drift_ratio": 1,
+  "runtime_feedback_policy": "test_runtime_feedback_policy",
+  "schema_version": "test_schema_version",
+  "selected_path": "test_selected_path",
+  "selection": "test_selection",
+  "target_key": "test_target_key",
+  "will_bias_future_plans": true
+}

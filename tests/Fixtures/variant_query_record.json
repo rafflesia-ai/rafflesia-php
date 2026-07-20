@@ -1,0 +1,13 @@
+{
+  "alt": "test_alt",
+  "chrom": "test_chrom",
+  "filter": "test_filter",
+  "id": "01234",
+  "info": "test_info",
+  "pos": 1,
+  "qual": "test_qual",
+  "ref": "test_ref",
+  "samples": [
+    "test_samples"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "artifact_id": "artifact_id_01234",
+  "evidence_digest": "evidence_digest_01234",
+  "id": "01234",
+  "kind": "test_kind",
+  "object": "validation_ref",
+  "observed_at": "test_observed_at",
+  "status": "test_status"
+}

@@ -1,0 +1,16 @@
+{
+  "artifact_ids": [
+    "artifact_ids_01234"
+  ],
+  "available_records": 1,
+  "coverage_fraction": 1,
+  "derived_from": [
+    "test_derived_from"
+  ],
+  "eligible_records": 1,
+  "id": "01234",
+  "kind": "test_kind",
+  "model_release_id": "model_release_id_01234",
+  "origin": "test_origin",
+  "representation": "test_representation"
+}

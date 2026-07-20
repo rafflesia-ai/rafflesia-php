@@ -1,0 +1,27 @@
+{
+  "cache_hit": true,
+  "created_at": "test_created_at",
+  "database_snapshots": [
+    {
+      "digest": "test_digest",
+      "kind": "test_kind",
+      "name": "Test",
+      "version": "test_version"
+    }
+  ],
+  "generated_object_ids": [
+    "generated_object_ids_01234"
+  ],
+  "input_hash": "test_input_hash",
+  "operation": "test_operation",
+  "parameters_hash": "test_parameters_hash",
+  "request_id": "request_id_01234",
+  "server_version": "test_server_version",
+  "tool_versions": [
+    {
+      "name": "Test",
+      "path": "test_path",
+      "version": "test_version"
+    }
+  ]
+}

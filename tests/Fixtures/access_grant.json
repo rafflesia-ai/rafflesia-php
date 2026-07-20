@@ -1,0 +1,7 @@
+{
+  "actions": [
+    "test_actions"
+  ],
+  "principal_id": "principal_id_01234",
+  "principal_type": "organization"
+}

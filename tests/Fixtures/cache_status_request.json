@@ -1,0 +1,24 @@
+{
+  "include_files": true,
+  "max_bytes": 1,
+  "max_files": 1,
+  "namespace": "Test",
+  "older_than_seconds": 1,
+  "pinned_paths": [
+    "test_pinned_paths"
+  ],
+  "policy": {
+    "max_age_seconds": 1,
+    "max_bytes": 1,
+    "namespace": "Test",
+    "older_than_seconds": 1,
+    "pinned_paths": [
+      "test_pinned_paths"
+    ],
+    "pinned_shards": [
+      "test_pinned_shards"
+    ]
+  },
+  "target_dir": "test_target_dir",
+  "workload_profile": "test_workload_profile"
+}

@@ -1,0 +1,2585 @@
+{
+  "data": {
+    "compilation": {
+      "activated_joins": [
+        {
+          "activation": "always",
+          "evidence_digest": "evidence_digest_01234",
+          "evidence_requirement": "observed",
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "on": [
+            {
+              "all": [],
+              "any": [],
+              "column": "test_column",
+              "compare_column": "test_compare_column",
+              "compare_source": "test_compare_source",
+              "exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "not": {},
+              "not_exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "operator": "eq",
+              "parameter": "test_parameter",
+              "source": "test_source",
+              "value": {},
+              "values": [
+                {}
+              ]
+            }
+          ],
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "type": "inner"
+        }
+      ],
+      "applied_parameters": {
+        "key": {}
+      },
+      "compilation_digest": "test_compilation_digest",
+      "evidence_ledger_plan": {
+        "comparison_output_columns": [
+          {
+            "computation": "source",
+            "is_nullable": true,
+            "is_result_key": true,
+            "lineage": [
+              {
+                "column": "test_column",
+                "database": "test_database",
+                "relation": "test_relation",
+                "release": "test_release",
+                "source": "test_source"
+              }
+            ],
+            "name": "Test",
+            "role": "dimension",
+            "semantic_keys": [
+              "test_semantic_keys"
+            ],
+            "unit": "test_unit",
+            "value_type": "string"
+          }
+        ],
+        "comparison_query": {
+          "allow_unverified_joins": true,
+          "budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "interactive",
+          "cursor": "test_cursor",
+          "dialect": "rafflesia_sql_2026_07_13",
+          "join_evidence_policy": "advisory",
+          "limit": 1,
+          "ontology_digest": "test_ontology_digest",
+          "required_join_evidence": [
+            {
+              "evidence_digest": "evidence_digest_01234",
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "requirement": "observed",
+              "right_source": "test_right_source"
+            }
+          ],
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release"
+            }
+          ],
+          "sql": "test_sql",
+          "strict_joins": true
+        },
+        "comparison_result_key": [
+          "test_comparison_result_key"
+        ],
+        "evidence_profiles": [
+          {
+            "index": 1,
+            "name": "Test",
+            "overrides": [
+              {
+                "authored_criterion_digest": "test_authored_criterion_digest",
+                "criterion_index": 1,
+                "operator": "test_operator",
+                "profile_criterion_digest": "test_profile_criterion_digest",
+                "relationship_name": "Test",
+                "threshold": 1,
+                "unit": "test_unit"
+              }
+            ],
+            "profile_digest": "test_profile_digest"
+          }
+        ],
+        "id": "01234",
+        "object": "rql_evidence_ledger_plan",
+        "output_columns": [
+          {
+            "computation": "source",
+            "is_nullable": true,
+            "is_result_key": true,
+            "lineage": [
+              {
+                "column": "test_column",
+                "database": "test_database",
+                "relation": "test_relation",
+                "release": "test_release",
+                "source": "test_source"
+              }
+            ],
+            "name": "Test",
+            "role": "dimension",
+            "semantic_keys": [
+              "test_semantic_keys"
+            ],
+            "unit": "test_unit",
+            "value_type": "string"
+          }
+        ],
+        "plan_digest": "test_plan_digest",
+        "profile_output_columns": [
+          {
+            "computation": "source",
+            "is_nullable": true,
+            "is_result_key": true,
+            "lineage": [
+              {
+                "column": "test_column",
+                "database": "test_database",
+                "relation": "test_relation",
+                "release": "test_release",
+                "source": "test_source"
+              }
+            ],
+            "name": "Test",
+            "role": "dimension",
+            "semantic_keys": [
+              "test_semantic_keys"
+            ],
+            "unit": "test_unit",
+            "value_type": "string"
+          }
+        ],
+        "profile_query": {
+          "allow_unverified_joins": true,
+          "budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "interactive",
+          "cursor": "test_cursor",
+          "dialect": "rafflesia_sql_2026_07_13",
+          "join_evidence_policy": "advisory",
+          "limit": 1,
+          "ontology_digest": "test_ontology_digest",
+          "required_join_evidence": [
+            {
+              "evidence_digest": "evidence_digest_01234",
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "requirement": "observed",
+              "right_source": "test_right_source"
+            }
+          ],
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release"
+            }
+          ],
+          "sql": "test_sql",
+          "strict_joins": true
+        },
+        "profile_result_key": [
+          "test_profile_result_key"
+        ],
+        "query": {
+          "allow_unverified_joins": true,
+          "budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "interactive",
+          "cursor": "test_cursor",
+          "dialect": "rafflesia_sql_2026_07_13",
+          "join_evidence_policy": "advisory",
+          "limit": 1,
+          "ontology_digest": "test_ontology_digest",
+          "required_join_evidence": [
+            {
+              "evidence_digest": "evidence_digest_01234",
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "requirement": "observed",
+              "right_source": "test_right_source"
+            }
+          ],
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release"
+            }
+          ],
+          "sql": "test_sql",
+          "strict_joins": true
+        },
+        "relationship_comparisons": [
+          {
+            "comparability": "comparable",
+            "comparability_reason": "typed_namespace_and_scope_match",
+            "comparison_digest": "test_comparison_digest",
+            "index": 1,
+            "left_evidence_source": "left_evidence_source_01234",
+            "left_relationship_digest": "test_left_relationship_digest",
+            "left_relationship_name": "Test",
+            "left_set_operation_index": 1,
+            "left_set_operation_operator": "base",
+            "name": "Test",
+            "object_namespace": "Test",
+            "right_evidence_source": "right_evidence_source_01234",
+            "right_relationship_digest": "test_right_relationship_digest",
+            "right_relationship_name": "Test",
+            "right_set_operation_index": 1,
+            "right_set_operation_operator": "base",
+            "scope_kind": "test_scope_kind",
+            "subject_namespace": "Test"
+          }
+        ],
+        "relationship_digests": [
+          "test_relationship_digests"
+        ],
+        "result_key": [
+          "test_result_key"
+        ],
+        "threshold_sweeps": [
+          {
+            "criterion_index": 1,
+            "relationship_name": "Test",
+            "thresholds": [
+              1
+            ]
+          }
+        ]
+      },
+      "evidence_relationships": [
+        {
+          "criteria": [
+            {
+              "all": [],
+              "any": [],
+              "column": "test_column",
+              "compare_column": "test_compare_column",
+              "compare_source": "test_compare_source",
+              "exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "not": {},
+              "not_exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "operator": "eq",
+              "source": "test_source",
+              "value": {},
+              "values": [
+                {}
+              ]
+            }
+          ],
+          "criteria_digest": "test_criteria_digest",
+          "criterion_plan": [
+            {
+              "acceptance": {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              },
+              "criterion_digest": "test_criterion_digest",
+              "field": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "index": 1,
+              "metric_contract": {
+                "column": "test_column",
+                "description": "test_description",
+                "direction": "minimum",
+                "maximum": 1,
+                "method_columns": [
+                  "test_method_columns"
+                ],
+                "minimum": 1,
+                "unit": "test_unit"
+              },
+              "missing_evidence_policy": "reject",
+              "origin": "identity",
+              "predicate": {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            }
+          ],
+          "description": "test_description",
+          "evidence_database": "evidence_database_01234",
+          "evidence_fields": [
+            {
+              "column": "test_column",
+              "source": "test_source"
+            }
+          ],
+          "evidence_release": "evidence_release_01234",
+          "evidence_source": "evidence_source_01234",
+          "kind": "sequence_similarity",
+          "method": {
+            "column": "test_column",
+            "source": "test_source"
+          },
+          "missing_evidence_policy": "reject",
+          "name": "Test",
+          "object": {
+            "column": "test_column",
+            "source": "test_source"
+          },
+          "ontology_contract_digest": "test_ontology_contract_digest",
+          "relationship_digest": "test_relationship_digest",
+          "scope": {
+            "alignment": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "kind": "whole_entity",
+            "object_domain_instance": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "object_end": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "object_start": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "subject_domain_instance": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "subject_end": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "subject_start": {
+              "column": "test_column",
+              "source": "test_source"
+            }
+          },
+          "set_operation_index": 1,
+          "set_operation_operator": "base",
+          "status": "candidate",
+          "subject": {
+            "column": "test_column",
+            "source": "test_source"
+          }
+        }
+      ],
+      "explanation": {
+        "caller_filter_expansions": [
+          {
+            "column": "test_column",
+            "name": "Test",
+            "operator": "test_operator",
+            "path": "test_path",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "evidence_relationships": [
+          {
+            "criteria": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "criteria_digest": "test_criteria_digest",
+            "criterion_plan": [
+              {
+                "acceptance": {
+                  "all": [],
+                  "any": [],
+                  "column": "test_column",
+                  "compare_column": "test_compare_column",
+                  "compare_source": "test_compare_source",
+                  "exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "not": {},
+                  "not_exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "operator": "eq",
+                  "source": "test_source",
+                  "value": {},
+                  "values": [
+                    {}
+                  ]
+                },
+                "criterion_digest": "test_criterion_digest",
+                "field": {
+                  "column": "test_column",
+                  "source": "test_source"
+                },
+                "index": 1,
+                "metric_contract": {
+                  "column": "test_column",
+                  "description": "test_description",
+                  "direction": "minimum",
+                  "maximum": 1,
+                  "method_columns": [
+                    "test_method_columns"
+                  ],
+                  "minimum": 1,
+                  "unit": "test_unit"
+                },
+                "missing_evidence_policy": "reject",
+                "origin": "identity",
+                "predicate": {
+                  "all": [],
+                  "any": [],
+                  "column": "test_column",
+                  "compare_column": "test_compare_column",
+                  "compare_source": "test_compare_source",
+                  "exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "not": {},
+                  "not_exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "operator": "eq",
+                  "source": "test_source",
+                  "value": {},
+                  "values": [
+                    {}
+                  ]
+                }
+              }
+            ],
+            "description": "test_description",
+            "evidence_database": "evidence_database_01234",
+            "evidence_fields": [
+              {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            ],
+            "evidence_release": "evidence_release_01234",
+            "evidence_source": "evidence_source_01234",
+            "kind": "sequence_similarity",
+            "method": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "missing_evidence_policy": "reject",
+            "name": "Test",
+            "object": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "ontology_contract_digest": "test_ontology_contract_digest",
+            "relationship_digest": "test_relationship_digest",
+            "scope": {
+              "alignment": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "kind": "whole_entity",
+              "object_domain_instance": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "object_end": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "object_start": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_domain_instance": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_end": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_start": {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            },
+            "set_operation_index": 1,
+            "set_operation_operator": "base",
+            "status": "candidate",
+            "subject": {
+              "column": "test_column",
+              "source": "test_source"
+            }
+          }
+        ],
+        "explanation_digest": "test_explanation_digest",
+        "grain_proofs": [
+          {
+            "fanout_join_ids": [
+              "fanout_join_ids_01234"
+            ],
+            "input_grain": [
+              "test_input_grain"
+            ],
+            "measurement": "test_measurement",
+            "protection": "not_declared"
+          }
+        ],
+        "id": "01234",
+        "join_decisions": [
+          {
+            "action": "activated",
+            "join_index": 1,
+            "left_source": "test_left_source",
+            "reason": "always",
+            "right_source": "test_right_source"
+          }
+        ],
+        "normalized_ast": {
+          "allow_unverified_joins": true,
+          "budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "interactive",
+          "cursor": "test_cursor",
+          "declaration_only": true,
+          "dialect": "rafflesia_sql_2026_07_13",
+          "dimensions": [
+            {
+              "alias": "test_alias",
+              "column": "test_column",
+              "compute": {
+                "else": {},
+                "function": "date_bucket",
+                "mappings": [
+                  {
+                    "output": {},
+                    "value": {}
+                  }
+                ],
+                "origin": 1,
+                "unit": "day",
+                "width": 1
+              },
+              "source": "test_source"
+            }
+          ],
+          "filters": [
+            {
+              "all": [],
+              "any": [],
+              "column": "test_column",
+              "compare_column": "test_compare_column",
+              "compare_source": "test_compare_source",
+              "exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "not": {},
+              "not_exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "operator": "eq",
+              "source": "test_source",
+              "value": {},
+              "values": [
+                {}
+              ]
+            }
+          ],
+          "from": "test_from",
+          "having": [
+            {
+              "alias": "test_alias",
+              "all": [],
+              "any": [],
+              "not": {},
+              "operator": "eq",
+              "value": {},
+              "values": [
+                {}
+              ]
+            }
+          ],
+          "join_evidence_policy": "advisory",
+          "joins": [
+            {
+              "activation": "always",
+              "evidence_digest": "evidence_digest_01234",
+              "evidence_requirement": "observed",
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "on": [
+                {
+                  "all": [],
+                  "any": [],
+                  "column": "test_column",
+                  "compare_column": "test_compare_column",
+                  "compare_source": "test_compare_source",
+                  "exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "not": {},
+                  "not_exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "operator": "eq",
+                  "source": "test_source",
+                  "value": {},
+                  "values": [
+                    {}
+                  ]
+                }
+              ],
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "type": "inner"
+            }
+          ],
+          "limit": 1,
+          "measurements": [
+            {
+              "alias": "test_alias",
+              "column": "test_column",
+              "fields": [
+                {
+                  "alias": "test_alias",
+                  "column": "test_column",
+                  "compute": {
+                    "else": {},
+                    "function": "date_bucket",
+                    "mappings": [
+                      {
+                        "output": {},
+                        "value": {}
+                      }
+                    ],
+                    "origin": 1,
+                    "unit": "day",
+                    "width": 1
+                  },
+                  "source": "test_source"
+                }
+              ],
+              "function": "count",
+              "input_grain": [
+                {
+                  "alias": "test_alias",
+                  "column": "test_column",
+                  "compute": {
+                    "else": {},
+                    "function": "date_bucket",
+                    "mappings": [
+                      {
+                        "output": {},
+                        "value": {}
+                      }
+                    ],
+                    "origin": 1,
+                    "unit": "day",
+                    "width": 1
+                  },
+                  "source": "test_source"
+                }
+              ],
+              "source": "test_source",
+              "unit": "test_unit",
+              "where": [
+                {
+                  "all": [],
+                  "any": [],
+                  "column": "test_column",
+                  "compare_column": "test_compare_column",
+                  "compare_source": "test_compare_source",
+                  "exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "not": {},
+                  "not_exists": {
+                    "key_variant": "primary",
+                    "left_source": "test_left_source",
+                    "relationship_id": "relationship_id_01234",
+                    "right_source": "test_right_source",
+                    "where": []
+                  },
+                  "operator": "eq",
+                  "source": "test_source",
+                  "value": {},
+                  "values": [
+                    {}
+                  ]
+                }
+              ]
+            }
+          ],
+          "ontology_digest": "test_ontology_digest",
+          "order_by": [
+            {
+              "alias": "test_alias",
+              "column": "test_column",
+              "direction": "asc",
+              "source": "test_source"
+            }
+          ],
+          "ratios": [
+            {
+              "alias": "test_alias",
+              "denominator": "test_denominator",
+              "null_behavior": "null",
+              "numerator": "test_numerator",
+              "scale": 1,
+              "unit": "test_unit",
+              "zero_behavior": "null"
+            }
+          ],
+          "result_key": [
+            "test_result_key"
+          ],
+          "semantic_dialect": "rafflesia_semantic_query_2026_07_17",
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release"
+            }
+          ],
+          "strict_joins": true
+        },
+        "normalized_ast_digest": "test_normalized_ast_digest",
+        "object": "rql_compiler_explanation",
+        "resolved_ontology_edges": [
+          {
+            "can_fan_out": true,
+            "cardinality": "test_cardinality",
+            "is_lossy": true,
+            "is_range_mapping": true,
+            "join_index": 1,
+            "key_variant": "test_key_variant",
+            "left_source": "test_left_source",
+            "local_columns": [
+              "test_local_columns"
+            ],
+            "relationship_id": "relationship_id_01234",
+            "remote_columns": [
+              "test_remote_columns"
+            ],
+            "right_source": "test_right_source"
+          }
+        ]
+      },
+      "id": "01234",
+      "is_release_backed": true,
+      "module": {
+        "default_dimensions": [
+          "test_default_dimensions"
+        ],
+        "default_measurements": [
+          "test_default_measurements"
+        ],
+        "default_ratios": [
+          "test_default_ratios"
+        ],
+        "description": "test_description",
+        "dimensions": [
+          {
+            "alias": "test_alias",
+            "column": "test_column",
+            "compute": {
+              "else": {},
+              "function": "date_bucket",
+              "mappings": [
+                {
+                  "output": {},
+                  "value": {}
+                }
+              ],
+              "origin": 1,
+              "unit": "day",
+              "width": 1
+            },
+            "description": "test_description",
+            "name": "Test",
+            "source": "test_source"
+          }
+        ],
+        "domain": "test_domain",
+        "evidence_relationships": [
+          {
+            "criteria": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "parameter": "test_parameter",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "description": "test_description",
+            "evidence_fields": [
+              {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            ],
+            "evidence_source": "evidence_source_01234",
+            "kind": "sequence_similarity",
+            "method": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "missing_evidence_policy": "reject",
+            "name": "Test",
+            "object": {
+              "column": "test_column",
+              "source": "test_source"
+            },
+            "ontology_contract": {
+              "assertion_evidence_columns": [
+                "assertion_evidence_columns_01234"
+              ],
+              "contract_digest": "test_contract_digest",
+              "description": "test_description",
+              "kind": "sequence_similarity",
+              "method_column": "test_method_column",
+              "metrics": [
+                {
+                  "column": "test_column",
+                  "description": "test_description",
+                  "direction": "minimum",
+                  "maximum": 1,
+                  "method_columns": [
+                    "test_method_columns"
+                  ],
+                  "minimum": 1,
+                  "unit": "test_unit"
+                }
+              ],
+              "object_column": "test_object_column",
+              "qualifier_columns": [
+                "test_qualifier_columns"
+              ],
+              "scopes": [
+                {
+                  "alignment_id_column": "alignment_id_column_01234",
+                  "kind": "whole_entity",
+                  "object_domain_instance_column": "test_object_domain_instance_column",
+                  "object_end_column": "test_object_end_column",
+                  "object_start_column": "test_object_start_column",
+                  "subject_domain_instance_column": "test_subject_domain_instance_column",
+                  "subject_end_column": "test_subject_end_column",
+                  "subject_start_column": "test_subject_start_column"
+                }
+              ],
+              "status": "candidate",
+              "subject_column": "test_subject_column"
+            },
+            "scope": {
+              "alignment": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "kind": "whole_entity",
+              "object_domain_instance": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "object_end": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "object_start": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_domain_instance": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_end": {
+                "column": "test_column",
+                "source": "test_source"
+              },
+              "subject_start": {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            },
+            "status": "candidate",
+            "subject": {
+              "column": "test_column",
+              "source": "test_source"
+            }
+          }
+        ],
+        "filterables": [
+          {
+            "column": "test_column",
+            "description": "test_description",
+            "name": "Test",
+            "operators": [
+              "test_operators"
+            ],
+            "source": "test_source"
+          }
+        ],
+        "filters": [
+          {
+            "all": [],
+            "any": [],
+            "column": "test_column",
+            "compare_column": "test_compare_column",
+            "compare_source": "test_compare_source",
+            "exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "not": {},
+            "not_exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "operator": "eq",
+            "parameter": "test_parameter",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "from": "test_from",
+        "having": [
+          {
+            "all": [],
+            "any": [],
+            "measurement": "test_measurement",
+            "not": {},
+            "operator": "eq",
+            "parameter": "test_parameter",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "id": "01234",
+        "imports": [
+          {
+            "description": "test_description",
+            "name": "Test",
+            "relation": "test_relation"
+          }
+        ],
+        "joins": [
+          {
+            "activation": "always",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_requirement": "observed",
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "on": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "parameter": "test_parameter",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "type": "inner"
+          }
+        ],
+        "measurements": [
+          {
+            "alias": "test_alias",
+            "column": "test_column",
+            "description": "test_description",
+            "fields": [
+              {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            ],
+            "function": "count",
+            "input_grain": [
+              {
+                "column": "test_column",
+                "source": "test_source"
+              }
+            ],
+            "name": "Test",
+            "source": "test_source",
+            "unit": "test_unit",
+            "where": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "parameter": "test_parameter",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ]
+          }
+        ],
+        "module_digest": "test_module_digest",
+        "name": "Test",
+        "object": "rql_module",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "order_by": [
+          {
+            "alias": "test_alias",
+            "column": "test_column",
+            "direction": "asc",
+            "source": "test_source"
+          }
+        ],
+        "parameter_guards": [
+          {
+            "compare_parameter": "test_compare_parameter",
+            "kind": "requires",
+            "message": "test_message",
+            "operator": "eq",
+            "parameter": "test_parameter",
+            "parameters": [
+              "test_parameters"
+            ],
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "allowed_values": [
+              {}
+            ],
+            "default": {},
+            "description": "test_description",
+            "has_default": true,
+            "is_required": true,
+            "is_unique": true,
+            "maximum": 1,
+            "maximum_items": 1,
+            "minimum": 1,
+            "minimum_items": 1,
+            "name": "Test",
+            "timezone": "required",
+            "type": "string",
+            "unit": "test_unit"
+          }
+        ],
+        "quality_notes": [
+          "test_quality_notes"
+        ],
+        "ratios": [
+          {
+            "alias": "test_alias",
+            "denominator": "test_denominator",
+            "description": "test_description",
+            "name": "Test",
+            "null_behavior": "null",
+            "numerator": "test_numerator",
+            "scale": 1,
+            "unit": "test_unit",
+            "zero_behavior": "null"
+          }
+        ],
+        "result_key": [
+          "test_result_key"
+        ],
+        "rql_dialect": "test_rql_dialect",
+        "source_format": "rql_yaml",
+        "source_origin": "embedded",
+        "source_text": "test_source_text",
+        "strict_joins": true,
+        "version": "test_version"
+      },
+      "module_digest": "test_module_digest",
+      "module_id": "module_id_01234",
+      "module_name": "Test",
+      "module_version": "test_module_version",
+      "object": "rql_compilation",
+      "ontology_digest": "test_ontology_digest",
+      "ontology_version": "test_ontology_version",
+      "output_columns": [
+        {
+          "computation": "source",
+          "is_nullable": true,
+          "is_result_key": true,
+          "lineage": [
+            {
+              "column": "test_column",
+              "database": "test_database",
+              "relation": "test_relation",
+              "release": "test_release",
+              "source": "test_source"
+            }
+          ],
+          "name": "Test",
+          "role": "dimension",
+          "semantic_keys": [
+            "test_semantic_keys"
+          ],
+          "unit": "test_unit",
+          "value_type": "string"
+        }
+      ],
+      "output_contract_compatibility": {
+        "actual_digest": "test_actual_digest",
+        "changes": [
+          {
+            "after": {},
+            "before": {},
+            "kind": "digest_changed",
+            "path": "test_path"
+          }
+        ],
+        "expected_digest": "test_expected_digest",
+        "is_compatible": true,
+        "object": "rql_output_contract_compatibility",
+        "status": "unpinned"
+      },
+      "output_contract_digest": "test_output_contract_digest",
+      "pruned_joins": [
+        {
+          "activation": "always",
+          "evidence_digest": "evidence_digest_01234",
+          "evidence_requirement": "observed",
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "on": [
+            {
+              "all": [],
+              "any": [],
+              "column": "test_column",
+              "compare_column": "test_compare_column",
+              "compare_source": "test_compare_source",
+              "exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "not": {},
+              "not_exists": {
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "where": []
+              },
+              "operator": "eq",
+              "parameter": "test_parameter",
+              "source": "test_source",
+              "value": {},
+              "values": [
+                {}
+              ]
+            }
+          ],
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "type": "inner"
+        }
+      ],
+      "reproducibility_lock": {
+        "compiler_contract_digest": "test_compiler_contract_digest",
+        "compiler_version": "test_compiler_version",
+        "evidence_comparison_result_digest": "evidence_comparison_result_digest_01234",
+        "evidence_comparison_summary_digest": "evidence_comparison_summary_digest_01234",
+        "evidence_ledger_digest": "evidence_ledger_digest_01234",
+        "evidence_ledger_plan_digest": "evidence_ledger_plan_digest_01234",
+        "evidence_profile_result_digest": "evidence_profile_result_digest_01234",
+        "evidence_profile_summary_digest": "evidence_profile_summary_digest_01234",
+        "evidence_relationships": [
+          {
+            "audit_digest": "test_audit_digest",
+            "criteria_digest": "test_criteria_digest",
+            "evidence_database": "evidence_database_01234",
+            "evidence_release": "evidence_release_01234",
+            "evidence_source": "evidence_source_01234",
+            "kind": "sequence_similarity",
+            "missing_evidence_policy": "reject",
+            "name": "Test",
+            "ontology_contract_digest": "test_ontology_contract_digest",
+            "relationship_digest": "test_relationship_digest",
+            "scope_kind": "whole_entity",
+            "set_operation_index": 1,
+            "set_operation_operator": "base",
+            "status": "candidate"
+          }
+        ],
+        "id": "01234",
+        "lock_digest": "test_lock_digest",
+        "module_digest": "test_module_digest",
+        "module_id": "module_id_01234",
+        "object": "rql_reproducibility_lock",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "output_contract_digest": "test_output_contract_digest",
+        "rql_dialect": "test_rql_dialect",
+        "semantic_dialect": "test_semantic_dialect",
+        "semantic_query_digest": "test_semantic_query_digest",
+        "sources": [
+          {
+            "database": "test_database",
+            "name": "Test",
+            "relation": "test_relation",
+            "relation_digest": "test_relation_digest",
+            "release": "test_release",
+            "release_digest": "test_release_digest",
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1
+          }
+        ],
+        "sql_dialect": "test_sql_dialect",
+        "threshold_summary_digest": "test_threshold_summary_digest"
+      },
+      "result_grain": [
+        "test_result_grain"
+      ],
+      "result_key": [
+        "test_result_key"
+      ],
+      "rql_dialect": "test_rql_dialect",
+      "selected_dimensions": [
+        "test_selected_dimensions"
+      ],
+      "selected_measurements": [
+        "test_selected_measurements"
+      ],
+      "selected_ratios": [
+        "test_selected_ratios"
+      ],
+      "semantic_diff": {
+        "baseline_module_digest": "test_baseline_module_digest",
+        "baseline_module_id": "baseline_module_id_01234",
+        "change_count": 1,
+        "changes": [
+          {
+            "after": {},
+            "before": {},
+            "category": "identity",
+            "kind": "added",
+            "path": "test_path"
+          }
+        ],
+        "is_changed": true,
+        "module_digest": "test_module_digest",
+        "module_id": "module_id_01234",
+        "object": "rql_semantic_diff"
+      },
+      "semantic_query": {
+        "activated_joins": [
+          {
+            "activation": "always",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_requirement": "observed",
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "on": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "type": "inner"
+          }
+        ],
+        "compiled_query": {
+          "allow_unverified_joins": true,
+          "budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "interactive",
+          "cursor": "test_cursor",
+          "dialect": "rafflesia_sql_2026_07_13",
+          "join_evidence_policy": "advisory",
+          "limit": 1,
+          "ontology_digest": "test_ontology_digest",
+          "required_join_evidence": [
+            {
+              "evidence_digest": "evidence_digest_01234",
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "requirement": "observed",
+              "right_source": "test_right_source"
+            }
+          ],
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release"
+            }
+          ],
+          "sql": "test_sql",
+          "strict_joins": true
+        },
+        "id": "01234",
+        "join_plan": [
+          {
+            "alt_local_columns": [
+              "test_alt_local_columns"
+            ],
+            "alt_remote_columns": [
+              "test_alt_remote_columns"
+            ],
+            "can_fan_out": true,
+            "cardinality": "one_to_one",
+            "cardinality_status": "not_observed",
+            "coordinate_notes": "test_coordinate_notes",
+            "definition_source": "declared",
+            "evidence_digest": "evidence_digest_01234",
+            "fragment": {
+              "rql_imports": [
+                {
+                  "description": "test_description",
+                  "name": "Test",
+                  "relation": "test_relation"
+                }
+              ],
+              "rql_join": {
+                "activation": "always",
+                "evidence_digest": "evidence_digest_01234",
+                "evidence_requirement": "observed",
+                "key_variant": "primary",
+                "left_source": "test_left_source",
+                "on": [
+                  {
+                    "all": [],
+                    "any": [],
+                    "column": "test_column",
+                    "compare_column": "test_compare_column",
+                    "compare_source": "test_compare_source",
+                    "exists": {
+                      "key_variant": "primary",
+                      "left_source": "test_left_source",
+                      "relationship_id": "relationship_id_01234",
+                      "right_source": "test_right_source",
+                      "where": []
+                    },
+                    "not": {},
+                    "not_exists": {
+                      "key_variant": "primary",
+                      "left_source": "test_left_source",
+                      "relationship_id": "relationship_id_01234",
+                      "right_source": "test_right_source",
+                      "where": []
+                    },
+                    "operator": "eq",
+                    "parameter": "test_parameter",
+                    "source": "test_source",
+                    "value": {},
+                    "values": [
+                      {}
+                    ]
+                  }
+                ],
+                "relationship_id": "relationship_id_01234",
+                "right_source": "test_right_source",
+                "type": "inner"
+              },
+              "rql_source_fragment": "test_rql_source_fragment",
+              "sources": [
+                {
+                  "database": "test_database",
+                  "name": "Test",
+                  "relation": "test_relation",
+                  "release": "test_release",
+                  "selector": "test_selector"
+                }
+              ],
+              "sql_from_clause": "test_sql_from_clause",
+              "sql_join_clause": "test_sql_join_clause"
+            },
+            "from_relation": "test_from_relation",
+            "from_selector": "test_from_selector",
+            "has_many_to_many": true,
+            "id": "01234",
+            "is_lossy": true,
+            "is_range_mapping": true,
+            "key_overlap_status": "not_observed",
+            "key_variant": "primary",
+            "local_columns": [
+              "test_local_columns"
+            ],
+            "measurement_id": "measurement_id_01234",
+            "measurement_url": "https://example.com",
+            "object": "test_object",
+            "observation_status": "not_observed",
+            "remote_columns": [
+              "test_remote_columns"
+            ],
+            "safety": "strict",
+            "safety_reason": "test_safety_reason",
+            "to_relation": "test_to_relation",
+            "to_selector": "test_to_selector"
+          }
+        ],
+        "object": "test_object",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "output_columns": [
+          {
+            "computation": "source",
+            "is_nullable": true,
+            "is_result_key": true,
+            "lineage": [
+              {
+                "column": "test_column",
+                "database": "test_database",
+                "relation": "test_relation",
+                "release": "test_release",
+                "source": "test_source"
+              }
+            ],
+            "name": "Test",
+            "role": "dimension",
+            "semantic_keys": [
+              "test_semantic_keys"
+            ],
+            "unit": "test_unit",
+            "value_type": "string"
+          }
+        ],
+        "pruned_joins": [
+          {
+            "activation": "always",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_requirement": "observed",
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "on": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "type": "inner"
+          }
+        ],
+        "result_grain": [
+          "test_result_grain"
+        ],
+        "result_key": [
+          "test_result_key"
+        ],
+        "semantic_dialect": "test_semantic_dialect",
+        "semantic_query_digest": "test_semantic_query_digest"
+      },
+      "set_operations": [
+        {
+          "index": 1,
+          "operator": "union_all",
+          "output_contract_digest": "test_output_contract_digest",
+          "semantic_query_digest": "test_semantic_query_digest",
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "release": "test_release"
+            }
+          ]
+        }
+      ]
+    },
+    "evidence_ledger": {
+      "comparison_query_result": {
+        "columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "dialect": "test_dialect",
+        "engine": "test_engine",
+        "has_more": true,
+        "id": "01234",
+        "measurements": {
+          "actual_bytes_scanned": 1,
+          "actual_rows_scanned": 1,
+          "applied_budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "test_budget_profile",
+          "bytes_scanned": 1,
+          "bytes_scanned_per_returned": 1,
+          "cpu_time_ms": 1,
+          "elapsed_ms": 1,
+          "engine_bytes_read": 1,
+          "engine_rows_scanned": 1,
+          "estimated_bytes_scanned": 1,
+          "estimated_rows_scanned": 1,
+          "execution_ms": 1,
+          "metadata_cache_hit_count": 1,
+          "object_read_backend": "gcs",
+          "object_read_bytes": 1,
+          "object_read_count": 1,
+          "object_read_measurement_kind": "backend_reported",
+          "peak_buffer_memory_bytes": 1,
+          "peak_temp_directory_bytes": 1,
+          "planning_ms": 1,
+          "queue_wait_ms": 1,
+          "rows_returned": 1,
+          "rows_scanned": 1,
+          "rows_scanned_per_returned": 1,
+          "scan_measurement_kind": "exact",
+          "source_count": 1
+        },
+        "next_cursor": "test_next_cursor",
+        "object": "test_object",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "query_digest": "test_query_digest",
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "sources": [
+          {
+            "byte_count": 1,
+            "database": "test_database",
+            "kind": "test_kind",
+            "name": "Test",
+            "relation": "test_relation",
+            "relation_digest": "test_relation_digest",
+            "relation_id": "relation_id_01234",
+            "release": "test_release",
+            "release_digest": "test_release_digest",
+            "row_count": 1,
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1
+          }
+        ],
+        "sql": "test_sql",
+        "verified_join_approvals": [
+          {
+            "approval_id": "approval_id_01234",
+            "approval_url": "https://example.com",
+            "approved_at": "test_approved_at",
+            "approved_by": "test_approved_by",
+            "catalog_view_digest": "test_catalog_view_digest",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_id": "evidence_id_01234",
+            "key_variant": "test_key_variant",
+            "left_relation_digest": "test_left_relation_digest",
+            "left_release_digest": "test_left_release_digest",
+            "left_source": "test_left_source",
+            "ontology_digest": "test_ontology_digest",
+            "ontology_module_release_id": "ontology_module_release_id_01234",
+            "relationship_id": "relationship_id_01234",
+            "resource_group_id": "resource_group_id_01234",
+            "right_relation_digest": "test_right_relation_digest",
+            "right_release_digest": "test_right_release_digest",
+            "right_source": "test_right_source"
+          }
+        ],
+        "verified_join_evidence": [
+          {
+            "cardinality_status": "test_cardinality_status",
+            "evidence_digest": "evidence_digest_01234",
+            "key_overlap_status": "test_key_overlap_status",
+            "key_variant": "test_key_variant",
+            "left_source": "test_left_source",
+            "measurement_id": "measurement_id_01234",
+            "measurement_url": "https://example.com",
+            "observation_status": "test_observation_status",
+            "relationship_id": "relationship_id_01234",
+            "requirement": "test_requirement",
+            "right_source": "test_right_source"
+          }
+        ]
+      },
+      "comparison_result_digest": "test_comparison_result_digest",
+      "comparison_result_key": [
+        "test_comparison_result_key"
+      ],
+      "comparison_summary_digest": "test_comparison_summary_digest",
+      "id": "01234",
+      "ledger_digest": "test_ledger_digest",
+      "object": "rql_evidence_ledger",
+      "plan_digest": "test_plan_digest",
+      "profile_comparisons": [
+        {
+          "authored_accepted_candidate_count": 1,
+          "authored_missing_candidate_count": 1,
+          "compared_with": "authored",
+          "gained_candidate_count": 1,
+          "input_candidate_count": 1,
+          "lost_candidate_count": 1,
+          "measurement_query_digest": "test_measurement_query_digest",
+          "membership_digest": "test_membership_digest",
+          "object": "rql_evidence_profile_comparison",
+          "profile_accepted_candidate_count": 1,
+          "profile_digest": "test_profile_digest",
+          "profile_index": 1,
+          "profile_missing_candidate_count": 1,
+          "profile_name": "Test",
+          "relationship_digest": "test_relationship_digest",
+          "relationship_name": "Test",
+          "set_operation_index": 1,
+          "set_operation_operator": "base",
+          "sources": [
+            {
+              "byte_count": 1,
+              "database": "test_database",
+              "kind": "test_kind",
+              "name": "Test",
+              "relation": "test_relation",
+              "relation_digest": "test_relation_digest",
+              "relation_id": "relation_id_01234",
+              "release": "test_release",
+              "release_digest": "test_release_digest",
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "unchanged_accepted_candidate_count": 1,
+          "unchanged_rejected_candidate_count": 1
+        }
+      ],
+      "profile_pair_comparisons": [
+        {
+          "baseline_accepted_candidate_count": 1,
+          "baseline_missing_candidate_count": 1,
+          "baseline_profile_digest": "test_baseline_profile_digest",
+          "baseline_profile_index": 1,
+          "baseline_profile_name": "Test",
+          "compared_with": "previous_profile",
+          "gained_candidate_count": 1,
+          "input_candidate_count": 1,
+          "lost_candidate_count": 1,
+          "measurement_query_digest": "test_measurement_query_digest",
+          "membership_digest": "test_membership_digest",
+          "object": "rql_evidence_profile_pair_comparison",
+          "profile_accepted_candidate_count": 1,
+          "profile_digest": "test_profile_digest",
+          "profile_index": 1,
+          "profile_missing_candidate_count": 1,
+          "profile_name": "Test",
+          "relationship_digest": "test_relationship_digest",
+          "relationship_name": "Test",
+          "set_operation_index": 1,
+          "set_operation_operator": "base",
+          "sources": [
+            {
+              "byte_count": 1,
+              "database": "test_database",
+              "kind": "test_kind",
+              "name": "Test",
+              "relation": "test_relation",
+              "relation_digest": "test_relation_digest",
+              "relation_id": "relation_id_01234",
+              "release": "test_release",
+              "release_digest": "test_release_digest",
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "unchanged_accepted_candidate_count": 1,
+          "unchanged_rejected_candidate_count": 1
+        }
+      ],
+      "profile_query_result": {
+        "columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "dialect": "test_dialect",
+        "engine": "test_engine",
+        "has_more": true,
+        "id": "01234",
+        "measurements": {
+          "actual_bytes_scanned": 1,
+          "actual_rows_scanned": 1,
+          "applied_budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "test_budget_profile",
+          "bytes_scanned": 1,
+          "bytes_scanned_per_returned": 1,
+          "cpu_time_ms": 1,
+          "elapsed_ms": 1,
+          "engine_bytes_read": 1,
+          "engine_rows_scanned": 1,
+          "estimated_bytes_scanned": 1,
+          "estimated_rows_scanned": 1,
+          "execution_ms": 1,
+          "metadata_cache_hit_count": 1,
+          "object_read_backend": "gcs",
+          "object_read_bytes": 1,
+          "object_read_count": 1,
+          "object_read_measurement_kind": "backend_reported",
+          "peak_buffer_memory_bytes": 1,
+          "peak_temp_directory_bytes": 1,
+          "planning_ms": 1,
+          "queue_wait_ms": 1,
+          "rows_returned": 1,
+          "rows_scanned": 1,
+          "rows_scanned_per_returned": 1,
+          "scan_measurement_kind": "exact",
+          "source_count": 1
+        },
+        "next_cursor": "test_next_cursor",
+        "object": "test_object",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "query_digest": "test_query_digest",
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "sources": [
+          {
+            "byte_count": 1,
+            "database": "test_database",
+            "kind": "test_kind",
+            "name": "Test",
+            "relation": "test_relation",
+            "relation_digest": "test_relation_digest",
+            "relation_id": "relation_id_01234",
+            "release": "test_release",
+            "release_digest": "test_release_digest",
+            "row_count": 1,
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1
+          }
+        ],
+        "sql": "test_sql",
+        "verified_join_approvals": [
+          {
+            "approval_id": "approval_id_01234",
+            "approval_url": "https://example.com",
+            "approved_at": "test_approved_at",
+            "approved_by": "test_approved_by",
+            "catalog_view_digest": "test_catalog_view_digest",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_id": "evidence_id_01234",
+            "key_variant": "test_key_variant",
+            "left_relation_digest": "test_left_relation_digest",
+            "left_release_digest": "test_left_release_digest",
+            "left_source": "test_left_source",
+            "ontology_digest": "test_ontology_digest",
+            "ontology_module_release_id": "ontology_module_release_id_01234",
+            "relationship_id": "relationship_id_01234",
+            "resource_group_id": "resource_group_id_01234",
+            "right_relation_digest": "test_right_relation_digest",
+            "right_release_digest": "test_right_release_digest",
+            "right_source": "test_right_source"
+          }
+        ],
+        "verified_join_evidence": [
+          {
+            "cardinality_status": "test_cardinality_status",
+            "evidence_digest": "evidence_digest_01234",
+            "key_overlap_status": "test_key_overlap_status",
+            "key_variant": "test_key_variant",
+            "left_source": "test_left_source",
+            "measurement_id": "measurement_id_01234",
+            "measurement_url": "https://example.com",
+            "observation_status": "test_observation_status",
+            "relationship_id": "relationship_id_01234",
+            "requirement": "test_requirement",
+            "right_source": "test_right_source"
+          }
+        ]
+      },
+      "profile_result_digest": "test_profile_result_digest",
+      "profile_result_key": [
+        "test_profile_result_key"
+      ],
+      "profile_summary_digest": "test_profile_summary_digest",
+      "query_result": {
+        "columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "dialect": "test_dialect",
+        "engine": "test_engine",
+        "has_more": true,
+        "id": "01234",
+        "measurements": {
+          "actual_bytes_scanned": 1,
+          "actual_rows_scanned": 1,
+          "applied_budget": {
+            "max_bytes_scanned": 1,
+            "max_rows_scanned": 1,
+            "timeout_ms": 1
+          },
+          "budget_profile": "test_budget_profile",
+          "bytes_scanned": 1,
+          "bytes_scanned_per_returned": 1,
+          "cpu_time_ms": 1,
+          "elapsed_ms": 1,
+          "engine_bytes_read": 1,
+          "engine_rows_scanned": 1,
+          "estimated_bytes_scanned": 1,
+          "estimated_rows_scanned": 1,
+          "execution_ms": 1,
+          "metadata_cache_hit_count": 1,
+          "object_read_backend": "gcs",
+          "object_read_bytes": 1,
+          "object_read_count": 1,
+          "object_read_measurement_kind": "backend_reported",
+          "peak_buffer_memory_bytes": 1,
+          "peak_temp_directory_bytes": 1,
+          "planning_ms": 1,
+          "queue_wait_ms": 1,
+          "rows_returned": 1,
+          "rows_scanned": 1,
+          "rows_scanned_per_returned": 1,
+          "scan_measurement_kind": "exact",
+          "source_count": 1
+        },
+        "next_cursor": "test_next_cursor",
+        "object": "test_object",
+        "ontology_digest": "test_ontology_digest",
+        "ontology_version": "test_ontology_version",
+        "query_digest": "test_query_digest",
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "sources": [
+          {
+            "byte_count": 1,
+            "database": "test_database",
+            "kind": "test_kind",
+            "name": "Test",
+            "relation": "test_relation",
+            "relation_digest": "test_relation_digest",
+            "relation_id": "relation_id_01234",
+            "release": "test_release",
+            "release_digest": "test_release_digest",
+            "row_count": 1,
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1
+          }
+        ],
+        "sql": "test_sql",
+        "verified_join_approvals": [
+          {
+            "approval_id": "approval_id_01234",
+            "approval_url": "https://example.com",
+            "approved_at": "test_approved_at",
+            "approved_by": "test_approved_by",
+            "catalog_view_digest": "test_catalog_view_digest",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_id": "evidence_id_01234",
+            "key_variant": "test_key_variant",
+            "left_relation_digest": "test_left_relation_digest",
+            "left_release_digest": "test_left_release_digest",
+            "left_source": "test_left_source",
+            "ontology_digest": "test_ontology_digest",
+            "ontology_module_release_id": "ontology_module_release_id_01234",
+            "relationship_id": "relationship_id_01234",
+            "resource_group_id": "resource_group_id_01234",
+            "right_relation_digest": "test_right_relation_digest",
+            "right_release_digest": "test_right_release_digest",
+            "right_source": "test_right_source"
+          }
+        ],
+        "verified_join_evidence": [
+          {
+            "cardinality_status": "test_cardinality_status",
+            "evidence_digest": "evidence_digest_01234",
+            "key_overlap_status": "test_key_overlap_status",
+            "key_variant": "test_key_variant",
+            "left_source": "test_left_source",
+            "measurement_id": "measurement_id_01234",
+            "measurement_url": "https://example.com",
+            "observation_status": "test_observation_status",
+            "relationship_id": "relationship_id_01234",
+            "requirement": "test_requirement",
+            "right_source": "test_right_source"
+          }
+        ]
+      },
+      "relationship_comparisons": [
+        {
+          "both_candidate_count": 1,
+          "comparability": "comparable",
+          "comparability_reason": "typed_namespace_and_scope_match",
+          "comparison_digest": "test_comparison_digest",
+          "comparison_index": 1,
+          "left_distinct_candidate_count": 1,
+          "left_evidence_database": "left_evidence_database_01234",
+          "left_evidence_release": "left_evidence_release_01234",
+          "left_method_column": "test_left_method_column",
+          "left_only_candidate_count": 1,
+          "left_relationship_digest": "test_left_relationship_digest",
+          "left_relationship_name": "Test",
+          "left_set_operation_index": 1,
+          "left_set_operation_operator": "base",
+          "measurement_query_digest": "test_measurement_query_digest",
+          "membership_digest": "test_membership_digest",
+          "name": "Test",
+          "object": "rql_evidence_relationship_comparison",
+          "object_namespace": "Test",
+          "right_distinct_candidate_count": 1,
+          "right_evidence_database": "right_evidence_database_01234",
+          "right_evidence_release": "right_evidence_release_01234",
+          "right_method_column": "test_right_method_column",
+          "right_only_candidate_count": 1,
+          "right_relationship_digest": "test_right_relationship_digest",
+          "right_relationship_name": "Test",
+          "right_set_operation_index": 1,
+          "right_set_operation_operator": "base",
+          "scope_kind": "test_scope_kind",
+          "sources": [
+            {
+              "byte_count": 1,
+              "database": "test_database",
+              "kind": "test_kind",
+              "name": "Test",
+              "relation": "test_relation",
+              "relation_digest": "test_relation_digest",
+              "relation_id": "relation_id_01234",
+              "release": "test_release",
+              "release_digest": "test_release_digest",
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "subject_namespace": "Test",
+          "union_candidate_count": 1
+        }
+      ],
+      "result_digest": "test_result_digest",
+      "result_key": [
+        "test_result_key"
+      ],
+      "threshold_memberships": [
+        {
+          "accepted_candidate_count": 1,
+          "compared_with": "authored",
+          "criterion_digest": "test_criterion_digest",
+          "criterion_index": 1,
+          "gained_candidate_count": 1,
+          "input_candidate_count": 1,
+          "lost_candidate_count": 1,
+          "measurement_query_digest": "test_measurement_query_digest",
+          "membership_digest": "test_membership_digest",
+          "object": "rql_evidence_threshold_membership",
+          "operator": "test_operator",
+          "relationship_digest": "test_relationship_digest",
+          "relationship_name": "Test",
+          "set_operation_index": 1,
+          "set_operation_operator": "base",
+          "sources": [
+            {
+              "byte_count": 1,
+              "database": "test_database",
+              "kind": "test_kind",
+              "name": "Test",
+              "relation": "test_relation",
+              "relation_digest": "test_relation_digest",
+              "relation_id": "relation_id_01234",
+              "release": "test_release",
+              "release_digest": "test_release_digest",
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "threshold": 1,
+          "threshold_index": 1,
+          "threshold_unit": "test_threshold_unit"
+        }
+      ],
+      "threshold_summary_digest": "test_threshold_summary_digest"
+    },
+    "evidence_relationship_audits": [
+      {
+        "audit_digest": "test_audit_digest",
+        "audit_query_digest": "test_audit_query_digest",
+        "criteria": [
+          {
+            "column": "test_column",
+            "criterion_digest": "test_criterion_digest",
+            "criterion_index": 1,
+            "cumulative_accepted_row_count": 1,
+            "failed_row_count": 1,
+            "missing_row_count": 1,
+            "operator": "test_operator",
+            "origin": "identity",
+            "passed_row_count": 1
+          }
+        ],
+        "evidence_source": "evidence_source_01234",
+        "input_row_count": 1,
+        "object": "rql_evidence_relationship_audit",
+        "relationship_digest": "test_relationship_digest",
+        "relationship_name": "Test",
+        "sources": [
+          {
+            "byte_count": 1,
+            "database": "test_database",
+            "kind": "test_kind",
+            "name": "Test",
+            "relation": "test_relation",
+            "relation_digest": "test_relation_digest",
+            "relation_id": "relation_id_01234",
+            "release": "test_release",
+            "release_digest": "test_release_digest",
+            "row_count": 1,
+            "schema_hash": "test_schema_hash",
+            "schema_version": 1
+          }
+        ]
+      }
+    ],
+    "id": "01234",
+    "object": "rql_query_result",
+    "query_result": {
+      "columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "dialect": "test_dialect",
+      "engine": "test_engine",
+      "has_more": true,
+      "id": "01234",
+      "measurements": {
+        "actual_bytes_scanned": 1,
+        "actual_rows_scanned": 1,
+        "applied_budget": {
+          "max_bytes_scanned": 1,
+          "max_rows_scanned": 1,
+          "timeout_ms": 1
+        },
+        "budget_profile": "test_budget_profile",
+        "bytes_scanned": 1,
+        "bytes_scanned_per_returned": 1,
+        "cpu_time_ms": 1,
+        "elapsed_ms": 1,
+        "engine_bytes_read": 1,
+        "engine_rows_scanned": 1,
+        "estimated_bytes_scanned": 1,
+        "estimated_rows_scanned": 1,
+        "execution_ms": 1,
+        "metadata_cache_hit_count": 1,
+        "object_read_backend": "gcs",
+        "object_read_bytes": 1,
+        "object_read_count": 1,
+        "object_read_measurement_kind": "backend_reported",
+        "peak_buffer_memory_bytes": 1,
+        "peak_temp_directory_bytes": 1,
+        "planning_ms": 1,
+        "queue_wait_ms": 1,
+        "rows_returned": 1,
+        "rows_scanned": 1,
+        "rows_scanned_per_returned": 1,
+        "scan_measurement_kind": "exact",
+        "source_count": 1
+      },
+      "next_cursor": "test_next_cursor",
+      "object": "test_object",
+      "ontology_digest": "test_ontology_digest",
+      "ontology_version": "test_ontology_version",
+      "query_digest": "test_query_digest",
+      "row_count": 1,
+      "rows": [
+        {
+          "key": {}
+        }
+      ],
+      "sources": [
+        {
+          "byte_count": 1,
+          "database": "test_database",
+          "kind": "test_kind",
+          "name": "Test",
+          "relation": "test_relation",
+          "relation_digest": "test_relation_digest",
+          "relation_id": "relation_id_01234",
+          "release": "test_release",
+          "release_digest": "test_release_digest",
+          "row_count": 1,
+          "schema_hash": "test_schema_hash",
+          "schema_version": 1
+        }
+      ],
+      "sql": "test_sql",
+      "verified_join_approvals": [
+        {
+          "approval_id": "approval_id_01234",
+          "approval_url": "https://example.com",
+          "approved_at": "test_approved_at",
+          "approved_by": "test_approved_by",
+          "catalog_view_digest": "test_catalog_view_digest",
+          "evidence_digest": "evidence_digest_01234",
+          "evidence_id": "evidence_id_01234",
+          "key_variant": "test_key_variant",
+          "left_relation_digest": "test_left_relation_digest",
+          "left_release_digest": "test_left_release_digest",
+          "left_source": "test_left_source",
+          "ontology_digest": "test_ontology_digest",
+          "ontology_module_release_id": "ontology_module_release_id_01234",
+          "relationship_id": "relationship_id_01234",
+          "resource_group_id": "resource_group_id_01234",
+          "right_relation_digest": "test_right_relation_digest",
+          "right_release_digest": "test_right_release_digest",
+          "right_source": "test_right_source"
+        }
+      ],
+      "verified_join_evidence": [
+        {
+          "cardinality_status": "test_cardinality_status",
+          "evidence_digest": "evidence_digest_01234",
+          "key_overlap_status": "test_key_overlap_status",
+          "key_variant": "test_key_variant",
+          "left_source": "test_left_source",
+          "measurement_id": "measurement_id_01234",
+          "measurement_url": "https://example.com",
+          "observation_status": "test_observation_status",
+          "relationship_id": "relationship_id_01234",
+          "requirement": "test_requirement",
+          "right_source": "test_right_source"
+        }
+      ]
+    },
+    "reproducibility_lock": {
+      "compiler_contract_digest": "test_compiler_contract_digest",
+      "compiler_version": "test_compiler_version",
+      "evidence_comparison_result_digest": "evidence_comparison_result_digest_01234",
+      "evidence_comparison_summary_digest": "evidence_comparison_summary_digest_01234",
+      "evidence_ledger_digest": "evidence_ledger_digest_01234",
+      "evidence_ledger_plan_digest": "evidence_ledger_plan_digest_01234",
+      "evidence_profile_result_digest": "evidence_profile_result_digest_01234",
+      "evidence_profile_summary_digest": "evidence_profile_summary_digest_01234",
+      "evidence_relationships": [
+        {
+          "audit_digest": "test_audit_digest",
+          "criteria_digest": "test_criteria_digest",
+          "evidence_database": "evidence_database_01234",
+          "evidence_release": "evidence_release_01234",
+          "evidence_source": "evidence_source_01234",
+          "kind": "sequence_similarity",
+          "missing_evidence_policy": "reject",
+          "name": "Test",
+          "ontology_contract_digest": "test_ontology_contract_digest",
+          "relationship_digest": "test_relationship_digest",
+          "scope_kind": "whole_entity",
+          "set_operation_index": 1,
+          "set_operation_operator": "base",
+          "status": "candidate"
+        }
+      ],
+      "id": "01234",
+      "lock_digest": "test_lock_digest",
+      "module_digest": "test_module_digest",
+      "module_id": "module_id_01234",
+      "object": "rql_reproducibility_lock",
+      "ontology_digest": "test_ontology_digest",
+      "ontology_version": "test_ontology_version",
+      "output_contract_digest": "test_output_contract_digest",
+      "rql_dialect": "test_rql_dialect",
+      "semantic_dialect": "test_semantic_dialect",
+      "semantic_query_digest": "test_semantic_query_digest",
+      "sources": [
+        {
+          "database": "test_database",
+          "name": "Test",
+          "relation": "test_relation",
+          "relation_digest": "test_relation_digest",
+          "release": "test_release",
+          "release_digest": "test_release_digest",
+          "schema_hash": "test_schema_hash",
+          "schema_version": 1
+        }
+      ],
+      "sql_dialect": "test_sql_dialect",
+      "threshold_summary_digest": "test_threshold_summary_digest"
+    },
+    "runtime_contract": {
+      "is_pagination_stable": true,
+      "is_result_key_unique": true,
+      "is_valid": true,
+      "object": "rql_runtime_contract_validation",
+      "output_contract_digest": "test_output_contract_digest",
+      "validated_row_count": 1
+    }
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "clickhouse_dataset_row_count": 1,
+  "clickhouse_expected_schema_version": 1,
+  "clickhouse_ingest_lag_rows": 1,
+  "clickhouse_relation": "test_clickhouse_relation",
+  "clickhouse_row_count": 1,
+  "clickhouse_snapshot_row_count": 1,
+  "clickhouse_snapshot_row_drift": 1,
+  "clickhouse_snapshot_schema_versions": [
+    1
+  ],
+  "clickhouse_status_code": "test_clickhouse_status_code",
+  "clickhouse_status_description": "test_clickhouse_status_description",
+  "clickhouse_status_reason": "test_clickhouse_status_reason",
+  "database": "test_database",
+  "is_clickhouse_configured": true,
+  "is_clickhouse_ingested": true,
+  "is_clickhouse_queryable": true,
+  "is_clickhouse_table_present": true,
+  "is_relation_reachable": true,
+  "record_count": 1,
+  "ref": "test_ref",
+  "relation": "test_relation",
+  "relation_row_count": 1,
+  "release": "test_release",
+  "source": "test_source",
+  "version": "test_version"
+}

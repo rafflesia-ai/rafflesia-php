@@ -1,0 +1,13 @@
+{
+  "checked_at": "test_checked_at",
+  "elapsed_ms": 1,
+  "endpoint": "test_endpoint",
+  "is_configured": true,
+  "kind": "test_kind",
+  "message": "test_message",
+  "name": "Test",
+  "probe_attempts": 1,
+  "recovery_hint": "test_recovery_hint",
+  "status": "test_status",
+  "successful_probe_attempts": 1
+}

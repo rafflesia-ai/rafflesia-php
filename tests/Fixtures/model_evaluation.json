@@ -1,0 +1,7 @@
+{
+  "dataset_release_id": "dataset_release_id_01234",
+  "evaluation_method": "test_evaluation_method",
+  "measurements_digest": "test_measurements_digest",
+  "measurements_object_id": "measurements_object_id_01234",
+  "tool_version": "test_tool_version"
+}

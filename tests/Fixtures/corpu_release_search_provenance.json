@@ -1,0 +1,12 @@
+{
+  "bytes_read": 1,
+  "candidates_examined": 1,
+  "evidence": {
+    "key": {}
+  },
+  "object_reads": 1,
+  "params": {
+    "key": {}
+  },
+  "release_id": "release_id_01234"
+}

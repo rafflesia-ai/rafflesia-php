@@ -1,0 +1,10 @@
+{
+  "command_index": 1,
+  "format": "test_format",
+  "is_dynamic": true,
+  "line_number": 1,
+  "normalized_path": "test_normalized_path",
+  "path": "test_path",
+  "role": "test_role",
+  "source_flag": "test_source_flag"
+}

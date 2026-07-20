@@ -1,0 +1,9 @@
+{
+  "compared_variant_count": 1,
+  "comparison_release": "test_comparison_release",
+  "drift_id": "drift_id_01234",
+  "is_complete": true,
+  "regression_count": 1,
+  "target_database": "test_target_database",
+  "target_release": "test_target_release"
+}

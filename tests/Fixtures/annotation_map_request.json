@@ -1,0 +1,8 @@
+{
+  "allow_network": true,
+  "from_id": "from_id_01234",
+  "sources": [
+    "test_sources"
+  ],
+  "to_ref": "test_to_ref"
+}

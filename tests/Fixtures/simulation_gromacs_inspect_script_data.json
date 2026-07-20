@@ -1,0 +1,99 @@
+{
+  "command_count": 1,
+  "commands": [
+    {
+      "argument_count": 1,
+      "executable": "test_executable",
+      "index": 1,
+      "inputs": [
+        {
+          "command_index": 1,
+          "format": "test_format",
+          "is_dynamic": true,
+          "line_number": 1,
+          "normalized_path": "test_normalized_path",
+          "path": "test_path",
+          "role": "test_role",
+          "source_flag": "test_source_flag"
+        }
+      ],
+      "kind": "test_kind",
+      "line_number": 1,
+      "outputs": [
+        {
+          "command_index": 1,
+          "format": "test_format",
+          "is_dynamic": true,
+          "line_number": 1,
+          "normalized_path": "test_normalized_path",
+          "path": "test_path",
+          "role": "test_role",
+          "source_flag": "test_source_flag"
+        }
+      ],
+      "raw": "test_raw",
+      "stage": "test_stage",
+      "subcommand": "test_subcommand"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "command_index": 1,
+      "format": "test_format",
+      "is_dynamic": true,
+      "line_number": 1,
+      "normalized_path": "test_normalized_path",
+      "path": "test_path",
+      "role": "test_role",
+      "source_flag": "test_source_flag"
+    }
+  ],
+  "has_dynamic_refs": true,
+  "required_inputs": [
+    {
+      "command_index": 1,
+      "format": "test_format",
+      "is_dynamic": true,
+      "line_number": 1,
+      "normalized_path": "test_normalized_path",
+      "path": "test_path",
+      "role": "test_role",
+      "source_flag": "test_source_flag"
+    }
+  ],
+  "runtime_requirements": [
+    "test_runtime_requirements"
+  ],
+  "schema_version": "test_schema_version",
+  "script": {
+    "content_type": "test_content_type",
+    "diagnostics": {
+      "content_type_source": "test_content_type_source",
+      "decode_elapsed_ms": 1,
+      "is_local": true,
+      "is_remote": true,
+      "max_read_bytes": 1,
+      "object_size_bytes": 1,
+      "read_elapsed_ms": 1,
+      "read_source": "test_read_source",
+      "requested_bytes": 1,
+      "resolve_elapsed_ms": 1,
+      "resolve_source": "test_resolve_source",
+      "returned_bytes": 1,
+      "total_elapsed_ms": 1,
+      "used_range_read": true,
+      "was_size_bounded": true
+    },
+    "line_count": 1,
+    "object_id": "object_id_01234",
+    "sha256": "test_sha256",
+    "size_bytes": 1
+  },
+  "unsupported_syntax": [
+    {
+      "line_number": 1,
+      "reason": "test_reason",
+      "text": "test_text"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "candidates": [
+    {
+      "download_url": "https://example.com",
+      "name": "Test",
+      "normalized_path": "test_normalized_path",
+      "object_id": "object_id_01234",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "source_object_id": "source_object_id_01234",
+      "type": "test_type",
+      "url": "https://example.com"
+    }
+  ],
+  "input": {
+    "command_index": 1,
+    "format": "test_format",
+    "is_dynamic": true,
+    "line_number": 1,
+    "normalized_path": "test_normalized_path",
+    "path": "test_path",
+    "role": "test_role",
+    "source_flag": "test_source_flag"
+  },
+  "match_type": "test_match_type",
+  "status": "test_status"
+}

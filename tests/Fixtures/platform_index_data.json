@@ -1,0 +1,21 @@
+{
+  "index": {
+    "key": {}
+  },
+  "index_path": "test_index_path",
+  "runs_root": "test_runs_root",
+  "validation": {
+    "error_count": 1,
+    "issues": [
+      {
+        "code": "test_code",
+        "message": "test_message",
+        "path": "test_path",
+        "severity": "test_severity"
+      }
+    ],
+    "schema_version": "test_schema_version",
+    "valid": true,
+    "warning_count": 1
+  }
+}

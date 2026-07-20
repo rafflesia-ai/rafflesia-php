@@ -1,0 +1,16 @@
+{
+  "max_blocks_per_query": 1,
+  "max_object_bytes_per_query": 1,
+  "max_object_reads_per_query": 1,
+  "min_byte_reduction_fraction": 1,
+  "min_hit_overlap_fraction": 1,
+  "min_recall_at_1": 1,
+  "min_recall_at_10": 1,
+  "min_recall_at_100": 1,
+  "passed": true,
+  "reasons": [
+    "test_reasons"
+  ],
+  "require_exact_verification": true,
+  "require_zero_materialization": true
+}

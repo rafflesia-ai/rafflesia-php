@@ -1,0 +1,114 @@
+{
+  "budget": {
+    "is_configured": true,
+    "is_within_budget": true,
+    "max_blocks": 1,
+    "max_exact_shards": 1,
+    "max_materialized_bytes": 1,
+    "max_object_bytes": 1,
+    "max_object_reads": 1,
+    "planned_block_count": 1,
+    "planned_exact_shard_count": 1,
+    "planned_materialized_bytes": 1,
+    "planned_object_bytes": 1,
+    "planned_object_read_count": 1,
+    "planned_uses_routing": true,
+    "reasons": [
+      "test_reasons"
+    ],
+    "require_routing": true,
+    "require_zero_materialization": true
+  },
+  "cost": {
+    "backend": "test_backend",
+    "byte_reduction_fraction": 1,
+    "cache_state": "test_cache_state",
+    "calibration_id": "calibration_id_01234",
+    "calibration_modes": [
+      "test_calibration_modes"
+    ],
+    "calibration_query_count": 1,
+    "calibration_repeat_count": 1,
+    "calibration_rung_count": 1,
+    "calibration_status": "test_calibration_status",
+    "calibration_target_count_max": 1,
+    "calibration_target_count_min": 1,
+    "data_read_semantics": "test_data_read_semantics",
+    "effective_shard_count": 1,
+    "estimate_method": "test_estimate_method",
+    "estimated_cpu_seconds": 1,
+    "estimated_peak_rss_mb": 1,
+    "estimated_wall_ms": 1,
+    "logical_target_db_bytes": 1,
+    "materialization_reduction_fraction": 1,
+    "model_version": "test_model_version",
+    "object_read_reduction_fraction": 1,
+    "planned_exact_shard_count": 1,
+    "planned_materialized_bytes": 1,
+    "planned_object_bytes": 1,
+    "planned_object_read_count": 1,
+    "query_count": 1,
+    "target_record_count": 1,
+    "target_record_count_estimated": true,
+    "target_shard_count": 1,
+    "warnings": [
+      "test_warnings"
+    ]
+  },
+  "distribution": "test_distribution",
+  "effective_shards": 1,
+  "execution": "test_execution",
+  "monitoring": {
+    "data_read_metric": "test_data_read_metric",
+    "observations": [
+      {
+        "code": "test_code",
+        "message": "test_message",
+        "observed_value": 1,
+        "reference_value": 1,
+        "severity": "test_severity"
+      }
+    ],
+    "runtime_metric": "test_runtime_metric",
+    "scaling_law_id": "scaling_law_id_01234",
+    "schema_version": "test_schema_version"
+  },
+  "nprobe": 1,
+  "policy": {
+    "candidate_layer": "candidate_layer_01234",
+    "corroboration_policy": "test_corroboration_policy",
+    "exhaustive_search_role": "test_exhaustive_search_role",
+    "fallback_channels": [
+      "test_fallback_channels"
+    ],
+    "is_calibration_only": true,
+    "materializes_foldseek_database": true,
+    "planner_bias": "test_planner_bias",
+    "primary_channel_id": "primary_channel_id_01234",
+    "reasons": [
+      "test_reasons"
+    ],
+    "requires_explicit_full_scan": true,
+    "retrieval_policy": "test_retrieval_policy",
+    "runtime_drift_observation_count": 1,
+    "runtime_drift_ratio": 1,
+    "runtime_feedback_policy": "test_runtime_feedback_policy",
+    "selected_path": "test_selected_path",
+    "uses_object_native_candidates": true,
+    "uses_routing": true,
+    "verifier_layer": "test_verifier_layer",
+    "verifier_mode": "test_verifier_mode",
+    "warnings": [
+      "test_warnings"
+    ]
+  },
+  "reasons": [
+    "test_reasons"
+  ],
+  "segment_roles": [
+    "test_segment_roles"
+  ],
+  "selection": "test_selection",
+  "shard_count": 1,
+  "total_size_bytes": 1
+}

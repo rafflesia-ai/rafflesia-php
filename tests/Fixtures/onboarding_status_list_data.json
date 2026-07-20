@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "mount_id": "mount_id_01234",
+      "organization_id": "organization_id_01234",
+      "resource_group_id": "resource_group_id_01234",
+      "snapshot_digest": "test_snapshot_digest",
+      "stages": [
+        {
+          "detail": "test_detail",
+          "expected": 1,
+          "id": "01234",
+          "label": "test_label",
+          "observed": 1,
+          "status": "complete"
+        }
+      ],
+      "status": "ready",
+      "updated_at": "test_updated_at"
+    }
+  ],
+  "has_more": true,
+  "object": "list"
+}

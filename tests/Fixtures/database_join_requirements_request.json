@@ -1,0 +1,14 @@
+{
+  "dialect": "rafflesia_sql_2026_07_13",
+  "join_evidence_policy": "observed",
+  "ontology_digest": "test_ontology_digest",
+  "sources": [
+    {
+      "database": "test_database",
+      "name": "Test",
+      "relation": "test_relation",
+      "release": "test_release"
+    }
+  ],
+  "sql": "test_sql"
+}

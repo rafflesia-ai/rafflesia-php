@@ -1,0 +1,7 @@
+{
+  "corpus": "test_corpus",
+  "dry_run": true,
+  "limit": 1,
+  "plan_id": "plan_id_01234",
+  "retain_last": 1
+}

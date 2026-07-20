@@ -1,0 +1,141 @@
+{
+  "data": {
+    "archive_format": "test_archive_format",
+    "directory_count": 1,
+    "extract": true,
+    "extracted_count": 1,
+    "file_count": 1,
+    "include_extensions": [
+      "test_include_extensions"
+    ],
+    "include_path_substrings": [
+      "test_include_path_substrings"
+    ],
+    "inventory_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "inventory_path": "test_inventory_path",
+    "max_extracted_members": 1,
+    "max_member_bytes": 1,
+    "member_count": 1,
+    "members": [
+      {
+        "compressed_size_bytes": 1,
+        "crc32": "test_crc32",
+        "extension": "test_extension",
+        "inferred_kind": "test_inferred_kind",
+        "is_dir": true,
+        "message": "test_message",
+        "modified_at": "test_modified_at",
+        "name": "Test",
+        "object": {
+          "bucket": "test_bucket",
+          "content_type": "test_content_type",
+          "kind": "test_kind",
+          "object_id": "object_id_01234",
+          "object_key": "test_object_key",
+          "path": "test_path",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "storage_backend": "test_storage_backend",
+          "uri": "https://example.com"
+        },
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "status": "test_status"
+      }
+    ],
+    "object_id": "object_id_01234",
+    "output_dir": "test_output_dir",
+    "phase_timings_ms": {
+      "key": 1
+    },
+    "skipped_extraction_count": 1,
+    "table_object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "table_path": "test_table_path",
+    "total_compressed_bytes": 1,
+    "total_uncompressed_bytes": 1
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

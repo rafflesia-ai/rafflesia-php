@@ -1,0 +1,6 @@
+{
+  "description": "test_description",
+  "digest": "test_digest",
+  "kind": "source_record",
+  "reference": "test_reference"
+}

@@ -1,0 +1,15 @@
+{
+  "binary_path": "test_binary_path",
+  "commands": [
+    [
+      "test_commands"
+    ]
+  ],
+  "input_count": 1,
+  "record_count": 1,
+  "sequence_residue_count": 1,
+  "token_residue_count": 1,
+  "tokens_sha256": "test_tokens_sha256",
+  "tool_name": "Test",
+  "tool_version": "test_tool_version"
+}

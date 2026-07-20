@@ -1,0 +1,65 @@
+{
+  "active_seconds": 1,
+  "artifact_ids": [
+    "artifact_ids_01234"
+  ],
+  "attempt_count": 1,
+  "completed_at": "2023-01-01T00:00:00.000Z",
+  "created_at": "2023-01-01T00:00:00.000Z",
+  "current_attempt_id": "current_attempt_id_01234",
+  "environment_id": "environment_id_01234",
+  "environment_release_id": "environment_release_id_01234",
+  "environment_task_id": "environment_task_id_01234",
+  "execution": {
+    "command": [
+      "test_command"
+    ],
+    "mode": "test_mode",
+    "model": "test_model",
+    "reasoning_effort": "test_reasoning_effort"
+  },
+  "grade": {
+    "blocking_errors": [
+      "test_blocking_errors"
+    ],
+    "grader_hash": "test_grader_hash",
+    "metrics": {
+      "key": {}
+    },
+    "pass_score": 1,
+    "passed": true,
+    "reward": 1,
+    "reward_definition_id": "reward_definition_id_01234",
+    "subscores": {
+      "key": {}
+    },
+    "warnings": [
+      "test_warnings"
+    ],
+    "weights": {
+      "key": {}
+    }
+  },
+  "id": "01234",
+  "is_cancel_requested": true,
+  "is_livemode": true,
+  "last_error": "test_last_error",
+  "metadata": {
+    "key": "test_value"
+  },
+  "object": "test_object",
+  "organization_id": "organization_id_01234",
+  "origin": {
+    "api_key_id": "api_key_id_01234",
+    "auth_method": "test_auth_method",
+    "credential_id": "credential_id_01234",
+    "user_id": "user_id_01234"
+  },
+  "provider": "provider_01234",
+  "rollout_group_id": "rollout_group_id_01234",
+  "runtime_profile_id": "runtime_profile_id_01234",
+  "seed": 1,
+  "status": "test_status",
+  "timeout_seconds": 1,
+  "updated_at": "2023-01-01T00:00:00.000Z"
+}

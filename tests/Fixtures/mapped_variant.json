@@ -1,0 +1,22 @@
+{
+  "is_valid": true,
+  "mutant_aa": "test_mutant_aa",
+  "mutation_type": "test_mutation_type",
+  "raw": "test_raw",
+  "sequence_position": 1,
+  "structure_chain_id": "structure_chain_id_01234",
+  "structure_residue_aa": "structure_residue_aa_01234",
+  "structure_residue_index": 1,
+  "structure_residue_number": 1,
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ],
+  "wildtype_aa": "test_wildtype_aa",
+  "wildtype_matches": true
+}

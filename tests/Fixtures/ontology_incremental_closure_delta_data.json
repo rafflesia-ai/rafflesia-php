@@ -1,0 +1,20 @@
+{
+  "affected_relation_count": 1,
+  "affected_relations": [
+    "test_affected_relations"
+  ],
+  "from_component_id": "from_component_id_01234",
+  "from_component_size": 1,
+  "is_affected_relations_complete": true,
+  "is_already_reachable": true,
+  "materialized_pair_write_count": 1,
+  "reachable_pair_gain": 1,
+  "requires_full_rebuild": true,
+  "result_component_id": "result_component_id_01234",
+  "result_component_size": 1,
+  "safety": "identity_safe",
+  "to_component_id": "to_component_id_01234",
+  "to_component_size": 1,
+  "touched_component_count": 1,
+  "update_mode": "incremental_union"
+}

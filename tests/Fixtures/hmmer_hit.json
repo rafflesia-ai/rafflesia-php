@@ -1,0 +1,23 @@
+{
+  "best_dom_bias": 1,
+  "best_dom_evalue": "test_best_dom_evalue",
+  "best_dom_score": 1,
+  "description": "test_description",
+  "domain_number_estimation": {
+    "clu": 1,
+    "dom": 1,
+    "env": 1,
+    "exp": 1,
+    "inc": 1,
+    "ov": 1,
+    "reg": 1,
+    "rep": 1
+  },
+  "full_bias": 1,
+  "full_evalue": "test_full_evalue",
+  "full_score": 1,
+  "query_accession": "test_query_accession",
+  "query_name": "Test",
+  "target_accession": "test_target_accession",
+  "target_name": "Test"
+}

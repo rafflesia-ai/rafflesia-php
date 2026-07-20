@@ -1,0 +1,63 @@
+{
+  "cardinality_consistent_count": 1,
+  "cardinality_contradicted_count": 1,
+  "coverage_table_object_ref": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "evidence_digest": "evidence_digest_01234",
+  "from_database": "test_from_database",
+  "from_release": "test_from_release",
+  "from_release_digest": "test_from_release_digest",
+  "id": "01234",
+  "is_complete": true,
+  "is_resumable": true,
+  "manifest_object_ref": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "no_overlap_observed_count": 1,
+  "object": "database_join_certification",
+  "observed_count": 1,
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "overlap_observed_count": 1,
+  "relationship_variant_count": 1,
+  "rows": [
+    {
+      "cardinality_status": "test_cardinality_status",
+      "evidence_digest": "evidence_digest_01234",
+      "from_selector": "test_from_selector",
+      "key_overlap_status": "test_key_overlap_status",
+      "key_variant": "test_key_variant",
+      "measurement_id": "measurement_id_01234",
+      "observation_status": "test_observation_status",
+      "relationship_id": "relationship_id_01234",
+      "to_selector": "test_to_selector",
+      "unavailable_reason": "test_unavailable_reason"
+    }
+  ],
+  "safety": "all",
+  "to_database": "test_to_database",
+  "to_release": "test_to_release",
+  "to_release_digest": "test_to_release_digest",
+  "unavailable_count": 1
+}

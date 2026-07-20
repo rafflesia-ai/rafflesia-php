@@ -1,0 +1,17 @@
+{
+  "aligned_match": "test_aligned_match",
+  "aligned_query": "test_aligned_query",
+  "aligned_target": "test_aligned_target",
+  "backend": "test_backend",
+  "close_pair_count": 1,
+  "pair_count": 1,
+  "pairs": [
+    {
+      "close": true,
+      "query_index": 1,
+      "query_residue": "query_residue_01234",
+      "target_index": 1,
+      "target_residue": "target_residue_01234"
+    }
+  ]
+}

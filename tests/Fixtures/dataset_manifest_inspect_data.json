@@ -1,0 +1,38 @@
+{
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "failure_count": 1,
+  "input_dir": "test_input_dir",
+  "manifest_path": "test_manifest_path",
+  "manifest_sha256": "test_manifest_sha256",
+  "manifest_version": 1,
+  "output_dir": "test_output_dir",
+  "row_count": 1,
+  "schema_hashes": [
+    "test_schema_hashes"
+  ],
+  "schema_version": "test_schema_version",
+  "source": "test_source",
+  "structure_count": 1,
+  "table_artifact_count": 1,
+  "table_artifact_counts": {
+    "key": 1
+  },
+  "table_row_counts": {
+    "key": 1
+  },
+  "table_summaries": [
+    {
+      "row_count": 1,
+      "schema_hashes": [
+        "test_schema_hashes"
+      ],
+      "structure_count": 1,
+      "table_artifact_count": 1,
+      "table_name": "Test"
+    }
+  ],
+  "tables": [
+    "test_tables"
+  ]
+}

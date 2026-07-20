@@ -1,0 +1,11 @@
+{
+  "column": "test_column",
+  "description": "test_description",
+  "direction": "minimum",
+  "maximum": 1,
+  "method_columns": [
+    "test_method_columns"
+  ],
+  "minimum": 1,
+  "unit": "test_unit"
+}

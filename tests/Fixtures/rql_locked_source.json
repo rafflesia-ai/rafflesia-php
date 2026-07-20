@@ -1,0 +1,10 @@
+{
+  "database": "test_database",
+  "name": "Test",
+  "relation": "test_relation",
+  "relation_digest": "test_relation_digest",
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "schema_hash": "test_schema_hash",
+  "schema_version": 1
+}

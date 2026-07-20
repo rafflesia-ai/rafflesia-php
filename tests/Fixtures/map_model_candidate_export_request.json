@@ -1,0 +1,7 @@
+{
+  "archive_artifact_manifest_object_id": "archive_artifact_manifest_object_id_01234",
+  "archive_artifact_manifest_path": "test_archive_artifact_manifest_path",
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "output_dir": "test_output_dir"
+}

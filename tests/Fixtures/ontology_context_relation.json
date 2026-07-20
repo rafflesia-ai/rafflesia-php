@@ -1,0 +1,94 @@
+{
+  "aliases": [
+    "test_aliases"
+  ],
+  "column_count": 1,
+  "columns": [
+    {
+      "coordinate_system": "test_coordinate_system",
+      "description": "test_description",
+      "identifier_namespace": "identifier_namespace_01234",
+      "is_nullable": true,
+      "is_required": true,
+      "is_search_match": true,
+      "name": "Test",
+      "type": "test_type",
+      "unit": "test_unit",
+      "value_kind": "test_value_kind"
+    }
+  ],
+  "default_order": [
+    "test_default_order"
+  ],
+  "description": "test_description",
+  "domain": "test_domain",
+  "entity_type": "test_entity_type",
+  "evidence_relationship_contracts": [
+    {
+      "assertion_evidence_columns": [
+        "assertion_evidence_columns_01234"
+      ],
+      "contract_digest": "test_contract_digest",
+      "description": "test_description",
+      "kind": "sequence_similarity",
+      "method_column": "test_method_column",
+      "metrics": [
+        {
+          "column": "test_column",
+          "description": "test_description",
+          "direction": "minimum",
+          "maximum": 1,
+          "method_columns": [
+            "test_method_columns"
+          ],
+          "minimum": 1,
+          "unit": "test_unit"
+        }
+      ],
+      "object_column": "test_object_column",
+      "qualifier_columns": [
+        "test_qualifier_columns"
+      ],
+      "scopes": [
+        {
+          "alignment_id_column": "alignment_id_column_01234",
+          "kind": "whole_entity",
+          "object_domain_instance_column": "test_object_domain_instance_column",
+          "object_end_column": "test_object_end_column",
+          "object_start_column": "test_object_start_column",
+          "subject_domain_instance_column": "test_subject_domain_instance_column",
+          "subject_end_column": "test_subject_end_column",
+          "subject_start_column": "test_subject_start_column"
+        }
+      ],
+      "status": "candidate",
+      "subject_column": "test_subject_column"
+    }
+  ],
+  "grain": "test_grain",
+  "id": "01234",
+  "is_columns_truncated": true,
+  "is_required_columns_truncated": true,
+  "matched_fields": [
+    "test_matched_fields"
+  ],
+  "matched_term_count": 1,
+  "matched_terms": [
+    "test_matched_terms"
+  ],
+  "name": "Test",
+  "object": "test_object",
+  "omitted_required_columns": [
+    "test_omitted_required_columns"
+  ],
+  "primary_key": [
+    "test_primary_key"
+  ],
+  "quality_notes": [
+    "test_quality_notes"
+  ],
+  "recommended_filters": [
+    "test_recommended_filters"
+  ],
+  "required_column_count": 1
+}

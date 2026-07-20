@@ -1,0 +1,33 @@
+{
+  "accession": "test_accession",
+  "artifact_doi": "test_artifact_doi",
+  "artifact_id": "artifact_id_01234",
+  "content_length_bytes": 1,
+  "kind": "test_kind",
+  "map_id": "map_id_01234",
+  "materialization_mode": "test_materialization_mode",
+  "message": "test_message",
+  "object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "paper_doi": "test_paper_doi",
+  "paper_id": "paper_id_01234",
+  "path": "test_path",
+  "resolved_revision": "test_resolved_revision",
+  "resolved_url": "https://example.com",
+  "retrieved_at": "test_retrieved_at",
+  "source": "test_source",
+  "source_url": "https://example.com",
+  "status": "test_status",
+  "structure_id": "structure_id_01234",
+  "url": "https://example.com"
+}

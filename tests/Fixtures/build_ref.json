@@ -1,0 +1,19 @@
+{
+  "artifact_refs": [
+    "test_artifact_refs"
+  ],
+  "content_digest": "test_content_digest",
+  "id": "01234",
+  "is_content_pinned": true,
+  "kind": "test_kind",
+  "metadata": {
+    "key": {}
+  },
+  "object": "build",
+  "precision": "test_precision",
+  "release_id": "release_id_01234",
+  "runtime": "test_runtime",
+  "status": "test_status",
+  "tool": "test_tool",
+  "tool_version": "test_tool_version"
+}

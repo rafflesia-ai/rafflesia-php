@@ -1,0 +1,16 @@
+{
+  "byte_count": 1,
+  "database": "test_database",
+  "is_integrity_verified": true,
+  "is_release_pinned": true,
+  "is_schema_verified": true,
+  "kind": "test_kind",
+  "relation": "test_relation",
+  "relation_digest": "test_relation_digest",
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "row_count": 1,
+  "schema_hash": "test_schema_hash",
+  "schema_version": 1,
+  "source": "test_source"
+}

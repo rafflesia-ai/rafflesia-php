@@ -1,0 +1,10 @@
+{
+  "evidence_object_id": "evidence_object_id_01234",
+  "evidence_status": "observed",
+  "from_release_id": "from_release_id_01234",
+  "id": "01234",
+  "object": "lineage_edge",
+  "predicate": "test_predicate",
+  "source_url": "https://example.com",
+  "to_release_id": "to_release_id_01234"
+}

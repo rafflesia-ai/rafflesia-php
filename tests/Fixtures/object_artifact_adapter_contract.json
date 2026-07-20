@@ -1,0 +1,25 @@
+{
+  "cache_namespace": "Test",
+  "domain": "test_domain",
+  "has_build": true,
+  "has_evict": true,
+  "has_list": true,
+  "has_materialize": true,
+  "has_publish": true,
+  "has_verify": true,
+  "lifecycle_operations": [
+    "test_lifecycle_operations"
+  ],
+  "manifest_roles": [
+    "test_manifest_roles"
+  ],
+  "name": "Test",
+  "notes": [
+    "test_notes"
+  ],
+  "search_operations": [
+    "test_search_operations"
+  ],
+  "status": "test_status",
+  "workload": "test_workload"
+}

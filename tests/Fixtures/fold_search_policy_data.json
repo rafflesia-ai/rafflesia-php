@@ -1,0 +1,28 @@
+{
+  "candidate_layer": "candidate_layer_01234",
+  "corroboration_policy": "test_corroboration_policy",
+  "exhaustive_search_role": "test_exhaustive_search_role",
+  "fallback_channels": [
+    "test_fallback_channels"
+  ],
+  "is_calibration_only": true,
+  "materializes_foldseek_database": true,
+  "planner_bias": "test_planner_bias",
+  "primary_channel_id": "primary_channel_id_01234",
+  "reasons": [
+    "test_reasons"
+  ],
+  "requires_explicit_full_scan": true,
+  "retrieval_policy": "test_retrieval_policy",
+  "runtime_drift_observation_count": 1,
+  "runtime_drift_ratio": 1,
+  "runtime_feedback_policy": "test_runtime_feedback_policy",
+  "selected_path": "test_selected_path",
+  "uses_object_native_candidates": true,
+  "uses_routing": true,
+  "verifier_layer": "test_verifier_layer",
+  "verifier_mode": "test_verifier_mode",
+  "warnings": [
+    "test_warnings"
+  ]
+}

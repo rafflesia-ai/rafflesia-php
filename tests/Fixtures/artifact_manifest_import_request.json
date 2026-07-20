@@ -1,0 +1,5 @@
+{
+  "allow_network": true,
+  "fetch_structures": true,
+  "manifest_path": "test_manifest_path"
+}

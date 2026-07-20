@@ -1,0 +1,14 @@
+{
+  "connectivity_class": "identity_safe",
+  "direct_identity_safe_release_edge_count": 1,
+  "direct_strict_release_edge_count": 1,
+  "identity_safe_component_id": "identity_safe_component_id_01234",
+  "identity_safe_component_size": 1,
+  "identity_safe_reachable_release_relation_count": 1,
+  "inferred_identity_safe_release_relation_count": 1,
+  "inferred_strict_release_relation_count": 1,
+  "relation": "test_relation",
+  "strict_component_id": "strict_component_id_01234",
+  "strict_component_size": 1,
+  "strict_reachable_release_relation_count": 1
+}

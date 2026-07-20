@@ -1,0 +1,8 @@
+{
+  "detail": "test_detail",
+  "gate": "test_gate",
+  "observed_value": 1,
+  "release_id": "release_id_01234",
+  "status": "test_status",
+  "threshold_value": 1
+}

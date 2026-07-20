@@ -1,0 +1,38 @@
+{
+  "audit_digest": "test_audit_digest",
+  "audit_query_digest": "test_audit_query_digest",
+  "criteria": [
+    {
+      "column": "test_column",
+      "criterion_digest": "test_criterion_digest",
+      "criterion_index": 1,
+      "cumulative_accepted_row_count": 1,
+      "failed_row_count": 1,
+      "missing_row_count": 1,
+      "operator": "test_operator",
+      "origin": "identity",
+      "passed_row_count": 1
+    }
+  ],
+  "evidence_source": "evidence_source_01234",
+  "input_row_count": 1,
+  "object": "rql_evidence_relationship_audit",
+  "relationship_digest": "test_relationship_digest",
+  "relationship_name": "Test",
+  "sources": [
+    {
+      "byte_count": 1,
+      "database": "test_database",
+      "kind": "test_kind",
+      "name": "Test",
+      "relation": "test_relation",
+      "relation_digest": "test_relation_digest",
+      "relation_id": "relation_id_01234",
+      "release": "test_release",
+      "release_digest": "test_release_digest",
+      "row_count": 1,
+      "schema_hash": "test_schema_hash",
+      "schema_version": 1
+    }
+  ]
+}

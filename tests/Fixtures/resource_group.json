@@ -1,0 +1,10 @@
+{
+  "access_policy_id": "access_policy_id_01234",
+  "classification": "internal",
+  "description": "test_description",
+  "display_name": "Test",
+  "id": "01234",
+  "organization_id": "organization_id_01234",
+  "slug": "test_slug",
+  "storage_scope_id": "storage_scope_id_01234"
+}

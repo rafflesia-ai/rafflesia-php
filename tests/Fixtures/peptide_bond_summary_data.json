@@ -1,0 +1,12 @@
+{
+  "bond_count": 1,
+  "cis_count": 1,
+  "cis_non_proline": 1,
+  "cis_non_proline_fraction": 1,
+  "cis_proline": 1,
+  "cis_proline_fraction": 1,
+  "non_proline_bonds": 1,
+  "proline_bonds": 1,
+  "trans_count": 1,
+  "twisted_count": 1
+}

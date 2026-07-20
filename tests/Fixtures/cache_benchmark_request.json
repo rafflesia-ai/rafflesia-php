@@ -1,0 +1,26 @@
+{
+  "db": "test_db",
+  "evalue": "test_evalue",
+  "evict_first": true,
+  "manifest_object_id": "manifest_object_id_01234",
+  "manifest_path": "test_manifest_path",
+  "max_target_seqs": 1,
+  "min_bit_score": 1,
+  "out_format": "test_out_format",
+  "pack_access_mode": "auto",
+  "pressure_max_bytes": 1,
+  "program": "test_program",
+  "query": "test_query",
+  "ref": "test_ref",
+  "run_pressure": true,
+  "segment_roles": [
+    "test_segment_roles"
+  ],
+  "shards": [
+    "test_shards"
+  ],
+  "target_dir": "test_target_dir",
+  "threads": 1,
+  "verify": true,
+  "workload": "object_artifact"
+}

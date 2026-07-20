@@ -1,0 +1,6 @@
+{
+  "catalog": "test_catalog",
+  "limit": 1,
+  "query_id": "query_id_01234",
+  "store_root": "test_store_root"
+}

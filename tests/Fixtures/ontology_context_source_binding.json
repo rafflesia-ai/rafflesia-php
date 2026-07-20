@@ -1,0 +1,9 @@
+{
+  "database": "test_database",
+  "object": "ontology_context_source",
+  "relation": "test_relation",
+  "relation_digest": "test_relation_digest",
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "selector": "test_selector"
+}

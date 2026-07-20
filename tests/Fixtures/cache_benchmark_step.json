@@ -1,0 +1,39 @@
+{
+  "all_cache_hits": true,
+  "cache_hit_bytes": 1,
+  "cache_hit_count": 1,
+  "cache_miss_bytes": 1,
+  "cache_miss_count": 1,
+  "elapsed_ms": 1,
+  "file_count": 1,
+  "hit_count": 1,
+  "lock_wait_ms": 1,
+  "materialize_db_ms": 1,
+  "name": "Test",
+  "object_read_bytes": 1,
+  "object_read_count": 1,
+  "object_storage_backends": [
+    "test_object_storage_backends"
+  ],
+  "pack_access_mode": "test_pack_access_mode",
+  "remaining_size_bytes": 1,
+  "remote_read_metrics": {
+    "block_cache_hits": 1,
+    "block_cache_misses": 1,
+    "http_bytes_read": 1,
+    "http_full_read_request_count": 1,
+    "http_range_request_count": 1,
+    "http_request_count": 1,
+    "sequence_bytes_read": 1,
+    "sequence_read_count": 1
+  },
+  "removed_count": 1,
+  "resolve_query_ms": 1,
+  "search_ms": 1,
+  "selected_size_bytes": 1,
+  "shard_count": 1,
+  "status": "test_status",
+  "store_output_ms": 1,
+  "total_size_bytes": 1,
+  "warning_count": 1
+}

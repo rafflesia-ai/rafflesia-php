@@ -1,0 +1,8 @@
+{
+  "aliases": [
+    "test_aliases"
+  ],
+  "length_bp": 1,
+  "name": "Test",
+  "role": "test_role"
+}

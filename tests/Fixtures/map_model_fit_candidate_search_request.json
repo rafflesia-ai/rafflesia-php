@@ -1,0 +1,12 @@
+{
+  "candidate_count": 1,
+  "cyclic_copy_count": 1,
+  "map_id": "map_id_01234",
+  "max_voxel_bytes": 1,
+  "maximum_radius_angstrom": 1,
+  "minimum_radius_angstrom": 1,
+  "restart_count": 1,
+  "seed": 1,
+  "structure_id": "structure_id_01234",
+  "threshold": 1
+}

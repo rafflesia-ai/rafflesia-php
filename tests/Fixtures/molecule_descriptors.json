@@ -1,0 +1,12 @@
+{
+  "aromatic_atoms": 1,
+  "aromatic_fraction": 1,
+  "hbond_acceptors": 1,
+  "hbond_donors": 1,
+  "heavy_atoms": 1,
+  "logp": 1,
+  "molecular_weight": 1,
+  "rings": 1,
+  "rotatable_bonds": 1,
+  "tpsa": 1
+}

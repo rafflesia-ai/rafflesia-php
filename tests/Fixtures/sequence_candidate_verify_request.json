@@ -1,0 +1,17 @@
+{
+  "check_gc_plan": true,
+  "expected_source_sha256": "test_expected_source_sha256",
+  "max_gc_garbage_count": 1,
+  "max_object_bytes": 1,
+  "max_object_reads": 1,
+  "min_record_count": 1,
+  "min_top_hit_identity": 1,
+  "namespace": "Test",
+  "probe_max_hits": 1,
+  "probe_query": "test_probe_query",
+  "require_payload_shards": true,
+  "require_posting_segment": true,
+  "require_probe_hit": true,
+  "require_zero_materialization": true,
+  "timeout_ms": 1
+}

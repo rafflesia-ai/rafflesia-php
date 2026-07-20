@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "01234",
+      "index": 1,
+      "mean_log_probability": 1,
+      "object": "test_object",
+      "position_log_probabilities": [
+        1
+      ],
+      "sequence": "test_sequence"
+    }
+  ],
+  "model_id": "model_id_01234",
+  "model_release": "test_model_release",
+  "object": "test_object",
+  "provider_request_id": "provider_request_id_01234",
+  "seed": 1,
+  "structure_object_id": "structure_object_id_01234",
+  "temperature": 1,
+  "usage": {
+    "generated_sequence_count": 1,
+    "residue_count": 1,
+    "structure_count": 1
+  }
+}

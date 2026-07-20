@@ -1,0 +1,7 @@
+{
+  "dockq_binary_path": "test_dockq_binary_path",
+  "model_chain_mapping": "test_model_chain_mapping",
+  "native_chain_mapping": "test_native_chain_mapping",
+  "query_structure_id": "query_structure_id_01234",
+  "target_structure_id": "target_structure_id_01234"
+}

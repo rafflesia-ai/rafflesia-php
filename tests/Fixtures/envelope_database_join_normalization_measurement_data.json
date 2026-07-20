@@ -1,0 +1,144 @@
+{
+  "data": {
+    "after_joined_row_count": 1,
+    "after_matched_distinct_key_count": 1,
+    "after_max_joined_rows_per_key": 1,
+    "before_matched_distinct_key_count": 1,
+    "evidence_digest": "evidence_digest_01234",
+    "from": {
+      "changed_row_count": 1,
+      "collision_key_count": 1,
+      "column": "test_column",
+      "evidence_digest": "evidence_digest_01234",
+      "is_lossy": true,
+      "max_originals_per_normalized_key": 1,
+      "normalized_distinct_key_count": 1,
+      "original_distinct_key_count": 1,
+      "profile_object_ref": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "selector": "test_selector",
+      "transform": {
+        "kind": "identity",
+        "length": 1,
+        "start": 1
+      }
+    },
+    "id": "01234",
+    "is_safe_join": true,
+    "matched_distinct_key_count_delta": 1,
+    "measurement_object_ref": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "object": "database_join_normalization_measurement",
+    "ontology_digest": "test_ontology_digest",
+    "ontology_version": "test_ontology_version",
+    "to": {
+      "changed_row_count": 1,
+      "collision_key_count": 1,
+      "column": "test_column",
+      "evidence_digest": "evidence_digest_01234",
+      "is_lossy": true,
+      "max_originals_per_normalized_key": 1,
+      "normalized_distinct_key_count": 1,
+      "original_distinct_key_count": 1,
+      "profile_object_ref": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "selector": "test_selector",
+      "transform": {
+        "kind": "identity",
+        "length": 1,
+        "start": 1
+      }
+    }
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

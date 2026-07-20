@@ -1,0 +1,10 @@
+{
+  "active_lease_count": 1,
+  "active_lease_pinned_count": 1,
+  "eligible_size_bytes": 1,
+  "file_count": 1,
+  "namespace": "Test",
+  "pinned_size_bytes": 1,
+  "target_dir": "test_target_dir",
+  "total_size_bytes": 1
+}

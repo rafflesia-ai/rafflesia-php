@@ -1,0 +1,15 @@
+{
+  "accession": "test_accession",
+  "artifact_id": "artifact_id_01234",
+  "content_type": "test_content_type",
+  "description": "test_description",
+  "doi": "test_doi",
+  "format": "test_format",
+  "kind": "test_kind",
+  "metadata": {
+    "key": "test_value"
+  },
+  "path": "test_path",
+  "source": "test_source",
+  "url": "https://example.com"
+}

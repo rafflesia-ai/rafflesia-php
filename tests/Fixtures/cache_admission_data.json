@@ -1,0 +1,111 @@
+{
+  "admit": true,
+  "candidate_object_ids": [
+    "candidate_object_ids_01234"
+  ],
+  "candidate_ref": "candidate_ref_01234",
+  "current_size_bytes": 1,
+  "eligible_size_bytes": 1,
+  "estimated_size_bytes": 1,
+  "eviction_plan": {
+    "active_lease_count": 1,
+    "active_lease_pinned_count": 1,
+    "age_basis": "test_age_basis",
+    "dry_run": true,
+    "eligible_size_bytes": 1,
+    "namespace": "Test",
+    "namespace_usage": [
+      {
+        "active_lease_count": 1,
+        "active_lease_pinned_count": 1,
+        "eligible_size_bytes": 1,
+        "file_count": 1,
+        "namespace": "Test",
+        "pinned_size_bytes": 1,
+        "target_dir": "test_target_dir",
+        "total_size_bytes": 1
+      }
+    ],
+    "pinned_size_bytes": 1,
+    "policy": {
+      "max_age_seconds": 1,
+      "max_bytes": 1,
+      "namespace": "Test",
+      "older_than_seconds": 1,
+      "pinned_paths": [
+        "test_pinned_paths"
+      ],
+      "pinned_shards": [
+        "test_pinned_shards"
+      ]
+    },
+    "remaining_size_bytes": 1,
+    "removed_count": 1,
+    "removed_files": [
+      {
+        "mod_time_unix": 1,
+        "path": "test_path",
+        "reason": "test_reason",
+        "rel_path": "test_rel_path",
+        "size_bytes": 1
+      }
+    ],
+    "removed_paths": [
+      "test_removed_paths"
+    ],
+    "selected_size_bytes": 1,
+    "skipped_pinned_count": 1,
+    "target_dir": "test_target_dir",
+    "total_size_bytes": 1
+  },
+  "max_bytes": 1,
+  "namespace": "Test",
+  "pinned_size_bytes": 1,
+  "planned_eviction_bytes": 1,
+  "planned_eviction_count": 1,
+  "policy": {
+    "max_age_seconds": 1,
+    "max_bytes": 1,
+    "namespace": "Test",
+    "older_than_seconds": 1,
+    "pinned_paths": [
+      "test_pinned_paths"
+    ],
+    "pinned_shards": [
+      "test_pinned_shards"
+    ]
+  },
+  "projected_size_bytes": 1,
+  "reasons": [
+    "test_reasons"
+  ],
+  "required_eviction_bytes": 1,
+  "requires_eviction": true,
+  "schema_version": "test_schema_version",
+  "status": "test_status",
+  "target_dir": "test_target_dir",
+  "workload": "test_workload",
+  "workload_profile": {
+    "algorithm": "test_algorithm",
+    "block_size_bytes": 1,
+    "cache_mode": "test_cache_mode",
+    "default_limit": 1,
+    "default_nprobe": 1,
+    "description": "test_description",
+    "max_blocks_per_query": 1,
+    "max_materialized_bytes_per_query": 1,
+    "max_object_bytes_per_query": 1,
+    "max_object_reads_per_query": 1,
+    "min_byte_reduction_fraction": 1,
+    "min_hit_overlap_fraction": 1,
+    "min_recall_at_1": 1,
+    "min_recall_at_10": 1,
+    "min_recall_at_100": 1,
+    "name": "Test",
+    "require_benchmark": true,
+    "require_exact_verification": true,
+    "require_routing": true,
+    "require_zero_materialization": true,
+    "workload": "test_workload"
+  }
+}

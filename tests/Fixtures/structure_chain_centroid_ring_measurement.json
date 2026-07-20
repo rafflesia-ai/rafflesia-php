@@ -1,0 +1,19 @@
+{
+  "angular_gap_mean_degrees": 1,
+  "angular_gap_stddev_degrees": 1,
+  "angular_gaps_degrees": [
+    1
+  ],
+  "axial_stddev_angstrom": 1,
+  "axis_direction": [
+    1
+  ],
+  "center": [
+    1
+  ],
+  "maximum_radius_angstrom": 1,
+  "mean_radius_angstrom": 1,
+  "metric": "test_metric",
+  "minimum_radius_angstrom": 1,
+  "radius_stddev_angstrom": 1
+}

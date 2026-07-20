@@ -1,0 +1,32 @@
+{
+  "block_bytes": 1,
+  "block_count": 1,
+  "content_sha256": "test_content_sha256",
+  "key_mode": "test_key_mode",
+  "kind": "test_kind",
+  "schema_version": "test_schema_version",
+  "segment_id": "segment_id_01234",
+  "sparse_entries": [
+    {
+      "block_index": 1,
+      "end_key": "test_end_key",
+      "object": {
+        "bucket": "test_bucket",
+        "content_type": "test_content_type",
+        "kind": "test_kind",
+        "object_id": "object_id_01234",
+        "object_key": "test_object_key",
+        "path": "test_path",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "storage_backend": "test_storage_backend",
+        "uri": "https://example.com"
+      },
+      "range_length_bytes": 1,
+      "range_offset_bytes": 1,
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "start_key": "test_start_key"
+    }
+  ]
+}

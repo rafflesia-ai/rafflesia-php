@@ -1,0 +1,19 @@
+{
+  "availability": "queryable",
+  "byte_count": 1,
+  "database": "test_database",
+  "id": "01234",
+  "object": "release",
+  "queryable_relation_count": 1,
+  "queryable_relations": [
+    "test_queryable_relations"
+  ],
+  "relation_count": 1,
+  "relations": [
+    "test_relations"
+  ],
+  "release": "test_release",
+  "row_count": 1,
+  "selector": "test_selector",
+  "url": "https://example.com"
+}

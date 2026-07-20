@@ -1,0 +1,96 @@
+{
+  "database": "test_database",
+  "features": [
+    "test_features"
+  ],
+  "output_format": "json",
+  "output_relation": "test_output_relation",
+  "partition_by": [
+    "test_partition_by"
+  ],
+  "pockets": [
+    {
+      "center_angstrom": [
+        1
+      ],
+      "confidence_metric": "confidence_metric_01234",
+      "detection_cache_key": "test_detection_cache_key",
+      "druggability_score_metric": "test_druggability_score_metric",
+      "druggability_score_value": 1,
+      "fpocket_druggability_score": 1,
+      "fpocket_score": 1,
+      "low_confidence_residue_count": 1,
+      "mean_local_confidence_value": 1,
+      "mean_local_plddt": 1,
+      "method": "test_method",
+      "objects": [
+        {
+          "bucket": "test_bucket",
+          "content_type": "test_content_type",
+          "kind": "test_kind",
+          "object_id": "object_id_01234",
+          "object_key": "test_object_key",
+          "path": "test_path",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "storage_backend": "test_storage_backend",
+          "uri": "https://example.com"
+        }
+      ],
+      "pocket_id": "pocket_id_01234",
+      "rank": 1,
+      "residues": [
+        {
+          "assembly_id": "assembly_id_01234",
+          "auth_chain_id": "auth_chain_id_01234",
+          "auth_position": 1,
+          "chain_id": "chain_id_01234",
+          "entity_id": "entity_id_01234",
+          "insertion_code": "test_insertion_code",
+          "label_chain_id": "label_chain_id_01234",
+          "label_position": 1,
+          "model_id": "model_id_01234",
+          "position": 1,
+          "residue": "residue_01234"
+        }
+      ],
+      "score_metric": "test_score_metric",
+      "score_value": 1,
+      "source_sha256": "test_source_sha256",
+      "structure_id": "structure_id_01234",
+      "volume_angstrom3": 1
+    }
+  ],
+  "preview_limit": 1,
+  "radius": 1,
+  "relation": "test_relation",
+  "release": "test_release",
+  "sort_by": [
+    "test_sort_by"
+  ],
+  "structure_id": "structure_id_01234",
+  "variants": [
+    {
+      "is_valid": true,
+      "mutant_aa": "test_mutant_aa",
+      "mutation_type": "test_mutation_type",
+      "raw": "test_raw",
+      "sequence_position": 1,
+      "structure_chain_id": "structure_chain_id_01234",
+      "structure_residue_aa": "structure_residue_aa_01234",
+      "structure_residue_index": 1,
+      "structure_residue_number": 1,
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ],
+      "wildtype_aa": "test_wildtype_aa",
+      "wildtype_matches": true
+    }
+  ]
+}

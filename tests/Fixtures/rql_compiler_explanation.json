@@ -1,0 +1,466 @@
+{
+  "caller_filter_expansions": [
+    {
+      "column": "test_column",
+      "name": "Test",
+      "operator": "test_operator",
+      "path": "test_path",
+      "source": "test_source",
+      "value": {},
+      "values": [
+        {}
+      ]
+    }
+  ],
+  "evidence_relationships": [
+    {
+      "criteria": [
+        {
+          "all": [],
+          "any": [],
+          "column": "test_column",
+          "compare_column": "test_compare_column",
+          "compare_source": "test_compare_source",
+          "exists": {
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "where": []
+          },
+          "not": {},
+          "not_exists": {
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "where": []
+          },
+          "operator": "eq",
+          "source": "test_source",
+          "value": {},
+          "values": [
+            {}
+          ]
+        }
+      ],
+      "criteria_digest": "test_criteria_digest",
+      "criterion_plan": [
+        {
+          "acceptance": {
+            "all": [],
+            "any": [],
+            "column": "test_column",
+            "compare_column": "test_compare_column",
+            "compare_source": "test_compare_source",
+            "exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "not": {},
+            "not_exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "operator": "eq",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          },
+          "criterion_digest": "test_criterion_digest",
+          "field": {
+            "column": "test_column",
+            "source": "test_source"
+          },
+          "index": 1,
+          "metric_contract": {
+            "column": "test_column",
+            "description": "test_description",
+            "direction": "minimum",
+            "maximum": 1,
+            "method_columns": [
+              "test_method_columns"
+            ],
+            "minimum": 1,
+            "unit": "test_unit"
+          },
+          "missing_evidence_policy": "reject",
+          "origin": "identity",
+          "predicate": {
+            "all": [],
+            "any": [],
+            "column": "test_column",
+            "compare_column": "test_compare_column",
+            "compare_source": "test_compare_source",
+            "exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "not": {},
+            "not_exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "operator": "eq",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        }
+      ],
+      "description": "test_description",
+      "evidence_database": "evidence_database_01234",
+      "evidence_fields": [
+        {
+          "column": "test_column",
+          "source": "test_source"
+        }
+      ],
+      "evidence_release": "evidence_release_01234",
+      "evidence_source": "evidence_source_01234",
+      "kind": "sequence_similarity",
+      "method": {
+        "column": "test_column",
+        "source": "test_source"
+      },
+      "missing_evidence_policy": "reject",
+      "name": "Test",
+      "object": {
+        "column": "test_column",
+        "source": "test_source"
+      },
+      "ontology_contract_digest": "test_ontology_contract_digest",
+      "relationship_digest": "test_relationship_digest",
+      "scope": {
+        "alignment": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "kind": "whole_entity",
+        "object_domain_instance": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "object_end": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "object_start": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "subject_domain_instance": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "subject_end": {
+          "column": "test_column",
+          "source": "test_source"
+        },
+        "subject_start": {
+          "column": "test_column",
+          "source": "test_source"
+        }
+      },
+      "set_operation_index": 1,
+      "set_operation_operator": "base",
+      "status": "candidate",
+      "subject": {
+        "column": "test_column",
+        "source": "test_source"
+      }
+    }
+  ],
+  "explanation_digest": "test_explanation_digest",
+  "grain_proofs": [
+    {
+      "fanout_join_ids": [
+        "fanout_join_ids_01234"
+      ],
+      "input_grain": [
+        "test_input_grain"
+      ],
+      "measurement": "test_measurement",
+      "protection": "not_declared"
+    }
+  ],
+  "id": "01234",
+  "join_decisions": [
+    {
+      "action": "activated",
+      "join_index": 1,
+      "left_source": "test_left_source",
+      "reason": "always",
+      "right_source": "test_right_source"
+    }
+  ],
+  "normalized_ast": {
+    "allow_unverified_joins": true,
+    "budget": {
+      "max_bytes_scanned": 1,
+      "max_rows_scanned": 1,
+      "timeout_ms": 1
+    },
+    "budget_profile": "interactive",
+    "cursor": "test_cursor",
+    "declaration_only": true,
+    "dialect": "rafflesia_sql_2026_07_13",
+    "dimensions": [
+      {
+        "alias": "test_alias",
+        "column": "test_column",
+        "compute": {
+          "else": {},
+          "function": "date_bucket",
+          "mappings": [
+            {
+              "output": {},
+              "value": {}
+            }
+          ],
+          "origin": 1,
+          "unit": "day",
+          "width": 1
+        },
+        "source": "test_source"
+      }
+    ],
+    "filters": [
+      {
+        "all": [],
+        "any": [],
+        "column": "test_column",
+        "compare_column": "test_compare_column",
+        "compare_source": "test_compare_source",
+        "exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "not": {},
+        "not_exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "operator": "eq",
+        "source": "test_source",
+        "value": {},
+        "values": [
+          {}
+        ]
+      }
+    ],
+    "from": "test_from",
+    "having": [
+      {
+        "alias": "test_alias",
+        "all": [],
+        "any": [],
+        "not": {},
+        "operator": "eq",
+        "value": {},
+        "values": [
+          {}
+        ]
+      }
+    ],
+    "join_evidence_policy": "advisory",
+    "joins": [
+      {
+        "activation": "always",
+        "evidence_digest": "evidence_digest_01234",
+        "evidence_requirement": "observed",
+        "key_variant": "primary",
+        "left_source": "test_left_source",
+        "on": [
+          {
+            "all": [],
+            "any": [],
+            "column": "test_column",
+            "compare_column": "test_compare_column",
+            "compare_source": "test_compare_source",
+            "exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "not": {},
+            "not_exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "operator": "eq",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "relationship_id": "relationship_id_01234",
+        "right_source": "test_right_source",
+        "type": "inner"
+      }
+    ],
+    "limit": 1,
+    "measurements": [
+      {
+        "alias": "test_alias",
+        "column": "test_column",
+        "fields": [
+          {
+            "alias": "test_alias",
+            "column": "test_column",
+            "compute": {
+              "else": {},
+              "function": "date_bucket",
+              "mappings": [
+                {
+                  "output": {},
+                  "value": {}
+                }
+              ],
+              "origin": 1,
+              "unit": "day",
+              "width": 1
+            },
+            "source": "test_source"
+          }
+        ],
+        "function": "count",
+        "input_grain": [
+          {
+            "alias": "test_alias",
+            "column": "test_column",
+            "compute": {
+              "else": {},
+              "function": "date_bucket",
+              "mappings": [
+                {
+                  "output": {},
+                  "value": {}
+                }
+              ],
+              "origin": 1,
+              "unit": "day",
+              "width": 1
+            },
+            "source": "test_source"
+          }
+        ],
+        "source": "test_source",
+        "unit": "test_unit",
+        "where": [
+          {
+            "all": [],
+            "any": [],
+            "column": "test_column",
+            "compare_column": "test_compare_column",
+            "compare_source": "test_compare_source",
+            "exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "not": {},
+            "not_exists": {
+              "key_variant": "primary",
+              "left_source": "test_left_source",
+              "relationship_id": "relationship_id_01234",
+              "right_source": "test_right_source",
+              "where": []
+            },
+            "operator": "eq",
+            "source": "test_source",
+            "value": {},
+            "values": [
+              {}
+            ]
+          }
+        ]
+      }
+    ],
+    "ontology_digest": "test_ontology_digest",
+    "order_by": [
+      {
+        "alias": "test_alias",
+        "column": "test_column",
+        "direction": "asc",
+        "source": "test_source"
+      }
+    ],
+    "ratios": [
+      {
+        "alias": "test_alias",
+        "denominator": "test_denominator",
+        "null_behavior": "null",
+        "numerator": "test_numerator",
+        "scale": 1,
+        "unit": "test_unit",
+        "zero_behavior": "null"
+      }
+    ],
+    "result_key": [
+      "test_result_key"
+    ],
+    "semantic_dialect": "rafflesia_semantic_query_2026_07_17",
+    "sources": [
+      {
+        "database": "test_database",
+        "name": "Test",
+        "relation": "test_relation",
+        "release": "test_release"
+      }
+    ],
+    "strict_joins": true
+  },
+  "normalized_ast_digest": "test_normalized_ast_digest",
+  "object": "rql_compiler_explanation",
+  "resolved_ontology_edges": [
+    {
+      "can_fan_out": true,
+      "cardinality": "test_cardinality",
+      "is_lossy": true,
+      "is_range_mapping": true,
+      "join_index": 1,
+      "key_variant": "test_key_variant",
+      "left_source": "test_left_source",
+      "local_columns": [
+        "test_local_columns"
+      ],
+      "relationship_id": "relationship_id_01234",
+      "remote_columns": [
+        "test_remote_columns"
+      ],
+      "right_source": "test_right_source"
+    }
+  ]
+}

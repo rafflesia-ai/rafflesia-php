@@ -1,0 +1,125 @@
+{
+  "data": {
+    "emdb_id": "emdb_id_01234",
+    "format": "test_format",
+    "header": {
+      "axis_order": [
+        1
+      ],
+      "cell_angles": [
+        1
+      ],
+      "cell_angstrom": [
+        1
+      ],
+      "columns": 1,
+      "endian": "test_endian",
+      "grid_columns": 1,
+      "grid_rows": 1,
+      "grid_sections": 1,
+      "header_only": true,
+      "header_size_bytes": 1,
+      "machine_stamp": "test_machine_stamp",
+      "max_density": 1,
+      "mean_density": 1,
+      "min_density": 1,
+      "mode": 1,
+      "origin_angstrom": [
+        1
+      ],
+      "parser": {
+        "format": "test_format",
+        "name": "Test",
+        "version": "test_version"
+      },
+      "rms_density": 1,
+      "rows": 1,
+      "sections": 1,
+      "space_group_number": 1,
+      "symmetry_bytes": 1,
+      "voxel_size_angstrom": [
+        1
+      ]
+    },
+    "map_id": "map_id_01234",
+    "metadata": {
+      "key": "test_value"
+    },
+    "object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "retrieved_at": "test_retrieved_at",
+    "source": "test_source",
+    "source_url": "https://example.com"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

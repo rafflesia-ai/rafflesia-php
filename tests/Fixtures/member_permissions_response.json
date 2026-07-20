@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "id": "01234",
+      "name": "Test",
+      "roles": [
+        "test_roles"
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "id": "01234",
+      "name": "Test",
+      "roles": [
+        "test_roles"
+      ]
+    }
+  ]
+}

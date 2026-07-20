@@ -1,0 +1,9 @@
+{
+  "manifest_path": "test_manifest_path",
+  "require_no_failures": true,
+  "require_source_files": true,
+  "skip_row_count_check": true,
+  "tables": [
+    "test_tables"
+  ]
+}

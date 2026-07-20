@@ -1,0 +1,15 @@
+{
+  "corpus": "test_corpus",
+  "detail": {},
+  "domain": "test_domain",
+  "family": "test_family",
+  "index_version": "test_index_version",
+  "manifest_generation": 1,
+  "namespace": "Test",
+  "position": 1,
+  "release_id": "release_id_01234",
+  "role": "test_role",
+  "score": 1,
+  "score_kind": "test_score_kind",
+  "source": "test_source"
+}

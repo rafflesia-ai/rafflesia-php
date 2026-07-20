@@ -1,0 +1,133 @@
+{
+  "data": {
+    "atom_count": 1,
+    "axes": [
+      {
+        "direction": [
+          1
+        ],
+        "direction_canonicalization": "test_direction_canonicalization",
+        "eigenvalue_angstrom2": 1,
+        "is_direction_flipped": true,
+        "rank": 1,
+        "rms_angstrom": 1
+      }
+    ],
+    "centroid": [
+      1
+    ],
+    "relation": {
+      "columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "object": "relation_artifact",
+      "object_refs": [
+        "test_object_refs"
+      ],
+      "preview": {
+        "columns": [
+          "test_columns"
+        ],
+        "content_hash": "test_content_hash",
+        "database": "test_database",
+        "engine": "test_engine",
+        "limit": 1,
+        "order_by": [
+          "test_order_by"
+        ],
+        "relation": "test_relation",
+        "release": "test_release",
+        "returned_row_count": 1,
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "schema_columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "schema_ref": "test_schema_ref"
+      },
+      "relation": "test_relation",
+      "release": "test_release",
+      "row_count": 1,
+      "schema_ref": "test_schema_ref"
+    },
+    "schema_version": "test_schema_version",
+    "structure_id": "structure_id_01234"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

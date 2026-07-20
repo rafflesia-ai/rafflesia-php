@@ -1,0 +1,10 @@
+{
+  "min_byte_reduction_fraction": 1,
+  "min_recall_at_1": 1,
+  "min_recall_at_10": 1,
+  "min_recall_at_100": 1,
+  "passed": true,
+  "reasons": [
+    "test_reasons"
+  ]
+}

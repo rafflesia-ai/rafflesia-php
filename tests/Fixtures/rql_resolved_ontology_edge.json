@@ -1,0 +1,17 @@
+{
+  "can_fan_out": true,
+  "cardinality": "test_cardinality",
+  "is_lossy": true,
+  "is_range_mapping": true,
+  "join_index": 1,
+  "key_variant": "test_key_variant",
+  "left_source": "test_left_source",
+  "local_columns": [
+    "test_local_columns"
+  ],
+  "relationship_id": "relationship_id_01234",
+  "remote_columns": [
+    "test_remote_columns"
+  ],
+  "right_source": "test_right_source"
+}

@@ -1,0 +1,10 @@
+{
+  "error": "test_error",
+  "executable": "test_executable",
+  "is_available": true,
+  "mdanalysis_available": true,
+  "mdanalysis_version": "test_mdanalysis_version",
+  "resolved_from": "test_resolved_from",
+  "runtime_manifest_path": "test_runtime_manifest_path",
+  "version": "test_version"
+}

@@ -1,0 +1,8 @@
+{
+  "allow_network": true,
+  "limit": 1,
+  "query": "test_query",
+  "source_snapshot_refs": [
+    "test_source_snapshot_refs"
+  ]
+}

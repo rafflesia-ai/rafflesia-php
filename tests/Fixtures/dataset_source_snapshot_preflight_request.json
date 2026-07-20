@@ -1,0 +1,7 @@
+{
+  "additional_working_bytes": 1,
+  "artifact_kind": "test_artifact_kind",
+  "minimum_free_bytes": 1,
+  "source": "test_source",
+  "url": "https://example.com"
+}

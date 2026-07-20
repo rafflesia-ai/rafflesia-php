@@ -1,0 +1,21 @@
+{
+  "cache_mode": "use",
+  "db": "test_db",
+  "dry_run": true,
+  "extra_args": [
+    "test_extra_args"
+  ],
+  "hit_fasta_path": "test_hit_fasta_path",
+  "homology_search_id": "homology_search_id_01234",
+  "include_query": true,
+  "kmer_size": 1,
+  "max_hits": 1,
+  "min_identity": 1,
+  "output_dir": "test_output_dir",
+  "query": "test_query",
+  "search_backend": "builtin",
+  "search_object_id": "search_object_id_01234",
+  "sequence_catalog_object_id": "sequence_catalog_object_id_01234",
+  "strategy": "auto",
+  "threads": 1
+}

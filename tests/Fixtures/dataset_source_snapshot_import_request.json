@@ -1,0 +1,15 @@
+{
+  "batch_rows": 1,
+  "checkpoint_path": "test_checkpoint_path",
+  "database": "test_database",
+  "format": "fasta",
+  "import_mode": "catalog",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "output_dir": "test_output_dir",
+  "parser": "generic_fasta",
+  "release": "test_release",
+  "resume": true,
+  "source": "test_source",
+  "version": "test_version"
+}

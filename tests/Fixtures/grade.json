@@ -1,0 +1,22 @@
+{
+  "blocking_errors": [
+    "test_blocking_errors"
+  ],
+  "grader_hash": "test_grader_hash",
+  "metrics": {
+    "key": {}
+  },
+  "pass_score": 1,
+  "passed": true,
+  "reward": 1,
+  "reward_definition_id": "reward_definition_id_01234",
+  "subscores": {
+    "key": {}
+  },
+  "warnings": [
+    "test_warnings"
+  ],
+  "weights": {
+    "key": {}
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "availability": "all",
+  "catalog_release_count": 1,
+  "data": [
+    {
+      "id": "01234",
+      "is_available": true,
+      "join": {
+        "alt_local_columns": [
+          "test_alt_local_columns"
+        ],
+        "alt_remote_columns": [
+          "test_alt_remote_columns"
+        ],
+        "can_fan_out": true,
+        "cardinality": "one_to_one",
+        "cardinality_status": "not_observed",
+        "coordinate_notes": "test_coordinate_notes",
+        "definition_source": "declared",
+        "evidence_digest": "evidence_digest_01234",
+        "fragment": {
+          "rql_imports": [
+            {
+              "description": "test_description",
+              "name": "Test",
+              "relation": "test_relation"
+            }
+          ],
+          "rql_join": {
+            "activation": "always",
+            "evidence_digest": "evidence_digest_01234",
+            "evidence_requirement": "observed",
+            "key_variant": "primary",
+            "left_source": "test_left_source",
+            "on": [
+              {
+                "all": [],
+                "any": [],
+                "column": "test_column",
+                "compare_column": "test_compare_column",
+                "compare_source": "test_compare_source",
+                "exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "not": {},
+                "not_exists": {
+                  "key_variant": "primary",
+                  "left_source": "test_left_source",
+                  "relationship_id": "relationship_id_01234",
+                  "right_source": "test_right_source",
+                  "where": []
+                },
+                "operator": "eq",
+                "parameter": "test_parameter",
+                "source": "test_source",
+                "value": {},
+                "values": [
+                  {}
+                ]
+              }
+            ],
+            "relationship_id": "relationship_id_01234",
+            "right_source": "test_right_source",
+            "type": "inner"
+          },
+          "rql_source_fragment": "test_rql_source_fragment",
+          "sources": [
+            {
+              "database": "test_database",
+              "name": "Test",
+              "relation": "test_relation",
+              "release": "test_release",
+              "selector": "test_selector"
+            }
+          ],
+          "sql_from_clause": "test_sql_from_clause",
+          "sql_join_clause": "test_sql_join_clause"
+        },
+        "from_relation": "test_from_relation",
+        "from_selector": "test_from_selector",
+        "has_many_to_many": true,
+        "id": "01234",
+        "is_lossy": true,
+        "is_range_mapping": true,
+        "key_overlap_status": "not_observed",
+        "key_variant": "primary",
+        "local_columns": [
+          "test_local_columns"
+        ],
+        "measurement_id": "measurement_id_01234",
+        "measurement_url": "https://example.com",
+        "object": "test_object",
+        "observation_status": "not_observed",
+        "remote_columns": [
+          "test_remote_columns"
+        ],
+        "safety": "strict",
+        "safety_reason": "test_safety_reason",
+        "to_relation": "test_to_relation",
+        "to_selector": "test_to_selector"
+      },
+      "object": "database_join_neighbor",
+      "target_database": "test_target_database",
+      "target_queryable_relation_count": 1,
+      "target_release": "test_target_release",
+      "target_release_digest": "test_target_release_digest",
+      "unavailable_reasons": [
+        "test_unavailable_reasons"
+      ]
+    }
+  ],
+  "database": "test_database",
+  "evidence_requirement": "declared",
+  "has_more": true,
+  "include_same_database": true,
+  "matched_target_release_count": 1,
+  "next_cursor": "test_next_cursor",
+  "object": "list",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "safety": "all",
+  "safety_basis": "declared_contract_and_release_integrity",
+  "source_queryable_relation_count": 1,
+  "source_relation": "test_source_relation",
+  "target_database": "test_target_database",
+  "url": "https://example.com"
+}

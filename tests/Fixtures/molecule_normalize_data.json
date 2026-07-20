@@ -1,0 +1,6 @@
+{
+  "backend": "test_backend",
+  "canonical_smiles": "test_canonical_smiles",
+  "inchikey": "test_inchikey",
+  "molecule_id": "molecule_id_01234"
+}

@@ -1,0 +1,157 @@
+{
+  "data": {
+    "chain_count": 1,
+    "chains": [
+      {
+        "atom_count": 1,
+        "auth_chain_id": "auth_chain_id_01234",
+        "chain_id": "chain_id_01234",
+        "end": 1,
+        "entity_description": "test_entity_description",
+        "entity_id": "entity_id_01234",
+        "entity_type": "test_entity_type",
+        "label_chain_id": "label_chain_id_01234",
+        "residue_count": 1,
+        "start": 1,
+        "uniprot_ids": [
+          "uniprot_ids_01234"
+        ]
+      }
+    ],
+    "format": "test_format",
+    "object": {
+      "bucket": "test_bucket",
+      "content_type": "test_content_type",
+      "kind": "test_kind",
+      "object_id": "object_id_01234",
+      "object_key": "test_object_key",
+      "path": "test_path",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "storage_backend": "test_storage_backend",
+      "uri": "https://example.com"
+    },
+    "parser": {
+      "input_format": "test_input_format",
+      "name": "Test",
+      "version": "test_version"
+    },
+    "relation": {
+      "columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "object": "relation_artifact",
+      "object_refs": [
+        "test_object_refs"
+      ],
+      "preview": {
+        "columns": [
+          "test_columns"
+        ],
+        "content_hash": "test_content_hash",
+        "database": "test_database",
+        "engine": "test_engine",
+        "limit": 1,
+        "order_by": [
+          "test_order_by"
+        ],
+        "relation": "test_relation",
+        "release": "test_release",
+        "returned_row_count": 1,
+        "row_count": 1,
+        "rows": [
+          {
+            "key": {}
+          }
+        ],
+        "schema_columns": [
+          {
+            "is_nullable": true,
+            "name": "Test",
+            "ordinal": 1,
+            "type": "test_type"
+          }
+        ],
+        "schema_ref": "test_schema_ref"
+      },
+      "relation": "test_relation",
+      "release": "test_release",
+      "row_count": 1,
+      "schema_ref": "test_schema_ref"
+    },
+    "source": "test_source",
+    "source_metadata": {
+      "key": "test_value"
+    },
+    "structure_id": "structure_id_01234",
+    "target_id": "target_id_01234"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

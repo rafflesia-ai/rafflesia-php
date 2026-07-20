@@ -1,0 +1,55 @@
+{
+  "artifact_kind": "test_artifact_kind",
+  "consumer_object_field": "test_consumer_object_field",
+  "consumer_primitive": "test_consumer_primitive",
+  "expected_etag": "test_expected_etag",
+  "expected_md5": "test_expected_md5",
+  "expected_sha256": "test_expected_sha256",
+  "expected_size_bytes": 1,
+  "fetch_id": "fetch_id_01234",
+  "http_etag": "test_http_etag",
+  "http_last_modified": "test_http_last_modified",
+  "object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "observed_md5": "test_observed_md5",
+  "observed_sha256": "test_observed_sha256",
+  "observed_size_bytes": 1,
+  "parser": "test_parser",
+  "profile": {
+    "allowed_hosts": [
+      "test_allowed_hosts"
+    ],
+    "allowed_path_prefixes": [
+      "test_allowed_path_prefixes"
+    ],
+    "artifact_kind": "test_artifact_kind",
+    "compression": "test_compression",
+    "consumer_object_field": "test_consumer_object_field",
+    "consumer_parameters": {
+      "key": "test_value"
+    },
+    "consumer_primitive": "test_consumer_primitive",
+    "content_type": "test_content_type",
+    "description": "test_description",
+    "example_url": "https://example.com",
+    "expected_relation": "test_expected_relation",
+    "format": "test_format",
+    "parser": "test_parser",
+    "recommended_import_mode": "test_recommended_import_mode"
+  },
+  "requested_url": "https://example.com",
+  "resolved_url": "https://example.com",
+  "source": "test_source",
+  "upstream_release": "test_upstream_release",
+  "version": "test_version"
+}

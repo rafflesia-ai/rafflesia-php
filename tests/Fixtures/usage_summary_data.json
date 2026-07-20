@@ -1,0 +1,37 @@
+{
+  "bucket_interval": "hour",
+  "cost_usd_data": [
+    {
+      "date": "2023-01-01T00:00:00.000Z",
+      "values": {
+        "key": 1
+      }
+    }
+  ],
+  "currency": "test_currency",
+  "data": [
+    {
+      "currency": "test_currency",
+      "event_count": 1,
+      "meter": "homology_query",
+      "product": "dandelion",
+      "quantity": "test_quantity",
+      "rated_amount_microusd": 1,
+      "unit": "test_unit"
+    }
+  ],
+  "ended_at": "2023-01-01T00:00:00.000Z",
+  "environment_id": "environment_id_01234",
+  "object": "test_object",
+  "operations_data": [
+    {
+      "date": "2023-01-01T00:00:00.000Z",
+      "values": {
+        "key": 1
+      }
+    }
+  ],
+  "organization_id": "organization_id_01234",
+  "started_at": "2023-01-01T00:00:00.000Z",
+  "total_rated_amount_microusd": 1
+}

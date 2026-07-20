@@ -1,0 +1,7 @@
+{
+  "chrom": "test_chrom",
+  "end": 1,
+  "file": "test_file",
+  "region": "test_region",
+  "start": 1
+}

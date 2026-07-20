@@ -1,0 +1,39 @@
+{
+  "comparison_cursor": "test_comparison_cursor",
+  "comparison_limit": 1,
+  "cursor": "test_cursor",
+  "evidence_profiles": [
+    {
+      "name": "Test",
+      "overrides": [
+        {
+          "criterion_index": 1,
+          "relationship_name": "Test",
+          "threshold": 1
+        }
+      ]
+    }
+  ],
+  "limit": 1,
+  "profile_cursor": "test_profile_cursor",
+  "profile_limit": 1,
+  "relationship_comparisons": [
+    {
+      "left_relationship": "test_left_relationship",
+      "name": "Test",
+      "right_relationship": "test_right_relationship"
+    }
+  ],
+  "relationship_names": [
+    "Test"
+  ],
+  "threshold_sweeps": [
+    {
+      "criterion_index": 1,
+      "relationship_name": "Test",
+      "thresholds": [
+        1
+      ]
+    }
+  ]
+}

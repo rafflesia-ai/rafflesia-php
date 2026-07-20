@@ -1,0 +1,90 @@
+{
+  "data": {
+    "id": "01234",
+    "object": "registry_runtime_reconciliation",
+    "observations": [
+      {
+        "binding_digest": "test_binding_digest",
+        "build_id": "build_id_01234",
+        "credential_ref": "test_credential_ref",
+        "database_id": "database_id_01234",
+        "database_release_id": "database_release_id_01234",
+        "deployment_id": "deployment_id_01234",
+        "detail": "test_detail",
+        "kind": "dandelion",
+        "observed_at": "test_observed_at",
+        "release_id": "release_id_01234",
+        "repository_id": "repository_id_01234",
+        "status": "ready"
+      }
+    ],
+    "organization_id": "organization_id_01234",
+    "receipt_digest": "test_receipt_digest",
+    "reconciled_at": "test_reconciled_at",
+    "reconciled_by": "test_reconciled_by",
+    "resource_group_id": "resource_group_id_01234",
+    "schema_version": "test_schema_version",
+    "snapshot_digest": "test_snapshot_digest"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

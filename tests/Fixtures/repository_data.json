@@ -1,0 +1,586 @@
+{
+  "builds": [
+    {
+      "artifact_refs": [
+        "test_artifact_refs"
+      ],
+      "content_digest": "test_content_digest",
+      "id": "01234",
+      "is_content_pinned": true,
+      "kind": "test_kind",
+      "metadata": {
+        "key": {}
+      },
+      "object": "build",
+      "precision": "test_precision",
+      "release_id": "release_id_01234",
+      "runtime": "test_runtime",
+      "status": "test_status",
+      "tool": "test_tool",
+      "tool_version": "test_tool_version"
+    }
+  ],
+  "deployments": [
+    {
+      "build_id": "build_id_01234",
+      "endpoint": "test_endpoint",
+      "id": "01234",
+      "method": "test_method",
+      "object": "deployment",
+      "provider": "provider_01234",
+      "region": "test_region",
+      "runtime_digest": "test_runtime_digest",
+      "status": "test_status"
+    }
+  ],
+  "lineage": [
+    {
+      "evidence_object_id": "evidence_object_id_01234",
+      "evidence_status": "observed",
+      "from_release_id": "from_release_id_01234",
+      "id": "01234",
+      "object": "lineage_edge",
+      "predicate": "test_predicate",
+      "source_url": "https://example.com",
+      "to_release_id": "to_release_id_01234"
+    }
+  ],
+  "object": "repository",
+  "offers": [
+    {
+      "currency": "test_currency",
+      "deployment_id": "deployment_id_01234",
+      "display": "test_display",
+      "effective_from": "test_effective_from",
+      "effective_until": "test_effective_until",
+      "id": "01234",
+      "object": "deployment_offer",
+      "unit": "test_unit",
+      "unit_amount_microusd": 1
+    }
+  ],
+  "releases": [
+    {
+      "artifacts": [
+        {
+          "format": "test_format",
+          "id": "01234",
+          "kind": "test_kind",
+          "location_uri": "https://example.com",
+          "object": "artifact",
+          "object_id": "object_id_01234",
+          "role": "test_role",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "status": "test_status"
+        }
+      ],
+      "capabilities": [
+        "test_capabilities"
+      ],
+      "card": {
+        "input_types": [
+          "test_input_types"
+        ],
+        "license": "test_license",
+        "metadata": {
+          "key": {}
+        },
+        "output_types": [
+          "test_output_types"
+        ],
+        "publisher": "test_publisher",
+        "summary": "test_summary",
+        "tags": [
+          "test_tags"
+        ],
+        "title": "test_title"
+      },
+      "content_digest": "test_content_digest",
+      "id": "01234",
+      "is_content_pinned": true,
+      "lifecycle": {
+        "deprecated_at": "test_deprecated_at",
+        "published_at": "test_published_at",
+        "status": "test_status"
+      },
+      "manifest": {
+        "dataset": {
+          "benchmark_cohorts": [
+            {
+              "id": "01234",
+              "kind": "test_kind",
+              "query_count": 1,
+              "record_set_artifact_id": "record_set_artifact_id_01234",
+              "required_evidence_set_ids": [
+                "required_evidence_set_ids_01234"
+              ],
+              "target_count": 1,
+              "truth_artifact_id": "truth_artifact_id_01234",
+              "truth_semantics": "test_truth_semantics"
+            }
+          ],
+          "byte_count": 1,
+          "configs": [
+            {
+              "description": "test_description",
+              "id": "01234",
+              "name": "Test",
+              "shard_ids": [
+                "shard_ids_01234"
+              ]
+            }
+          ],
+          "evidence_sets": [
+            {
+              "artifact_ids": [
+                "artifact_ids_01234"
+              ],
+              "available_records": 1,
+              "coverage_fraction": 1,
+              "derived_from": [
+                "test_derived_from"
+              ],
+              "eligible_records": 1,
+              "id": "01234",
+              "kind": "test_kind",
+              "model_release_id": "model_release_id_01234",
+              "origin": "test_origin",
+              "representation": "test_representation"
+            }
+          ],
+          "evidence_status": "measured",
+          "formats": [
+            "test_formats"
+          ],
+          "license": "test_license",
+          "modality": [
+            "test_modality"
+          ],
+          "molecule_type": "test_molecule_type",
+          "profiles": [
+            {
+              "artifact_id": "artifact_id_01234",
+              "content_digest": "test_content_digest",
+              "id": "01234",
+              "kind": "test_kind",
+              "tool_version": "test_tool_version",
+              "validation_status": "validation_status_01234"
+            }
+          ],
+          "record_count": 1,
+          "relations": [
+            {
+              "grain": "test_grain",
+              "name": "Test",
+              "primary_key": [
+                "test_primary_key"
+              ],
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "residue_count": 1,
+          "row_count": 1,
+          "schema_digest": "test_schema_digest",
+          "shards": [
+            {
+              "byte_count": 1,
+              "config_id": "config_id_01234",
+              "format": "test_format",
+              "id": "01234",
+              "object_id": "object_id_01234",
+              "partitions": {
+                "key": {}
+              },
+              "relation": "test_relation",
+              "row_count": 1,
+              "sha256": "test_sha256",
+              "split_id": "split_id_01234"
+            }
+          ],
+          "source_snapshots": [
+            {
+              "content_digest": "test_content_digest",
+              "name": "Test",
+              "provider": "provider_01234",
+              "sha256": "test_sha256",
+              "source_uri": "https://example.com",
+              "version": "test_version"
+            }
+          ],
+          "splits": [
+            {
+              "config_id": "config_id_01234",
+              "id": "01234",
+              "name": "Test",
+              "partition": "test_partition",
+              "record_count": 1,
+              "shard_ids": [
+                "shard_ids_01234"
+              ]
+            }
+          ]
+        },
+        "kind": "model",
+        "model": {
+          "architecture": "test_architecture",
+          "capabilities": [
+            {
+              "constraints": {
+                "key": {}
+              },
+              "input_schema_id": "input_schema_id_01234",
+              "input_types": [
+                "test_input_types"
+              ],
+              "operation_id": "operation_id_01234",
+              "output_schema_id": "output_schema_id_01234",
+              "output_types": [
+                "test_output_types"
+              ],
+              "workload": "test_workload"
+            }
+          ],
+          "configuration_digest": "test_configuration_digest",
+          "dependency_closure_status": "complete",
+          "evaluations": [
+            {
+              "dataset_release_id": "dataset_release_id_01234",
+              "evaluation_method": "test_evaluation_method",
+              "measurements_digest": "test_measurements_digest",
+              "measurements_object_id": "measurements_object_id_01234",
+              "tool_version": "test_tool_version"
+            }
+          ],
+          "framework": "test_framework",
+          "license": "test_license",
+          "parameter_count": 1,
+          "upstream_publisher": "test_upstream_publisher",
+          "upstream_revision": "test_upstream_revision",
+          "weight_digest": "test_weight_digest",
+          "weight_format": "test_weight_format",
+          "weight_status": "pinned"
+        },
+        "ontology": {
+          "coordinate_system_count": 1,
+          "dataset_binding_kind": "test_dataset_binding_kind",
+          "entity_type_count": 1,
+          "field_count": 1,
+          "identifier_namespace_count": 1,
+          "join_path_policy": "test_join_path_policy",
+          "ontology_digest": "test_ontology_digest",
+          "relation_count": 1,
+          "relationship_count": 1,
+          "snapshot_artifact_id": "snapshot_artifact_id_01234",
+          "source_digest": "test_source_digest"
+        }
+      },
+      "object": "release",
+      "repository_id": "repository_id_01234",
+      "revision_digest": "test_revision_digest",
+      "revision_id": "revision_id_01234",
+      "validation_refs": [
+        {
+          "artifact_id": "artifact_id_01234",
+          "evidence_digest": "evidence_digest_01234",
+          "id": "01234",
+          "kind": "test_kind",
+          "object": "validation_ref",
+          "observed_at": "test_observed_at",
+          "status": "test_status"
+        }
+      ],
+      "version": "test_version"
+    }
+  ],
+  "revision_pointers": [
+    {
+      "generation": 1,
+      "kind": "branch",
+      "name": "Test",
+      "revision_id": "revision_id_01234",
+      "updated_at": "test_updated_at"
+    }
+  ],
+  "revisions": [
+    {
+      "content_digest": "test_content_digest",
+      "created_at": "test_created_at",
+      "id": "01234",
+      "object": "revision",
+      "repository_id": "repository_id_01234",
+      "revision_digest": "test_revision_digest"
+    }
+  ],
+  "summary": {
+    "aliases": [
+      {
+        "generation": 1,
+        "name": "Test",
+        "release_id": "release_id_01234",
+        "updated_at": "test_updated_at"
+      }
+    ],
+    "build_count": 1,
+    "capabilities": [
+      "test_capabilities"
+    ],
+    "description": "test_description",
+    "display_name": "Test",
+    "latest_release": {
+      "artifacts": [
+        {
+          "format": "test_format",
+          "id": "01234",
+          "kind": "test_kind",
+          "location_uri": "https://example.com",
+          "object": "artifact",
+          "object_id": "object_id_01234",
+          "role": "test_role",
+          "sha256": "test_sha256",
+          "size_bytes": 1,
+          "status": "test_status"
+        }
+      ],
+      "capabilities": [
+        "test_capabilities"
+      ],
+      "card": {
+        "input_types": [
+          "test_input_types"
+        ],
+        "license": "test_license",
+        "metadata": {
+          "key": {}
+        },
+        "output_types": [
+          "test_output_types"
+        ],
+        "publisher": "test_publisher",
+        "summary": "test_summary",
+        "tags": [
+          "test_tags"
+        ],
+        "title": "test_title"
+      },
+      "content_digest": "test_content_digest",
+      "id": "01234",
+      "is_content_pinned": true,
+      "lifecycle": {
+        "deprecated_at": "test_deprecated_at",
+        "published_at": "test_published_at",
+        "status": "test_status"
+      },
+      "manifest": {
+        "dataset": {
+          "benchmark_cohorts": [
+            {
+              "id": "01234",
+              "kind": "test_kind",
+              "query_count": 1,
+              "record_set_artifact_id": "record_set_artifact_id_01234",
+              "required_evidence_set_ids": [
+                "required_evidence_set_ids_01234"
+              ],
+              "target_count": 1,
+              "truth_artifact_id": "truth_artifact_id_01234",
+              "truth_semantics": "test_truth_semantics"
+            }
+          ],
+          "byte_count": 1,
+          "configs": [
+            {
+              "description": "test_description",
+              "id": "01234",
+              "name": "Test",
+              "shard_ids": [
+                "shard_ids_01234"
+              ]
+            }
+          ],
+          "evidence_sets": [
+            {
+              "artifact_ids": [
+                "artifact_ids_01234"
+              ],
+              "available_records": 1,
+              "coverage_fraction": 1,
+              "derived_from": [
+                "test_derived_from"
+              ],
+              "eligible_records": 1,
+              "id": "01234",
+              "kind": "test_kind",
+              "model_release_id": "model_release_id_01234",
+              "origin": "test_origin",
+              "representation": "test_representation"
+            }
+          ],
+          "evidence_status": "measured",
+          "formats": [
+            "test_formats"
+          ],
+          "license": "test_license",
+          "modality": [
+            "test_modality"
+          ],
+          "molecule_type": "test_molecule_type",
+          "profiles": [
+            {
+              "artifact_id": "artifact_id_01234",
+              "content_digest": "test_content_digest",
+              "id": "01234",
+              "kind": "test_kind",
+              "tool_version": "test_tool_version",
+              "validation_status": "validation_status_01234"
+            }
+          ],
+          "record_count": 1,
+          "relations": [
+            {
+              "grain": "test_grain",
+              "name": "Test",
+              "primary_key": [
+                "test_primary_key"
+              ],
+              "row_count": 1,
+              "schema_hash": "test_schema_hash",
+              "schema_version": 1
+            }
+          ],
+          "residue_count": 1,
+          "row_count": 1,
+          "schema_digest": "test_schema_digest",
+          "shards": [
+            {
+              "byte_count": 1,
+              "config_id": "config_id_01234",
+              "format": "test_format",
+              "id": "01234",
+              "object_id": "object_id_01234",
+              "partitions": {
+                "key": {}
+              },
+              "relation": "test_relation",
+              "row_count": 1,
+              "sha256": "test_sha256",
+              "split_id": "split_id_01234"
+            }
+          ],
+          "source_snapshots": [
+            {
+              "content_digest": "test_content_digest",
+              "name": "Test",
+              "provider": "provider_01234",
+              "sha256": "test_sha256",
+              "source_uri": "https://example.com",
+              "version": "test_version"
+            }
+          ],
+          "splits": [
+            {
+              "config_id": "config_id_01234",
+              "id": "01234",
+              "name": "Test",
+              "partition": "test_partition",
+              "record_count": 1,
+              "shard_ids": [
+                "shard_ids_01234"
+              ]
+            }
+          ]
+        },
+        "kind": "model",
+        "model": {
+          "architecture": "test_architecture",
+          "capabilities": [
+            {
+              "constraints": {
+                "key": {}
+              },
+              "input_schema_id": "input_schema_id_01234",
+              "input_types": [
+                "test_input_types"
+              ],
+              "operation_id": "operation_id_01234",
+              "output_schema_id": "output_schema_id_01234",
+              "output_types": [
+                "test_output_types"
+              ],
+              "workload": "test_workload"
+            }
+          ],
+          "configuration_digest": "test_configuration_digest",
+          "dependency_closure_status": "complete",
+          "evaluations": [
+            {
+              "dataset_release_id": "dataset_release_id_01234",
+              "evaluation_method": "test_evaluation_method",
+              "measurements_digest": "test_measurements_digest",
+              "measurements_object_id": "measurements_object_id_01234",
+              "tool_version": "test_tool_version"
+            }
+          ],
+          "framework": "test_framework",
+          "license": "test_license",
+          "parameter_count": 1,
+          "upstream_publisher": "test_upstream_publisher",
+          "upstream_revision": "test_upstream_revision",
+          "weight_digest": "test_weight_digest",
+          "weight_format": "test_weight_format",
+          "weight_status": "pinned"
+        },
+        "ontology": {
+          "coordinate_system_count": 1,
+          "dataset_binding_kind": "test_dataset_binding_kind",
+          "entity_type_count": 1,
+          "field_count": 1,
+          "identifier_namespace_count": 1,
+          "join_path_policy": "test_join_path_policy",
+          "ontology_digest": "test_ontology_digest",
+          "relation_count": 1,
+          "relationship_count": 1,
+          "snapshot_artifact_id": "snapshot_artifact_id_01234",
+          "source_digest": "test_source_digest"
+        }
+      },
+      "object": "release",
+      "repository_id": "repository_id_01234",
+      "revision_digest": "test_revision_digest",
+      "revision_id": "revision_id_01234",
+      "validation_refs": [
+        {
+          "artifact_id": "artifact_id_01234",
+          "evidence_digest": "evidence_digest_01234",
+          "id": "01234",
+          "kind": "test_kind",
+          "object": "validation_ref",
+          "observed_at": "test_observed_at",
+          "status": "test_status"
+        }
+      ],
+      "version": "test_version"
+    },
+    "license": "test_license",
+    "release_count": 1,
+    "repository": {
+      "full_name": "Test",
+      "id": "01234",
+      "kind": "model",
+      "namespace": "Test",
+      "object": "repository",
+      "slug": "test_slug"
+    },
+    "scope": {
+      "access_policy_id": "access_policy_id_01234",
+      "classification": "public",
+      "organization_id": "organization_id_01234",
+      "resource_group_id": "resource_group_id_01234",
+      "storage_scope_id": "storage_scope_id_01234"
+    },
+    "source_url": "https://example.com",
+    "visibility": "test_visibility"
+  }
+}

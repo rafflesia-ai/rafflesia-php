@@ -1,0 +1,12 @@
+{
+  "auth_position": 1,
+  "chain_id": "chain_id_01234",
+  "delta_sasa": 1,
+  "group": 1,
+  "is_interface": true,
+  "position": 1,
+  "relative_burial": 1,
+  "residue": "residue_01234",
+  "sasa_complex": 1,
+  "sasa_monomer": 1
+}

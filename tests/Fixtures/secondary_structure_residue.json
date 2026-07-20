@@ -1,0 +1,11 @@
+{
+  "auth_chain_id": "auth_chain_id_01234",
+  "auth_position": 1,
+  "chain_id": "chain_id_01234",
+  "code": "test_code",
+  "insertion_code": "test_insertion_code",
+  "label": "test_label",
+  "position": 1,
+  "residue": "residue_01234",
+  "simple": "test_simple"
+}

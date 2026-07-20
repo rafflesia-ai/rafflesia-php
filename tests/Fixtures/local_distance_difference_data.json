@@ -1,0 +1,20 @@
+{
+  "backend": "test_backend",
+  "compared_residue_count": 1,
+  "cutoff_angstrom": 1,
+  "lddt": 1,
+  "local_pair_count": 1,
+  "method": "test_method",
+  "passing_threshold_counts": [
+    1
+  ],
+  "query_residue_count": 1,
+  "query_structure_id": "query_structure_id_01234",
+  "target_residue_count": 1,
+  "target_structure_id": "target_structure_id_01234",
+  "thresholds": [
+    1
+  ],
+  "unmatched_query_count": 1,
+  "unmatched_target_count": 1
+}

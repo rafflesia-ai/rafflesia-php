@@ -1,0 +1,173 @@
+{
+  "criteria": [
+    {
+      "all": [],
+      "any": [],
+      "column": "test_column",
+      "compare_column": "test_compare_column",
+      "compare_source": "test_compare_source",
+      "exists": {
+        "key_variant": "primary",
+        "left_source": "test_left_source",
+        "relationship_id": "relationship_id_01234",
+        "right_source": "test_right_source",
+        "where": []
+      },
+      "not": {},
+      "not_exists": {
+        "key_variant": "primary",
+        "left_source": "test_left_source",
+        "relationship_id": "relationship_id_01234",
+        "right_source": "test_right_source",
+        "where": []
+      },
+      "operator": "eq",
+      "source": "test_source",
+      "value": {},
+      "values": [
+        {}
+      ]
+    }
+  ],
+  "criteria_digest": "test_criteria_digest",
+  "criterion_plan": [
+    {
+      "acceptance": {
+        "all": [],
+        "any": [],
+        "column": "test_column",
+        "compare_column": "test_compare_column",
+        "compare_source": "test_compare_source",
+        "exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "not": {},
+        "not_exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "operator": "eq",
+        "source": "test_source",
+        "value": {},
+        "values": [
+          {}
+        ]
+      },
+      "criterion_digest": "test_criterion_digest",
+      "field": {
+        "column": "test_column",
+        "source": "test_source"
+      },
+      "index": 1,
+      "metric_contract": {
+        "column": "test_column",
+        "description": "test_description",
+        "direction": "minimum",
+        "maximum": 1,
+        "method_columns": [
+          "test_method_columns"
+        ],
+        "minimum": 1,
+        "unit": "test_unit"
+      },
+      "missing_evidence_policy": "reject",
+      "origin": "identity",
+      "predicate": {
+        "all": [],
+        "any": [],
+        "column": "test_column",
+        "compare_column": "test_compare_column",
+        "compare_source": "test_compare_source",
+        "exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "not": {},
+        "not_exists": {
+          "key_variant": "primary",
+          "left_source": "test_left_source",
+          "relationship_id": "relationship_id_01234",
+          "right_source": "test_right_source",
+          "where": []
+        },
+        "operator": "eq",
+        "source": "test_source",
+        "value": {},
+        "values": [
+          {}
+        ]
+      }
+    }
+  ],
+  "description": "test_description",
+  "evidence_database": "evidence_database_01234",
+  "evidence_fields": [
+    {
+      "column": "test_column",
+      "source": "test_source"
+    }
+  ],
+  "evidence_release": "evidence_release_01234",
+  "evidence_source": "evidence_source_01234",
+  "kind": "sequence_similarity",
+  "method": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "missing_evidence_policy": "reject",
+  "name": "Test",
+  "object": {
+    "column": "test_column",
+    "source": "test_source"
+  },
+  "ontology_contract_digest": "test_ontology_contract_digest",
+  "relationship_digest": "test_relationship_digest",
+  "scope": {
+    "alignment": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "kind": "whole_entity",
+    "object_domain_instance": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "object_end": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "object_start": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "subject_domain_instance": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "subject_end": {
+      "column": "test_column",
+      "source": "test_source"
+    },
+    "subject_start": {
+      "column": "test_column",
+      "source": "test_source"
+    }
+  },
+  "set_operation_index": 1,
+  "set_operation_operator": "base",
+  "status": "candidate",
+  "subject": {
+    "column": "test_column",
+    "source": "test_source"
+  }
+}

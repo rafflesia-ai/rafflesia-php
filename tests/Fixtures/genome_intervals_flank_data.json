@@ -1,0 +1,22 @@
+{
+  "intervals": [
+    {
+      "contig": "test_contig",
+      "end": 1,
+      "length_bp": 1,
+      "name": "Test",
+      "start": 1,
+      "strand": "test_strand"
+    }
+  ],
+  "row_count": 1,
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

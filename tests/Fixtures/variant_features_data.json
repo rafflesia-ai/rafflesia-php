@@ -1,0 +1,84 @@
+{
+  "features_computed": [
+    "test_features_computed"
+  ],
+  "features_requested": [
+    "test_features_requested"
+  ],
+  "relation": {
+    "columns": [
+      {
+        "is_nullable": true,
+        "name": "Test",
+        "ordinal": 1,
+        "type": "test_type"
+      }
+    ],
+    "content_hash": "test_content_hash",
+    "database": "test_database",
+    "object": "relation_artifact",
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "preview": {
+      "columns": [
+        "test_columns"
+      ],
+      "content_hash": "test_content_hash",
+      "database": "test_database",
+      "engine": "test_engine",
+      "limit": 1,
+      "order_by": [
+        "test_order_by"
+      ],
+      "relation": "test_relation",
+      "release": "test_release",
+      "returned_row_count": 1,
+      "row_count": 1,
+      "rows": [
+        {
+          "key": {}
+        }
+      ],
+      "schema_columns": [
+        {
+          "is_nullable": true,
+          "name": "Test",
+          "ordinal": 1,
+          "type": "test_type"
+        }
+      ],
+      "schema_ref": "test_schema_ref"
+    },
+    "relation": "test_relation",
+    "release": "test_release",
+    "row_count": 1,
+    "schema_ref": "test_schema_ref"
+  },
+  "structure_id": "structure_id_01234",
+  "variants": [
+    {
+      "interface_distance_angstrom": 1,
+      "mutant_aa": "test_mutant_aa",
+      "mutation_type": "test_mutation_type",
+      "neighbor_count": 1,
+      "plddt": 1,
+      "pocket_distance_angstrom": 1,
+      "raw": "test_raw",
+      "residue": "residue_01234",
+      "sequence_position": 1,
+      "structure_chain_id": "structure_chain_id_01234",
+      "structure_residue_number": 1,
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ],
+      "wildtype_aa": "test_wildtype_aa"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "is_complete": true,
+  "missing_paths": [
+    "test_missing_paths"
+  ],
+  "missing_suffixes": [
+    "test_missing_suffixes"
+  ],
+  "name": "Test",
+  "prefix": "test_prefix",
+  "present_suffixes": [
+    "test_present_suffixes"
+  ],
+  "required_suffixes": [
+    "test_required_suffixes"
+  ]
+}

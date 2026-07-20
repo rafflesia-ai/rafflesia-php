@@ -1,0 +1,15 @@
+{
+  "candidate_refs": [
+    "candidate_refs_01234"
+  ],
+  "candidate_segment_refs": [
+    "candidate_segment_refs_01234"
+  ],
+  "dry_run": true,
+  "keep_refs": [
+    "test_keep_refs"
+  ],
+  "keep_segment_refs": [
+    "test_keep_segment_refs"
+  ]
+}

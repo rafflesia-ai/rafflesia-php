@@ -1,0 +1,10 @@
+{
+  "is_evaluated": true,
+  "is_passed": true,
+  "message": "test_message",
+  "metric": "test_metric",
+  "name": "Test",
+  "observed": 1,
+  "operator": "test_operator",
+  "threshold": 1
+}

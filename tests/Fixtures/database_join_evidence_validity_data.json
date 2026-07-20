@@ -1,0 +1,9 @@
+{
+  "checked_dependency_count": 1,
+  "current_ontology_digest": "test_current_ontology_digest",
+  "evidence_ontology_digest": "evidence_ontology_digest_01234",
+  "invalidation_reasons": [
+    "invalidation_reasons_01234"
+  ],
+  "status": "current"
+}

@@ -1,0 +1,10 @@
+{
+  "contig": "test_contig",
+  "end": 1,
+  "length_bp": 1,
+  "source_count": 1,
+  "source_names": [
+    "Test"
+  ],
+  "start": 1
+}

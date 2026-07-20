@@ -1,0 +1,5 @@
+{
+  "max_bytes_scanned": 1,
+  "max_rows_scanned": 1,
+  "timeout_ms": 1
+}

@@ -1,0 +1,22 @@
+{
+  "format": "test_format",
+  "is_present": true,
+  "local_path": "test_local_path",
+  "object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "path": "test_path",
+  "planned_ref": "test_planned_ref",
+  "role": "test_role",
+  "sha256": "test_sha256",
+  "size_bytes": 1
+}

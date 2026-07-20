@@ -1,0 +1,97 @@
+{
+  "atom_count": 1,
+  "chain_count": 1,
+  "chains": [
+    {
+      "assembly_ids": [
+        "assembly_ids_01234"
+      ],
+      "atom_count": 1,
+      "auth_chain_ids": [
+        "auth_chain_ids_01234"
+      ],
+      "bounds": {
+        "max_x": 1,
+        "max_y": 1,
+        "max_z": 1,
+        "min_x": 1,
+        "min_y": 1,
+        "min_z": 1
+      },
+      "centroid": [
+        1
+      ],
+      "chain_id": "chain_id_01234",
+      "end": 1,
+      "entity_ids": [
+        "entity_ids_01234"
+      ],
+      "label_chain_ids": [
+        "label_chain_ids_01234"
+      ],
+      "model_ids": [
+        "model_ids_01234"
+      ],
+      "polymer_type": "test_polymer_type",
+      "residue_count": 1,
+      "sequence": "test_sequence",
+      "sequence_sha256": "test_sequence_sha256",
+      "start": 1
+    }
+  ],
+  "confidence_metric": "confidence_metric_01234",
+  "confidence_value_sources": [
+    "confidence_value_sources_01234"
+  ],
+  "format": "test_format",
+  "has_plddt_like_b_factor": true,
+  "low_confidence_residue_count": 1,
+  "mean_b_factor": 1,
+  "mean_confidence_value": 1,
+  "mean_plddt": 1,
+  "model_version": "test_model_version",
+  "object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "pae_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "parser": {
+    "input_format": "test_input_format",
+    "name": "Test",
+    "version": "test_version"
+  },
+  "residue_count": 1,
+  "residue_ranges": [
+    {
+      "chain_id": "chain_id_01234",
+      "end": 1,
+      "start": 1
+    }
+  ],
+  "source": "test_source",
+  "source_metadata": {
+    "key": "test_value"
+  },
+  "source_url": "https://example.com",
+  "structure_id": "structure_id_01234",
+  "target_id": "target_id_01234"
+}

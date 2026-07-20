@@ -1,0 +1,7 @@
+{
+  "domain": "test_domain",
+  "index_version": "test_index_version",
+  "namespace": "Test",
+  "reason": "test_reason",
+  "target_family": "test_target_family"
+}

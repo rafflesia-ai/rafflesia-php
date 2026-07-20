@@ -1,0 +1,10 @@
+{
+  "algorithm": "test_algorithm",
+  "bit_count": 1,
+  "bits_base64": "test_bits_base64",
+  "content_sha256": "test_content_sha256",
+  "distinct_token_count": 1,
+  "hash_count": 1,
+  "kmer_size": 1,
+  "set_bit_count": 1
+}

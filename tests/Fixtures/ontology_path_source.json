@@ -1,0 +1,6 @@
+{
+  "relation": "test_relation",
+  "relation_digest": "test_relation_digest",
+  "release_digest": "test_release_digest",
+  "selector": "test_selector"
+}

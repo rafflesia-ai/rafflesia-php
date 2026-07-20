@@ -1,0 +1,20 @@
+{
+  "auxiliary_input_object_id": "auxiliary_input_object_id_01234",
+  "auxiliary_path": "test_auxiliary_path",
+  "batch_rows": 1,
+  "checkpoint_path": "test_checkpoint_path",
+  "database": "test_database",
+  "format": "auto",
+  "input_object_id": "input_object_id_01234",
+  "mapping_family": "test_mapping_family",
+  "output_dir": "test_output_dir",
+  "path": "test_path",
+  "relation": "test_relation",
+  "release": "test_release",
+  "resume": true,
+  "source_doi": "test_source_doi",
+  "source_layout": "canonical",
+  "source_record_id": "source_record_id_01234",
+  "source_url": "https://example.com",
+  "timeout_ms": 1
+}

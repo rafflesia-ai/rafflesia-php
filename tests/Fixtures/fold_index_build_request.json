@@ -1,0 +1,18 @@
+{
+  "create_index": true,
+  "dry_run": true,
+  "name": "Test",
+  "output_dir": "test_output_dir",
+  "publish": true,
+  "routing_representatives_per_shard": 1,
+  "shard_count": 1,
+  "source_manifest_object_id": "source_manifest_object_id_01234",
+  "store_artifacts": true,
+  "structure_ids": [
+    "structure_ids_01234"
+  ],
+  "structure_object_ids": [
+    "structure_object_ids_01234"
+  ],
+  "version": "test_version"
+}

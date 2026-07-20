@@ -1,0 +1,33 @@
+{
+  "concurrency": 1,
+  "exact_limit": 1,
+  "exact_verify": true,
+  "index_ref": "test_index_ref",
+  "limit": 1,
+  "manifest_object_id": "manifest_object_id_01234",
+  "manifest_path": "test_manifest_path",
+  "max_blocks_per_query": 1,
+  "max_object_bytes_per_query": 1,
+  "max_object_reads_per_query": 1,
+  "min_byte_reduction_fraction": 1,
+  "min_hit_overlap_fraction": 1,
+  "min_recall_at_1": 1,
+  "min_recall_at_10": 1,
+  "min_recall_at_100": 1,
+  "nprobe": 1,
+  "profile": true,
+  "query_ids": [
+    "query_ids_01234"
+  ],
+  "recall_at": [
+    1
+  ],
+  "require_exact_verification": true,
+  "require_zero_materialization": true,
+  "segment_manifest_object_id": "segment_manifest_object_id_01234",
+  "segment_manifest_path": "test_segment_manifest_path",
+  "segment_ref": "test_segment_ref",
+  "store_artifact": true,
+  "target_dir": "test_target_dir",
+  "verify_index": true
+}

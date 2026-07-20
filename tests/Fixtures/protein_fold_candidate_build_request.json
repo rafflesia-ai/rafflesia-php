@@ -1,0 +1,13 @@
+{
+  "build_policy": "if_not_exists",
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "kmer_size": 1,
+  "min_shared_tokens": 1,
+  "name": "Test",
+  "namespace": "Test",
+  "timeout_ms": 1,
+  "version": "test_version"
+}

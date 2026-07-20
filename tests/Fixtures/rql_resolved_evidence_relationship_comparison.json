@@ -1,0 +1,20 @@
+{
+  "comparability": "comparable",
+  "comparability_reason": "typed_namespace_and_scope_match",
+  "comparison_digest": "test_comparison_digest",
+  "index": 1,
+  "left_evidence_source": "left_evidence_source_01234",
+  "left_relationship_digest": "test_left_relationship_digest",
+  "left_relationship_name": "Test",
+  "left_set_operation_index": 1,
+  "left_set_operation_operator": "base",
+  "name": "Test",
+  "object_namespace": "Test",
+  "right_evidence_source": "right_evidence_source_01234",
+  "right_relationship_digest": "test_right_relationship_digest",
+  "right_relationship_name": "Test",
+  "right_set_operation_index": 1,
+  "right_set_operation_operator": "base",
+  "scope_kind": "test_scope_kind",
+  "subject_namespace": "Test"
+}

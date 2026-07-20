@@ -1,0 +1,27 @@
+{
+  "candidate_observations": 1,
+  "catalog_upper_bound_score": 1,
+  "common_seed_route_count": 1,
+  "cumulative_candidate_count": 1,
+  "duplicate_candidate_observations": 1,
+  "estimated_candidate_count": 1,
+  "estimated_position_count": 1,
+  "expected_new_candidates_per_mb": 1,
+  "feature_kinds": [
+    "test_feature_kinds"
+  ],
+  "new_candidate_count": 1,
+  "new_candidates_per_mb": 1,
+  "phase": "test_phase",
+  "planning_score": 1,
+  "query_bin_count": 1,
+  "read_yield_adjusted_score": 1,
+  "read_yield_source": "test_read_yield_source",
+  "role": "test_role",
+  "route_count": 1,
+  "size_bytes": 1,
+  "stop_reason_after_object": "test_stop_reason_after_object",
+  "token_count": 1,
+  "upper_bound_score": 1,
+  "uri": "https://example.com"
+}

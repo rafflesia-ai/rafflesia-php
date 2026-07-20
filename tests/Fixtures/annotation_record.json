@@ -1,0 +1,22 @@
+{
+  "id": "01234",
+  "labels": [
+    "test_labels"
+  ],
+  "raw_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "source": "test_source",
+  "xrefs": {
+    "key": "test_value"
+  }
+}

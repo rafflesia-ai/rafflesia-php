@@ -1,0 +1,35 @@
+{
+  "database": "test_database",
+  "include_waters": true,
+  "max_comparisons": 1,
+  "output_format": "json",
+  "output_relation": "test_output_relation",
+  "pairs": [
+    {
+      "comparison_id": "comparison_id_01234",
+      "method": "test_method",
+      "query_structure_id": "query_structure_id_01234",
+      "sample_id": "sample_id_01234",
+      "target_structure_id": "target_structure_id_01234"
+    }
+  ],
+  "pairs_path": "test_pairs_path",
+  "pairs_table_object_id": "pairs_table_object_id_01234",
+  "pairs_table_path": "test_pairs_table_path",
+  "partition_by": [
+    "test_partition_by"
+  ],
+  "preview_limit": 1,
+  "query_ligands": [
+    "test_query_ligands"
+  ],
+  "radius": 1,
+  "relation": "test_relation",
+  "release": "test_release",
+  "sort_by": [
+    "test_sort_by"
+  ],
+  "target_ligands": [
+    "test_target_ligands"
+  ]
+}

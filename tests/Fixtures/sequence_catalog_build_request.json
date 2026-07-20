@@ -1,0 +1,19 @@
+{
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "input_object_id": "input_object_id_01234",
+  "input_path": "test_input_path",
+  "name": "Test",
+  "source_database_snapshot": {
+    "digest": "test_digest",
+    "kind": "test_kind",
+    "name": "Test",
+    "version": "test_version"
+  },
+  "source_tool_version": {
+    "name": "Test",
+    "path": "test_path",
+    "version": "test_version"
+  },
+  "version": "test_version"
+}

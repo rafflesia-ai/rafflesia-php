@@ -1,0 +1,38 @@
+{
+  "atom_name_a": "Test",
+  "atom_name_b": "Test",
+  "atom_serial_a": 1,
+  "atom_serial_b": 1,
+  "base_readout": true,
+  "distance_angstrom": 1,
+  "groove": "test_groove",
+  "interaction": "test_interaction",
+  "moiety_a": "test_moiety_a",
+  "moiety_b": "test_moiety_b",
+  "residue_a": {
+    "assembly_id": "assembly_id_01234",
+    "auth_chain_id": "auth_chain_id_01234",
+    "auth_position": 1,
+    "chain_id": "chain_id_01234",
+    "entity_id": "entity_id_01234",
+    "insertion_code": "test_insertion_code",
+    "label_chain_id": "label_chain_id_01234",
+    "label_position": 1,
+    "model_id": "model_id_01234",
+    "position": 1,
+    "residue": "residue_01234"
+  },
+  "residue_b": {
+    "assembly_id": "assembly_id_01234",
+    "auth_chain_id": "auth_chain_id_01234",
+    "auth_position": 1,
+    "chain_id": "chain_id_01234",
+    "entity_id": "entity_id_01234",
+    "insertion_code": "test_insertion_code",
+    "label_chain_id": "label_chain_id_01234",
+    "label_position": 1,
+    "model_id": "model_id_01234",
+    "position": 1,
+    "residue": "residue_01234"
+  }
+}

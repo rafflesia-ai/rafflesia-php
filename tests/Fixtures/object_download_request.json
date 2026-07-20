@@ -1,0 +1,8 @@
+{
+  "allow_network": true,
+  "content_type": "test_content_type",
+  "file_name": "Test",
+  "kind": "test_kind",
+  "max_download_bytes": 1,
+  "url": "https://example.com"
+}

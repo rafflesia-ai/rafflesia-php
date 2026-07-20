@@ -1,0 +1,15 @@
+{
+  "actual_digest": "test_actual_digest",
+  "changes": [
+    {
+      "after": {},
+      "before": {},
+      "kind": "digest_changed",
+      "path": "test_path"
+    }
+  ],
+  "expected_digest": "test_expected_digest",
+  "is_compatible": true,
+  "object": "rql_output_contract_compatibility",
+  "status": "unpinned"
+}

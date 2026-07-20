@@ -1,0 +1,10 @@
+{
+  "allow_network": true,
+  "ids": [
+    "ids_01234"
+  ],
+  "sources": [
+    "test_sources"
+  ],
+  "target_id": "target_id_01234"
+}

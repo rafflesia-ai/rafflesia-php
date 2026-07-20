@@ -1,0 +1,10 @@
+{
+  "object_id_a": "object_id_a_01234",
+  "object_id_b": "object_id_b_01234",
+  "sha256_a": "test_sha256_a",
+  "sha256_b": "test_sha256_b",
+  "size_bytes_a": 1,
+  "size_bytes_b": 1,
+  "structure_id": "structure_id_01234",
+  "target_id": "target_id_01234"
+}

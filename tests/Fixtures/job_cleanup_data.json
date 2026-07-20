@@ -1,0 +1,15 @@
+{
+  "deleted_terminal_count": 1,
+  "dry_run": true,
+  "limit": 1,
+  "marked_failed_count": 1,
+  "reference_at": "test_reference_at",
+  "stale_candidate_job_ids": [
+    "stale_candidate_job_ids_01234"
+  ],
+  "stale_cutoff_at": "test_stale_cutoff_at",
+  "terminal_candidate_job_ids": [
+    "terminal_candidate_job_ids_01234"
+  ],
+  "terminal_cutoff_at": "test_terminal_cutoff_at"
+}

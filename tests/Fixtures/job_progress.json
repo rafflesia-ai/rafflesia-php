@@ -1,0 +1,9 @@
+{
+  "failures": 1,
+  "files_discovered": 1,
+  "files_parsed": 1,
+  "objects_produced": 1,
+  "rows_written": 1,
+  "shards_processed": 1,
+  "table_artifacts": 1
+}

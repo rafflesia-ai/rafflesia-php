@@ -1,0 +1,20 @@
+{
+  "axis_count": 1,
+  "coarse_refinement_seed_count": 1,
+  "evaluation_count_by_stage": {
+    "key": 1
+  },
+  "exact_refinement_seed_count": 1,
+  "fine_beam_expanded_state_count": 1,
+  "fine_beam_invocation_count": 1,
+  "fine_beam_layer_count": 1,
+  "fine_beam_peak_state_count": 1,
+  "fine_beam_retained_state_count": 1,
+  "fine_beam_width_limit": 1,
+  "geometry_seed_count": 1,
+  "global_orientation_seed_count": 1,
+  "pose_seed_count": 1,
+  "probe_evaluation_count": 1,
+  "refinement_seed_count": 1,
+  "total_evaluation_count": 1
+}

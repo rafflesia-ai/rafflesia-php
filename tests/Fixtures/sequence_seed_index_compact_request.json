@@ -1,0 +1,17 @@
+{
+  "base_index_id": "base_index_id_01234",
+  "base_manifest_object_id": "base_manifest_object_id_01234",
+  "base_manifest_path": "test_base_manifest_path",
+  "base_name": "Test",
+  "base_version": "test_base_version",
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "kmer_size": 1,
+  "name": "Test",
+  "payload_block_size": 1,
+  "posting_block_size": 1,
+  "version": "test_version",
+  "wal_object_ids": [
+    "wal_object_ids_01234"
+  ]
+}

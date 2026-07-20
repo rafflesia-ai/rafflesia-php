@@ -1,0 +1,12 @@
+{
+  "all": [],
+  "any": [],
+  "measurement": "test_measurement",
+  "not": {},
+  "operator": "eq",
+  "parameter": "test_parameter",
+  "value": {},
+  "values": [
+    {}
+  ]
+}

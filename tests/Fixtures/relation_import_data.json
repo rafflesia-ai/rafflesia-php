@@ -1,0 +1,72 @@
+{
+  "auxiliary_input_sha256": "test_auxiliary_input_sha256",
+  "auxiliary_source_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "batch_rows": 1,
+  "checkpoint_path": "test_checkpoint_path",
+  "columns": [
+    {
+      "is_nullable": true,
+      "name": "Test",
+      "ordinal": 1,
+      "type": "test_type"
+    }
+  ],
+  "completed_batch_count": 1,
+  "database": "test_database",
+  "id": "01234",
+  "input_row_count": 1,
+  "input_sha256": "test_input_sha256",
+  "is_resumed": true,
+  "mapping_family": "test_mapping_family",
+  "object": "test_object",
+  "object_ref": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "peak_buffered_records": 1,
+  "relation": "test_relation",
+  "relation_id": "relation_id_01234",
+  "release": "test_release",
+  "release_digest": "test_release_digest",
+  "required_columns": [
+    "test_required_columns"
+  ],
+  "row_count": 1,
+  "skipped_row_count": 1,
+  "source_doi": "test_source_doi",
+  "source_layout": "test_source_layout",
+  "source_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "source_record_id": "source_record_id_01234",
+  "source_url": "https://example.com",
+  "validation": "validation_01234"
+}

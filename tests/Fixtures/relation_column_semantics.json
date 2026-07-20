@@ -1,0 +1,14 @@
+{
+  "allowed_values": [
+    "test_allowed_values"
+  ],
+  "coordinate_system": "test_coordinate_system",
+  "description": "test_description",
+  "examples": [
+    "test_examples"
+  ],
+  "identifier_namespace": "identifier_namespace_01234",
+  "null_meaning": "test_null_meaning",
+  "unit": "test_unit",
+  "value_kind": "identifier"
+}

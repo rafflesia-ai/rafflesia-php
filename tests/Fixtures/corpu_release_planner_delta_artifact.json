@@ -1,0 +1,70 @@
+{
+  "baseline": {
+    "bytes_read_total": 1,
+    "candidates_examined_total": 1,
+    "hit_rate_at_k": 1,
+    "mean_recall_at_k": 1,
+    "object_reads_total": 1,
+    "query_count": 1
+  },
+  "baseline_planner_mode": "test_baseline_planner_mode",
+  "baseline_query_profiles_path": "test_baseline_query_profiles_path",
+  "calibrated": {
+    "bytes_read_total": 1,
+    "candidates_examined_total": 1,
+    "hit_rate_at_k": 1,
+    "mean_recall_at_k": 1,
+    "object_reads_total": 1,
+    "query_count": 1
+  },
+  "calibrated_planner_mode": "test_calibrated_planner_mode",
+  "calibrated_query_profiles_path": "test_calibrated_query_profiles_path",
+  "calibration_rule_fires": [
+    {
+      "count": 1,
+      "source": "test_source"
+    }
+  ],
+  "corpus": "test_corpus",
+  "delta": {
+    "bytes_read_total": 1,
+    "candidates_examined_total": 1,
+    "hit_rate_at_k": 1,
+    "mean_recall_at_k": 1,
+    "object_reads_total": 1
+  },
+  "demoted_objects": [
+    {
+      "baseline_expected_new_candidates_per_mb": 1,
+      "baseline_rank": 1,
+      "baseline_read_yield_adjusted_score": 1,
+      "baseline_read_yield_source": "test_baseline_read_yield_source",
+      "calibrated_expected_new_candidates_per_mb": 1,
+      "calibrated_rank": 1,
+      "calibrated_read_yield_adjusted_score": 1,
+      "calibrated_read_yield_source": "test_calibrated_read_yield_source",
+      "query_id": "query_id_01234",
+      "rank_delta": 1,
+      "uri": "https://example.com"
+    }
+  ],
+  "family": "test_family",
+  "kind": "test_kind",
+  "promoted_objects": [
+    {
+      "baseline_expected_new_candidates_per_mb": 1,
+      "baseline_rank": 1,
+      "baseline_read_yield_adjusted_score": 1,
+      "baseline_read_yield_source": "test_baseline_read_yield_source",
+      "calibrated_expected_new_candidates_per_mb": 1,
+      "calibrated_rank": 1,
+      "calibrated_read_yield_adjusted_score": 1,
+      "calibrated_read_yield_source": "test_calibrated_read_yield_source",
+      "query_id": "query_id_01234",
+      "rank_delta": 1,
+      "uri": "https://example.com"
+    }
+  ],
+  "release_id": "release_id_01234",
+  "sequence_planner_calibration_path": "test_sequence_planner_calibration_path"
+}

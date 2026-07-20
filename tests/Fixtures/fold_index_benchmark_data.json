@@ -1,0 +1,82 @@
+{
+  "backend": "test_backend",
+  "benchmark_id": "benchmark_id_01234",
+  "benchmark_object": {
+    "bucket": "test_bucket",
+    "content_type": "test_content_type",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "object_key": "test_object_key",
+    "path": "test_path",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "storage_backend": "test_storage_backend",
+    "uri": "https://example.com"
+  },
+  "byte_reduction_fraction": 1,
+  "created_at": "test_created_at",
+  "eligible_query_count": 1,
+  "full_scan_materialized_bytes": 1,
+  "full_scan_object_read_count": 1,
+  "full_scan_searched_shard_count": 1,
+  "gate": {
+    "min_byte_reduction_fraction": 1,
+    "min_recall_at_1": 1,
+    "min_recall_at_10": 1,
+    "min_recall_at_100": 1,
+    "passed": true,
+    "reasons": [
+      "test_reasons"
+    ]
+  },
+  "limit": 1,
+  "manifest_id": "manifest_id_01234",
+  "manifest_object_id": "manifest_object_id_01234",
+  "manifest_path": "test_manifest_path",
+  "nprobe": 1,
+  "object_read_reduction_fraction": 1,
+  "passed": true,
+  "query_count": 1,
+  "recall_at": [
+    {
+      "eligible_query_count": 1,
+      "full_scan_target_count": 1,
+      "k": 1,
+      "matched_query_count": 1,
+      "matched_target_count": 1,
+      "recall": 1
+    }
+  ],
+  "ref": "test_ref",
+  "results": [
+    {
+      "full_scan_hit_count": 1,
+      "full_scan_materialized_bytes": 1,
+      "full_scan_object_read_count": 1,
+      "full_scan_searched_shard_count": 1,
+      "query_id": "query_id_01234",
+      "recall_at": [
+        {
+          "eligible_query_count": 1,
+          "full_scan_target_count": 1,
+          "k": 1,
+          "matched_query_count": 1,
+          "matched_target_count": 1,
+          "recall": 1
+        }
+      ],
+      "routed_candidate_shard_ids": [
+        "routed_candidate_shard_ids_01234"
+      ],
+      "routed_fell_back_to_all_shards": true,
+      "routed_hit_count": 1,
+      "routed_materialized_bytes": 1,
+      "routed_object_read_count": 1,
+      "routed_searched_shard_count": 1
+    }
+  ],
+  "routed_fallback_count": 1,
+  "routed_materialized_bytes": 1,
+  "routed_object_read_count": 1,
+  "routed_searched_shard_count": 1
+}

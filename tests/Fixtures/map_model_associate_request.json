@@ -1,0 +1,11 @@
+{
+  "map_id": "map_id_01234",
+  "metadata": {
+    "key": "test_value"
+  },
+  "method": "test_method",
+  "model_id": "model_id_01234",
+  "source": "test_source",
+  "source_url": "https://example.com",
+  "structure_id": "structure_id_01234"
+}

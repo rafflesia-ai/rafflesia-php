@@ -1,0 +1,11 @@
+{
+  "exists": true,
+  "object_id": "object_id_01234",
+  "sha256": "test_sha256",
+  "sha256_matches": true,
+  "size_bytes": 1,
+  "size_bytes_matches": true,
+  "source_path": "test_source_path",
+  "structure_id": "structure_id_01234",
+  "target_id": "target_id_01234"
+}

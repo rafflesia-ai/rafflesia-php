@@ -1,0 +1,9 @@
+{
+  "actual": "test_actual",
+  "code": "test_code",
+  "expected": "test_expected",
+  "message": "test_message",
+  "path": "test_path",
+  "severity": "error",
+  "suggested_repair": "test_suggested_repair"
+}

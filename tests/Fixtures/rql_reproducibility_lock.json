@@ -1,0 +1,53 @@
+{
+  "compiler_contract_digest": "test_compiler_contract_digest",
+  "compiler_version": "test_compiler_version",
+  "evidence_comparison_result_digest": "evidence_comparison_result_digest_01234",
+  "evidence_comparison_summary_digest": "evidence_comparison_summary_digest_01234",
+  "evidence_ledger_digest": "evidence_ledger_digest_01234",
+  "evidence_ledger_plan_digest": "evidence_ledger_plan_digest_01234",
+  "evidence_profile_result_digest": "evidence_profile_result_digest_01234",
+  "evidence_profile_summary_digest": "evidence_profile_summary_digest_01234",
+  "evidence_relationships": [
+    {
+      "audit_digest": "test_audit_digest",
+      "criteria_digest": "test_criteria_digest",
+      "evidence_database": "evidence_database_01234",
+      "evidence_release": "evidence_release_01234",
+      "evidence_source": "evidence_source_01234",
+      "kind": "sequence_similarity",
+      "missing_evidence_policy": "reject",
+      "name": "Test",
+      "ontology_contract_digest": "test_ontology_contract_digest",
+      "relationship_digest": "test_relationship_digest",
+      "scope_kind": "whole_entity",
+      "set_operation_index": 1,
+      "set_operation_operator": "base",
+      "status": "candidate"
+    }
+  ],
+  "id": "01234",
+  "lock_digest": "test_lock_digest",
+  "module_digest": "test_module_digest",
+  "module_id": "module_id_01234",
+  "object": "rql_reproducibility_lock",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "output_contract_digest": "test_output_contract_digest",
+  "rql_dialect": "test_rql_dialect",
+  "semantic_dialect": "test_semantic_dialect",
+  "semantic_query_digest": "test_semantic_query_digest",
+  "sources": [
+    {
+      "database": "test_database",
+      "name": "Test",
+      "relation": "test_relation",
+      "relation_digest": "test_relation_digest",
+      "release": "test_release",
+      "release_digest": "test_release_digest",
+      "schema_hash": "test_schema_hash",
+      "schema_version": 1
+    }
+  ],
+  "sql_dialect": "test_sql_dialect",
+  "threshold_summary_digest": "test_threshold_summary_digest"
+}

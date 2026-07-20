@@ -1,0 +1,13 @@
+{
+  "else": {},
+  "function": "date_bucket",
+  "mappings": [
+    {
+      "output": {},
+      "value": {}
+    }
+  ],
+  "origin": 1,
+  "unit": "day",
+  "width": 1
+}

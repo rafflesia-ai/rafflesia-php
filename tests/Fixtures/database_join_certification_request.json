@@ -1,0 +1,15 @@
+{
+  "budget": {
+    "max_bytes_scanned": 1,
+    "max_rows_scanned": 1,
+    "timeout_ms": 1
+  },
+  "dataset_name": "Test",
+  "dataset_version": "test_dataset_version",
+  "from_database": "test_from_database",
+  "from_release": "test_from_release",
+  "ontology_digest": "test_ontology_digest",
+  "safety": "all",
+  "to_database": "test_to_database",
+  "to_release": "test_to_release"
+}

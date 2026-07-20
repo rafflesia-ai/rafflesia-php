@@ -1,0 +1,9 @@
+{
+  "detail": "test_detail",
+  "family": "test_family",
+  "gate": "test_gate",
+  "status": "test_status",
+  "values": {
+    "key": {}
+  }
+}

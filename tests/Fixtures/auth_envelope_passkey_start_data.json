@@ -1,0 +1,11 @@
+{
+  "data": {
+    "authorization_url": "https://example.com"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {},
+    "message": "test_message"
+  },
+  "ok": true
+}

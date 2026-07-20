@@ -1,0 +1,18 @@
+{
+  "allowed_values": [
+    {}
+  ],
+  "default": {},
+  "description": "test_description",
+  "has_default": true,
+  "is_required": true,
+  "is_unique": true,
+  "maximum": 1,
+  "maximum_items": 1,
+  "minimum": 1,
+  "minimum_items": 1,
+  "name": "Test",
+  "timezone": "required",
+  "type": "string",
+  "unit": "test_unit"
+}

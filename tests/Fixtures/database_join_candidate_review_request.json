@@ -1,0 +1,23 @@
+{
+  "candidate_id": "candidate_id_01234",
+  "cardinality": "one_to_one",
+  "coordinate_notes": "test_coordinate_notes",
+  "decision": "accept",
+  "evidence_references": [
+    {
+      "description": "test_description",
+      "digest": "test_digest",
+      "kind": "source_record",
+      "reference": "test_reference"
+    }
+  ],
+  "is_direction_reviewed": true,
+  "is_identifier_namespace_reviewed": true,
+  "is_lossy": true,
+  "is_range_mapping": true,
+  "rejection_reason": "test_rejection_reason",
+  "review_version": "test_review_version",
+  "reviewer": "test_reviewer",
+  "semantic_basis": "test_semantic_basis",
+  "supersedes_review_id": "supersedes_review_id_01234"
+}

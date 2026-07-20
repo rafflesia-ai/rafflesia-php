@@ -1,0 +1,12 @@
+{
+  "id": "01234",
+  "is_current": true,
+  "object": "ontology_snapshot",
+  "ontology_digest": "test_ontology_digest",
+  "ontology_version": "test_ontology_version",
+  "relation_count": 1,
+  "relationship_count": 1,
+  "snapshot_digest": "test_snapshot_digest",
+  "source_digest": "test_source_digest",
+  "url": "https://example.com"
+}
