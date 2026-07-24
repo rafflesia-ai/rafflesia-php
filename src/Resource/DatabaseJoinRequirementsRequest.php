@@ -15,7 +15,7 @@ readonly class DatabaseJoinRequirementsRequest implements \JsonSerializable
         public ?array $sources,
         public string $sql,
         /** Required retained evidence level; defaults to cardinality_consistent. */
-        public ?SemanticJoinEvidenceRequirement $joinEvidencePolicy = null,
+        public ?QueryJoinExplanationRequiredEvidence $joinEvidencePolicy = null,
         public ?string $ontologyDigest = null,
         public string $dialect = 'rafflesia_sql_2026_07_13',
     ) {
@@ -35,7 +35,7 @@ readonly class DatabaseJoinRequirementsRequest implements \JsonSerializable
         return new self(
             sources: isset($data['sources']) ? array_map(fn ($item) => QuerySource::fromArray($item), $data['sources']) : null,
             sql: $data['sql'],
-            joinEvidencePolicy: isset($data['join_evidence_policy']) ? SemanticJoinEvidenceRequirement::from($data['join_evidence_policy']) : null,
+            joinEvidencePolicy: isset($data['join_evidence_policy']) ? QueryJoinExplanationRequiredEvidence::from($data['join_evidence_policy']) : null,
             ontologyDigest: $data['ontology_digest'] ?? null,
             dialect: $data['dialect'] ?? 'rafflesia_sql_2026_07_13',
         );

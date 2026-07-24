@@ -1,0 +1,11 @@
+{
+  "data": {
+    "csrf_token": "test_csrf_token"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {},
+    "message": "test_message"
+  },
+  "ok": true
+}

@@ -23,7 +23,7 @@ readonly class EnvelopeProfileBuildData implements \JsonSerializable
         /** Operation result data. */
         public ?ProfileBuildData $data = null,
         /** Structured error information. */
-        public ?ApiError $error = null,
+        public ?ApiErrorBody $error = null,
         /** Mechanical evidence summary for agent inspection and chaining. */
         public ?EvidenceSummary $evidence = null,
     ) {
@@ -46,7 +46,7 @@ readonly class EnvelopeProfileBuildData implements \JsonSerializable
             provenance: Provenance::fromArray($data['provenance']),
             warnings: isset($data['warnings']) ? array_map(fn ($item) => SearchWarning::fromArray($item), $data['warnings']) : null,
             data: isset($data['data']) ? ProfileBuildData::fromArray($data['data']) : null,
-            error: isset($data['error']) ? ApiError::fromArray($data['error']) : null,
+            error: isset($data['error']) ? ApiErrorBody::fromArray($data['error']) : null,
             evidence: isset($data['evidence']) ? EvidenceSummary::fromArray($data['evidence']) : null,
         );
     }

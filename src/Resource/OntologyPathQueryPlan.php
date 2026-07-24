@@ -14,7 +14,6 @@ readonly class OntologyPathQueryPlan implements \JsonSerializable
         public string $id,
         public bool $isExecutable,
         public string $planDigest,
-        public string $rqlSource,
         /** @var array<\Rafflesia\Resource\DatabaseJoinSourceFragment>|null */
         public ?array $sources,
         public string $sqlFromClause,
@@ -31,7 +30,6 @@ readonly class OntologyPathQueryPlan implements \JsonSerializable
             'id',
             'is_executable',
             'plan_digest',
-            'rql_source',
             'sources',
             'sql_from_clause',
         ] as $__required) {
@@ -43,7 +41,6 @@ readonly class OntologyPathQueryPlan implements \JsonSerializable
             id: $data['id'],
             isExecutable: $data['is_executable'],
             planDigest: $data['plan_digest'],
-            rqlSource: $data['rql_source'],
             sources: isset($data['sources']) ? array_map(fn ($item) => DatabaseJoinSourceFragment::fromArray($item), $data['sources']) : null,
             sqlFromClause: $data['sql_from_clause'],
             requiredJoinEvidence: isset($data['required_join_evidence']) ? array_map(fn ($item) => DatabaseJoinEvidenceRequirement::fromArray($item), $data['required_join_evidence']) : null,
@@ -58,7 +55,6 @@ readonly class OntologyPathQueryPlan implements \JsonSerializable
             'id' => $this->id,
             'is_executable' => $this->isExecutable,
             'plan_digest' => $this->planDigest,
-            'rql_source' => $this->rqlSource,
             'sources' => $this->sources !== null ? array_map(fn ($item) => $item->toArray(), $this->sources) : null,
             'sql_from_clause' => $this->sqlFromClause,
             'required_join_evidence' => $this->requiredJoinEvidence !== null ? array_map(fn ($item) => $item->toArray(), $this->requiredJoinEvidence) : null,

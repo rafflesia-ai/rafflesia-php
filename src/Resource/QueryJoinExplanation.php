@@ -52,7 +52,7 @@ readonly class QueryJoinExplanation implements \JsonSerializable
         public ?string $relationshipId = null,
         /** @var array<\Rafflesia\Resource\QueryJoinEquality>|null */
         public ?array $requiredEqualities = null,
-        public ?SemanticJoinEvidenceRequirement $requiredEvidence = null,
+        public ?QueryJoinExplanationRequiredEvidence $requiredEvidence = null,
         public ?string $rightRelation = null,
         public ?string $rightRelationDigest = null,
         public ?string $rightReleaseDigest = null,
@@ -118,7 +118,7 @@ readonly class QueryJoinExplanation implements \JsonSerializable
             missingEqualities: isset($data['missing_equalities']) ? array_map(fn ($item) => QueryJoinEquality::fromArray($item), $data['missing_equalities']) : null,
             relationshipId: $data['relationship_id'] ?? null,
             requiredEqualities: isset($data['required_equalities']) ? array_map(fn ($item) => QueryJoinEquality::fromArray($item), $data['required_equalities']) : null,
-            requiredEvidence: isset($data['required_evidence']) ? SemanticJoinEvidenceRequirement::from($data['required_evidence']) : null,
+            requiredEvidence: isset($data['required_evidence']) ? QueryJoinExplanationRequiredEvidence::from($data['required_evidence']) : null,
             rightRelation: $data['right_relation'] ?? null,
             rightRelationDigest: $data['right_relation_digest'] ?? null,
             rightReleaseDigest: $data['right_release_digest'] ?? null,

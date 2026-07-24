@@ -11,10 +11,6 @@ readonly class DatabaseJoinFragment implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RqlImport>|null */
-        public ?array $rqlImports,
-        public RqlJoinDefinition $rqlJoin,
-        public string $rqlSourceFragment,
         /** @var array<\Rafflesia\Resource\DatabaseJoinSourceFragment>|null */
         public ?array $sources,
         public string $sqlFromClause,
@@ -26,9 +22,6 @@ readonly class DatabaseJoinFragment implements \JsonSerializable
     public static function fromArray(array $data): self
     {
         foreach ([
-            'rql_imports',
-            'rql_join',
-            'rql_source_fragment',
             'sources',
             'sql_from_clause',
             'sql_join_clause',
@@ -38,9 +31,6 @@ readonly class DatabaseJoinFragment implements \JsonSerializable
             }
         }
         return new self(
-            rqlImports: isset($data['rql_imports']) ? array_map(fn ($item) => RqlImport::fromArray($item), $data['rql_imports']) : null,
-            rqlJoin: RqlJoinDefinition::fromArray($data['rql_join']),
-            rqlSourceFragment: $data['rql_source_fragment'],
             sources: isset($data['sources']) ? array_map(fn ($item) => DatabaseJoinSourceFragment::fromArray($item), $data['sources']) : null,
             sqlFromClause: $data['sql_from_clause'],
             sqlJoinClause: $data['sql_join_clause'],
@@ -51,9 +41,6 @@ readonly class DatabaseJoinFragment implements \JsonSerializable
     public function toArray(): array
     {
         return [
-            'rql_imports' => $this->rqlImports !== null ? array_map(fn ($item) => $item->toArray(), $this->rqlImports) : null,
-            'rql_join' => $this->rqlJoin->toArray(),
-            'rql_source_fragment' => $this->rqlSourceFragment,
             'sources' => $this->sources !== null ? array_map(fn ($item) => $item->toArray(), $this->sources) : null,
             'sql_from_clause' => $this->sqlFromClause,
             'sql_join_clause' => $this->sqlJoinClause,

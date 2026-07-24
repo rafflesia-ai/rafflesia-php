@@ -17,7 +17,7 @@ class DatabaseJoinRequirements
 
     /**
      * @param string|null $dialect
-     * @param \Rafflesia\Resource\SemanticJoinEvidenceRequirement|null $joinEvidencePolicy Required retained evidence level; defaults to cardinality_consistent.
+     * @param \Rafflesia\Resource\QueryJoinExplanationRequiredEvidence|null $joinEvidencePolicy Required retained evidence level; defaults to cardinality_consistent.
      * @param string|null $ontologyDigest
      * @param array<\Rafflesia\Resource\QuerySource>|null $sources
      * @param string $sql
@@ -28,7 +28,7 @@ class DatabaseJoinRequirements
         ?array $sources,
         string $sql,
         ?string $dialect = null,
-        ?\Rafflesia\Resource\SemanticJoinEvidenceRequirement $joinEvidencePolicy = null,
+        ?\Rafflesia\Resource\QueryJoinExplanationRequiredEvidence $joinEvidencePolicy = null,
         ?string $ontologyDigest = null,
         ?\Rafflesia\RequestOptions $options = null,
     ): \Rafflesia\Resource\EnvelopeDatabaseJoinRequirementsData {

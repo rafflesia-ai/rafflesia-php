@@ -1,6 +1,7 @@
 {
   "data": {
-    "signed_out": true
+    "signed_out": true,
+    "logOutUrl": "test_logOutUrl"
   },
   "error": {
     "code": "test_code",

@@ -13,12 +13,12 @@ readonly class OntologyEvidenceRelationshipContractData implements \JsonSerializ
     public function __construct(
         public string $contractDigest,
         public string $description,
-        public RqlLockedEvidenceRelationshipKind $kind,
+        public OntologyEvidenceRelationshipContractDataKind $kind,
         public string $methodColumn,
         public string $objectColumn,
         /** @var array<\Rafflesia\Resource\OntologyEvidenceScopeContractData>|null */
         public ?array $scopes,
-        public RqlLockedEvidenceRelationshipStatus $status,
+        public OntologyEvidenceRelationshipContractDataStatus $status,
         public string $subjectColumn,
         /** @var array<string>|null */
         public ?array $assertionEvidenceColumns = null,
@@ -49,11 +49,11 @@ readonly class OntologyEvidenceRelationshipContractData implements \JsonSerializ
         return new self(
             contractDigest: $data['contract_digest'],
             description: $data['description'],
-            kind: RqlLockedEvidenceRelationshipKind::from($data['kind']),
+            kind: OntologyEvidenceRelationshipContractDataKind::from($data['kind']),
             methodColumn: $data['method_column'],
             objectColumn: $data['object_column'],
             scopes: isset($data['scopes']) ? array_map(fn ($item) => OntologyEvidenceScopeContractData::fromArray($item), $data['scopes']) : null,
-            status: RqlLockedEvidenceRelationshipStatus::from($data['status']),
+            status: OntologyEvidenceRelationshipContractDataStatus::from($data['status']),
             subjectColumn: $data['subject_column'],
             assertionEvidenceColumns: $data['assertion_evidence_columns'] ?? null,
             metrics: isset($data['metrics']) ? array_map(fn ($item) => OntologyEvidenceMetricContractData::fromArray($item), $data['metrics']) : null,

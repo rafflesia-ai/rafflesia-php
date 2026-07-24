@@ -8,6 +8,7 @@ namespace Rafflesia\Service;
 
 use Rafflesia\Resource\AuthEnvelopeCliAuthorizeData;
 use Rafflesia\Resource\AuthEnvelopeCliTokenData;
+use Rafflesia\Resource\AuthEnvelopeCsrfTokenData;
 use Rafflesia\Resource\AuthEnvelopeInvitationPreviewResponse;
 use Rafflesia\Resource\AuthEnvelopeListPasskeySummary;
 use Rafflesia\Resource\AuthEnvelopeListTeamInvitationResponse;
@@ -128,6 +129,22 @@ class Auth
             options: $options,
         );
         return AuthEnvelopeCliTokenData::fromArray($response);
+    }
+
+    /**
+     * Issue a CSRF token and set its HMAC cookie.
+     * @return \Rafflesia\Resource\AuthEnvelopeCsrfTokenData
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function csrfTokenGet(
+        ?\Rafflesia\RequestOptions $options = null,
+    ): \Rafflesia\Resource\AuthEnvelopeCsrfTokenData {
+        $response = $this->client->request(
+            method: 'GET',
+            path: 'v1/auth/csrf-token',
+            options: $options,
+        );
+        return AuthEnvelopeCsrfTokenData::fromArray($response);
     }
 
     /**

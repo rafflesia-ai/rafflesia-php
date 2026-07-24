@@ -16,7 +16,7 @@ readonly class DatabaseJoinEvidenceRequirement implements \JsonSerializable
         public string $relationshipId,
         public string $rightSource,
         public ?OntologyKeyVariant $keyVariant = null,
-        public ?SemanticJoinEvidenceRequirement $requirement = null,
+        public ?QueryJoinExplanationRequiredEvidence $requirement = null,
     ) {
     }
 
@@ -39,7 +39,7 @@ readonly class DatabaseJoinEvidenceRequirement implements \JsonSerializable
             relationshipId: $data['relationship_id'],
             rightSource: $data['right_source'],
             keyVariant: isset($data['key_variant']) ? OntologyKeyVariant::from($data['key_variant']) : null,
-            requirement: isset($data['requirement']) ? SemanticJoinEvidenceRequirement::from($data['requirement']) : null,
+            requirement: isset($data['requirement']) ? QueryJoinExplanationRequiredEvidence::from($data['requirement']) : null,
         );
     }
 

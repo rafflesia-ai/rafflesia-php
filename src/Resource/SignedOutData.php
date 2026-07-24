@@ -13,6 +13,8 @@ readonly class SignedOutData implements \JsonSerializable
     public function __construct(
         /** Always true. The session cookie is cleared regardless. */
         public bool $signedOut,
+        /** WorkOS end-session URL to redirect to, revoking the session server-side. Absent for passkey or session-less sign-outs. */
+        public ?string $logOutUrl = null,
     ) {
     }
 
@@ -28,6 +30,7 @@ readonly class SignedOutData implements \JsonSerializable
         }
         return new self(
             signedOut: $data['signed_out'],
+            logOutUrl: $data['logOutUrl'] ?? null,
         );
     }
 
@@ -36,6 +39,7 @@ readonly class SignedOutData implements \JsonSerializable
     {
         return [
             'signed_out' => $this->signedOut,
+            'logOutUrl' => $this->logOutUrl,
         ];
     }
 }

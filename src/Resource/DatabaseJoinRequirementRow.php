@@ -24,7 +24,7 @@ readonly class DatabaseJoinRequirementRow implements \JsonSerializable
         /** @var array<\Rafflesia\Resource\QueryJoinEquality>|null */
         public ?array $observedEqualities,
         public string $proofDigest,
-        public SemanticJoinEvidenceRequirement $requiredEvidence,
+        public QueryJoinExplanationRequiredEvidence $requiredEvidence,
         public string $rightSource,
         public DatabaseJoinRequirementRowSafetyBasis $safetyBasis,
         public DatabaseJoinRequirementRowStatus $status,
@@ -94,7 +94,7 @@ readonly class DatabaseJoinRequirementRow implements \JsonSerializable
             message: $data['message'],
             observedEqualities: isset($data['observed_equalities']) ? array_map(fn ($item) => QueryJoinEquality::fromArray($item), $data['observed_equalities']) : null,
             proofDigest: $data['proof_digest'],
-            requiredEvidence: SemanticJoinEvidenceRequirement::from($data['required_evidence']),
+            requiredEvidence: QueryJoinExplanationRequiredEvidence::from($data['required_evidence']),
             rightSource: $data['right_source'],
             safetyBasis: DatabaseJoinRequirementRowSafetyBasis::from($data['safety_basis']),
             status: DatabaseJoinRequirementRowStatus::from($data['status']),

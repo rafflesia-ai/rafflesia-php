@@ -64,6 +64,18 @@ class AuthTest extends TestCase
         $this->assertSame('test_value', $body['code_verifier']);
     }
 
+    public function testCsrfTokenGet(): void
+    {
+        $fixture = $this->loadFixture('auth_envelope_csrf_token_data');
+        $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
+        $result = $client->auth()->csrfTokenGet();
+        $this->assertInstanceOf(\Rafflesia\Resource\AuthEnvelopeCsrfTokenData::class, $result);
+        $this->assertIsArray($result->toArray());
+        $request = $this->getLastRequest();
+        $this->assertSame('GET', $request->getMethod());
+        $this->assertStringEndsWith('v1/auth/csrf-token', $request->getUri()->getPath());
+    }
+
     public function testGoogleStart(): void
     {
         $fixture = $this->loadFixture('auth_envelope_passkey_start_data');

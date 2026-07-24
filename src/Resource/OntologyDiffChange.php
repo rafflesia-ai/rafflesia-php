@@ -11,7 +11,7 @@ readonly class OntologyDiffChange implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        public RqlSemanticChangeKind $kind,
+        public OntologyDiffChangeKind $kind,
         public string $path,
         public mixed $after = null,
         public mixed $before = null,
@@ -30,7 +30,7 @@ readonly class OntologyDiffChange implements \JsonSerializable
             }
         }
         return new self(
-            kind: RqlSemanticChangeKind::from($data['kind']),
+            kind: OntologyDiffChangeKind::from($data['kind']),
             path: $data['path'],
             after: $data['after'] ?? null,
             before: $data['before'] ?? null,

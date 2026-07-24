@@ -64,12 +64,6 @@ use Rafflesia\Service\RelationReleases;
 use Rafflesia\Service\Relations;
 use Rafflesia\Service\Repositories;
 use Rafflesia\Service\RolloutGroups;
-use Rafflesia\Service\RqlCompilations;
-use Rafflesia\Service\RqlContract;
-use Rafflesia\Service\RqlFormats;
-use Rafflesia\Service\RqlModules;
-use Rafflesia\Service\RqlQueries;
-use Rafflesia\Service\RqlValidations;
 use Rafflesia\Service\Search;
 use Rafflesia\Service\Sequences;
 use Rafflesia\Service\Simulations;
@@ -165,12 +159,6 @@ class Client
     private ?Service\Relations $relations = null;
     private ?Service\Repositories $repositories = null;
     private ?Service\RolloutGroups $rolloutGroups = null;
-    private ?Service\RqlCompilations $rqlCompilations = null;
-    private ?Service\RqlContract $rqlContract = null;
-    private ?Service\RqlFormats $rqlFormats = null;
-    private ?Service\RqlModules $rqlModules = null;
-    private ?Service\RqlQueries $rqlQueries = null;
-    private ?Service\RqlValidations $rqlValidations = null;
     private ?Service\Search $search = null;
     private ?Service\Sequences $sequences = null;
     private ?Service\Simulations $simulations = null;
@@ -479,36 +467,6 @@ class Client
     public function rolloutGroups(): RolloutGroups
     {
         return $this->rolloutGroups ??= new Service\RolloutGroups($this->httpClient);
-    }
-
-    public function rqlCompilations(): RqlCompilations
-    {
-        return $this->rqlCompilations ??= new Service\RqlCompilations($this->httpClient);
-    }
-
-    public function rqlContract(): RqlContract
-    {
-        return $this->rqlContract ??= new Service\RqlContract($this->httpClient);
-    }
-
-    public function rqlFormats(): RqlFormats
-    {
-        return $this->rqlFormats ??= new Service\RqlFormats($this->httpClient);
-    }
-
-    public function rqlModules(): RqlModules
-    {
-        return $this->rqlModules ??= new Service\RqlModules($this->httpClient);
-    }
-
-    public function rqlQueries(): RqlQueries
-    {
-        return $this->rqlQueries ??= new Service\RqlQueries($this->httpClient);
-    }
-
-    public function rqlValidations(): RqlValidations
-    {
-        return $this->rqlValidations ??= new Service\RqlValidations($this->httpClient);
     }
 
     public function search(): Search
