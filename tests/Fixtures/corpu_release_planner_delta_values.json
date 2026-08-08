@@ -1,7 +1,0 @@
-{
-  "bytes_read_total": 1,
-  "candidates_examined_total": 1,
-  "hit_rate_at_k": 1,
-  "mean_recall_at_k": 1,
-  "object_reads_total": 1
-}

@@ -21,12 +21,28 @@ composer require rafflesia/rafflesia
 require 'vendor/autoload.php';
 
 use Rafflesia\Client;
+use Rafflesia\Resource\HomologyQuery;
 
 // Reads RAFFLESIA_API_KEY from the environment when no key is passed.
 $client = new Client(apiKey: getenv('RAFFLESIA_API_KEY'));
 
-// Every API group is a lazily-instantiated accessor, e.g.:
-$result = $client->biosearch()->/* ... */;
+$query = new HomologyQuery(
+    sequence: 'MTEYKLVVVGAGGVGKSALTIQLIQNHFVDEYDPTIEDSYRKQ',
+);
+$result = $client->homology(
+    database: 'tomato',
+    query: $query,
+);
+$batch = $client->homologyMany(
+    database: 'tomato',
+    queries: [
+        $query,
+        new HomologyQuery(sequence: 'GAGGVGKS'),
+    ],
+    include: [],
+    limit: 100,
+);
+$releases = $client->homologyDatabaseReleases()->list('tomato');
 ```
 
 The client also reads `RAFFLESIA_API_KEY` and `RAFFLESIA_CLIENT_ID` from the

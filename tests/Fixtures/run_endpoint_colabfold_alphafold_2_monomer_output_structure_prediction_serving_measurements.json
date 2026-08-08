@@ -1,0 +1,10 @@
+{
+  "container_invocation_index": 1,
+  "container_model_load_ms": 1,
+  "did_compile": true,
+  "is_cold_start": true,
+  "model_compute_ms": 1,
+  "model_load_ms": 1,
+  "padded_length": 1,
+  "sequence_length": 1
+}

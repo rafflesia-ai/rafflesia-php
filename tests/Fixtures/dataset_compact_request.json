@@ -1,7 +1,0 @@
-{
-  "manifest_path": "test_manifest_path",
-  "output_dir": "test_output_dir",
-  "output_manifest_path": "test_output_manifest_path",
-  "replace": true,
-  "shard_size": 1
-}

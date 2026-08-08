@@ -9,6 +9,14 @@ namespace Rafflesia\Exception;
 
 class RafflesiaException extends \RuntimeException
 {
+    public readonly ?string $errorType;
+    public readonly ?string $errorCode;
+    public readonly ?string $errorParam;
+    public readonly ?string $requestId;
+    public readonly ?string $docUrl;
+    /** @var array<string, mixed>|null */
+    public readonly ?array $details;
+
     /**
      * @param array<string, mixed>|null $responseBody
      */
@@ -18,7 +26,19 @@ class RafflesiaException extends \RuntimeException
         public readonly ?array $responseBody = null,
         ?\Throwable $previous = null,
     ) {
-        parent::__construct($message, $statusCode ?? 0, $previous);
+        $error = is_array($responseBody['error'] ?? null)
+            ? $responseBody['error']
+            : [];
+        $this->errorType = is_string($error['type'] ?? null) ? $error['type'] : null;
+        $this->errorCode = is_string($error['code'] ?? null) ? $error['code'] : null;
+        $this->errorParam = is_string($error['param'] ?? null) ? $error['param'] : null;
+        $this->requestId = is_string($error['request_id'] ?? null) ? $error['request_id'] : null;
+        $this->docUrl = is_string($error['doc_url'] ?? null) ? $error['doc_url'] : null;
+        $this->details = is_array($error['details'] ?? null) ? $error['details'] : null;
+        $semanticMessage = is_string($error['message'] ?? null)
+            ? $error['message']
+            : $message;
+        parent::__construct($semanticMessage, $statusCode ?? 0, $previous);
     }
 
     /**

@@ -1,0 +1,20 @@
+{
+  "components": [
+    {
+      "component_id": "component_id_01234",
+      "sequence": "test_sequence",
+      "stoichiometry": 1
+    }
+  ],
+  "msa_configuration_id": "msa_configuration_id_01234",
+  "pairing_parameters": {
+    "grouping_key": "uniprot_mnemonic",
+    "is_conflicting_group_excluded": true,
+    "matching": "rank_order",
+    "maximum_paired_rows": 1,
+    "maximum_unpaired_rows_per_component": 1,
+    "strategy": "complete",
+    "taxonomy_nodes_object_id": "taxonomy_nodes_object_id_01234",
+    "taxonomy_rank": "species"
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "foldseek_binary_path": "test_foldseek_binary_path",
-  "method": "test_method",
-  "query_structure_id": "query_structure_id_01234",
-  "target_structure_id": "target_structure_id_01234",
-  "tmalign_binary_path": "test_tmalign_binary_path"
-}

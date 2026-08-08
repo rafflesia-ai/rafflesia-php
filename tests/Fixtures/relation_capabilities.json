@@ -1,6 +1,0 @@
-{
-  "can_aggregate": true,
-  "can_filter": true,
-  "can_join": true,
-  "can_project": true
-}

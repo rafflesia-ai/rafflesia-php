@@ -1,0 +1,6 @@
+{
+  "mgnify": "test_mgnify",
+  "small_bfd": "test_small_bfd",
+  "uniprot": "test_uniprot",
+  "uniref90": "test_uniref90"
+}

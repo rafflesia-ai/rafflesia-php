@@ -1,0 +1,8 @@
+{
+  "chain_id": "chain_id_01234",
+  "query": {
+    "id": "01234",
+    "kind": "protein_sequence",
+    "sequence": "test_sequence"
+  }
+}

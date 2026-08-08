@@ -1,0 +1,12 @@
+{
+  "checksum_sha256": "test_checksum_sha256",
+  "content_type": "test_content_type",
+  "created_time": "2023-01-01T00:00:00.000Z",
+  "id": "01234",
+  "is_file": true,
+  "name": "Test",
+  "path": "test_path",
+  "size": 1,
+  "updated_time": "2023-01-01T00:00:00.000Z",
+  "url": "https://example.com"
+}

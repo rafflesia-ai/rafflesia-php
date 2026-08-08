@@ -1,7 +1,0 @@
-{
-  "created_at": "test_created_at",
-  "header": "test_header",
-  "operation": "upsert",
-  "sequence": "test_sequence",
-  "sequence_id": "sequence_id_01234"
-}

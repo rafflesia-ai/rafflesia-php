@@ -10,6 +10,7 @@ enum ApiErrorBodyType: string
 {
     case InvalidRequestError = 'invalid_request_error';
     case ResourceMissing = 'resource_missing';
+    case ResourceExpired = 'resource_expired';
     case ConflictError = 'conflict_error';
     case RateLimitError = 'rate_limit_error';
     case AuthenticationError = 'authentication_error';

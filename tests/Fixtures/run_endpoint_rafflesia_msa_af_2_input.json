@@ -1,0 +1,12 @@
+{
+  "databases": {
+    "bfd_uniref30": "test_bfd_uniref30",
+    "mgnify": "test_mgnify",
+    "uniref90": "test_uniref90"
+  },
+  "query": {
+    "id": "01234",
+    "kind": "protein_sequence",
+    "sequence": "test_sequence"
+  }
+}

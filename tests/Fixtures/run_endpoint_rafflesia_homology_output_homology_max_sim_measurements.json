@@ -1,0 +1,5 @@
+{
+  "bidirectional": 1,
+  "query_to_target": 1,
+  "target_to_query": 1
+}

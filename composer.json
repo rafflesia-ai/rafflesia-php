@@ -17,7 +17,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Rafflesia\\Tests\\": "tests/"
+      "Tests\\": "tests/"
     }
   },
   "_comment": "@oagen-ignore-file — hand-maintained after initial scaffold."

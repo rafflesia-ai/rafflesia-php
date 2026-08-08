@@ -1,7 +1,0 @@
-{
-  "allow_network": true,
-  "chain_id": "chain_id_01234",
-  "method": "test_method",
-  "structure_id": "structure_id_01234",
-  "uniprot_id": "uniprot_id_01234"
-}

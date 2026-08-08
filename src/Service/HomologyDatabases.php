@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 namespace Rafflesia\Service;
 
-use Rafflesia\Resource\EnvelopeHomologyDatabaseList;
+use Rafflesia\Resource\HomologyDatabase;
 
 class HomologyDatabases
 {
@@ -16,28 +16,37 @@ class HomologyDatabases
     }
 
     /**
+     * List searchable homology databases
+     *
+     * Returns one cursor page of the homology databases available to search, each with its molecule type, the query kinds it accepts, the evidence it can return, and the immutable release its default alias resolves to when one is published. A search always executes against a release id, never against a mutable alias.
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract; any other value returns api_version_unsupported.
      * @param int|null $limit Defaults to 20.
-     * @param string|null $startingAfter
-     * @param string|null $endingBefore
-     * @return \Rafflesia\PaginatedResponse<\Rafflesia\Resource\EnvelopeHomologyDatabaseList>
+     * @param string|null $before Return the page immediately before this opaque cursor. Mutually exclusive with after.
+     * @param string|null $after Return the page immediately after this opaque cursor. Mutually exclusive with before.
+     * @return \Rafflesia\PaginatedResponse<\Rafflesia\Resource\HomologyDatabase>
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function list(
+        ?string $rafflesiaApiVersion = null,
         ?int $limit = null,
-        ?string $startingAfter = null,
-        ?string $endingBefore = null,
+        ?string $before = null,
+        ?string $after = null,
         ?\Rafflesia\RequestOptions $options = null,
     ): \Rafflesia\PaginatedResponse {
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+        ], fn ($v) => $v !== null);
         $query = array_filter([
             'limit' => $limit,
-            'starting_after' => $startingAfter,
-            'ending_before' => $endingBefore,
+            'before' => $before,
+            'after' => $after,
         ], fn ($v) => $v !== null);
         return $this->client->requestPage(
             method: 'GET',
-            path: 'v1/homology_databases',
+            path: 'v1/homology/databases',
             query: $query,
-            modelClass: EnvelopeHomologyDatabaseList::class,
+            modelClass: HomologyDatabase::class,
+            headers: $headers,
             options: $options,
         );
     }

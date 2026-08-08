@@ -1,0 +1,12 @@
+{
+  "ctx": {
+    "key": {}
+  },
+  "input": {},
+  "loc": [
+    "test_loc"
+  ],
+  "msg": "test_msg",
+  "type": "test_type",
+  "url": "https://example.com"
+}

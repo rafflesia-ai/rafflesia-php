@@ -1,0 +1,179 @@
+{
+  "candidates": [
+    {
+      "alignment": {
+        "aligned_residue_count": 1,
+        "cigar": "test_cigar",
+        "cigar_dialect": "extended",
+        "coordinate_system": "zero_based_half_open",
+        "gap_opening_count": 1,
+        "gap_residue_count": 1,
+        "identical_residue_count": 1,
+        "query_coverage_ratio": 1,
+        "query_end": 1,
+        "query_length": 1,
+        "query_start": 1,
+        "sequence_identity_ratio": 1,
+        "target_coverage_ratio": 1,
+        "target_end": 1,
+        "target_length": 1,
+        "target_start": 1
+      },
+      "measurements": {
+        "affine": {
+          "normalized_score": 1,
+          "raw_score": 1
+        },
+        "late_interaction": {
+          "distance": 1,
+          "mean_closest_cosine_distance": 1,
+          "mean_closest_cosine_similarity": 1,
+          "query_token_count": 1
+        },
+        "maxsim": {
+          "bidirectional": 1,
+          "query_to_target": 1,
+          "target_to_query": 1
+        }
+      },
+      "rank": 1,
+      "significance": {
+        "measurements": {
+          "bit_score": 1,
+          "calibration_bin": "test_calibration_bin",
+          "calibration_id": "calibration_id_01234",
+          "calibration_sample_count": 1,
+          "e_value_calibration_id": "e_value_calibration_id_01234",
+          "e_value_conditioning_context_id": "e_value_conditioning_context_id_01234",
+          "e_value_estimand": "test_e_value_estimand",
+          "e_value_maximum_log_extrapolation_factor": 1,
+          "e_value_method": "test_e_value_method",
+          "e_value_null_population_id": "e_value_null_population_id_01234",
+          "e_value_qualification_id": "e_value_qualification_id_01234",
+          "e_value_search_policy_id": "e_value_search_policy_id_01234",
+          "e_value_searched_inventory_id": "e_value_searched_inventory_id_01234",
+          "e_value_supported_log_maximum": 1,
+          "e_value_supported_log_minimum": 1,
+          "e_value_tail_coordinate": 1,
+          "e_value_target_stratum_count": 1,
+          "expected_false_hits": 1,
+          "family_wise_exceedance_probability": 1,
+          "is_e_value_upper_bound": true,
+          "is_family_wise_lower_bound": true,
+          "log_expected_false_hits": 1,
+          "minimum_resolvable_probability": 1,
+          "pair_tail_log_probability": 1,
+          "pair_tail_probability": 1,
+          "pair_tail_surprisal_bits": 1,
+          "q_value": 1,
+          "searched_residue_count": 1,
+          "searched_sequence_count": 1,
+          "support_status": "supported_empirical",
+          "tail_model": {
+            "fit_exceedance_count": 1,
+            "holdout_exceedance_count": 1,
+            "holdout_kolmogorov_smirnov": 1,
+            "holdout_significance_level": 1,
+            "k": 1,
+            "lambda": 1,
+            "threshold_score": 1
+          }
+        },
+        "reason": "test_reason",
+        "status": "supported_empirical"
+      },
+      "target": {
+        "attributes": {
+          "key": "test_value"
+        },
+        "id": "01234",
+        "sequence": "test_sequence"
+      }
+    }
+  ],
+  "database": {
+    "canonical_filter_sha256": "test_canonical_filter_sha256",
+    "corpus_snapshot_id": "corpus_snapshot_id_01234",
+    "id": "01234",
+    "release_id": "release_id_01234",
+    "searched_residue_count": 1,
+    "searched_target_count": 1,
+    "slug": "test_slug",
+    "target_space_id": "target_space_id_01234"
+  },
+  "evidence_summary": {
+    "alignment": {
+      "affected_candidate_count": 1,
+      "candidate_count": 1,
+      "reason": "test_reason",
+      "status": "not_requested"
+    },
+    "is_requested_evidence_complete": true,
+    "requested": "candidate_measurement",
+    "significance": {
+      "affected_candidate_count": 1,
+      "candidate_count": 1,
+      "reason": "no_qualified_calibration",
+      "requirement": "not_requested",
+      "status": "not_requested"
+    }
+  },
+  "execution": {
+    "created_at": "2023-01-01T00:00:00.000Z",
+    "engine": "test_engine",
+    "engine_release": "test_engine_release",
+    "policy": {
+      "is_deterministic": true,
+      "is_exhaustive": true,
+      "is_fallback": true,
+      "outcome": "complete_exact",
+      "requested_guarantee": "approximate",
+      "resolution_reason": "test_resolution_reason",
+      "resolved_guarantee": "approximate"
+    },
+    "semantic_profile_id": "semantic_profile_id_01234",
+    "server_version": "test_server_version"
+  },
+  "is_result_limit_reached": true,
+  "object": "homology_candidate_set",
+  "query": {
+    "kind": "protein_sequence",
+    "normalization_id": "normalization_id_01234",
+    "normalized_length": 1,
+    "sha256": "test_sha256"
+  },
+  "query_index": 1,
+  "ranking": {
+    "comparability": "within_query_only",
+    "order": "ascending",
+    "primary_measurement": "maxsim.bidirectional",
+    "scope": "resolved_policy_frontier",
+    "tie_breakers": [
+      {
+        "field": "maxsim.bidirectional",
+        "order": "ascending"
+      }
+    ]
+  },
+  "receipt": {
+    "bytes": 1,
+    "id": "01234",
+    "sha256": "test_sha256"
+  },
+  "result_sha256": "test_result_sha256",
+  "usage": {
+    "billable_formula_id": "billable_formula_id_01234",
+    "billable_units": 1,
+    "logical_bytes_read": 1,
+    "logical_bytes_returned": 1
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

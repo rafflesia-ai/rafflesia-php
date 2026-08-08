@@ -1,0 +1,12 @@
+{
+  "expiration_duration_seconds": 1,
+  "initial_acl": {
+    "default": "allow",
+    "rules": [
+      {
+        "decision": "allow",
+        "principal": "test_principal"
+      }
+    ]
+  }
+}

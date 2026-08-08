@@ -1,0 +1,67 @@
+{
+  "billable_formula_id": "tomato.object_reads_plus_logical_mib.v1",
+  "evidence": [
+    "candidate_measurement",
+    "pairwise_sequence_alignment"
+  ],
+  "filter_schema": {
+    "database_release_id": "database_release_id_01234",
+    "fields": [
+      {
+        "field_type": "string",
+        "name": "Test",
+        "operators": [
+          "test_operators"
+        ]
+      }
+    ],
+    "id": "01234",
+    "limits": {
+      "maximum_bytes": 1,
+      "maximum_depth": 1,
+      "maximum_field_bytes": 1,
+      "maximum_nodes": 1,
+      "maximum_scalar_bytes": 1,
+      "maximum_values": 1
+    },
+    "metadata_manifest_sha256": "test_metadata_manifest_sha256",
+    "metadata_release_id": "metadata_release_id_01234",
+    "missing_field_semantics": "turbopuffer",
+    "object": "test_object",
+    "search_policy_ids": [
+      "search_policy_ids_01234"
+    ]
+  },
+  "guarantees": [
+    "approximate",
+    "exhaustive"
+  ],
+  "maximum_results": 1,
+  "query_kinds": [
+    "protein_sequence"
+  ],
+  "ranking": {
+    "comparability": "within_query_only",
+    "order": "ascending",
+    "primary_measurement": "maxsim.bidirectional",
+    "scope": "resolved_policy_frontier",
+    "tie_breakers": [
+      {
+        "field": "maxsim.bidirectional",
+        "order": "ascending"
+      }
+    ]
+  },
+  "significance": {
+    "calibration_scope": "release",
+    "requirements": [
+      "not_requested",
+      "if_available",
+      "required"
+    ],
+    "status": "available",
+    "unavailable_reason": "test_unavailable_reason"
+  },
+  "status": "available",
+  "unavailable_reason": "test_unavailable_reason"
+}

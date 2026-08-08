@@ -7,37 +7,76 @@ declare(strict_types=1);
 namespace Tests\Service;
 
 use PHPUnit\Framework\TestCase;
-use Rafflesia\TestHelper;
+use Tests\TestHelper;
 
 class HomologySearchesTest extends TestCase
 {
     use TestHelper;
 
+    public function testList(): void
+    {
+        $fixture = $this->loadFixture('envelope_homology_search_list');
+        $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
+        $result = $client->homologySearches()->list(rafflesiaApiVersion: 'test_value', limit: 1, startingAfter: 'test_value');
+        $this->assertInstanceOf(\Rafflesia\Resource\EnvelopeHomologySearchList::class, $result);
+        $this->assertIsArray($result->toArray());
+        $request = $this->getLastRequest();
+        $this->assertSame('GET', $request->getMethod());
+        $this->assertStringEndsWith('v1/homology/searches', $request->getUri()->getPath());
+        parse_str($request->getUri()->getQuery(), $query);
+        $this->assertArrayHasKey('limit', $query);
+        $this->assertSame('test_value', $query['starting_after']);
+    }
+
     public function testCreate(): void
     {
         $fixture = $this->loadFixture('envelope_homology_search');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->homologySearches()->create(databaseId: 'test_value', query: \Rafflesia\Resource\HomologyQuery::fromArray($this->loadFixture('homology_query')));
+        $result = $client->homologySearches()->create(idempotencyKey: 'idem_test', query: \Rafflesia\Resource\HomologyQuery::fromArray($this->loadFixture('homology_query')));
         $this->assertInstanceOf(\Rafflesia\Resource\EnvelopeHomologySearch::class, $result);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('POST', $request->getMethod());
-        $this->assertStringEndsWith('v1/homology_searches', $request->getUri()->getPath());
-        $body = json_decode((string) $request->getBody(), true);
-        $this->assertSame('test_value', $body['database_id']);
+        $this->assertStringEndsWith('v1/homology/searches', $request->getUri()->getPath());
+        $this->assertSame('idem_test', $request->getHeaderLine('Idempotency-Key'));
     }
 
     public function testGet(): void
     {
         $fixture = $this->loadFixture('envelope_homology_search');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->homologySearches()->get('test_homology_search_id', includeResults: true);
+        $result = $client->homologySearches()->get('test_homology_search_id');
         $this->assertInstanceOf(\Rafflesia\Resource\EnvelopeHomologySearch::class, $result);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('GET', $request->getMethod());
-        $this->assertStringEndsWith('v1/homology_searches/test_homology_search_id', $request->getUri()->getPath());
+        $this->assertStringEndsWith('v1/homology/searches/test_homology_search_id', $request->getUri()->getPath());
+    }
+
+    public function testCancel(): void
+    {
+        $fixture = $this->loadFixture('envelope_homology_search');
+        $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
+        $result = $client->homologySearches()->cancel('test_homology_search_id');
+        $this->assertInstanceOf(\Rafflesia\Resource\EnvelopeHomologySearch::class, $result);
+        $this->assertIsArray($result->toArray());
+        $request = $this->getLastRequest();
+        $this->assertSame('POST', $request->getMethod());
+        $this->assertStringEndsWith('v1/homology/searches/test_homology_search_id/cancel', $request->getUri()->getPath());
+    }
+
+    public function testListResults(): void
+    {
+        $fixture = $this->loadFixture('envelope_homology_search_result_list');
+        $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
+        $result = $client->homologySearches()->listResults('test_homology_search_id', rafflesiaApiVersion: 'test_value', limit: 1, startingAfter: 'test_value');
+        $this->assertInstanceOf(\Rafflesia\Resource\EnvelopeHomologySearchResultList::class, $result);
+        $this->assertIsArray($result->toArray());
+        $request = $this->getLastRequest();
+        $this->assertSame('GET', $request->getMethod());
+        $this->assertStringEndsWith('v1/homology/searches/test_homology_search_id/results', $request->getUri()->getPath());
         parse_str($request->getUri()->getQuery(), $query);
-        $this->assertArrayHasKey('include_results', $query);
+        $this->assertArrayHasKey('limit', $query);
+        $this->assertSame('test_value', $query['starting_after']);
     }
 }

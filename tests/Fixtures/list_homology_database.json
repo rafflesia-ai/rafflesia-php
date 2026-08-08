@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "default_release_alias": "test_default_release_alias",
+      "default_release_id": "default_release_id_01234",
+      "description": "test_description",
+      "display_name": "Test",
+      "evidence": [
+        "candidate_measurement",
+        "pairwise_sequence_alignment"
+      ],
+      "id": "01234",
+      "is_default": true,
+      "molecule_type": "protein",
+      "msa_roles": [
+        "test_msa_roles"
+      ],
+      "object": "homology_database",
+      "organization": "test_organization",
+      "query_kinds": [
+        "protein_sequence"
+      ],
+      "slug": "test_slug"
+    }
+  ],
+  "list_metadata": {
+    "before": null,
+    "after": null
+  }
+}

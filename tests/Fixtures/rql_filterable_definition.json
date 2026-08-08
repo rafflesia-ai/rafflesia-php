@@ -1,9 +1,0 @@
-{
-  "column": "test_column",
-  "description": "test_description",
-  "name": "Test",
-  "operators": [
-    "test_operators"
-  ],
-  "source": "test_source"
-}

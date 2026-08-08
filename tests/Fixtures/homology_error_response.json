@@ -1,0 +1,13 @@
+{
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "message": "test_message",
+    "param": "test_param",
+    "request_id": "request_id_01234",
+    "type": "invalid_request_error"
+  }
+}

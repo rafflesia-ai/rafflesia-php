@@ -1,7 +1,0 @@
-{
-  "action": "activated",
-  "join_index": 1,
-  "left_source": "test_left_source",
-  "reason": "always",
-  "right_source": "test_right_source"
-}

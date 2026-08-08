@@ -1,0 +1,15 @@
+{
+  "auxiliary_taxonomy_fraction": 1,
+  "auxiliary_taxonomy_rows": 1,
+  "chain_id": "chain_id_01234",
+  "maximum_rows_per_species": 1,
+  "multi_row_species": 1,
+  "parseable_species_rows": 1,
+  "row_count": 1,
+  "rows_in_multi_row_species": 1,
+  "rows_without_species": 1,
+  "singleton_species": 1,
+  "species_parse_fraction": 1,
+  "taxonomy_without_key_rows": 1,
+  "unique_species": 1
+}

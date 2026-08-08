@@ -1,0 +1,13 @@
+{
+  "background": true,
+  "endpoint": "test_endpoint",
+  "input": {},
+  "is_retry_disabled": true,
+  "metadata": {
+    "key": "test_value"
+  },
+  "priority": "normal",
+  "start_deadline_at": "2023-01-01T00:00:00.000Z",
+  "start_timeout_ms": 1,
+  "webhook_endpoint_id": "webhook_endpoint_id_01234"
+}

@@ -1,9 +1,0 @@
-{
-  "format": "test_format",
-  "id": "01234",
-  "object_id": "object_id_01234",
-  "row_count": 1,
-  "sha256": "test_sha256",
-  "size_bytes": 1,
-  "status": "test_status"
-}

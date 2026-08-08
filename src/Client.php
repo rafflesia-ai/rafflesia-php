@@ -6,68 +6,20 @@ declare(strict_types=1);
 
 namespace Rafflesia;
 
-use Rafflesia\Service\Annotations;
-use Rafflesia\Service\ApiKeys;
-use Rafflesia\Service\Artifacts;
-use Rafflesia\Service\Audit;
-use Rafflesia\Service\Auth;
-use Rafflesia\Service\Billing;
-use Rafflesia\Service\Biosearch;
-use Rafflesia\Service\Cache;
-use Rafflesia\Service\DatabaseJoinCandidateMatrices;
-use Rafflesia\Service\DatabaseJoinCandidateProposals;
-use Rafflesia\Service\DatabaseJoinCandidateReviews;
-use Rafflesia\Service\DatabaseJoinCandidates;
-use Rafflesia\Service\DatabaseJoinCertifications;
-use Rafflesia\Service\DatabaseJoinCoverage;
-use Rafflesia\Service\DatabaseJoinCoverageLedgers;
-use Rafflesia\Service\DatabaseJoinDrifts;
-use Rafflesia\Service\DatabaseJoinMeasurements;
-use Rafflesia\Service\DatabaseJoinNeighbors;
-use Rafflesia\Service\DatabaseJoinNormalizationMeasurements;
-use Rafflesia\Service\DatabaseJoinPathMeasurements;
-use Rafflesia\Service\DatabaseJoinRequirements;
-use Rafflesia\Service\DatabaseJoins;
-use Rafflesia\Service\DatabaseReleases;
-use Rafflesia\Service\Databases;
-use Rafflesia\Service\Datasets;
-use Rafflesia\Service\EnvironmentReleases;
-use Rafflesia\Service\Environments;
-use Rafflesia\Service\EnvironmentTasks;
-use Rafflesia\Service\EpisodeArtifacts;
-use Rafflesia\Service\EpisodeEvents;
-use Rafflesia\Service\Episodes;
-use Rafflesia\Service\Foundry;
-use Rafflesia\Service\Genomes;
+use Rafflesia\Service\Account;
+use Rafflesia\Service\Events;
+use Rafflesia\Service\Files;
+use Rafflesia\Service\Homology;
 use Rafflesia\Service\HomologyDatabaseReleases;
 use Rafflesia\Service\HomologyDatabases;
-use Rafflesia\Service\HomologyQueryContextMeasurements;
-use Rafflesia\Service\HomologyResultReleases;
 use Rafflesia\Service\HomologySearches;
-use Rafflesia\Service\Jobs;
-use Rafflesia\Service\Maps;
-use Rafflesia\Service\Molecules;
-use Rafflesia\Service\ObjectArtifacts;
-use Rafflesia\Service\Objects;
-use Rafflesia\Service\Ontology;
-use Rafflesia\Service\OntologyConnectivity;
-use Rafflesia\Service\OntologyContexts;
-use Rafflesia\Service\OntologyPaths;
-use Rafflesia\Service\Platform;
-use Rafflesia\Service\Proteins;
-use Rafflesia\Service\Query;
-use Rafflesia\Service\QueryContract;
-use Rafflesia\Service\QueryExports;
-use Rafflesia\Service\Refs;
-use Rafflesia\Service\Registry;
-use Rafflesia\Service\RelationReleases;
-use Rafflesia\Service\Relations;
-use Rafflesia\Service\Repositories;
-use Rafflesia\Service\RolloutGroups;
-use Rafflesia\Service\Search;
-use Rafflesia\Service\Sequences;
-use Rafflesia\Service\Simulations;
-use Rafflesia\Service\System;
+use Rafflesia\Service\Limits;
+use Rafflesia\Service\Models;
+use Rafflesia\Service\Runs;
+use Rafflesia\Service\SqlCredentialService;
+use Rafflesia\Service\Storage;
+use Rafflesia\Service\WebhookDeliveries;
+use Rafflesia\Service\WebhookEndpoints;
 
 class Client
 {
@@ -101,73 +53,25 @@ class Client
         $withoutVersion = preg_replace('#/v[0-9]+$#', '', $normalized);
         return $withoutVersion !== null && $withoutVersion !== '' ? $withoutVersion : $normalized;
     }
-    private ?Service\Annotations $annotations = null;
-    private ?Service\ApiKeys $apiKeys = null;
-    private ?Service\Artifacts $artifacts = null;
-    private ?Service\Audit $audit = null;
-    private ?Service\Auth $auth = null;
-    private ?Service\Billing $billing = null;
-    private ?Service\Biosearch $biosearch = null;
-    private ?Service\Cache $cache = null;
-    private ?Service\DatabaseJoinCandidateMatrices $databaseJoinCandidateMatrices = null;
-    private ?Service\DatabaseJoinCandidateProposals $databaseJoinCandidateProposals = null;
-    private ?Service\DatabaseJoinCandidateReviews $databaseJoinCandidateReviews = null;
-    private ?Service\DatabaseJoinCandidates $databaseJoinCandidates = null;
-    private ?Service\DatabaseJoinCertifications $databaseJoinCertifications = null;
-    private ?Service\DatabaseJoinCoverage $databaseJoinCoverage = null;
-    private ?Service\DatabaseJoinCoverageLedgers $databaseJoinCoverageLedgers = null;
-    private ?Service\DatabaseJoinDrifts $databaseJoinDrifts = null;
-    private ?Service\DatabaseJoinMeasurements $databaseJoinMeasurements = null;
-    private ?Service\DatabaseJoinNeighbors $databaseJoinNeighbors = null;
-    private ?Service\DatabaseJoinNormalizationMeasurements $databaseJoinNormalizationMeasurements = null;
-    private ?Service\DatabaseJoinPathMeasurements $databaseJoinPathMeasurements = null;
-    private ?Service\DatabaseJoinRequirements $databaseJoinRequirements = null;
-    private ?Service\DatabaseJoins $databaseJoins = null;
-    private ?Service\DatabaseReleases $databaseReleases = null;
-    private ?Service\Databases $databases = null;
-    private ?Service\Datasets $datasets = null;
-    private ?Service\EnvironmentReleases $environmentReleases = null;
-    private ?Service\EnvironmentTasks $environmentTasks = null;
-    private ?Service\Environments $environments = null;
-    private ?Service\EpisodeArtifacts $episodeArtifacts = null;
-    private ?Service\EpisodeEvents $episodeEvents = null;
-    private ?Service\Episodes $episodes = null;
-    private ?Service\Foundry $foundry = null;
-    private ?Service\Genomes $genomes = null;
+    private ?Service\Homology $homology = null;
+    private ?Service\Account $account = null;
+    private ?Service\Events $events = null;
+    private ?Service\Storage $storage = null;
+    private ?Service\Files $files = null;
     private ?Service\HomologyDatabases $homologyDatabases = null;
     private ?Service\HomologyDatabaseReleases $homologyDatabaseReleases = null;
-    private ?Service\HomologyQueryContextMeasurements $homologyQueryContextMeasurements = null;
-    private ?Service\HomologyResultReleases $homologyResultReleases = null;
     private ?Service\HomologySearches $homologySearches = null;
-    private ?Service\Jobs $jobs = null;
-    private ?Service\Maps $maps = null;
-    private ?Service\Molecules $molecules = null;
-    private ?Service\ObjectArtifacts $objectArtifacts = null;
-    private ?Service\Objects $objects = null;
-    private ?Service\Ontology $ontology = null;
-    private ?Service\OntologyConnectivity $ontologyConnectivity = null;
-    private ?Service\OntologyContexts $ontologyContexts = null;
-    private ?Service\OntologyPaths $ontologyPaths = null;
-    private ?Service\Platform $platform = null;
-    private ?Service\Proteins $proteins = null;
-    private ?Service\Query $query = null;
-    private ?Service\QueryContract $queryContract = null;
-    private ?Service\QueryExports $queryExports = null;
-    private ?Service\Refs $refs = null;
-    private ?Service\Registry $registry = null;
-    private ?Service\RelationReleases $relationReleases = null;
-    private ?Service\Relations $relations = null;
-    private ?Service\Repositories $repositories = null;
-    private ?Service\RolloutGroups $rolloutGroups = null;
-    private ?Service\Search $search = null;
-    private ?Service\Sequences $sequences = null;
-    private ?Service\Simulations $simulations = null;
-    private ?Service\System $system = null;
+    private ?Service\Limits $limits = null;
+    private ?Service\Models $models = null;
+    private ?Service\Runs $runs = null;
+    private ?Service\SqlCredentialService $sqlCredential = null;
+    private ?Service\WebhookDeliveries $webhookDeliveries = null;
+    private ?Service\WebhookEndpoints $webhookEndpoints = null;
 
     public function __construct(
         ?string $apiKey = null,
         ?string $clientId = null,
-        string $baseUrl = 'https://api.retab.com',
+        string $baseUrl = 'https://api.rafflesia.ai',
         int $timeout = 60,
         int $maxRetries = 3,
         ?\GuzzleHttp\HandlerStack $handler = null,
@@ -179,169 +83,34 @@ class Client
         $this->httpClient = new HttpClient($apiKey, $clientId, $baseUrl, $timeout, $maxRetries, $handler, $userAgent);
     }
 
-    public function annotations(): Annotations
+    public function transport(): HttpClient
     {
-        return $this->annotations ??= new Service\Annotations($this->httpClient);
+        return $this->httpClient;
     }
 
-    public function apiKeys(): ApiKeys
+    public function homologyService(): Homology
     {
-        return $this->apiKeys ??= new Service\ApiKeys($this->httpClient);
+        return $this->homology ??= new Service\Homology($this->httpClient);
     }
 
-    public function artifacts(): Artifacts
+    public function account(): Account
     {
-        return $this->artifacts ??= new Service\Artifacts($this->httpClient);
+        return $this->account ??= new Service\Account($this->httpClient);
     }
 
-    public function audit(): Audit
+    public function events(): Events
     {
-        return $this->audit ??= new Service\Audit($this->httpClient);
+        return $this->events ??= new Service\Events($this->httpClient);
     }
 
-    public function auth(): Auth
+    public function storage(): Storage
     {
-        return $this->auth ??= new Service\Auth($this->httpClient);
+        return $this->storage ??= new Service\Storage($this->httpClient);
     }
 
-    public function billing(): Billing
+    public function files(): Files
     {
-        return $this->billing ??= new Service\Billing($this->httpClient);
-    }
-
-    public function biosearch(): Biosearch
-    {
-        return $this->biosearch ??= new Service\Biosearch($this->httpClient);
-    }
-
-    public function cache(): Cache
-    {
-        return $this->cache ??= new Service\Cache($this->httpClient);
-    }
-
-    public function databaseJoinCandidateMatrices(): DatabaseJoinCandidateMatrices
-    {
-        return $this->databaseJoinCandidateMatrices ??= new Service\DatabaseJoinCandidateMatrices($this->httpClient);
-    }
-
-    public function databaseJoinCandidateProposals(): DatabaseJoinCandidateProposals
-    {
-        return $this->databaseJoinCandidateProposals ??= new Service\DatabaseJoinCandidateProposals($this->httpClient);
-    }
-
-    public function databaseJoinCandidateReviews(): DatabaseJoinCandidateReviews
-    {
-        return $this->databaseJoinCandidateReviews ??= new Service\DatabaseJoinCandidateReviews($this->httpClient);
-    }
-
-    public function databaseJoinCandidates(): DatabaseJoinCandidates
-    {
-        return $this->databaseJoinCandidates ??= new Service\DatabaseJoinCandidates($this->httpClient);
-    }
-
-    public function databaseJoinCertifications(): DatabaseJoinCertifications
-    {
-        return $this->databaseJoinCertifications ??= new Service\DatabaseJoinCertifications($this->httpClient);
-    }
-
-    public function databaseJoinCoverage(): DatabaseJoinCoverage
-    {
-        return $this->databaseJoinCoverage ??= new Service\DatabaseJoinCoverage($this->httpClient);
-    }
-
-    public function databaseJoinCoverageLedgers(): DatabaseJoinCoverageLedgers
-    {
-        return $this->databaseJoinCoverageLedgers ??= new Service\DatabaseJoinCoverageLedgers($this->httpClient);
-    }
-
-    public function databaseJoinDrifts(): DatabaseJoinDrifts
-    {
-        return $this->databaseJoinDrifts ??= new Service\DatabaseJoinDrifts($this->httpClient);
-    }
-
-    public function databaseJoinMeasurements(): DatabaseJoinMeasurements
-    {
-        return $this->databaseJoinMeasurements ??= new Service\DatabaseJoinMeasurements($this->httpClient);
-    }
-
-    public function databaseJoinNeighbors(): DatabaseJoinNeighbors
-    {
-        return $this->databaseJoinNeighbors ??= new Service\DatabaseJoinNeighbors($this->httpClient);
-    }
-
-    public function databaseJoinNormalizationMeasurements(): DatabaseJoinNormalizationMeasurements
-    {
-        return $this->databaseJoinNormalizationMeasurements ??= new Service\DatabaseJoinNormalizationMeasurements($this->httpClient);
-    }
-
-    public function databaseJoinPathMeasurements(): DatabaseJoinPathMeasurements
-    {
-        return $this->databaseJoinPathMeasurements ??= new Service\DatabaseJoinPathMeasurements($this->httpClient);
-    }
-
-    public function databaseJoinRequirements(): DatabaseJoinRequirements
-    {
-        return $this->databaseJoinRequirements ??= new Service\DatabaseJoinRequirements($this->httpClient);
-    }
-
-    public function databaseJoins(): DatabaseJoins
-    {
-        return $this->databaseJoins ??= new Service\DatabaseJoins($this->httpClient);
-    }
-
-    public function databaseReleases(): DatabaseReleases
-    {
-        return $this->databaseReleases ??= new Service\DatabaseReleases($this->httpClient);
-    }
-
-    public function databases(): Databases
-    {
-        return $this->databases ??= new Service\Databases($this->httpClient);
-    }
-
-    public function datasets(): Datasets
-    {
-        return $this->datasets ??= new Service\Datasets($this->httpClient);
-    }
-
-    public function environmentReleases(): EnvironmentReleases
-    {
-        return $this->environmentReleases ??= new Service\EnvironmentReleases($this->httpClient);
-    }
-
-    public function environmentTasks(): EnvironmentTasks
-    {
-        return $this->environmentTasks ??= new Service\EnvironmentTasks($this->httpClient);
-    }
-
-    public function environments(): Environments
-    {
-        return $this->environments ??= new Service\Environments($this->httpClient);
-    }
-
-    public function episodeArtifacts(): EpisodeArtifacts
-    {
-        return $this->episodeArtifacts ??= new Service\EpisodeArtifacts($this->httpClient);
-    }
-
-    public function episodeEvents(): EpisodeEvents
-    {
-        return $this->episodeEvents ??= new Service\EpisodeEvents($this->httpClient);
-    }
-
-    public function episodes(): Episodes
-    {
-        return $this->episodes ??= new Service\Episodes($this->httpClient);
-    }
-
-    public function foundry(): Foundry
-    {
-        return $this->foundry ??= new Service\Foundry($this->httpClient);
-    }
-
-    public function genomes(): Genomes
-    {
-        return $this->genomes ??= new Service\Genomes($this->httpClient);
+        return $this->files ??= new Service\Files($this->httpClient);
     }
 
     public function homologyDatabases(): HomologyDatabases
@@ -354,138 +123,50 @@ class Client
         return $this->homologyDatabaseReleases ??= new Service\HomologyDatabaseReleases($this->httpClient);
     }
 
-    public function homologyQueryContextMeasurements(): HomologyQueryContextMeasurements
-    {
-        return $this->homologyQueryContextMeasurements ??= new Service\HomologyQueryContextMeasurements($this->httpClient);
-    }
-
-    public function homologyResultReleases(): HomologyResultReleases
-    {
-        return $this->homologyResultReleases ??= new Service\HomologyResultReleases($this->httpClient);
-    }
-
     public function homologySearches(): HomologySearches
     {
         return $this->homologySearches ??= new Service\HomologySearches($this->httpClient);
     }
 
-    public function jobs(): Jobs
+    public function limits(): Limits
     {
-        return $this->jobs ??= new Service\Jobs($this->httpClient);
+        return $this->limits ??= new Service\Limits($this->httpClient);
     }
 
-    public function maps(): Maps
+    public function models(): Models
     {
-        return $this->maps ??= new Service\Maps($this->httpClient);
+        return $this->models ??= new Service\Models($this->httpClient);
     }
 
-    public function molecules(): Molecules
+    public function runs(): Runs
     {
-        return $this->molecules ??= new Service\Molecules($this->httpClient);
+        return $this->runs ??= new Service\Runs($this->httpClient);
     }
 
-    public function objectArtifacts(): ObjectArtifacts
+    public function sqlCredential(): SqlCredentialService
     {
-        return $this->objectArtifacts ??= new Service\ObjectArtifacts($this->httpClient);
+        return $this->sqlCredential ??= new Service\SqlCredentialService($this->httpClient);
     }
 
-    public function objects(): Objects
+    public function webhookDeliveries(): WebhookDeliveries
     {
-        return $this->objects ??= new Service\Objects($this->httpClient);
+        return $this->webhookDeliveries ??= new Service\WebhookDeliveries($this->httpClient);
     }
 
-    public function ontology(): Ontology
+    public function webhookEndpoints(): WebhookEndpoints
     {
-        return $this->ontology ??= new Service\Ontology($this->httpClient);
+        return $this->webhookEndpoints ??= new Service\WebhookEndpoints($this->httpClient);
     }
 
-    public function ontologyConnectivity(): OntologyConnectivity
+    /** Perform one stateless homology query directly. */
+    public function homology(mixed ...$arguments): Resource\HomologyResponse
     {
-        return $this->ontologyConnectivity ??= new Service\OntologyConnectivity($this->httpClient);
+        return $this->homologyService()->search(...$arguments);
     }
 
-    public function ontologyContexts(): OntologyContexts
+    /** Perform one bounded ordered homology query batch directly. */
+    public function homologyMany(mixed ...$arguments): Resource\HomologyBatchResponse
     {
-        return $this->ontologyContexts ??= new Service\OntologyContexts($this->httpClient);
-    }
-
-    public function ontologyPaths(): OntologyPaths
-    {
-        return $this->ontologyPaths ??= new Service\OntologyPaths($this->httpClient);
-    }
-
-    public function platform(): Platform
-    {
-        return $this->platform ??= new Service\Platform($this->httpClient);
-    }
-
-    public function proteins(): Proteins
-    {
-        return $this->proteins ??= new Service\Proteins($this->httpClient);
-    }
-
-    public function query(): Query
-    {
-        return $this->query ??= new Service\Query($this->httpClient);
-    }
-
-    public function queryContract(): QueryContract
-    {
-        return $this->queryContract ??= new Service\QueryContract($this->httpClient);
-    }
-
-    public function queryExports(): QueryExports
-    {
-        return $this->queryExports ??= new Service\QueryExports($this->httpClient);
-    }
-
-    public function refs(): Refs
-    {
-        return $this->refs ??= new Service\Refs($this->httpClient);
-    }
-
-    public function registry(): Registry
-    {
-        return $this->registry ??= new Service\Registry($this->httpClient);
-    }
-
-    public function relationReleases(): RelationReleases
-    {
-        return $this->relationReleases ??= new Service\RelationReleases($this->httpClient);
-    }
-
-    public function relations(): Relations
-    {
-        return $this->relations ??= new Service\Relations($this->httpClient);
-    }
-
-    public function repositories(): Repositories
-    {
-        return $this->repositories ??= new Service\Repositories($this->httpClient);
-    }
-
-    public function rolloutGroups(): RolloutGroups
-    {
-        return $this->rolloutGroups ??= new Service\RolloutGroups($this->httpClient);
-    }
-
-    public function search(): Search
-    {
-        return $this->search ??= new Service\Search($this->httpClient);
-    }
-
-    public function sequences(): Sequences
-    {
-        return $this->sequences ??= new Service\Sequences($this->httpClient);
-    }
-
-    public function simulations(): Simulations
-    {
-        return $this->simulations ??= new Service\Simulations($this->httpClient);
-    }
-
-    public function system(): System
-    {
-        return $this->system ??= new Service\System($this->httpClient);
+        return $this->homologyService()->many(...$arguments);
     }
 }

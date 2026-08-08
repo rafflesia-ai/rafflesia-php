@@ -1,0 +1,5 @@
+{
+  "enforcement": "provider",
+  "error_code": "content_policy_violation",
+  "is_supported": true
+}

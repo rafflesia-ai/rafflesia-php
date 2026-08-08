@@ -1,0 +1,26 @@
+{
+  "columns_csv": {
+    "content_type": "test_content_type",
+    "download_url": "https://example.com",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "sha256": "test_sha256",
+    "size_bytes": 1
+  },
+  "insertion_slots_csv": {
+    "content_type": "test_content_type",
+    "download_url": "https://example.com",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "sha256": "test_sha256",
+    "size_bytes": 1
+  },
+  "rows_csv": {
+    "content_type": "test_content_type",
+    "download_url": "https://example.com",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "sha256": "test_sha256",
+    "size_bytes": 1
+  }
+}

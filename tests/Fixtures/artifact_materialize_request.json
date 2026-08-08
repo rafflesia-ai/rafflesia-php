@@ -1,8 +1,0 @@
-{
-  "allow_network": true,
-  "associate_map_models": true,
-  "download_emdb_maps": true,
-  "manifest_path": "test_manifest_path",
-  "max_download_bytes": 1,
-  "output_dir": "test_output_dir"
-}

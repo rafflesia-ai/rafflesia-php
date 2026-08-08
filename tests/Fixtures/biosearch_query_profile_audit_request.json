@@ -1,5 +1,0 @@
-{
-  "engine": "clickhouse",
-  "limit": 1,
-  "timeout_ms": 1
-}

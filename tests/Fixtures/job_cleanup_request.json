@@ -1,9 +1,0 @@
-{
-  "delete_terminal": true,
-  "dry_run": true,
-  "limit": 1,
-  "mark_stale_running": true,
-  "reason": "test_reason",
-  "stale_after_ms": 1,
-  "terminal_older_than_ms": 1
-}

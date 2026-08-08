@@ -1,0 +1,10 @@
+{
+  "msa_candidate_count": 1,
+  "msa_inference_bytes": 1,
+  "msa_inference_row_count": 1,
+  "msa_lane_count": 1,
+  "msa_logical_bytes_read": 1,
+  "msa_object_reads": 1,
+  "msa_projected_row_count": 1,
+  "residue_count": 1
+}

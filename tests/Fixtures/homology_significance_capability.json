@@ -1,0 +1,10 @@
+{
+  "calibration_scope": "release",
+  "requirements": [
+    "not_requested",
+    "if_available",
+    "required"
+  ],
+  "status": "available",
+  "unavailable_reason": "test_unavailable_reason"
+}

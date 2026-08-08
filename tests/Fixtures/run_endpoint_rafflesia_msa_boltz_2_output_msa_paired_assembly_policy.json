@@ -1,0 +1,11 @@
+{
+  "exclude_conflicting_groups": true,
+  "exclude_unpaired_rows": true,
+  "grouping_key": "uniprot_mnemonic",
+  "grouping_rank": "test_grouping_rank",
+  "matching": "rank_order",
+  "maximum_paired_rows": 1,
+  "maximum_unpaired_rows_per_chain": 1,
+  "strategy": "complete",
+  "taxonomy_nodes_object_id": "taxonomy_nodes_object_id_01234"
+}

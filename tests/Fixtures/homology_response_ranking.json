@@ -1,0 +1,12 @@
+{
+  "comparability": "within_query_only",
+  "order": "ascending",
+  "primary_measurement": "maxsim.bidirectional",
+  "scope": "resolved_policy_frontier",
+  "tie_breakers": [
+    {
+      "field": "maxsim.bidirectional",
+      "order": "ascending"
+    }
+  ]
+}

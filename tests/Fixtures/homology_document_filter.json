@@ -1,0 +1,8 @@
+{
+  "field": "test_field",
+  "op": "and",
+  "value": "test_value",
+  "values": [
+    "test_values"
+  ]
+}

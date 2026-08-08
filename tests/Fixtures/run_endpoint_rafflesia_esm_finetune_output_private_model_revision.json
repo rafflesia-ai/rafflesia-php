@@ -1,0 +1,42 @@
+{
+  "base_model_id": "base_model_id_01234",
+  "base_model_repository": "test_base_model_repository",
+  "base_model_revision": "test_base_model_revision",
+  "created_at": "2023-01-01T00:00:00.000Z",
+  "id": "01234",
+  "metadata": {
+    "key": "test_value"
+  },
+  "object": "private_model_revision",
+  "private_model_id": "private_model_id_01234",
+  "training": {
+    "checkpoint_step": 1,
+    "is_ema": true,
+    "manifest": {
+      "content_type": "test_content_type",
+      "file_name": "Test",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "url": "https://example.com"
+    },
+    "manifest_sha256": "test_manifest_sha256",
+    "source_uri": "https://example.com",
+    "spec": {
+      "content_type": "test_content_type",
+      "file_name": "Test",
+      "sha256": "test_sha256",
+      "size_bytes": 1,
+      "url": "https://example.com"
+    },
+    "trainer_run_id": "trainer_run_id_01234",
+    "trainer_version": "test_trainer_version"
+  },
+  "weights": {
+    "content_type": "test_content_type",
+    "file_name": "Test",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "url": "https://example.com"
+  },
+  "weights_format": "base"
+}

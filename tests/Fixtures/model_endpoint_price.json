@@ -1,0 +1,6 @@
+{
+  "currency": "test_currency",
+  "endpoint_id": "endpoint_id_01234",
+  "unit": "test_unit",
+  "unit_price": 1
+}

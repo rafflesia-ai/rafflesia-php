@@ -1,6 +1,0 @@
-{
-  "default_max_retries": 1,
-  "description": "test_description",
-  "operation": "test_operation",
-  "result_inline_bytes": 1
-}

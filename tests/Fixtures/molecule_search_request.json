@@ -1,6 +1,0 @@
-{
-  "backend": "test_backend",
-  "db": "test_db",
-  "max_hits": 1,
-  "query": "test_query"
-}

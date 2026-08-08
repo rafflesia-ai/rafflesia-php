@@ -1,0 +1,30 @@
+{
+  "constraint": "credit_balance",
+  "currency": "usd",
+  "endpoint": "test_endpoint",
+  "entitlement_refreshed_at": "2023-01-01T00:00:00.000Z",
+  "entitlement_source": "default",
+  "history": [
+    {
+      "started_at": "test_started_at",
+      "used": 1
+    }
+  ],
+  "id": "01234",
+  "is_entitlement_stale": true,
+  "is_unlimited": true,
+  "kind": "request_rate",
+  "limit": 1,
+  "next_tier_spend_microusd": 1,
+  "object": "limit",
+  "peak_used": 1,
+  "remaining": 1,
+  "reserved": 1,
+  "reset_at": "test_reset_at",
+  "scope": "organization",
+  "tier_spend_microusd": 1,
+  "tier_window_started_at": "2023-01-01T00:00:00.000Z",
+  "unit": "requests",
+  "used": 1,
+  "window_seconds": 1
+}

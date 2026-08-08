@@ -1,8 +1,0 @@
-{
-  "materialize_index_ms": 1,
-  "resolve_index_ms": 1,
-  "resolve_query_ms": 1,
-  "search_ms": 1,
-  "store_output_ms": 1,
-  "total_ms": 1
-}

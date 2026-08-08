@@ -1,0 +1,16 @@
+{
+  "category": "test_category",
+  "description": "test_description",
+  "display_name": "Test",
+  "group": {
+    "key": "test_key",
+    "label": "test_label"
+  },
+  "kind": "inference",
+  "license_type": "commercial",
+  "model_url": "https://example.com",
+  "status": "preview",
+  "tags": [
+    "test_tags"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "created_at": "2023-01-01T00:00:00.000Z",
+      "expires_at": "2023-01-01T00:00:00.000Z",
+      "failure": {
+        "code": "test_code",
+        "detail": "test_detail",
+        "is_retryable": true
+      },
+      "id": "01234",
+      "idempotency_key_expires_at": "2023-01-01T00:00:00.000Z",
+      "object": "homology_search",
+      "query": {
+        "kind": "protein_sequence",
+        "normalization_id": "normalization_id_01234",
+        "normalized_length": 1,
+        "retention": "test_retention",
+        "sha256": "test_sha256"
+      },
+      "receipt": {
+        "calibration_id": "calibration_id_01234",
+        "canonical_filter_sha256": "test_canonical_filter_sha256",
+        "corpus_snapshot_id": "corpus_snapshot_id_01234",
+        "database_release_id": "database_release_id_01234",
+        "database_residue_count": 1,
+        "database_target_count": 1,
+        "engine": "test_engine",
+        "engine_release": "test_engine_release",
+        "execution_warnings": [
+          "test_execution_warnings"
+        ],
+        "filter_schema_id": "filter_schema_id_01234",
+        "is_deterministic": true,
+        "is_exhaustive": true,
+        "is_policy_complete": true,
+        "outcome": "complete_exact",
+        "outcome_receipt_bytes": 1,
+        "outcome_receipt_id": "outcome_receipt_id_01234",
+        "outcome_receipt_sha256": "test_outcome_receipt_sha256",
+        "result_sha256": "test_result_sha256",
+        "searched_residue_count": 1,
+        "searched_target_count": 1,
+        "semantic_profile_id": "semantic_profile_id_01234",
+        "target_space_id": "target_space_id_01234",
+        "usage": {
+          "billable_formula_id": "billable_formula_id_01234",
+          "billable_units": 1,
+          "logical_bytes_read": 1,
+          "logical_bytes_returned": 1,
+          "object_reads": 1,
+          "query_pack_bytes": 1
+        },
+        "work": {
+          "affine_cells": 1,
+          "affine_pairs": 1,
+          "candidate_pairs": 1,
+          "maxsim_residue_pairs": 1,
+          "returned_result_count": 1,
+          "traceback_pairs": 1
+        }
+      },
+      "result_set": {
+        "canonical_result_id": "canonical_result_id_01234",
+        "count": 1,
+        "expires_at": "2023-01-01T00:00:00.000Z",
+        "is_result_limit_reached": true,
+        "object": "test_object",
+        "sha256": "test_sha256",
+        "url": "https://example.com"
+      },
+      "results": {
+        "evidence": "candidate_measurement",
+        "limit": 1,
+        "significance": "not_requested"
+      },
+      "retention_class": "standard_30d",
+      "specification_sha256": "test_specification_sha256",
+      "status": "queued",
+      "target_space": {
+        "canonical_filter_sha256": "test_canonical_filter_sha256",
+        "eligible_record_count": 1,
+        "eligible_residue_count": 1,
+        "filter_schema_id": "filter_schema_id_01234",
+        "id": "01234",
+        "is_filtered": true,
+        "total_record_count": 1,
+        "unknown_record_count": 1
+      },
+      "warnings": [
+        {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "message": "test_message"
+        }
+      ]
+    }
+  ],
+  "has_more": true,
+  "next_cursor": "test_next_cursor",
+  "object": "test_object",
+  "url": "https://example.com"
+}

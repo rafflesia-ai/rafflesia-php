@@ -1,0 +1,7 @@
+{
+  "execution_receipt_id": "execution_receipt_id_01234",
+  "execution_receipt_sha256": "test_execution_receipt_sha256",
+  "outcome_id": "outcome_id_01234",
+  "outcome_sha256": "test_outcome_sha256",
+  "result_sha256": "test_result_sha256"
+}

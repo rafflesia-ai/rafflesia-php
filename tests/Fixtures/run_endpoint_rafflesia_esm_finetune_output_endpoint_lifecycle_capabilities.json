@@ -1,0 +1,6 @@
+{
+  "is_cancellation_supported": true,
+  "is_long_polling_supported": true,
+  "is_sse_supported": true,
+  "is_webhook_supported": true
+}

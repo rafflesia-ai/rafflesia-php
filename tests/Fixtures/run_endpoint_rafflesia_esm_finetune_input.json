@@ -1,0 +1,7 @@
+{
+  "expected_optimizer_steps": 1,
+  "private_model_description": "test_private_model_description",
+  "private_model_endpoint": "test_private_model_endpoint",
+  "private_model_name": "Test",
+  "training_profile_url": "https://example.com"
+}

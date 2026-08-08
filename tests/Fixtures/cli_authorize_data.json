@@ -1,5 +1,0 @@
-{
-  "authorization_url": "https://example.com",
-  "redirect_uri": "https://example.com",
-  "state": "test_state"
-}

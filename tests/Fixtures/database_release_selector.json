@@ -1,7 +1,0 @@
-{
-  "database": "test_database",
-  "digest": "test_digest",
-  "release": "test_release",
-  "resolution": "endpoint",
-  "selector": "test_selector"
-}

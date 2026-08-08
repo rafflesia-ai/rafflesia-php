@@ -7,7 +7,7 @@ declare(strict_types=1);
 namespace Tests\Service;
 
 use PHPUnit\Framework\TestCase;
-use Rafflesia\TestHelper;
+use Tests\TestHelper;
 
 class HomologyDatabasesTest extends TestCase
 {
@@ -15,22 +15,22 @@ class HomologyDatabasesTest extends TestCase
 
     public function testList(): void
     {
-        $fixture = $this->loadFixture('list_envelope_homology_database_list');
+        $fixture = $this->loadFixture('list_homology_database');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->homologyDatabases()->list(limit: 1, startingAfter: 'test_value', endingBefore: 'test_value');
+        $result = $client->homologyDatabases()->list(rafflesiaApiVersion: 'test_value', limit: 1, before: 'test_value', after: 'test_value');
         $this->assertInstanceOf(\Rafflesia\PaginatedResponse::class, $result);
         $request = $this->getLastRequest();
         $this->assertSame('GET', $request->getMethod());
-        $this->assertStringEndsWith('v1/homology_databases', $request->getUri()->getPath());
+        $this->assertStringEndsWith('v1/homology/databases', $request->getUri()->getPath());
         parse_str($request->getUri()->getQuery(), $query);
         $this->assertArrayHasKey('limit', $query);
-        $this->assertSame('test_value', $query['starting_after']);
-        $this->assertSame('test_value', $query['ending_before']);
+        $this->assertSame('test_value', $query['before']);
+        $this->assertSame('test_value', $query['after']);
     }
 
     public function testPaginationBoundary(): void
     {
-        $fixture = $this->loadFixture('list_envelope_homology_database_list');
+        $fixture = $this->loadFixture('list_homology_database');
         // Ensure cursors are null (first/last page boundary)
         $fixture['list_metadata']['before'] = null;
         $fixture['list_metadata']['after'] = null;

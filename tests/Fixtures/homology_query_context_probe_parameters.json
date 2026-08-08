@@ -1,7 +1,0 @@
-{
-  "max_bytes_read": 1,
-  "max_candidates": 1,
-  "max_object_reads": 1,
-  "search_profile": "economic",
-  "timeout_ms": 1
-}

@@ -11,29 +11,24 @@ readonly class CreateHomologySearchRequest implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** Opaque db_ database id to search. */
-        public string $databaseId,
-        /** The query sequence. */
+        /** One typed biological query. */
         public HomologyQuery $query,
-        /** When true, enqueue durable background execution and return a queued search. Requires the serving database to run the shared durable request plane and a standalone search worker; a deployment without them refuses with 503 background_search_unavailable rather than running the search synchronously. Not offered by the rafflesia CLI for that reason. */
-        public ?bool $background = null,
-        /** Optional release alias; omit both selectors to use the database default. */
-        public ?string $databaseReleaseAlias = null,
-        /** Optional immutable dbr_ release id. */
+        /** Database id or slug from homology.databases.list. Omit both database selectors to use the server-advertised default database and its default release. Mutually exclusive with database_release_id. */
+        public ?string $database = null,
+        /** Exact immutable dbr_ release id returned by the catalog. Omit both database selectors to use the server-advertised default database and its default release. Mutually exclusive with database. */
         public ?string $databaseReleaseId = null,
-        /**
-         * Caller metadata echoed on the search.
-         * @var array<string, mixed>|null
-         */
-        public ?array $metadata = null,
-        /** Result mode: candidates or verified. Defaults to verified. */
-        public ?string $mode = null,
-        /** Optional explicit resource budgets and planner policy; forwarded to the serving database unchanged. */
-        public mixed $parameters = null,
-        /** Optional qctx_ preflight identity returned by query-context measure; the serving database rejects drift. */
-        public ?string $queryContextId = null,
-        /** Operating profile: economic, balanced, or sensitive. Defaults to balanced. */
-        public ?string $searchProfile = null,
+        /** Stable scientific evidence representation. The release-owned final ranking measurement is always returned independently. */
+        public ?Evidence $evidence = null,
+        /** Optional exact metadata predicate applied before the release-owned search policy. */
+        public ?HomologyDocumentFilter $filter = null,
+        /** Minimum search guarantee. Approximate permits the release-selected qualified policy or a stronger exhaustive fallback; exhaustive requires the reference policy. */
+        public ?Guarantees $guarantee = null,
+        /** Maximum ranked results. Inline delivery accepts at most 5,000 and remains bounded by the 16 MiB response ceiling; retained delivery accepts at most 10,000 and pages the immutable result set. */
+        public ?int $limit = null,
+        /** Database-aware significance requirement. if_available never invalidates an otherwise valid alignment. */
+        public ?Requirements $significance = null,
+        /** Immutable reusable target space returned as database.target_space_id by a prior filtered homology search. Mutually exclusive with database, database_release_id, and filter. */
+        public ?string $targetSpaceId = null,
     ) {
     }
 
@@ -41,7 +36,6 @@ readonly class CreateHomologySearchRequest implements \JsonSerializable
     public static function fromArray(array $data): self
     {
         foreach ([
-            'database_id',
             'query',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -49,16 +43,15 @@ readonly class CreateHomologySearchRequest implements \JsonSerializable
             }
         }
         return new self(
-            databaseId: $data['database_id'],
             query: HomologyQuery::fromArray($data['query']),
-            background: $data['background'] ?? null,
-            databaseReleaseAlias: $data['database_release_alias'] ?? null,
+            database: $data['database'] ?? null,
             databaseReleaseId: $data['database_release_id'] ?? null,
-            metadata: $data['metadata'] ?? null,
-            mode: $data['mode'] ?? null,
-            parameters: $data['parameters'] ?? null,
-            queryContextId: $data['query_context_id'] ?? null,
-            searchProfile: $data['search_profile'] ?? null,
+            evidence: isset($data['evidence']) ? Evidence::from($data['evidence']) : null,
+            filter: isset($data['filter']) ? HomologyDocumentFilter::fromArray($data['filter']) : null,
+            guarantee: isset($data['guarantee']) ? Guarantees::from($data['guarantee']) : null,
+            limit: $data['limit'] ?? null,
+            significance: isset($data['significance']) ? Requirements::from($data['significance']) : null,
+            targetSpaceId: $data['target_space_id'] ?? null,
         );
     }
 
@@ -66,16 +59,15 @@ readonly class CreateHomologySearchRequest implements \JsonSerializable
     public function toArray(): array
     {
         return [
-            'database_id' => $this->databaseId,
             'query' => $this->query->toArray(),
-            'background' => $this->background,
-            'database_release_alias' => $this->databaseReleaseAlias,
+            'database' => $this->database,
             'database_release_id' => $this->databaseReleaseId,
-            'metadata' => $this->metadata,
-            'mode' => $this->mode,
-            'parameters' => $this->parameters,
-            'query_context_id' => $this->queryContextId,
-            'search_profile' => $this->searchProfile,
+            'evidence' => $this->evidence?->value,
+            'filter' => $this->filter?->toArray(),
+            'guarantee' => $this->guarantee?->value,
+            'limit' => $this->limit,
+            'significance' => $this->significance?->value,
+            'target_space_id' => $this->targetSpaceId,
         ];
     }
 }

@@ -1,0 +1,13 @@
+{
+  "chain_ids": [
+    "chain_ids_01234"
+  ],
+  "fixed_positions": [
+    "test_fixed_positions"
+  ],
+  "num_sequences": 1,
+  "output_format": "json",
+  "seed": 1,
+  "structure_url": "https://example.com",
+  "temperature": 1
+}

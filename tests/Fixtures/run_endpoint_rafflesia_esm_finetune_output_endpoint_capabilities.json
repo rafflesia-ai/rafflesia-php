@@ -1,0 +1,25 @@
+{
+  "content_policy": {
+    "enforcement": "provider",
+    "error_code": "content_policy_violation",
+    "is_supported": true
+  },
+  "execution_modes": [
+    "foreground",
+    "background"
+  ],
+  "lifecycle": {
+    "is_cancellation_supported": true,
+    "is_long_polling_supported": true,
+    "is_sse_supported": true,
+    "is_webhook_supported": true
+  },
+  "output_streaming": {
+    "is_supported": true,
+    "transport": "sse"
+  },
+  "realtime": {
+    "is_supported": true,
+    "transport": "websocket"
+  }
+}

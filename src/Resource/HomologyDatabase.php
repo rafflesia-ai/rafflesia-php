@@ -12,13 +12,17 @@ readonly class HomologyDatabase implements \JsonSerializable
 
     public function __construct(
         public string $displayName,
-        /** Opaque db_ database id accepted by sequences search homology --database-id. */
+        /** @var array<\Rafflesia\Resource\Evidence>|null */
+        public ?array $evidence,
+        /** Opaque database id used to enumerate immutable releases. */
         public string $id,
-        /** @var array<string>|null */
-        public ?array $modes,
-        public string $moleculeType,
-        /** Always homology_database. */
-        public string $object,
+        /** Whether omitting both database selectors currently resolves to this database and its advertised default release. */
+        public bool $isDefault,
+        /**
+         * MSA configuration roles this corpus is explicitly registered to serve. Empty means the corpus cannot be used by an AF2, AF3, or ColabFold MSA build.
+         * @var array<string>|null
+         */
+        public ?array $msaRoles,
         /** @var array<string>|null */
         public ?array $queryKinds,
         /** Human-readable stable database slug. */
@@ -27,10 +31,11 @@ readonly class HomologyDatabase implements \JsonSerializable
         /** Immutable release currently selected by the default alias. */
         public ?string $defaultReleaseId = null,
         public ?string $description = null,
-        public ?string $sourceDataset = null,
-        public ?string $sourceLicense = null,
-        public ?string $sourceProvider = null,
-        public ?string $sourceVersion = null,
+        /** Institution that curates the upstream corpus. Absent when the served corpus has no declared curator. */
+        public ?string $organization = null,
+        public string $moleculeType = 'protein',
+        /** Always homology_database. */
+        public string $object = 'homology_database',
     ) {
     }
 
@@ -39,10 +44,10 @@ readonly class HomologyDatabase implements \JsonSerializable
     {
         foreach ([
             'display_name',
+            'evidence',
             'id',
-            'modes',
-            'molecule_type',
-            'object',
+            'is_default',
+            'msa_roles',
             'query_kinds',
             'slug',
         ] as $__required) {
@@ -52,19 +57,18 @@ readonly class HomologyDatabase implements \JsonSerializable
         }
         return new self(
             displayName: $data['display_name'],
+            evidence: isset($data['evidence']) ? array_map(fn ($item) => Evidence::from($item), $data['evidence']) : null,
             id: $data['id'],
-            modes: $data['modes'] ?? null,
-            moleculeType: $data['molecule_type'],
-            object: $data['object'],
+            isDefault: $data['is_default'],
+            msaRoles: $data['msa_roles'] ?? null,
             queryKinds: $data['query_kinds'] ?? null,
             slug: $data['slug'],
             defaultReleaseAlias: $data['default_release_alias'] ?? null,
             defaultReleaseId: $data['default_release_id'] ?? null,
             description: $data['description'] ?? null,
-            sourceDataset: $data['source_dataset'] ?? null,
-            sourceLicense: $data['source_license'] ?? null,
-            sourceProvider: $data['source_provider'] ?? null,
-            sourceVersion: $data['source_version'] ?? null,
+            organization: $data['organization'] ?? null,
+            moleculeType: $data['molecule_type'] ?? 'protein',
+            object: $data['object'] ?? 'homology_database',
         );
     }
 
@@ -73,19 +77,18 @@ readonly class HomologyDatabase implements \JsonSerializable
     {
         return [
             'display_name' => $this->displayName,
+            'evidence' => $this->evidence !== null ? array_map(fn ($item) => $item->value, $this->evidence) : null,
             'id' => $this->id,
-            'modes' => $this->modes,
-            'molecule_type' => $this->moleculeType,
-            'object' => $this->object,
+            'is_default' => $this->isDefault,
+            'msa_roles' => $this->msaRoles,
             'query_kinds' => $this->queryKinds,
             'slug' => $this->slug,
             'default_release_alias' => $this->defaultReleaseAlias,
             'default_release_id' => $this->defaultReleaseId,
             'description' => $this->description,
-            'source_dataset' => $this->sourceDataset,
-            'source_license' => $this->sourceLicense,
-            'source_provider' => $this->sourceProvider,
-            'source_version' => $this->sourceVersion,
+            'organization' => $this->organization,
+            'molecule_type' => $this->moleculeType,
+            'object' => $this->object,
         ];
     }
 }

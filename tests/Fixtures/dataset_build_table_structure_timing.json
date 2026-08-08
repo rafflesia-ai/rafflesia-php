@@ -1,8 +1,0 @@
-{
-  "elapsed_ms": 1,
-  "error_code": "test_error_code",
-  "error_message": "test_error_message",
-  "row_count": 1,
-  "status": "test_status",
-  "table_name": "Test"
-}

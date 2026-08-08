@@ -1,0 +1,8 @@
+{
+  "billable_formula_id": "billable_formula_id_01234",
+  "billable_units": 1,
+  "logical_bytes_read": 1,
+  "logical_bytes_returned": 1,
+  "object_reads": 1,
+  "query_pack_bytes": 1
+}

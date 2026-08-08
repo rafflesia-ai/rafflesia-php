@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 namespace Rafflesia\Service;
 
-use Rafflesia\Resource\EnvelopeHomologyDatabaseReleaseList;
+use Rafflesia\Resource\HomologyDatabaseRelease;
 
 class HomologyDatabaseReleases
 {
@@ -16,30 +16,39 @@ class HomologyDatabaseReleases
     }
 
     /**
+     * List the immutable releases of a homology database
+     *
+     * Returns one cursor page of a database's immutable releases, ordered by release id, each with its record and residue counts, its aliases, and the release-owned capability contract naming the search policies and evidence it can serve. A release id always identifies the same searched content. A release whose capability cannot currently be resolved is reported as unavailable with a warning rather than dropped from the page.
      * @param string $databaseId
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract; any other value returns api_version_unsupported.
      * @param int|null $limit Defaults to 20.
-     * @param string|null $startingAfter
-     * @param string|null $endingBefore
-     * @return \Rafflesia\PaginatedResponse<\Rafflesia\Resource\EnvelopeHomologyDatabaseReleaseList>
+     * @param string|null $before Return the page immediately before this opaque cursor. Mutually exclusive with after.
+     * @param string|null $after Return the page immediately after this opaque cursor. Mutually exclusive with before.
+     * @return \Rafflesia\PaginatedResponse<\Rafflesia\Resource\HomologyDatabaseRelease>
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function list(
         string $databaseId,
+        ?string $rafflesiaApiVersion = null,
         ?int $limit = null,
-        ?string $startingAfter = null,
-        ?string $endingBefore = null,
+        ?string $before = null,
+        ?string $after = null,
         ?\Rafflesia\RequestOptions $options = null,
     ): \Rafflesia\PaginatedResponse {
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+        ], fn ($v) => $v !== null);
         $query = array_filter([
             'limit' => $limit,
-            'starting_after' => $startingAfter,
-            'ending_before' => $endingBefore,
+            'before' => $before,
+            'after' => $after,
         ], fn ($v) => $v !== null);
         return $this->client->requestPage(
             method: 'GET',
-            path: 'v1/homology_databases/' . rawurlencode($databaseId) . '/releases',
+            path: 'v1/homology/databases/' . rawurlencode((string) $databaseId) . '/releases',
             query: $query,
-            modelClass: EnvelopeHomologyDatabaseReleaseList::class,
+            modelClass: HomologyDatabaseRelease::class,
+            headers: $headers,
             options: $options,
         );
     }

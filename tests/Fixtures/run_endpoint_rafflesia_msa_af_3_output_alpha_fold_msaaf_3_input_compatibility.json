@@ -1,0 +1,10 @@
+{
+  "are_both_msa_fields_non_empty": true,
+  "input_dialect": "alphafold3_json_v3",
+  "is_accepted_by_af3_custom_msa_contract": true,
+  "is_pairing_species_ready": true,
+  "is_query_first_and_exact": true,
+  "is_rectangular_after_removing_insertions": true,
+  "paired_msa_field": "pairedMsa",
+  "unpaired_msa_field": "unpairedMsa"
+}

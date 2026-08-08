@@ -1,0 +1,12 @@
+{
+  "checksum": "test_checksum",
+  "checksum_algorithm": "sha256",
+  "expires_at": "2023-01-01T00:00:00.000Z",
+  "headers": {
+    "key": "test_value"
+  },
+  "is_api_url": true,
+  "is_etag_required": true,
+  "part_number": 1,
+  "upload_url": "https://example.com"
+}

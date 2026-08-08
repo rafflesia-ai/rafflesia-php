@@ -1,0 +1,7 @@
+{
+  "content_type": "test_content_type",
+  "file_name": "Test",
+  "path": "test_path",
+  "sha256": "test_sha256",
+  "size_bytes": 1
+}

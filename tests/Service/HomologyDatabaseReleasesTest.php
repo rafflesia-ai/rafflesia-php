@@ -7,7 +7,7 @@ declare(strict_types=1);
 namespace Tests\Service;
 
 use PHPUnit\Framework\TestCase;
-use Rafflesia\TestHelper;
+use Tests\TestHelper;
 
 class HomologyDatabaseReleasesTest extends TestCase
 {
@@ -15,22 +15,22 @@ class HomologyDatabaseReleasesTest extends TestCase
 
     public function testList(): void
     {
-        $fixture = $this->loadFixture('list_envelope_homology_database_release_list');
+        $fixture = $this->loadFixture('list_homology_database_release');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->homologyDatabaseReleases()->list('test_database_id', limit: 1, startingAfter: 'test_value', endingBefore: 'test_value');
+        $result = $client->homologyDatabaseReleases()->list('test_database_id', rafflesiaApiVersion: 'test_value', limit: 1, before: 'test_value', after: 'test_value');
         $this->assertInstanceOf(\Rafflesia\PaginatedResponse::class, $result);
         $request = $this->getLastRequest();
         $this->assertSame('GET', $request->getMethod());
-        $this->assertStringEndsWith('v1/homology_databases/test_database_id/releases', $request->getUri()->getPath());
+        $this->assertStringEndsWith('v1/homology/databases/test_database_id/releases', $request->getUri()->getPath());
         parse_str($request->getUri()->getQuery(), $query);
         $this->assertArrayHasKey('limit', $query);
-        $this->assertSame('test_value', $query['starting_after']);
-        $this->assertSame('test_value', $query['ending_before']);
+        $this->assertSame('test_value', $query['before']);
+        $this->assertSame('test_value', $query['after']);
     }
 
     public function testPaginationBoundary(): void
     {
-        $fixture = $this->loadFixture('list_envelope_homology_database_release_list');
+        $fixture = $this->loadFixture('list_homology_database_release');
         // Ensure cursors are null (first/last page boundary)
         $fixture['list_metadata']['before'] = null;
         $fixture['list_metadata']['after'] = null;

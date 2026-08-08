@@ -1,0 +1,10 @@
+{
+  "identity_threshold": 1,
+  "is_neff_exact": true,
+  "neff_method": "test_neff_method",
+  "neff_standard_error": 1,
+  "paired_homolog_neff": 1,
+  "paired_neff": 1,
+  "paired_neff_per_column": 1,
+  "paired_row_count": 1
+}

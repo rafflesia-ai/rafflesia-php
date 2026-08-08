@@ -47,10 +47,39 @@ class HttpClient
         string $path,
         ?array $body = null,
         array $query = [],
+        array $headers = [],
         ?RequestOptions $options = null,
         ?array $multipart = null,
     ): array {
-        $requestOptions = $this->requestOptions($query, $options);
+        return $this->requestWithMetadata(
+            method: $method,
+            path: $path,
+            body: $body,
+            query: $query,
+            headers: $headers,
+            options: $options,
+            multipart: $multipart,
+        )['body'];
+    }
+
+    /**
+     * Execute one request while preserving response status and headers.
+     *
+     * @param array<string, mixed> $query
+     * @param array<string, mixed>|null $body
+     * @param list<array{name: string, contents: mixed, filename?: string, headers?: array<string, string>}>|null $multipart
+     * @return array{status: int, headers: array<string, list<string>>, body: array<string, mixed>}
+     */
+    public function requestWithMetadata(
+        string $method,
+        string $path,
+        ?array $body = null,
+        array $query = [],
+        array $headers = [],
+        ?RequestOptions $options = null,
+        ?array $multipart = null,
+    ): array {
+        $requestOptions = $this->requestOptions($query, $headers, $options);
         if ($multipart !== null) {
             // multipart/form-data body (e.g. table create/replace). Guzzle's
             // `multipart` request option builds the body and sets the
@@ -68,7 +97,11 @@ class HttpClient
                 $statusCode = $response->getStatusCode();
                 $rawBody = (string) $response->getBody();
                 if ($statusCode === 204 || $rawBody === '') {
-                    return [];
+                    return [
+                        'status' => $statusCode,
+                        'headers' => $response->getHeaders(),
+                        'body' => [],
+                    ];
                 }
 
                 $decoded = json_decode($rawBody, true);
@@ -77,7 +110,11 @@ class HttpClient
                 }
 
                 /** @var array<string, mixed> $decoded */
-                return $decoded;
+                return [
+                    'status' => $statusCode,
+                    'headers' => $response->getHeaders(),
+                    'body' => $decoded,
+                ];
             } catch (GuzzleException $error) {
                 if ($attempt >= $this->maxRetries) {
                     // Surface the typed subclass (RetabNotFoundException,
@@ -113,12 +150,14 @@ class HttpClient
         string $path,
         array $query,
         string $modelClass,
+        array $headers = [],
         ?RequestOptions $options = null,
     ): PaginatedResponse {
         $response = $this->request(
             method: $method,
             path: $path,
             query: $query,
+            headers: $headers,
             options: $options,
         );
 
@@ -135,11 +174,14 @@ class HttpClient
         return new PaginatedResponse(
             data: $data,
             listMetadata: $metadata,
-            fetchAfter: function (string $after) use ($method, $path, $query, $modelClass, $options): PaginatedResponse {
+            object: is_string($response['object'] ?? null) ? $response['object'] : 'list',
+            warnings: is_array($response['warnings'] ?? null) ? $response['warnings'] : [],
+            provenance: is_array($response['provenance'] ?? null) ? $response['provenance'] : [],
+            fetchAfter: function (string $after) use ($method, $path, $query, $modelClass, $headers, $options): PaginatedResponse {
                 $nextQuery = $query;
                 unset($nextQuery['before']);
                 $nextQuery['after'] = $after;
-                return $this->requestPage($method, $path, $nextQuery, $modelClass, $options);
+                return $this->requestPage($method, $path, $nextQuery, $modelClass, $headers, $options);
             },
         );
     }
@@ -148,7 +190,7 @@ class HttpClient
      * @param array<string, mixed> $query
      * @return array<string, mixed>
      */
-    private function requestOptions(array $query, ?RequestOptions $options): array
+    private function requestOptions(array $query, array $requestHeaders, ?RequestOptions $options): array
     {
         $mergedQuery = array_filter(
             array_merge($query, $options !== null ? $options->query : []),
@@ -163,7 +205,7 @@ class HttpClient
         ], static fn($value) => $value !== null);
 
         return [
-            'headers' => array_merge($headers, $options !== null ? $options->headers : []),
+            'headers' => array_merge($headers, $requestHeaders, $options !== null ? $options->headers : []),
             'query' => $mergedQuery,
             'timeout' => $options !== null && $options->timeout !== null ? $options->timeout : $this->timeout,
         ];

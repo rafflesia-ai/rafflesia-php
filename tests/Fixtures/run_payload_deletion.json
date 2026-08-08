@@ -1,0 +1,8 @@
+{
+  "cdn_delete_results": [
+    {
+      "exception": "test_exception",
+      "link": "test_link"
+    }
+  ]
+}

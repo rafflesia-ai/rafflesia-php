@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "alignment": {
+        "aligned_residue_count": 1,
+        "cigar": "test_cigar",
+        "cigar_dialect": "extended",
+        "coordinate_system": "zero_based_half_open",
+        "gap_opening_count": 1,
+        "gap_residue_count": 1,
+        "identical_residue_count": 1,
+        "query_coverage_ratio": 1,
+        "query_end": 1,
+        "query_length": 1,
+        "query_start": 1,
+        "sequence_identity_ratio": 1,
+        "target_coverage_ratio": 1,
+        "target_end": 1,
+        "target_length": 1,
+        "target_start": 1
+      },
+      "measurements": {
+        "affine": {
+          "normalized_score": 1,
+          "raw_score": 1
+        },
+        "late_interaction": {
+          "distance": 1,
+          "mean_closest_cosine_distance": 1,
+          "mean_closest_cosine_similarity": 1,
+          "query_token_count": 1
+        },
+        "maxsim": {
+          "bidirectional": 1,
+          "query_to_target": 1,
+          "target_to_query": 1
+        }
+      },
+      "rank": 1,
+      "significance": {
+        "measurements": {
+          "bit_score": 1,
+          "calibration_bin": "test_calibration_bin",
+          "calibration_id": "calibration_id_01234",
+          "calibration_sample_count": 1,
+          "e_value_calibration_id": "e_value_calibration_id_01234",
+          "e_value_conditioning_context_id": "e_value_conditioning_context_id_01234",
+          "e_value_estimand": "test_e_value_estimand",
+          "e_value_maximum_log_extrapolation_factor": 1,
+          "e_value_method": "test_e_value_method",
+          "e_value_null_population_id": "e_value_null_population_id_01234",
+          "e_value_qualification_id": "e_value_qualification_id_01234",
+          "e_value_search_policy_id": "e_value_search_policy_id_01234",
+          "e_value_searched_inventory_id": "e_value_searched_inventory_id_01234",
+          "e_value_supported_log_maximum": 1,
+          "e_value_supported_log_minimum": 1,
+          "e_value_tail_coordinate": 1,
+          "e_value_target_stratum_count": 1,
+          "expected_false_hits": 1,
+          "family_wise_exceedance_probability": 1,
+          "is_e_value_upper_bound": true,
+          "is_family_wise_lower_bound": true,
+          "log_expected_false_hits": 1,
+          "minimum_resolvable_probability": 1,
+          "pair_tail_log_probability": 1,
+          "pair_tail_probability": 1,
+          "pair_tail_surprisal_bits": 1,
+          "q_value": 1,
+          "searched_residue_count": 1,
+          "searched_sequence_count": 1,
+          "support_status": "supported_empirical",
+          "tail_model": {
+            "fit_exceedance_count": 1,
+            "holdout_exceedance_count": 1,
+            "holdout_kolmogorov_smirnov": 1,
+            "holdout_significance_level": 1,
+            "k": 1,
+            "lambda": 1,
+            "threshold_score": 1
+          }
+        },
+        "reason": "test_reason",
+        "status": "supported_empirical"
+      },
+      "target": {
+        "attributes": {
+          "key": "test_value"
+        },
+        "id": "01234",
+        "sequence": "test_sequence"
+      }
+    }
+  ],
+  "has_more": true,
+  "next_cursor": "test_next_cursor",
+  "object": "list",
+  "url": "https://example.com"
+}

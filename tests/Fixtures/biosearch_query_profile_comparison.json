@@ -1,9 +1,0 @@
-{
-  "current_source_sha256": "test_current_source_sha256",
-  "kind": "test_kind",
-  "metrics": {
-    "key": 1
-  },
-  "previous_audit_path": "test_previous_audit_path",
-  "previous_source_sha256": "test_previous_source_sha256"
-}

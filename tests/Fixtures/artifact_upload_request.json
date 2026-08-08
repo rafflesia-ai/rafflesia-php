@@ -1,8 +1,0 @@
-{
-  "artifact_id": "artifact_id_01234",
-  "binding_id": "binding_id_01234",
-  "content_base64": "test_content_base64",
-  "filename": "Test",
-  "resource_group_id": "resource_group_id_01234",
-  "source_uri": "https://example.com"
-}

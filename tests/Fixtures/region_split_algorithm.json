@@ -1,7 +1,0 @@
-{
-  "method": "test_method",
-  "min_length": 1,
-  "name": "Test",
-  "pae_threshold": 1,
-  "plddt_threshold": 1
-}

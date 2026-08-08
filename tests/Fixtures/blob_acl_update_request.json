@@ -1,0 +1,9 @@
+{
+  "default": "allow",
+  "rules": [
+    {
+      "decision": "allow",
+      "principal": "test_principal"
+    }
+  ]
+}

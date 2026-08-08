@@ -1,0 +1,9 @@
+{
+  "is_deterministic": true,
+  "is_exhaustive": true,
+  "is_fallback": true,
+  "outcome": "complete_exact",
+  "requested_guarantee": "approximate",
+  "resolution_reason": "test_resolution_reason",
+  "resolved_guarantee": "approximate"
+}

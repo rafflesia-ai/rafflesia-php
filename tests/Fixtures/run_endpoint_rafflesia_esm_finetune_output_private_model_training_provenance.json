@@ -1,0 +1,22 @@
+{
+  "checkpoint_step": 1,
+  "is_ema": true,
+  "manifest": {
+    "content_type": "test_content_type",
+    "file_name": "Test",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "url": "https://example.com"
+  },
+  "manifest_sha256": "test_manifest_sha256",
+  "source_uri": "https://example.com",
+  "spec": {
+    "content_type": "test_content_type",
+    "file_name": "Test",
+    "sha256": "test_sha256",
+    "size_bytes": 1,
+    "url": "https://example.com"
+  },
+  "trainer_run_id": "trainer_run_id_01234",
+  "trainer_version": "test_trainer_version"
+}

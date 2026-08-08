@@ -1,8 +1,0 @@
-{
-  "content_digest": "test_content_digest",
-  "created_at": "test_created_at",
-  "id": "01234",
-  "object": "revision",
-  "repository_id": "repository_id_01234",
-  "revision_digest": "test_revision_digest"
-}

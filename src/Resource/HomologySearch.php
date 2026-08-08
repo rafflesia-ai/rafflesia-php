@@ -11,44 +11,26 @@ readonly class HomologySearch implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        public string $databaseId,
-        /** Opaque hsrch_ id. */
+        public \DateTimeImmutable $createdAt,
+        /** RFC 3339 instant after which the retained search and its cursors return 410 Gone. */
+        public \DateTimeImmutable $expiresAt,
         public string $id,
-        /** True when accepted for durable background execution. */
-        public bool $isBackground,
-        public bool $livemode,
-        /** Always homology_search. */
-        public string $object,
-        /** queued, in_progress, succeeded, degraded, failed, or canceled. */
-        public string $status,
-        public mixed $cost = null,
-        public mixed $coverage = null,
-        public ?string $createdAt = null,
-        /** Resolved immutable release id used by the search. */
-        public ?string $databaseReleaseId = null,
-        /** Serving-database retention deadline for this search and its result pages. */
-        public ?string $expiresAt = null,
-        /** @var array<string, mixed>|null */
-        public ?array $metadata = null,
-        public ?string $mode = null,
-        /** Serving-database provenance, forwarded unchanged. */
-        public mixed $provenance = null,
-        /** Query summary from the serving database. */
-        public mixed $query = null,
-        /** Serving-database query context and deterministic explanation of instrumental limitations against the pinned release, forwarded unchanged. */
-        public mixed $queryContext = null,
-        public ?string $requestedDatabaseReleaseAlias = null,
-        /** Actual resolved parameters used by the search. */
-        public mixed $resolvedParameters = null,
-        /** Inline first page of hits when present. */
-        public mixed $results = null,
-        /** Digest of the canonical ordered complete result array when materialized. */
-        public ?string $resultsSha256 = null,
-        /**
-         * Warnings emitted by the serving database for this search.
-         * @var array<\Rafflesia\Resource\SearchWarning>|null
-         */
-        public ?array $warnings = null,
+        /** RFC 3339 instant through which the create idempotency key is guaranteed to replay the original request. */
+        public \DateTimeImmutable $idempotencyKeyExpiresAt,
+        public HomologySearchQuerySummary $query,
+        public HomologySearchReceipt $receipt,
+        public HomologySearchResultsRequest $results,
+        public string $specificationSha256,
+        public HomologySearchStatus $status,
+        /** @var array<\Rafflesia\Resource\SearchWarning>|null */
+        public ?array $warnings,
+        public ?HomologyFailure $failure = null,
+        public ?HomologySearchResultSet $resultSet = null,
+        /** Authoritative searched target population. For filtered async searches this is absent until Tomato has compiled immutable eligibility. */
+        public ?HomologySearchTargetSpace $targetSpace = null,
+        public string $object = 'homology_search',
+        /** Public retained-resource lifecycle applied to this search. */
+        public string $retentionClass = 'standard_30d',
     ) {
     }
 
@@ -56,39 +38,37 @@ readonly class HomologySearch implements \JsonSerializable
     public static function fromArray(array $data): self
     {
         foreach ([
-            'database_id',
+            'created_at',
+            'expires_at',
             'id',
-            'is_background',
-            'livemode',
-            'object',
+            'idempotency_key_expires_at',
+            'query',
+            'receipt',
+            'results',
+            'specification_sha256',
             'status',
+            'warnings',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
                 throw new \UnexpectedValueException("Missing required field '$__required' for HomologySearch::fromArray()");
             }
         }
         return new self(
-            databaseId: $data['database_id'],
+            createdAt: new \DateTimeImmutable($data['created_at']),
+            expiresAt: new \DateTimeImmutable($data['expires_at']),
             id: $data['id'],
-            isBackground: $data['is_background'],
-            livemode: $data['livemode'],
-            object: $data['object'],
-            status: $data['status'],
-            cost: $data['cost'] ?? null,
-            coverage: $data['coverage'] ?? null,
-            createdAt: $data['created_at'] ?? null,
-            databaseReleaseId: $data['database_release_id'] ?? null,
-            expiresAt: $data['expires_at'] ?? null,
-            metadata: $data['metadata'] ?? null,
-            mode: $data['mode'] ?? null,
-            provenance: $data['provenance'] ?? null,
-            query: $data['query'] ?? null,
-            queryContext: $data['query_context'] ?? null,
-            requestedDatabaseReleaseAlias: $data['requested_database_release_alias'] ?? null,
-            resolvedParameters: $data['resolved_parameters'] ?? null,
-            results: $data['results'] ?? null,
-            resultsSha256: $data['results_sha256'] ?? null,
+            idempotencyKeyExpiresAt: new \DateTimeImmutable($data['idempotency_key_expires_at']),
+            query: HomologySearchQuerySummary::fromArray($data['query']),
+            receipt: HomologySearchReceipt::fromArray($data['receipt']),
+            results: HomologySearchResultsRequest::fromArray($data['results']),
+            specificationSha256: $data['specification_sha256'],
+            status: HomologySearchStatus::from($data['status']),
             warnings: isset($data['warnings']) ? array_map(fn ($item) => SearchWarning::fromArray($item), $data['warnings']) : null,
+            failure: isset($data['failure']) ? HomologyFailure::fromArray($data['failure']) : null,
+            resultSet: isset($data['result_set']) ? HomologySearchResultSet::fromArray($data['result_set']) : null,
+            targetSpace: isset($data['target_space']) ? HomologySearchTargetSpace::fromArray($data['target_space']) : null,
+            object: $data['object'] ?? 'homology_search',
+            retentionClass: $data['retention_class'] ?? 'standard_30d',
         );
     }
 
@@ -96,27 +76,21 @@ readonly class HomologySearch implements \JsonSerializable
     public function toArray(): array
     {
         return [
-            'database_id' => $this->databaseId,
+            'created_at' => $this->createdAt->format(\DateTimeInterface::RFC3339_EXTENDED),
+            'expires_at' => $this->expiresAt->format(\DateTimeInterface::RFC3339_EXTENDED),
             'id' => $this->id,
-            'is_background' => $this->isBackground,
-            'livemode' => $this->livemode,
-            'object' => $this->object,
-            'status' => $this->status,
-            'cost' => $this->cost,
-            'coverage' => $this->coverage,
-            'created_at' => $this->createdAt,
-            'database_release_id' => $this->databaseReleaseId,
-            'expires_at' => $this->expiresAt,
-            'metadata' => $this->metadata,
-            'mode' => $this->mode,
-            'provenance' => $this->provenance,
-            'query' => $this->query,
-            'query_context' => $this->queryContext,
-            'requested_database_release_alias' => $this->requestedDatabaseReleaseAlias,
-            'resolved_parameters' => $this->resolvedParameters,
-            'results' => $this->results,
-            'results_sha256' => $this->resultsSha256,
+            'idempotency_key_expires_at' => $this->idempotencyKeyExpiresAt->format(\DateTimeInterface::RFC3339_EXTENDED),
+            'query' => $this->query->toArray(),
+            'receipt' => $this->receipt->toArray(),
+            'results' => $this->results->toArray(),
+            'specification_sha256' => $this->specificationSha256,
+            'status' => $this->status->value,
             'warnings' => $this->warnings !== null ? array_map(fn ($item) => $item->toArray(), $this->warnings) : null,
+            'failure' => $this->failure?->toArray(),
+            'result_set' => $this->resultSet?->toArray(),
+            'target_space' => $this->targetSpace?->toArray(),
+            'object' => $this->object,
+            'retention_class' => $this->retentionClass,
         ];
     }
 }

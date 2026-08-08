@@ -1,0 +1,10 @@
+{
+  "grouping_key": "uniprot_mnemonic",
+  "is_conflicting_group_excluded": true,
+  "matching": "rank_order",
+  "maximum_paired_rows": 1,
+  "maximum_unpaired_rows_per_component": 1,
+  "strategy": "complete",
+  "taxonomy_nodes_object_id": "taxonomy_nodes_object_id_01234",
+  "taxonomy_rank": "species"
+}

@@ -1,0 +1,16 @@
+{
+  "created_at": "2023-01-01T00:00:00.000Z",
+  "engine": "test_engine",
+  "engine_release": "test_engine_release",
+  "policy": {
+    "is_deterministic": true,
+    "is_exhaustive": true,
+    "is_fallback": true,
+    "outcome": "complete_exact",
+    "requested_guarantee": "approximate",
+    "resolution_reason": "test_resolution_reason",
+    "resolved_guarantee": "approximate"
+  },
+  "semantic_profile_id": "semantic_profile_id_01234",
+  "server_version": "test_server_version"
+}

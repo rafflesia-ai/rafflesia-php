@@ -1,0 +1,10 @@
+{
+  "canonical_filter_sha256": "test_canonical_filter_sha256",
+  "corpus_snapshot_id": "corpus_snapshot_id_01234",
+  "id": "01234",
+  "release_id": "release_id_01234",
+  "searched_residue_count": 1,
+  "searched_target_count": 1,
+  "slug": "test_slug",
+  "target_space_id": "target_space_id_01234"
+}

@@ -1,0 +1,18 @@
+{
+  "aligned_residue_count": 1,
+  "cigar": "test_cigar",
+  "cigar_dialect": "extended",
+  "coordinate_system": "zero_based_half_open",
+  "gap_opening_count": 1,
+  "gap_residue_count": 1,
+  "identical_residue_count": 1,
+  "query_coverage_ratio": 1,
+  "query_end": 1,
+  "query_length": 1,
+  "query_start": 1,
+  "sequence_identity_ratio": 1,
+  "target_coverage_ratio": 1,
+  "target_end": 1,
+  "target_length": 1,
+  "target_start": 1
+}

@@ -1,8 +1,0 @@
-{
-  "detail": "test_detail",
-  "from_relation": "test_from_relation",
-  "reason_codes": [
-    "test_reason_codes"
-  ],
-  "to_relation": "test_to_relation"
-}

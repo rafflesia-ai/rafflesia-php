@@ -1,0 +1,17 @@
+{
+  "affine": {
+    "normalized_score": 1,
+    "raw_score": 1
+  },
+  "late_interaction": {
+    "distance": 1,
+    "mean_closest_cosine_distance": 1,
+    "mean_closest_cosine_similarity": 1,
+    "query_token_count": 1
+  },
+  "maxsim": {
+    "bidirectional": 1,
+    "query_to_target": 1,
+    "target_to_query": 1
+  }
+}

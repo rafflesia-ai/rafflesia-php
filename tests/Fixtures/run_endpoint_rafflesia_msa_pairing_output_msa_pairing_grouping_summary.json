@@ -1,0 +1,10 @@
+{
+  "candidate_group_count": 1,
+  "conflicting_group_count": 1,
+  "conflicting_paired_rows": 1,
+  "excluded_ambiguous_groups": 1,
+  "excluded_conflicting_groups": 1,
+  "excluded_unresolved_rank_rows": 1,
+  "is_truncated_by_row_cap": true,
+  "paired_group_count": 1
+}

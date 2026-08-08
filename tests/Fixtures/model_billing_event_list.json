@@ -1,0 +1,24 @@
+{
+  "billing_events": [
+    {
+      "auth_method": "test_auth_method",
+      "auth_method_structured": {
+        "api_key_id": "api_key_id_01234",
+        "detail": "test_detail",
+        "login_username": "Test"
+      },
+      "cost_discount": 1,
+      "cost_estimate_nano_usd": 1,
+      "cost_subtotal": 1,
+      "cost_total": 1,
+      "endpoint_id": "endpoint_id_01234",
+      "output_units": 1,
+      "percent_discount": 1,
+      "request_id": "request_id_01234",
+      "timestamp": "2023-01-01T00:00:00.000Z",
+      "unit_price": 1
+    }
+  ],
+  "has_more": true,
+  "next_cursor": "test_next_cursor"
+}

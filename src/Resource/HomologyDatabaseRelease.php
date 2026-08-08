@@ -13,27 +13,21 @@ readonly class HomologyDatabaseRelease implements \JsonSerializable
     public function __construct(
         /** @var array<string>|null */
         public ?array $aliases,
-        public string $createdAt,
+        /** Immutable Tomato corpus snapshot selected by this release. */
+        public string $corpusSnapshotId,
         public string $databaseId,
-        public int $explanationCalibrationCount,
+        public HomologySearchCapability $homologySearchCapability,
         /** Immutable dbr_ release id. */
         public string $id,
-        public bool $isExplanationCalibrationAvailable,
-        public bool $isQueryContextProfileAvailable,
-        /** Always homology_database_release. */
-        public string $object,
         public ?int $recordCount,
         public ?int $residueCount,
-        /** @var array<string>|null */
-        public ?array $searchableSequenceChannelIds,
-        public string $status,
-        /** @var array<string>|null */
-        public ?array $verifierModelIds,
+        public HomologyDatabaseReleaseStatus $status,
         public ?string $compilerVersion = null,
+        /** RFC 3339 UTC publication or update instant of the upstream corpus. This is not the time the Tomato release was built. */
+        public ?\DateTimeImmutable $corpusPublishedAt = null,
         public ?string $manifestSha256 = null,
-        public ?string $queryContextProfileArtifactSha256 = null,
-        public ?string $queryContextProfileArtifactUri = null,
-        public ?string $queryContextProfileKind = null,
+        /** Always homology_database_release. */
+        public string $object = 'homology_database_release',
     ) {
     }
 
@@ -42,18 +36,13 @@ readonly class HomologyDatabaseRelease implements \JsonSerializable
     {
         foreach ([
             'aliases',
-            'created_at',
+            'corpus_snapshot_id',
             'database_id',
-            'explanation_calibration_count',
+            'homology_search_capability',
             'id',
-            'is_explanation_calibration_available',
-            'is_query_context_profile_available',
-            'object',
             'record_count',
             'residue_count',
-            'searchable_sequence_channel_ids',
             'status',
-            'verifier_model_ids',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
                 throw new \UnexpectedValueException("Missing required field '$__required' for HomologyDatabaseRelease::fromArray()");
@@ -61,23 +50,17 @@ readonly class HomologyDatabaseRelease implements \JsonSerializable
         }
         return new self(
             aliases: $data['aliases'] ?? null,
-            createdAt: $data['created_at'],
+            corpusSnapshotId: $data['corpus_snapshot_id'],
             databaseId: $data['database_id'],
-            explanationCalibrationCount: $data['explanation_calibration_count'],
+            homologySearchCapability: HomologySearchCapability::fromArray($data['homology_search_capability']),
             id: $data['id'],
-            isExplanationCalibrationAvailable: $data['is_explanation_calibration_available'],
-            isQueryContextProfileAvailable: $data['is_query_context_profile_available'],
-            object: $data['object'],
             recordCount: $data['record_count'] ?? null,
             residueCount: $data['residue_count'] ?? null,
-            searchableSequenceChannelIds: $data['searchable_sequence_channel_ids'] ?? null,
-            status: $data['status'],
-            verifierModelIds: $data['verifier_model_ids'] ?? null,
+            status: HomologyDatabaseReleaseStatus::from($data['status']),
             compilerVersion: $data['compiler_version'] ?? null,
+            corpusPublishedAt: isset($data['corpus_published_at']) ? new \DateTimeImmutable($data['corpus_published_at']) : null,
             manifestSha256: $data['manifest_sha256'] ?? null,
-            queryContextProfileArtifactSha256: $data['query_context_profile_artifact_sha256'] ?? null,
-            queryContextProfileArtifactUri: $data['query_context_profile_artifact_uri'] ?? null,
-            queryContextProfileKind: $data['query_context_profile_kind'] ?? null,
+            object: $data['object'] ?? 'homology_database_release',
         );
     }
 
@@ -86,23 +69,17 @@ readonly class HomologyDatabaseRelease implements \JsonSerializable
     {
         return [
             'aliases' => $this->aliases,
-            'created_at' => $this->createdAt,
+            'corpus_snapshot_id' => $this->corpusSnapshotId,
             'database_id' => $this->databaseId,
-            'explanation_calibration_count' => $this->explanationCalibrationCount,
+            'homology_search_capability' => $this->homologySearchCapability->toArray(),
             'id' => $this->id,
-            'is_explanation_calibration_available' => $this->isExplanationCalibrationAvailable,
-            'is_query_context_profile_available' => $this->isQueryContextProfileAvailable,
-            'object' => $this->object,
             'record_count' => $this->recordCount,
             'residue_count' => $this->residueCount,
-            'searchable_sequence_channel_ids' => $this->searchableSequenceChannelIds,
-            'status' => $this->status,
-            'verifier_model_ids' => $this->verifierModelIds,
+            'status' => $this->status->value,
             'compiler_version' => $this->compilerVersion,
+            'corpus_published_at' => $this->corpusPublishedAt?->format(\DateTimeInterface::RFC3339_EXTENDED),
             'manifest_sha256' => $this->manifestSha256,
-            'query_context_profile_artifact_sha256' => $this->queryContextProfileArtifactSha256,
-            'query_context_profile_artifact_uri' => $this->queryContextProfileArtifactUri,
-            'query_context_profile_kind' => $this->queryContextProfileKind,
+            'object' => $this->object,
         ];
     }
 }

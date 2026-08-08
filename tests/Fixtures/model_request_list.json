@@ -1,0 +1,17 @@
+{
+  "has_more": true,
+  "items": [
+    {
+      "duration": 1,
+      "ended_at": "2023-01-01T00:00:00.000Z",
+      "endpoint_id": "endpoint_id_01234",
+      "json_input": {},
+      "json_output": {},
+      "request_id": "request_id_01234",
+      "sent_at": "2023-01-01T00:00:00.000Z",
+      "started_at": "2023-01-01T00:00:00.000Z",
+      "status_code": 1
+    }
+  ],
+  "next_cursor": "test_next_cursor"
+}

@@ -20,7 +20,7 @@ readonly class EnvelopeHomologySearch implements \JsonSerializable
          * @var array<\Rafflesia\Resource\SearchWarning>|null
          */
         public ?array $warnings,
-        /** Operation result data. */
+        /** Operation result data. Absent when the operation did not succeed. */
         public ?HomologySearch $data = null,
         /** Structured error information. */
         public ?ApiErrorBody $error = null,

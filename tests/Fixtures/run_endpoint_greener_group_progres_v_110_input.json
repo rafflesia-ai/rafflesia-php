@@ -1,0 +1,11 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "structure_url": "https://example.com"
+    }
+  ],
+  "layer": "graph_embedding",
+  "output_format": "json",
+  "pooling": "mean"
+}

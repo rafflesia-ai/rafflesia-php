@@ -1,0 +1,11 @@
+{
+  "description": "test_description",
+  "enabled_events": [
+    "test_enabled_events"
+  ],
+  "metadata": {
+    "key": "test_value"
+  },
+  "status": "enabled",
+  "url": "https://example.com"
+}

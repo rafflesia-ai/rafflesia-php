@@ -1,0 +1,9 @@
+{
+  "chain_id": "chain_id_01234",
+  "database_id": "database_id_01234",
+  "database_release_id": "database_release_id_01234",
+  "is_complex": true,
+  "manifest_url": "https://example.com",
+  "pairing_csv_url": "https://example.com",
+  "url": "https://example.com"
+}

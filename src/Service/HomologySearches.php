@@ -7,6 +7,8 @@ declare(strict_types=1);
 namespace Rafflesia\Service;
 
 use Rafflesia\Resource\EnvelopeHomologySearch;
+use Rafflesia\Resource\EnvelopeHomologySearchList;
+use Rafflesia\Resource\EnvelopeHomologySearchResultList;
 
 class HomologySearches
 {
@@ -16,73 +18,303 @@ class HomologySearches
     }
 
     /**
-     * @param bool|null $background When true, enqueue durable background execution and return a queued search. Requires the serving database to run the shared durable request plane and a standalone search worker; a deployment without them refuses with 503 background_search_unavailable rather than running the search synchronously. Not offered by the rafflesia CLI for that reason.
-     * @param string $databaseId Opaque db_ database id to search.
-     * @param string|null $databaseReleaseAlias Optional release alias; omit both selectors to use the database default.
-     * @param string|null $databaseReleaseId Optional immutable dbr_ release id.
-     * @param array<string, mixed>|null $metadata Caller metadata echoed on the search.
-     * @param string|null $mode Result mode: candidates or verified. Defaults to verified.
-     * @param mixed|null $parameters Optional explicit resource budgets and planner policy; forwarded to the serving database unchanged.
-     * @param \Rafflesia\Resource\HomologyQuery $query The query sequence.
-     * @param string|null $queryContextId Optional qctx_ preflight identity returned by query-context measure; the serving database rejects drift.
-     * @param string|null $searchProfile Operating profile: economic, balanced, or sensitive. Defaults to balanced.
+     * List retained homology searches
+     *
+     * Returns one cursor page of the searches retained for the authenticated principal, most recently created first, each with its current status, immutable scientific receipts, and result-set summary. Searches past their retention window are not listed; retrieving one by id still reports its expiry explicitly.
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract.
+     * @param int|null $limit Defaults to 20.
+     * @param string|null $startingAfter
+     * @return \Rafflesia\Resource\EnvelopeHomologySearchList
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function list(
+        ?string $rafflesiaApiVersion = null,
+        ?int $limit = null,
+        ?string $startingAfter = null,
+        ?\Rafflesia\RequestOptions $options = null,
+    ): \Rafflesia\Resource\EnvelopeHomologySearchList {
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+        ], fn ($v) => $v !== null);
+        $query = array_filter([
+            'limit' => $limit,
+            'starting_after' => $startingAfter,
+        ], fn ($v) => $v !== null);
+        $response = $this->client->request(
+            method: 'GET',
+            path: 'v1/homology/searches',
+            query: $query,
+            headers: $headers,
+            options: $options,
+        );
+        return EnvelopeHomologySearchList::fromArray($response);
+    }
+
+    /**
+     * Create a retained homology search
+     *
+     * Creates one durable search from scientific intent. Without Prefer, the server waits up to 2 seconds. Prefer: respond-async returns after durable acceptance; Prefer: wait=N waits up to N seconds. Returns 201 when terminal within that window and 202 otherwise. Transport preference never changes scientific execution.
+     * @param string $idempotencyKey Stable key for safely retrying this create request.
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract.
+     * @param string|null $prefer Transport wait policy: respond-async, wait=N (0–60 seconds), or wait=N with respond-async fallback.
+     * @param string|null $database Database id or slug from homology.databases.list. Omit both database selectors to use the server-advertised default database and its default release. Mutually exclusive with database_release_id.
+     * @param string|null $databaseReleaseId Exact immutable dbr_ release id returned by the catalog. Omit both database selectors to use the server-advertised default database and its default release. Mutually exclusive with database.
+     * @param \Rafflesia\Resource\Evidence|null $evidence Stable scientific evidence representation. The release-owned final ranking measurement is always returned independently.
+     * @param \Rafflesia\Resource\HomologyDocumentFilter|null $filter Optional exact metadata predicate applied before the release-owned search policy.
+     * @param \Rafflesia\Resource\Guarantees|null $guarantee Minimum search guarantee. Approximate permits the release-selected qualified policy or a stronger exhaustive fallback; exhaustive requires the reference policy.
+     * @param int|null $limit Maximum ranked results. Inline delivery accepts at most 5,000 and remains bounded by the 16 MiB response ceiling; retained delivery accepts at most 10,000 and pages the immutable result set.
+     * @param \Rafflesia\Resource\HomologyQuery $query One typed biological query.
+     * @param \Rafflesia\Resource\Requirements|null $significance Database-aware significance requirement. if_available never invalidates an otherwise valid alignment.
+     * @param string|null $targetSpaceId Immutable reusable target space returned as database.target_space_id by a prior filtered homology search. Mutually exclusive with database, database_release_id, and filter.
      * @return \Rafflesia\Resource\EnvelopeHomologySearch
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function create(
-        string $databaseId,
+        string $idempotencyKey,
         \Rafflesia\Resource\HomologyQuery $query,
-        ?bool $background = null,
-        ?string $databaseReleaseAlias = null,
+        ?string $rafflesiaApiVersion = null,
+        ?string $prefer = null,
+        ?string $database = null,
         ?string $databaseReleaseId = null,
-        ?array $metadata = null,
-        ?string $mode = null,
-        mixed $parameters = null,
-        ?string $queryContextId = null,
-        ?string $searchProfile = null,
+        ?\Rafflesia\Resource\Evidence $evidence = null,
+        ?\Rafflesia\Resource\HomologyDocumentFilter $filter = null,
+        ?\Rafflesia\Resource\Guarantees $guarantee = null,
+        ?int $limit = null,
+        ?\Rafflesia\Resource\Requirements $significance = null,
+        ?string $targetSpaceId = null,
         ?\Rafflesia\RequestOptions $options = null,
     ): \Rafflesia\Resource\EnvelopeHomologySearch {
+        $headers = array_filter([
+            'Idempotency-Key' => $idempotencyKey,
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+            'Prefer' => $prefer,
+        ], fn ($v) => $v !== null);
         $body = array_filter([
-            'background' => $background,
-            'database_id' => $databaseId,
-            'database_release_alias' => $databaseReleaseAlias,
+            'database' => $database,
             'database_release_id' => $databaseReleaseId,
-            'metadata' => $metadata,
-            'mode' => $mode,
-            'parameters' => $parameters,
+            'evidence' => $evidence?->value,
+            'filter' => $filter,
+            'guarantee' => $guarantee?->value,
+            'limit' => $limit,
             'query' => $query,
-            'query_context_id' => $queryContextId,
-            'search_profile' => $searchProfile,
+            'significance' => $significance?->value,
+            'target_space_id' => $targetSpaceId,
         ], fn ($v) => $v !== null);
         $response = $this->client->request(
             method: 'POST',
-            path: 'v1/homology_searches',
+            path: 'v1/homology/searches',
             body: $body,
+            headers: $headers,
             options: $options,
         );
         return EnvelopeHomologySearch::fromArray($response);
     }
 
     /**
+     * Retrieve a retained homology search
+     *
+     * Returns current status, immutable release and scientific receipts, and the result-set summary. Poll this resource until it reaches succeeded, failed, or canceled. Expired searches return 410 with the deletion receipt identity when physical deletion has completed.
      * @param string $homologySearchId
-     * @param bool|null $includeResults Defaults to true.
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract.
      * @return \Rafflesia\Resource\EnvelopeHomologySearch
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function get(
         string $homologySearchId,
-        ?bool $includeResults = null,
+        ?string $rafflesiaApiVersion = null,
         ?\Rafflesia\RequestOptions $options = null,
     ): \Rafflesia\Resource\EnvelopeHomologySearch {
-        $query = array_filter([
-            'include_results' => $includeResults,
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
         ], fn ($v) => $v !== null);
         $response = $this->client->request(
             method: 'GET',
-            path: 'v1/homology_searches/' . rawurlencode($homologySearchId),
-            query: $query,
+            path: 'v1/homology/searches/' . rawurlencode((string) $homologySearchId),
+            headers: $headers,
             options: $options,
         );
         return EnvelopeHomologySearch::fromArray($response);
+    }
+
+    /**
+     * Cancel a retained homology search
+     *
+     * Idempotently cancels a queued or running retained search. Succeeded and failed searches are immutable and return 409; expired searches return 410.
+     * @param string $homologySearchId
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract.
+     * @return \Rafflesia\Resource\EnvelopeHomologySearch
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function cancel(
+        string $homologySearchId,
+        ?string $rafflesiaApiVersion = null,
+        ?\Rafflesia\RequestOptions $options = null,
+    ): \Rafflesia\Resource\EnvelopeHomologySearch {
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+        ], fn ($v) => $v !== null);
+        $response = $this->client->request(
+            method: 'POST',
+            path: 'v1/homology/searches/' . rawurlencode((string) $homologySearchId) . '/cancel',
+            headers: $headers,
+            options: $options,
+        );
+        return EnvelopeHomologySearch::fromArray($response);
+    }
+
+    /**
+     * List immutable homology results
+     *
+     * Pages the stable ranked results of a completed homology search. Each result carries typed measurements and provenance. Expired result sets return 410.
+     * @param string $homologySearchId
+     * @param string|null $rafflesiaApiVersion Optional dated contract pin. Omit to use the current 2026-08-08 homology contract.
+     * @param int|null $limit Defaults to 100.
+     * @param string|null $startingAfter
+     * @return \Rafflesia\Resource\EnvelopeHomologySearchResultList
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function listResults(
+        string $homologySearchId,
+        ?string $rafflesiaApiVersion = null,
+        ?int $limit = null,
+        ?string $startingAfter = null,
+        ?\Rafflesia\RequestOptions $options = null,
+    ): \Rafflesia\Resource\EnvelopeHomologySearchResultList {
+        $headers = array_filter([
+            'Rafflesia-API-Version' => $rafflesiaApiVersion,
+        ], fn ($v) => $v !== null);
+        $query = array_filter([
+            'limit' => $limit,
+            'starting_after' => $startingAfter,
+        ], fn ($v) => $v !== null);
+        $response = $this->client->request(
+            method: 'GET',
+            path: 'v1/homology/searches/' . rawurlencode((string) $homologySearchId) . '/results',
+            query: $query,
+            headers: $headers,
+            options: $options,
+        );
+        return EnvelopeHomologySearchResultList::fromArray($response);
+    }
+
+    private const TERMINAL_HOMOLOGY_SEARCH_STATUSES = [
+        \Rafflesia\Resource\HomologySearchStatus::Succeeded,
+        \Rafflesia\Resource\HomologySearchStatus::Failed,
+        \Rafflesia\Resource\HomologySearchStatus::Canceled,
+    ];
+
+    /**
+     * Poll the retained search until it reaches a terminal status
+     * (succeeded, failed, or canceled).
+     *
+     * Polling paces itself with exponential backoff (1000ms multiplied by
+     * 1.5x per attempt up to a 10000ms cap) under full jitter; transient
+     * 429/5xx responses are retried by the underlying HTTP client. The
+     * local timeout only stops polling — it NEVER cancels the durable
+     * server-side search. Fully synchronous.
+     *
+     * Supported $options keys:
+     *  - timeout_ms (int|null): total local polling budget; omit to wait forever.
+     *  - poll_interval_ms (int|null): base delay between polls, replacing the
+     *    default backoff schedule. Full jitter still applies.
+     *  - on_update (callable(\Rafflesia\Resource\HomologySearch): void|null):
+     *    invoked with every retrieved search snapshot.
+     *
+     * @param array{timeout_ms?: int|null, poll_interval_ms?: int|null, on_update?: callable|null} $options
+     * @return \Rafflesia\Resource\HomologySearch the terminal search
+     * @throws \Rafflesia\Exception\HomologySearchWaitTimeoutException when the timeout elapses first
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function wait(
+        string $homologySearchId,
+        array $options = [],
+        ?\Rafflesia\RequestOptions $requestOptions = null,
+    ): \Rafflesia\Resource\HomologySearch {
+        $timeoutMs = $options['timeout_ms'] ?? null;
+        $pollIntervalMs = $options['poll_interval_ms'] ?? null;
+        $onUpdate = $options['on_update'] ?? null;
+        $startedAt = microtime(true);
+        $attempt = 0;
+        while (true) {
+            $envelope = $this->get($homologySearchId, options: $requestOptions);
+            $search = $this->homologySearchData($envelope, 'homology_searches.get');
+            if ($onUpdate !== null) {
+                $onUpdate($search);
+            }
+            if (in_array($search->status, self::TERMINAL_HOMOLOGY_SEARCH_STATUSES, true)) {
+                return $search;
+            }
+            $elapsedMs = (microtime(true) - $startedAt) * 1000.0;
+            if ($timeoutMs !== null && $elapsedMs >= $timeoutMs) {
+                throw new \Rafflesia\Exception\HomologySearchWaitTimeoutException($homologySearchId, $timeoutMs);
+            }
+            usleep((int) (1000 * $this->nextHomologySearchPollDelayMs($attempt, $pollIntervalMs, $timeoutMs, $elapsedMs)));
+            $attempt++;
+        }
+    }
+
+    /**
+     * Create a retained homology search, then wait for a terminal status.
+     *
+     * $createParams are forwarded to create() as named arguments (including
+     * the required idempotencyKey). When the caller does not set 'prefer',
+     * the transport hint 'wait=10' is applied. The local timeout never
+     * cancels the durable server-side search.
+     *
+     * @param array<string, mixed> $createParams named arguments for create()
+     * @param array{timeout_ms?: int|null, poll_interval_ms?: int|null, on_update?: callable|null} $options
+     * @return \Rafflesia\Resource\HomologySearch the terminal search
+     * @throws \Rafflesia\Exception\HomologySearchWaitTimeoutException when the timeout elapses first
+     * @throws \Rafflesia\Exception\RafflesiaException
+     */
+    public function subscribe(array $createParams, array $options = []): \Rafflesia\Resource\HomologySearch
+    {
+        if (!isset($createParams['prefer'])) {
+            $createParams['prefer'] = 'wait=10';
+        }
+        $envelope = $this->create(...$createParams);
+        $search = $this->homologySearchData($envelope, 'homology_searches.create');
+        $onUpdate = $options['on_update'] ?? null;
+        if ($onUpdate !== null) {
+            $onUpdate($search);
+        }
+        if (in_array($search->status, self::TERMINAL_HOMOLOGY_SEARCH_STATUSES, true)) {
+            return $search;
+        }
+        $requestOptions = $createParams['options'] ?? null;
+        return $this->wait($search->id, $options, $requestOptions);
+    }
+
+    /**
+     * Unwrap the envelope; data is optional, so surface the envelope error
+     * member as the SDK's standard API error when no search came back.
+     */
+    private function homologySearchData(
+        \Rafflesia\Resource\EnvelopeHomologySearch $envelope,
+        string $operation,
+    ): \Rafflesia\Resource\HomologySearch {
+        if ($envelope->ok !== false && $envelope->data !== null) {
+            return $envelope->data;
+        }
+        throw new \Rafflesia\Exception\RafflesiaException(
+            $operation . ' returned no data',
+            null,
+            $envelope->toArray(),
+        );
+    }
+
+    /**
+     * First delay 1000ms, multiplied by 1.5x per attempt up to a 10000ms cap
+     * (or the caller's poll_interval_ms), under full jitter with a 50ms
+     * floor, clamped to the remaining timeout.
+     */
+    private function nextHomologySearchPollDelayMs(int $attempt, ?int $pollIntervalMs, ?int $timeoutMs, float $elapsedMs): float
+    {
+        $base = $pollIntervalMs ?? min(1000.0 * (1.5 ** $attempt), 10000.0);
+        $delay = max(mt_rand() / mt_getrandmax() * $base, 50.0);
+        if ($timeoutMs !== null) {
+            $delay = min($delay, max($timeoutMs - $elapsedMs, 1.0));
+        }
+        return $delay;
     }
 }

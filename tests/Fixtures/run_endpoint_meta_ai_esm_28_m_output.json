@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "id": "01234",
+      "index": 1,
+      "object": "test_object",
+      "salience": [
+        1
+      ],
+      "shape": [
+        1
+      ],
+      "values": [
+        1
+      ]
+    }
+  ],
+  "layer": "test_layer",
+  "model_id": "model_id_01234",
+  "model_release": "test_model_release",
+  "object": "test_object",
+  "pooling": "test_pooling",
+  "provider_request_id": "provider_request_id_01234",
+  "usage": {
+    "input_count": 1,
+    "token_count": 1
+  },
+  "embeddings_url": "https://example.com",
+  "manifest_url": "https://example.com",
+  "output_format": "npz"
+}

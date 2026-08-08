@@ -1,8 +1,0 @@
-{
-  "alignment_column": 1,
-  "mapping_status": "exact_identity",
-  "query_position": 1,
-  "query_residue": "query_residue_01234",
-  "target_position": 1,
-  "target_residue": "target_residue_01234"
-}

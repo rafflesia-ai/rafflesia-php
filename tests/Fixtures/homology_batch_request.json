@@ -1,0 +1,15 @@
+{
+  "database": "test_database",
+  "database_release_id": "database_release_id_01234",
+  "evidence": "candidate_measurement",
+  "guarantee": "approximate",
+  "limit": 1,
+  "queries": [
+    {
+      "kind": "protein_sequence",
+      "sequence": "test_sequence"
+    }
+  ],
+  "significance": "not_requested",
+  "target_space_id": "target_space_id_01234"
+}

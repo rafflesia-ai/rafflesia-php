@@ -1,0 +1,167 @@
+{
+  "aligned_parquet": {
+    "content_type": "test_content_type",
+    "download_url": "https://example.com",
+    "kind": "test_kind",
+    "object_id": "object_id_01234",
+    "sha256": "test_sha256",
+    "size_bytes": 1
+  },
+  "chain_id": "chain_id_01234",
+  "file_name": "Test",
+  "pairable_row_count": 1,
+  "paired_row_count": 1,
+  "query": {
+    "id": "01234",
+    "kind": "protein_sequence",
+    "sequence": "test_sequence"
+  },
+  "source_counts": {
+    "bfd_uniclust": 1,
+    "mgnify": 1,
+    "query": 1,
+    "uniprot": 1,
+    "uniref90": 1
+  },
+  "source_row_count": 1,
+  "sources": [
+    {
+      "a3m": {
+        "measurements": {
+          "artifacts": {
+            "columns_csv": {
+              "content_type": "test_content_type",
+              "download_url": "https://example.com",
+              "kind": "test_kind",
+              "object_id": "object_id_01234",
+              "sha256": "test_sha256",
+              "size_bytes": 1
+            },
+            "insertion_slots_csv": {
+              "content_type": "test_content_type",
+              "download_url": "https://example.com",
+              "kind": "test_kind",
+              "object_id": "object_id_01234",
+              "sha256": "test_sha256",
+              "size_bytes": 1
+            },
+            "rows_csv": {
+              "content_type": "test_content_type",
+              "download_url": "https://example.com",
+              "kind": "test_kind",
+              "object_id": "object_id_01234",
+              "sha256": "test_sha256",
+              "size_bytes": 1
+            }
+          },
+          "id": "01234",
+          "summary": {
+            "collapsed_duplicate_rows": 1,
+            "columns_at_least_50_pct_occupancy": 1,
+            "columns_at_least_75_pct_occupancy": 1,
+            "columns_at_least_90_pct_occupancy": 1,
+            "columns_with_no_residue": 1,
+            "homolog_neff": 1,
+            "homolog_row_count": 1,
+            "identity_threshold": 1,
+            "insertion_row_fraction": 1,
+            "is_duplicate_target_collapsed": true,
+            "is_neff_exact": true,
+            "is_pairwise_diagnostics_estimated": true,
+            "is_query_included_in_neff": true,
+            "mean_column_entropy_bits": 1,
+            "mean_column_occupancy": 1,
+            "mean_identity_to_query": 1,
+            "mean_row_coverage": 1,
+            "median_column_occupancy": 1,
+            "median_identity_to_query": 1,
+            "median_row_coverage": 1,
+            "minimum_overlap_fraction": 1,
+            "neff": 1,
+            "neff_method": "exact_pairwise_reweighting_v3_bitpacked",
+            "neff_per_column": 1,
+            "neff_sequence_ratio": 1,
+            "neff_standard_error": 1,
+            "occupied_insertion_slots": 1,
+            "p10_column_occupancy": 1,
+            "p10_identity_to_query": 1,
+            "p10_row_coverage": 1,
+            "p90_column_occupancy": 1,
+            "p90_identity_to_query": 1,
+            "p90_row_coverage": 1,
+            "pair_sample_count": 1,
+            "pair_sampling_fraction": 1,
+            "pairwise_comparable_pairs": 1,
+            "pairwise_comparisons": 1,
+            "pairwise_mean_overlap_fraction": 1,
+            "pairwise_pooled_identity": 1,
+            "pairwise_similar_pairs": 1,
+            "pairwise_similarity_fraction": 1,
+            "query_length": 1,
+            "redundant_aligned_sequence_rows": 1,
+            "rows_with_insertions": 1,
+            "sampling_seed": 1,
+            "sequence_count": 1,
+            "total_insertion_residues": 1,
+            "unique_aligned_sequences": 1,
+            "unique_target_ids": 1,
+            "weighted_mean_column_entropy_bits": 1,
+            "weighted_mean_column_occupancy": 1,
+            "weighting_kernel_comparisons": 1
+          }
+        },
+        "object": {
+          "content_type": "test_content_type",
+          "download_url": "https://example.com",
+          "kind": "test_kind",
+          "object_id": "object_id_01234",
+          "sha256": "test_sha256",
+          "size_bytes": 1
+        },
+        "query_length": 1,
+        "role": "lane",
+        "sequence_count": 1
+      },
+      "candidate_count": 1,
+      "corpus_snapshot_id": "corpus_snapshot_id_01234",
+      "database_id": "database_id_01234",
+      "database_release_id": "database_release_id_01234",
+      "dataset_name": "Test",
+      "dataset_version": "test_dataset_version",
+      "is_result_limit_reached": true,
+      "is_upstream_limit_unbounded": true,
+      "projected_row_count": 1,
+      "receipt": {
+        "execution_receipt_id": "execution_receipt_id_01234",
+        "execution_receipt_sha256": "test_execution_receipt_sha256",
+        "outcome_id": "outcome_id_01234",
+        "outcome_sha256": "test_outcome_sha256",
+        "result_sha256": "test_result_sha256"
+      },
+      "release_maximum_results": 1,
+      "requested_max_results": 1,
+      "role": "uniref90",
+      "search_id": "search_id_01234",
+      "search_policy_id": "search_policy_id_01234",
+      "skipped_alignment_count": 1,
+      "upstream_max_results": 1,
+      "usage": {
+        "billable_formula_id": "billable_formula_id_01234",
+        "billable_units": 1,
+        "logical_bytes_read": 1,
+        "logical_bytes_returned": 1,
+        "object_reads": 1,
+        "query_pack_bytes": 1
+      },
+      "work": {
+        "affine_cells": 1,
+        "affine_pairs": 1,
+        "candidate_pairs": 1,
+        "maxsim_residue_pairs": 1,
+        "returned_result_count": 1,
+        "traceback_pairs": 1
+      }
+    }
+  ],
+  "unpaired_row_count": 1
+}

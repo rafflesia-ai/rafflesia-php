@@ -1,0 +1,9 @@
+{
+  "fit_exceedance_count": 1,
+  "holdout_exceedance_count": 1,
+  "holdout_kolmogorov_smirnov": 1,
+  "holdout_significance_level": 1,
+  "k": 1,
+  "lambda": 1,
+  "threshold_score": 1
+}

@@ -1,0 +1,6 @@
+{
+  "kind": "protein_sequence",
+  "normalization_id": "normalization_id_01234",
+  "normalized_length": 1,
+  "sha256": "test_sha256"
+}

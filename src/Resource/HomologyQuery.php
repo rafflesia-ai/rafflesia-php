@@ -11,9 +11,8 @@ readonly class HomologyQuery implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** Raw amino-acid sequence text. */
+        /** Raw amino-acid sequence text. ASCII whitespace is ignored, letters are uppercased, and one trailing stop symbol is removed. The normalized sequence may contain at most 100,000 residues. */
         public string $sequence,
-        /** Query kind. */
         public string $kind = 'protein_sequence',
     ) {
     }

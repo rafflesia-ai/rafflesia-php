@@ -1,0 +1,8 @@
+{
+  "maximum_bytes": 1,
+  "maximum_depth": 1,
+  "maximum_field_bytes": 1,
+  "maximum_nodes": 1,
+  "maximum_scalar_bytes": 1,
+  "maximum_values": 1
+}

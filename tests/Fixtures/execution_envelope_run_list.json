@@ -1,0 +1,236 @@
+{
+  "data": {
+    "data": [
+      {
+        "attempt": 1,
+        "background": true,
+        "billing": {
+          "amount_microusd": 1,
+          "billable_units": 1,
+          "currency": "usd",
+          "discount_basis_points": 1,
+          "discount_microusd": 1,
+          "is_estimate": true,
+          "measurements": {
+            "key": 1
+          },
+          "subtotal_microusd": 1,
+          "unit": "test_unit",
+          "unit_amount_microusd": 1
+        },
+        "cancel_url": "https://example.com",
+        "canceled_at": "2023-01-01T00:00:00.000Z",
+        "completed_at": "2023-01-01T00:00:00.000Z",
+        "created_at": "2023-01-01T00:00:00.000Z",
+        "endpoint": "test_endpoint",
+        "endpoint_release_id": "endpoint_release_id_01234",
+        "error": {
+          "code": "test_code",
+          "details": {
+            "key": {}
+          },
+          "doc_url": "https://example.com",
+          "errors": [
+            {
+              "ctx": {
+                "key": {}
+              },
+              "input": {},
+              "loc": [
+                "test_loc"
+              ],
+              "msg": "test_msg",
+              "type": "test_type",
+              "url": "https://example.com"
+            }
+          ],
+          "is_retryable": true,
+          "message": "test_message",
+          "param": "test_param",
+          "request_id": "request_id_01234",
+          "type": "invalid_request_error"
+        },
+        "expires_at": "2023-01-01T00:00:00.000Z",
+        "id": "01234",
+        "logs": [
+          {
+            "attempt": 1,
+            "created_at": "test_created_at",
+            "details": {
+              "key": "test_value"
+            },
+            "message": "test_message",
+            "sequence": 1,
+            "type": "test_type",
+            "worker_id": "worker_id_01234"
+          }
+        ],
+        "max_retries": 1,
+        "metadata": {
+          "key": "test_value"
+        },
+        "model": "test_model",
+        "model_release_id": "model_release_id_01234",
+        "object": "run",
+        "output": {
+          "billing": {
+            "amount_microusd": 1,
+            "billable_units": 1,
+            "currency": "usd",
+            "discount_basis_points": 1,
+            "discount_microusd": 1,
+            "is_estimate": true,
+            "measurements": {
+              "key": 1
+            },
+            "subtotal_microusd": 1,
+            "unit": "test_unit",
+            "unit_amount_microusd": 1
+          },
+          "data": {
+            "data": [
+              {
+                "id": "01234",
+                "index": 1,
+                "object": "test_object",
+                "salience": [
+                  1
+                ],
+                "shape": [
+                  1
+                ],
+                "values": [
+                  1
+                ]
+              }
+            ],
+            "layer": "test_layer",
+            "model_id": "model_id_01234",
+            "model_release": "test_model_release",
+            "object": "test_object",
+            "pooling": "test_pooling",
+            "provider_request_id": "provider_request_id_01234",
+            "usage": {
+              "input_count": 1,
+              "token_count": 1
+            }
+          },
+          "endpoint_release_id": "endpoint_release_id_01234",
+          "model_release_id": "model_release_id_01234",
+          "request_sha256": "test_request_sha256",
+          "timings_ms": {
+            "key": 1
+          },
+          "usage": {
+            "key": 1
+          }
+        },
+        "progress": {
+          "current": 1,
+          "stage": "test_stage",
+          "total": 1,
+          "unit": "test_unit",
+          "updated_at": "2023-01-01T00:00:00.000Z"
+        },
+        "queue": {
+          "is_position_estimated": true,
+          "position": 1,
+          "priority": "normal",
+          "queued_at": "2023-01-01T00:00:00.000Z",
+          "scope": "organization"
+        },
+        "result_url": "https://example.com",
+        "runner_hint": "test_runner_hint",
+        "served_from": "test_served_from",
+        "start_deadline_at": "2023-01-01T00:00:00.000Z",
+        "started_at": "2023-01-01T00:00:00.000Z",
+        "status": "queued",
+        "status_stream_url": "https://example.com",
+        "status_url": "https://example.com",
+        "version": 1,
+        "webhook_endpoint_id": "webhook_endpoint_id_01234"
+      }
+    ],
+    "has_more": true,
+    "next_cursor": "test_next_cursor",
+    "object": "list",
+    "url": "https://example.com"
+  },
+  "error": {
+    "code": "test_code",
+    "details": {
+      "key": {}
+    },
+    "doc_url": "https://example.com",
+    "errors": [
+      {
+        "ctx": {
+          "key": {}
+        },
+        "input": {},
+        "loc": [
+          "test_loc"
+        ],
+        "msg": "test_msg",
+        "type": "test_type",
+        "url": "https://example.com"
+      }
+    ],
+    "is_retryable": true,
+    "message": "test_message",
+    "param": "test_param",
+    "request_id": "request_id_01234",
+    "type": "invalid_request_error"
+  },
+  "evidence": {
+    "duration_ms": 1,
+    "input_refs": [
+      "test_input_refs"
+    ],
+    "object_refs": [
+      "test_object_refs"
+    ],
+    "output_refs": [
+      "test_output_refs"
+    ],
+    "row_count": 1,
+    "warnings_count": 1
+  },
+  "ok": true,
+  "provenance": {
+    "cache_hit": true,
+    "created_at": "test_created_at",
+    "database_snapshots": [
+      {
+        "digest": "test_digest",
+        "kind": "test_kind",
+        "name": "Test",
+        "version": "test_version"
+      }
+    ],
+    "generated_object_ids": [
+      "generated_object_ids_01234"
+    ],
+    "input_hash": "test_input_hash",
+    "operation": "test_operation",
+    "parameters_hash": "test_parameters_hash",
+    "request_id": "request_id_01234",
+    "server_version": "test_server_version",
+    "tool_versions": [
+      {
+        "name": "Test",
+        "path": "test_path",
+        "version": "test_version"
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "test_code",
+      "details": {
+        "key": {}
+      },
+      "message": "test_message"
+    }
+  ]
+}

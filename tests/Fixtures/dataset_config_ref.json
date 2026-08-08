@@ -1,8 +1,0 @@
-{
-  "description": "test_description",
-  "id": "01234",
-  "name": "Test",
-  "shard_ids": [
-    "shard_ids_01234"
-  ]
-}

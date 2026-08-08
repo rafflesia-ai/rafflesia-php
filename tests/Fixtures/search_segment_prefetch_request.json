@@ -1,9 +1,0 @@
-{
-  "manifest_object_id": "manifest_object_id_01234",
-  "manifest_path": "test_manifest_path",
-  "max_materialized_bytes": 1,
-  "max_object_bytes": 1,
-  "max_object_reads": 1,
-  "query_key": "test_query_key",
-  "require_zero_materialization": true
-}

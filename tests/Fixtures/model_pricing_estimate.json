@@ -1,0 +1,5 @@
+{
+  "currency": "test_currency",
+  "estimate_type": "historical_api_price",
+  "total_cost": 1
+}

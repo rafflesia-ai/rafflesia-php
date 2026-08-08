@@ -1,0 +1,14 @@
+{
+  "amount_microusd": 1,
+  "billable_units": 1,
+  "currency": "usd",
+  "discount_basis_points": 1,
+  "discount_microusd": 1,
+  "is_estimate": true,
+  "measurements": {
+    "key": 1
+  },
+  "subtotal_microusd": 1,
+  "unit": "test_unit",
+  "unit_amount_microusd": 1
+}

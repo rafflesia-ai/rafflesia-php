@@ -1,0 +1,15 @@
+{
+  "bucket": "test_bucket",
+  "checksum": "test_checksum",
+  "checksum_algorithm": "test_checksum_algorithm",
+  "content_type": "test_content_type",
+  "kind": "test_kind",
+  "object_id": "object_id_01234",
+  "object_key": "test_object_key",
+  "path": "test_path",
+  "sha256": "test_sha256",
+  "size_bytes": 1,
+  "storage_backend": "test_storage_backend",
+  "storage_version": "test_storage_version",
+  "uri": "https://example.com"
+}
