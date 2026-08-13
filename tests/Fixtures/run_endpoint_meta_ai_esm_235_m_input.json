@@ -1,0 +1,14 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "sequence": "test_sequence"
+    }
+  ],
+  "layer": "repr_layer_12",
+  "output_format": "json",
+  "pooling": "mean",
+  "representation": "residue",
+  "input_format": "fasta",
+  "input_url": "https://example.com"
+}

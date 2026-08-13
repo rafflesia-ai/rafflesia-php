@@ -11,20 +11,13 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsa i
     use JsonSerializableTrait;
 
     public function __construct(
-        public string $cacheKey,
-        public bool $isCacheHit,
-        /**
-         * Alignment role to ordinary A3M URL.
-         * @var array<string, string>
-         */
-        public array $laneUrls,
-        public string $manifestUrl,
+        /** @var array<\Rafflesia\Resource\RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsaChain>|null */
+        public ?array $chains,
         public string $profile,
-        public int $sequenceCount,
-        public string $url,
-        public ?RunEndpointGoogleDeepmindAlphafold2MonomerOutputMsaMeasurementLink $measurements = null,
-        public ?string $pairedSourceUrl = null,
-        public ?string $rowIdentitiesUrl = null,
+        public string $providerArtifactRole,
+        public string $providerArtifactUrl,
+        public ?string $assemblyId = null,
+        public ?string $assemblyManifestUrl = null,
     ) {
     }
 
@@ -32,29 +25,22 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsa i
     public static function fromArray(array $data): self
     {
         foreach ([
-            'cache_key',
-            'is_cache_hit',
-            'lane_urls',
-            'manifest_url',
+            'chains',
             'profile',
-            'sequence_count',
-            'url',
+            'provider_artifact_role',
+            'provider_artifact_url',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
                 throw new \UnexpectedValueException("Missing required field '$__required' for RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsa::fromArray()");
             }
         }
         return new self(
-            cacheKey: $data['cache_key'],
-            isCacheHit: $data['is_cache_hit'],
-            laneUrls: $data['lane_urls'],
-            manifestUrl: $data['manifest_url'],
+            chains: isset($data['chains']) ? array_map(fn ($item) => RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsaChain::fromArray($item), $data['chains']) : null,
             profile: $data['profile'],
-            sequenceCount: $data['sequence_count'],
-            url: $data['url'],
-            measurements: isset($data['measurements']) ? RunEndpointGoogleDeepmindAlphafold2MonomerOutputMsaMeasurementLink::fromArray($data['measurements']) : null,
-            pairedSourceUrl: $data['paired_source_url'] ?? null,
-            rowIdentitiesUrl: $data['row_identities_url'] ?? null,
+            providerArtifactRole: $data['provider_artifact_role'],
+            providerArtifactUrl: $data['provider_artifact_url'],
+            assemblyId: $data['assembly_id'] ?? null,
+            assemblyManifestUrl: $data['assembly_manifest_url'] ?? null,
         );
     }
 
@@ -62,16 +48,12 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsa i
     public function toArray(): array
     {
         return [
-            'cache_key' => $this->cacheKey,
-            'is_cache_hit' => $this->isCacheHit,
-            'lane_urls' => $this->laneUrls,
-            'manifest_url' => $this->manifestUrl,
+            'chains' => $this->chains !== null ? array_map(fn ($item) => $item->toArray(), $this->chains) : null,
             'profile' => $this->profile,
-            'sequence_count' => $this->sequenceCount,
-            'url' => $this->url,
-            'measurements' => $this->measurements?->toArray(),
-            'paired_source_url' => $this->pairedSourceUrl,
-            'row_identities_url' => $this->rowIdentitiesUrl,
+            'provider_artifact_role' => $this->providerArtifactRole,
+            'provider_artifact_url' => $this->providerArtifactUrl,
+            'assembly_id' => $this->assemblyId,
+            'assembly_manifest_url' => $this->assemblyManifestUrl,
         ];
     }
 }

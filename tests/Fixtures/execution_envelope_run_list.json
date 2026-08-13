@@ -87,37 +87,19 @@
             "unit": "test_unit",
             "unit_amount_microusd": 1
           },
-          "data": {
-            "data": [
-              {
-                "id": "01234",
-                "index": 1,
-                "object": "test_object",
-                "salience": [
-                  1
-                ],
-                "shape": [
-                  1
-                ],
-                "values": [
-                  1
-                ]
-              }
-            ],
-            "layer": "test_layer",
-            "model_id": "model_id_01234",
-            "model_release": "test_model_release",
-            "object": "test_object",
-            "pooling": "test_pooling",
-            "provider_request_id": "provider_request_id_01234",
-            "usage": {
-              "input_count": 1,
-              "token_count": 1
-            }
-          },
+          "data": {},
           "endpoint_release_id": "endpoint_release_id_01234",
           "model_release_id": "model_release_id_01234",
           "request_sha256": "test_request_sha256",
+          "result_cache": {
+            "cache_key": "test_cache_key",
+            "is_cache_hit": true,
+            "is_coalesced": true,
+            "lookup_ms": 1,
+            "manifest_sha256": "test_manifest_sha256",
+            "validation_ms": 1,
+            "wait_ms": 1
+          },
           "timings_ms": {
             "key": 1
           },
@@ -140,7 +122,6 @@
           "scope": "organization"
         },
         "result_url": "https://example.com",
-        "runner_hint": "test_runner_hint",
         "served_from": "test_served_from",
         "start_deadline_at": "2023-01-01T00:00:00.000Z",
         "started_at": "2023-01-01T00:00:00.000Z",

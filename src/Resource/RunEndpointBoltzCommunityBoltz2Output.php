@@ -20,7 +20,6 @@ readonly class RunEndpointBoltzCommunityBoltz2Output implements \JsonSerializabl
         public string $predictionId,
         public string $structureUrl,
         public RunEndpointBoltzCommunityBoltz2OutputRunUsage $usage,
-        public ?RunEndpointBoltzCommunityBoltz2OutputStructureRunInferenceMsa $inferenceMsa = null,
         public ?string $manifestUrl = null,
         /** @var array<string, float>|null */
         public ?array $metrics = null,
@@ -54,7 +53,6 @@ readonly class RunEndpointBoltzCommunityBoltz2Output implements \JsonSerializabl
             predictionId: $data['prediction_id'],
             structureUrl: $data['structure_url'],
             usage: RunEndpointBoltzCommunityBoltz2OutputRunUsage::fromArray($data['usage']),
-            inferenceMsa: isset($data['inference_msa']) ? RunEndpointBoltzCommunityBoltz2OutputStructureRunInferenceMsa::fromArray($data['inference_msa']) : null,
             manifestUrl: $data['manifest_url'] ?? null,
             metrics: $data['metrics'] ?? null,
             msa: isset($data['msa']) ? RunEndpointBoltzCommunityBoltz2OutputStructureRunMsa::fromArray($data['msa']) : null,
@@ -75,7 +73,6 @@ readonly class RunEndpointBoltzCommunityBoltz2Output implements \JsonSerializabl
             'prediction_id' => $this->predictionId,
             'structure_url' => $this->structureUrl,
             'usage' => $this->usage->toArray(),
-            'inference_msa' => $this->inferenceMsa?->toArray(),
             'manifest_url' => $this->manifestUrl,
             'metrics' => $this->metrics,
             'msa' => $this->msa?->toArray(),

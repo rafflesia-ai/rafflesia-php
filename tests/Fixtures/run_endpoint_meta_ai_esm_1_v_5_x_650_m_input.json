@@ -1,0 +1,12 @@
+{
+  "scoring_method": "wildtype_marginal",
+  "sequence": "test_sequence",
+  "variants": [
+    {
+      "alternate": "test_alternate",
+      "id": "01234",
+      "position": 1,
+      "reference": "test_reference"
+    }
+  ]
+}

@@ -11,15 +11,21 @@ readonly class RunEndpointRostlabProstt53BOutput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointRostlabProstt53BOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointRostlabProstt53BOutputEmbeddingVector>|null */
         public ?array $data,
         public string $layer,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $pooling,
-        public RunEndpointRostlabProstt53BOutputFoundryEmbeddingUsage $usage,
+        public string $representation,
+        public RunEndpointRostlabProstt53BOutputEmbeddingUsage $usage,
         public ?string $providerRequestId = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointRostlabProstt53BOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
     ) {
     }
 
@@ -33,6 +39,7 @@ readonly class RunEndpointRostlabProstt53BOutput implements \JsonSerializable
             'model_release',
             'object',
             'pooling',
+            'representation',
             'usage',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -40,14 +47,16 @@ readonly class RunEndpointRostlabProstt53BOutput implements \JsonSerializable
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointRostlabProstt53BOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointRostlabProstt53BOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'],
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             pooling: $data['pooling'],
-            usage: RunEndpointRostlabProstt53BOutputFoundryEmbeddingUsage::fromArray($data['usage']),
+            representation: $data['representation'],
+            usage: RunEndpointRostlabProstt53BOutputEmbeddingUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointRostlabProstt53BOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
         );
     }
 
@@ -61,8 +70,10 @@ readonly class RunEndpointRostlabProstt53BOutput implements \JsonSerializable
             'model_release' => $this->modelRelease,
             'object' => $this->object,
             'pooling' => $this->pooling,
+            'representation' => $this->representation,
             'usage' => $this->usage->toArray(),
             'provider_request_id' => $this->providerRequestId,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
         ];
     }
 }

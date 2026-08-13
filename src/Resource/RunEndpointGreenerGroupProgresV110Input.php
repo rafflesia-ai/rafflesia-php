@@ -13,6 +13,8 @@ readonly class RunEndpointGreenerGroupProgresV110Input implements \JsonSerializa
     public function __construct(
         /** @var array<\Rafflesia\Resource\RunEndpointGreenerGroupProgresV110InputRunEmbeddingInput>|null */
         public ?array $inputs,
+        /** Embedding row policy. tomato_contextual_tokens_v1 emits normalized CLS, right-truncated residues, then EOS for Tomato pack construction. */
+        public ?RunEndpointBiohubEsmc6BInputRepresentation $representation = null,
         public string $layer = 'graph_embedding',
         /** Inline embedding output defaults to json. File batches require npz. */
         public string $outputFormat = 'json',
@@ -33,6 +35,7 @@ readonly class RunEndpointGreenerGroupProgresV110Input implements \JsonSerializa
         }
         return new self(
             inputs: isset($data['inputs']) ? array_map(fn ($item) => RunEndpointGreenerGroupProgresV110InputRunEmbeddingInput::fromArray($item), $data['inputs']) : null,
+            representation: isset($data['representation']) ? RunEndpointBiohubEsmc6BInputRepresentation::from($data['representation']) : null,
             layer: $data['layer'] ?? 'graph_embedding',
             outputFormat: $data['output_format'] ?? 'json',
             pooling: $data['pooling'] ?? 'mean',
@@ -44,6 +47,7 @@ readonly class RunEndpointGreenerGroupProgresV110Input implements \JsonSerializa
     {
         return [
             'inputs' => $this->inputs !== null ? array_map(fn ($item) => $item->toArray(), $this->inputs) : null,
+            'representation' => $this->representation?->value,
             'layer' => $this->layer,
             'output_format' => $this->outputFormat,
             'pooling' => $this->pooling,

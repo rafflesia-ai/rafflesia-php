@@ -20,7 +20,6 @@ readonly class RunEndpointRosettacommonsRosettafold3Output implements \JsonSeria
         public string $predictionId,
         public string $structureUrl,
         public RunEndpointRosettacommonsRosettafold3OutputRunUsage $usage,
-        public ?RunEndpointRosettacommonsRosettafold3OutputStructureRunInferenceMsa $inferenceMsa = null,
         public ?string $manifestUrl = null,
         /** @var array<string, float>|null */
         public ?array $metrics = null,
@@ -54,7 +53,6 @@ readonly class RunEndpointRosettacommonsRosettafold3Output implements \JsonSeria
             predictionId: $data['prediction_id'],
             structureUrl: $data['structure_url'],
             usage: RunEndpointRosettacommonsRosettafold3OutputRunUsage::fromArray($data['usage']),
-            inferenceMsa: isset($data['inference_msa']) ? RunEndpointRosettacommonsRosettafold3OutputStructureRunInferenceMsa::fromArray($data['inference_msa']) : null,
             manifestUrl: $data['manifest_url'] ?? null,
             metrics: $data['metrics'] ?? null,
             msa: isset($data['msa']) ? RunEndpointRosettacommonsRosettafold3OutputStructureRunMsa::fromArray($data['msa']) : null,
@@ -75,7 +73,6 @@ readonly class RunEndpointRosettacommonsRosettafold3Output implements \JsonSeria
             'prediction_id' => $this->predictionId,
             'structure_url' => $this->structureUrl,
             'usage' => $this->usage->toArray(),
-            'inference_msa' => $this->inferenceMsa?->toArray(),
             'manifest_url' => $this->manifestUrl,
             'metrics' => $this->metrics,
             'msa' => $this->msa?->toArray(),

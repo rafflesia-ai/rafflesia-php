@@ -1,0 +1,6 @@
+{
+  "level": "STDERR",
+  "message": "test_message",
+  "source": "USER",
+  "timestamp": "2023-01-01T00:00:00.000Z"
+}

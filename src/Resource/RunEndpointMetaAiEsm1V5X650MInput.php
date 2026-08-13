@@ -12,7 +12,7 @@ readonly class RunEndpointMetaAiEsm1V5X650MInput implements \JsonSerializable
 
     public function __construct(
         public string $sequence,
-        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsm1V5X650MInputFoundryVariantSubstitution>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsm1V5X650MInputVariantSubstitution>|null */
         public ?array $variants,
         /** Log-likelihood-ratio calculation; defaults to wildtype_marginal. */
         public ?RunEndpointMetaAiEsm1V5X650MInputScoringMethod $scoringMethod = null,
@@ -32,7 +32,7 @@ readonly class RunEndpointMetaAiEsm1V5X650MInput implements \JsonSerializable
         }
         return new self(
             sequence: $data['sequence'],
-            variants: isset($data['variants']) ? array_map(fn ($item) => RunEndpointMetaAiEsm1V5X650MInputFoundryVariantSubstitution::fromArray($item), $data['variants']) : null,
+            variants: isset($data['variants']) ? array_map(fn ($item) => RunEndpointMetaAiEsm1V5X650MInputVariantSubstitution::fromArray($item), $data['variants']) : null,
             scoringMethod: isset($data['scoring_method']) ? RunEndpointMetaAiEsm1V5X650MInputScoringMethod::from($data['scoring_method']) : null,
         );
     }

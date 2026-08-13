@@ -16,6 +16,9 @@ class RafflesiaException extends \RuntimeException
     public readonly ?string $docUrl;
     /** @var array<string, mixed>|null */
     public readonly ?array $details;
+    /** @var list<array<string, mixed>>|null */
+    public readonly ?array $errors;
+    public readonly ?bool $isRetryable;
 
     /**
      * @param array<string, mixed>|null $responseBody
@@ -25,16 +28,29 @@ class RafflesiaException extends \RuntimeException
         public readonly ?int $statusCode = null,
         public readonly ?array $responseBody = null,
         ?\Throwable $previous = null,
+        /** @var array<string, list<string>> */
+        public readonly array $responseHeaders = [],
     ) {
         $error = is_array($responseBody['error'] ?? null)
             ? $responseBody['error']
             : [];
         $this->errorType = is_string($error['type'] ?? null) ? $error['type'] : null;
-        $this->errorCode = is_string($error['code'] ?? null) ? $error['code'] : null;
+        $this->errorCode = is_string($error['code'] ?? null)
+            ? $error['code']
+            : self::header($responseHeaders, 'Rafflesia-Error-Type');
         $this->errorParam = is_string($error['param'] ?? null) ? $error['param'] : null;
-        $this->requestId = is_string($error['request_id'] ?? null) ? $error['request_id'] : null;
+        $this->requestId = is_string($error['request_id'] ?? null)
+            ? $error['request_id']
+            : self::header($responseHeaders, 'X-Request-ID');
         $this->docUrl = is_string($error['doc_url'] ?? null) ? $error['doc_url'] : null;
         $this->details = is_array($error['details'] ?? null) ? $error['details'] : null;
+        $this->errors = is_array($error['errors'] ?? null) ? $error['errors'] : null;
+        $retryableHeader = self::header($responseHeaders, 'Rafflesia-Retryable');
+        $this->isRetryable = is_bool($error['is_retryable'] ?? null)
+            ? $error['is_retryable']
+            : ($retryableHeader === null
+                ? null
+                : filter_var($retryableHeader, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE));
         $semanticMessage = is_string($error['message'] ?? null)
             ? $error['message']
             : $message;
@@ -57,13 +73,28 @@ class RafflesiaException extends \RuntimeException
         string $message,
         ?array $responseBody = null,
         ?\Throwable $previous = null,
+        /** @var array<string, list<string>> */
+        array $responseHeaders = [],
     ): self {
         return match ($statusCode) {
-            401 => new RafflesiaAuthenticationException($message, $responseBody, $previous),
-            403 => new RafflesiaPermissionException($message, $responseBody, $previous),
-            404 => new RafflesiaNotFoundException($message, $responseBody, $previous),
-            429 => new RafflesiaRateLimitException($message, $responseBody, $previous),
-            default => new self($message, $statusCode, $responseBody, $previous),
+            401 => new RafflesiaAuthenticationException($message, $responseBody, $previous, $responseHeaders),
+            403 => new RafflesiaPermissionException($message, $responseBody, $previous, $responseHeaders),
+            404 => new RafflesiaNotFoundException($message, $responseBody, $previous, $responseHeaders),
+            429 => new RafflesiaRateLimitException($message, $responseBody, $previous, $responseHeaders),
+            default => new self($message, $statusCode, $responseBody, $previous, $responseHeaders),
         };
+    }
+
+    /** @param array<string, list<string>> $headers */
+    private static function header(array $headers, string ...$names): ?string
+    {
+        foreach ($headers as $name => $values) {
+            foreach ($names as $wanted) {
+                if (strcasecmp($name, $wanted) === 0) {
+                    return $values[0] ?? null;
+                }
+            }
+        }
+        return null;
     }
 }

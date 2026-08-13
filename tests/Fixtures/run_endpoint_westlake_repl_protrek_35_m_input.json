@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "sequence": "test_sequence",
+      "three_di_sequence": "test_three_di_sequence"
+    }
+  ],
+  "layer": "projection",
+  "output_format": "json",
+  "pooling": "mean",
+  "representation": "residue"
+}

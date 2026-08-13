@@ -17,7 +17,7 @@ class RunsTest extends TestCase
     {
         $fixture = $this->loadFixture('execution_envelope_run_list');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->runs()->list(status: \Rafflesia\Resource\RunState::Queued, endpoint: 'test_value', limit: 1, startingAfter: 'test_value');
+        $result = $client->runs()->list(status: \Rafflesia\Resource\RunStatus::Queued, endpoint: 'test_value', limit: 1, startingAfter: 'test_value');
         $this->assertInstanceOf(\Rafflesia\Resource\ExecutionEnvelopeRunList::class, $result);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
@@ -32,10 +32,11 @@ class RunsTest extends TestCase
 
     public function testCreate(): void
     {
-        $fixture = $this->loadFixture('execution_envelope_run');
+        $fixture = $this->loadFixture('run_create_response');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
-        $result = $client->runs()->create(idempotencyKey: 'test_value', rafflesiaRequestTimeout: 1.0, rafflesiaRunnerHint: 'test_value', rafflesiaQueuePriority: \Rafflesia\Resource\RunQueuePriority::Normal, rafflesiaObjectLifecyclePreference: 'test_value', rafflesiaStoreIo: \Rafflesia\Resource\RunsRafflesiaStoreIo::Value0, rafflesiaNoRetry: 'test_value', rafflesiaRetryConfig: 'test_value', xRafflesiaDisableFallback: 'test_value', background: true, endpoint: 'test_value', input: \Rafflesia\Resource\RunInput::fromArray($this->loadFixture('run_input')), isRetryDisabled: true, metadata: [], priority: \Rafflesia\Resource\RunQueuePriority::Normal, startDeadlineAt: new \DateTimeImmutable('2026-01-02T03:04:05+00:00'), startTimeoutMs: 1, webhookEndpointId: 'test_value', rafflesiaMaxQueueLength: 1);
-        $this->assertInstanceOf(\Rafflesia\Resource\ExecutionEnvelopeRun::class, $result);
+        $result = $client->runs()->create(idempotencyKey: 'test_value', rafflesiaRequestTimeout: 1.0, rafflesiaQueuePriority: \Rafflesia\Resource\RunQueuePriority::Normal, rafflesiaObjectLifecyclePreference: 'test_value', rafflesiaStoreIo: \Rafflesia\Resource\RunsRafflesiaStoreIo::Value0, rafflesiaNoRetry: 'test_value', rafflesiaRetryConfig: 'test_value', background: true, endpoint: 'test_value', input: \Rafflesia\Resource\RunInput::fromArray($this->loadFixture('run_input')), isRetryDisabled: true, metadata: [], priority: \Rafflesia\Resource\RunQueuePriority::Normal, startDeadlineAt: new \DateTimeImmutable('2026-01-02T03:04:05+00:00'), startTimeoutMs: 1, webhookEndpointId: 'test_value', rafflesiaMaxQueueLength: 1);
+        $this->assertInstanceOf(\Rafflesia\Resource\RunCreateResponse::class, $result);
+        $this->assertSame($fixture['request_id'], $result->requestId);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('POST', $request->getMethod());
@@ -63,10 +64,11 @@ class RunsTest extends TestCase
 
     public function testCancel(): void
     {
-        $fixture = $this->loadFixture('execution_envelope_run');
+        $fixture = $this->loadFixture('run_cancel_response');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
         $result = $client->runs()->cancel('test_run_id');
-        $this->assertInstanceOf(\Rafflesia\Resource\ExecutionEnvelopeRun::class, $result);
+        $this->assertInstanceOf(\Rafflesia\Resource\RunCancelResponse::class, $result);
+        $this->assertSame($fixture['request_id'], $result->requestId);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('POST', $request->getMethod());
@@ -75,10 +77,11 @@ class RunsTest extends TestCase
 
     public function testResultRetrieve(): void
     {
-        $fixture = $this->loadFixture('execution_envelope_run_output');
+        $fixture = $this->loadFixture('run_result_response');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
         $result = $client->runs()->resultRetrieve('test_run_id');
-        $this->assertInstanceOf(\Rafflesia\Resource\ExecutionEnvelopeRunOutput::class, $result);
+        $this->assertInstanceOf(\Rafflesia\Resource\RunResultResponse::class, $result);
+        $this->assertSame($fixture['request_id'], $result->requestId);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('GET', $request->getMethod());
@@ -87,10 +90,11 @@ class RunsTest extends TestCase
 
     public function testStatusRetrieve(): void
     {
-        $fixture = $this->loadFixture('execution_envelope_run_status');
+        $fixture = $this->loadFixture('run_queue_status');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
         $result = $client->runs()->statusRetrieve('test_run_id', logs: true, waitMs: 1, sinceVersion: 1);
-        $this->assertInstanceOf(\Rafflesia\Resource\ExecutionEnvelopeRunStatus::class, $result);
+        $this->assertInstanceOf(\Rafflesia\Resource\RunQueueStatus::class, $result);
+        $this->assertSame($fixture['cancel_url'], $result->cancelUrl);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();
         $this->assertSame('GET', $request->getMethod());
@@ -103,11 +107,10 @@ class RunsTest extends TestCase
 
     public function testStatusStream(): void
     {
-        $fixture = $this->loadFixture('run_status');
+        $fixture = $this->loadFixture('run_queue_status');
         $client = $this->createMockClient([['status' => 200, 'body' => $fixture]]);
         $result = $client->runs()->statusStream('test_run_id', logs: true, sinceVersion: 1);
-        $this->assertInstanceOf(\Rafflesia\Resource\RunStatus::class, $result);
-        $this->assertSame($fixture['id'], $result->id);
+        $this->assertInstanceOf(\Rafflesia\Resource\RunQueueStatus::class, $result);
         $this->assertSame($fixture['cancel_url'], $result->cancelUrl);
         $this->assertIsArray($result->toArray());
         $request = $this->getLastRequest();

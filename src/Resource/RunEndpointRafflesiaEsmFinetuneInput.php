@@ -11,14 +11,14 @@ readonly class RunEndpointRafflesiaEsmFinetuneInput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** Exact optimizer-step budget used for admission and pricing. Execution rejects a profile whose resolved plan differs. */
-        public int $expectedOptimizerSteps,
-        /** Stable organization-private endpoint to create or update after training succeeds. */
-        public string $privateModelEndpoint,
-        public string $privateModelName,
-        /** Organization-private Foundry file URL containing an exact trainer.local_profile.v1 document. Relative dataset and cache paths resolve against the configured local trainer repository. */
-        public string $trainingProfileUrl,
-        public ?string $privateModelDescription = null,
+        /** Pinned trainable backbone. The endpoint advertises only combinations that are verified by both the local trainer and the private inference runtime. */
+        public RunEndpointRafflesiaEsmFinetuneInputBaseModelId $baseModelId,
+        /** Organization-private Rafflesia file URL containing a self-contained foundry.esm_training_dataset.v1 manifest. Every dataset artifact in the manifest is immutable and digest-pinned. */
+        public string $datasetUrl,
+        /** Stable organization-private model resource published after the selected checkpoint verifies. */
+        public RunEndpointRafflesiaEsmFinetuneInputFineTunePrivateModel $privateModel,
+        /** Typed training controls. Rafflesia derives the exact training profile, execution plan, and estimate from these fields. */
+        public RunEndpointRafflesiaEsmFinetuneInputFineTuneTraining $training,
     ) {
     }
 
@@ -26,21 +26,20 @@ readonly class RunEndpointRafflesiaEsmFinetuneInput implements \JsonSerializable
     public static function fromArray(array $data): self
     {
         foreach ([
-            'expected_optimizer_steps',
-            'private_model_endpoint',
-            'private_model_name',
-            'training_profile_url',
+            'base_model_id',
+            'dataset_url',
+            'private_model',
+            'training',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
                 throw new \UnexpectedValueException("Missing required field '$__required' for RunEndpointRafflesiaEsmFinetuneInput::fromArray()");
             }
         }
         return new self(
-            expectedOptimizerSteps: $data['expected_optimizer_steps'],
-            privateModelEndpoint: $data['private_model_endpoint'],
-            privateModelName: $data['private_model_name'],
-            trainingProfileUrl: $data['training_profile_url'],
-            privateModelDescription: $data['private_model_description'] ?? null,
+            baseModelId: RunEndpointRafflesiaEsmFinetuneInputBaseModelId::from($data['base_model_id']),
+            datasetUrl: $data['dataset_url'],
+            privateModel: RunEndpointRafflesiaEsmFinetuneInputFineTunePrivateModel::fromArray($data['private_model']),
+            training: RunEndpointRafflesiaEsmFinetuneInputFineTuneTraining::fromArray($data['training']),
         );
     }
 
@@ -48,11 +47,10 @@ readonly class RunEndpointRafflesiaEsmFinetuneInput implements \JsonSerializable
     public function toArray(): array
     {
         return [
-            'expected_optimizer_steps' => $this->expectedOptimizerSteps,
-            'private_model_endpoint' => $this->privateModelEndpoint,
-            'private_model_name' => $this->privateModelName,
-            'training_profile_url' => $this->trainingProfileUrl,
-            'private_model_description' => $this->privateModelDescription,
+            'base_model_id' => $this->baseModelId->value,
+            'dataset_url' => $this->datasetUrl,
+            'private_model' => $this->privateModel->toArray(),
+            'training' => $this->training->toArray(),
         ];
     }
 }

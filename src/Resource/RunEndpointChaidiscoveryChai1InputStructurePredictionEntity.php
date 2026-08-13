@@ -28,7 +28,7 @@ readonly class RunEndpointChaidiscoveryChai1InputStructurePredictionEntity imple
         /** Ligand SMILES; mutually exclusive with ccd. */
         public ?string $smiles = null,
         /** Molecule type; defaults to protein. */
-        public ?RunEndpointChaidiscoveryChai1InputStructurePredictionEntityType $type = null,
+        public ?RunEndpointBiohubEsmfold2InputStructurePredictionEntityType $type = null,
     ) {
     }
 
@@ -48,7 +48,7 @@ readonly class RunEndpointChaidiscoveryChai1InputStructurePredictionEntity imple
             modifications: isset($data['modifications']) ? array_map(fn ($item) => RunEndpointChaidiscoveryChai1InputStructurePredictionModification::fromArray($item), $data['modifications']) : null,
             sequence: $data['sequence'] ?? null,
             smiles: $data['smiles'] ?? null,
-            type: isset($data['type']) ? RunEndpointChaidiscoveryChai1InputStructurePredictionEntityType::from($data['type']) : null,
+            type: isset($data['type']) ? RunEndpointBiohubEsmfold2InputStructurePredictionEntityType::from($data['type']) : null,
         );
     }
 

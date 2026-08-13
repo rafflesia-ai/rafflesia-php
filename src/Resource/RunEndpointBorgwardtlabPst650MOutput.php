@@ -11,15 +11,21 @@ readonly class RunEndpointBorgwardtlabPst650MOutput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointBorgwardtlabPst650MOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointBorgwardtlabPst650MOutputEmbeddingVector>|null */
         public ?array $data,
         public string $layer,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $pooling,
-        public RunEndpointBorgwardtlabPst650MOutputFoundryEmbeddingUsage $usage,
+        public string $representation,
+        public RunEndpointBorgwardtlabPst650MOutputEmbeddingUsage $usage,
         public ?string $providerRequestId = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointBorgwardtlabPst650MOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
     ) {
     }
 
@@ -33,6 +39,7 @@ readonly class RunEndpointBorgwardtlabPst650MOutput implements \JsonSerializable
             'model_release',
             'object',
             'pooling',
+            'representation',
             'usage',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -40,14 +47,16 @@ readonly class RunEndpointBorgwardtlabPst650MOutput implements \JsonSerializable
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointBorgwardtlabPst650MOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointBorgwardtlabPst650MOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'],
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             pooling: $data['pooling'],
-            usage: RunEndpointBorgwardtlabPst650MOutputFoundryEmbeddingUsage::fromArray($data['usage']),
+            representation: $data['representation'],
+            usage: RunEndpointBorgwardtlabPst650MOutputEmbeddingUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointBorgwardtlabPst650MOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
         );
     }
 
@@ -61,8 +70,10 @@ readonly class RunEndpointBorgwardtlabPst650MOutput implements \JsonSerializable
             'model_release' => $this->modelRelease,
             'object' => $this->object,
             'pooling' => $this->pooling,
+            'representation' => $this->representation,
             'usage' => $this->usage->toArray(),
             'provider_request_id' => $this->providerRequestId,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
         ];
     }
 }

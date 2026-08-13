@@ -20,7 +20,6 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutput implements \Json
         public string $predictionId,
         public string $structureUrl,
         public RunEndpointGoogleDeepmindAlphafold2MonomerOutputRunUsage $usage,
-        public ?RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunInferenceMsa $inferenceMsa = null,
         public ?string $manifestUrl = null,
         /** @var array<string, float>|null */
         public ?array $metrics = null,
@@ -54,7 +53,6 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutput implements \Json
             predictionId: $data['prediction_id'],
             structureUrl: $data['structure_url'],
             usage: RunEndpointGoogleDeepmindAlphafold2MonomerOutputRunUsage::fromArray($data['usage']),
-            inferenceMsa: isset($data['inference_msa']) ? RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunInferenceMsa::fromArray($data['inference_msa']) : null,
             manifestUrl: $data['manifest_url'] ?? null,
             metrics: $data['metrics'] ?? null,
             msa: isset($data['msa']) ? RunEndpointGoogleDeepmindAlphafold2MonomerOutputStructureRunMsa::fromArray($data['msa']) : null,
@@ -75,7 +73,6 @@ readonly class RunEndpointGoogleDeepmindAlphafold2MonomerOutput implements \Json
             'prediction_id' => $this->predictionId,
             'structure_url' => $this->structureUrl,
             'usage' => $this->usage->toArray(),
-            'inference_msa' => $this->inferenceMsa?->toArray(),
             'manifest_url' => $this->manifestUrl,
             'metrics' => $this->metrics,
             'msa' => $this->msa?->toArray(),

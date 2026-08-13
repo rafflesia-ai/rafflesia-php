@@ -11,15 +11,21 @@ readonly class RunEndpointAiriInstituteModerngenaBaseOutput implements \JsonSeri
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointAiriInstituteModerngenaBaseOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingVector>|null */
         public ?array $data,
         public string $layer,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $pooling,
-        public RunEndpointAiriInstituteModerngenaBaseOutputFoundryEmbeddingUsage $usage,
+        public string $representation,
+        public RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingUsage $usage,
         public ?string $providerRequestId = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
     ) {
     }
 
@@ -33,6 +39,7 @@ readonly class RunEndpointAiriInstituteModerngenaBaseOutput implements \JsonSeri
             'model_release',
             'object',
             'pooling',
+            'representation',
             'usage',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -40,14 +47,16 @@ readonly class RunEndpointAiriInstituteModerngenaBaseOutput implements \JsonSeri
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointAiriInstituteModerngenaBaseOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'],
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             pooling: $data['pooling'],
-            usage: RunEndpointAiriInstituteModerngenaBaseOutputFoundryEmbeddingUsage::fromArray($data['usage']),
+            representation: $data['representation'],
+            usage: RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointAiriInstituteModerngenaBaseOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
         );
     }
 
@@ -61,8 +70,10 @@ readonly class RunEndpointAiriInstituteModerngenaBaseOutput implements \JsonSeri
             'model_release' => $this->modelRelease,
             'object' => $this->object,
             'pooling' => $this->pooling,
+            'representation' => $this->representation,
             'usage' => $this->usage->toArray(),
             'provider_request_id' => $this->providerRequestId,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
         ];
     }
 }

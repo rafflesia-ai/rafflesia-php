@@ -11,15 +11,21 @@ readonly class RunEndpointMetaAiEsmIf1142MOutput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsmIf1142MOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsmIf1142MOutputEmbeddingVector>|null */
         public ?array $data,
         public string $layer,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $pooling,
-        public RunEndpointMetaAiEsmIf1142MOutputFoundryEmbeddingUsage $usage,
+        public string $representation,
+        public RunEndpointMetaAiEsmIf1142MOutputEmbeddingUsage $usage,
         public ?string $providerRequestId = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointMetaAiEsmIf1142MOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
     ) {
     }
 
@@ -33,6 +39,7 @@ readonly class RunEndpointMetaAiEsmIf1142MOutput implements \JsonSerializable
             'model_release',
             'object',
             'pooling',
+            'representation',
             'usage',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -40,14 +47,16 @@ readonly class RunEndpointMetaAiEsmIf1142MOutput implements \JsonSerializable
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMetaAiEsmIf1142MOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMetaAiEsmIf1142MOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'],
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             pooling: $data['pooling'],
-            usage: RunEndpointMetaAiEsmIf1142MOutputFoundryEmbeddingUsage::fromArray($data['usage']),
+            representation: $data['representation'],
+            usage: RunEndpointMetaAiEsmIf1142MOutputEmbeddingUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointMetaAiEsmIf1142MOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
         );
     }
 
@@ -61,8 +70,10 @@ readonly class RunEndpointMetaAiEsmIf1142MOutput implements \JsonSerializable
             'model_release' => $this->modelRelease,
             'object' => $this->object,
             'pooling' => $this->pooling,
+            'representation' => $this->representation,
             'usage' => $this->usage->toArray(),
             'provider_request_id' => $this->providerRequestId,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
         ];
     }
 }

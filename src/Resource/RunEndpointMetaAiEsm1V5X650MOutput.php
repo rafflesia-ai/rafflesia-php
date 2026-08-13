@@ -11,13 +11,13 @@ readonly class RunEndpointMetaAiEsm1V5X650MOutput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsm1V5X650MOutputFoundryVariantEffect>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointMetaAiEsm1V5X650MOutputVariantEffect>|null */
         public ?array $data,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $scoringMethod,
-        public RunEndpointMetaAiEsm1V5X650MOutputFoundryVariantEffectUsage $usage,
+        public RunEndpointMetaAiEsm1V5X650MOutputVariantEffectUsage $usage,
         public ?string $providerRequestId = null,
     ) {
     }
@@ -38,12 +38,12 @@ readonly class RunEndpointMetaAiEsm1V5X650MOutput implements \JsonSerializable
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMetaAiEsm1V5X650MOutputFoundryVariantEffect::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMetaAiEsm1V5X650MOutputVariantEffect::fromArray($item), $data['data']) : null,
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             scoringMethod: $data['scoring_method'],
-            usage: RunEndpointMetaAiEsm1V5X650MOutputFoundryVariantEffectUsage::fromArray($data['usage']),
+            usage: RunEndpointMetaAiEsm1V5X650MOutputVariantEffectUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
         );
     }

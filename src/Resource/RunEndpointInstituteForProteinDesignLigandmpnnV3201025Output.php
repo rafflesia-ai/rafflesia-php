@@ -11,14 +11,14 @@ readonly class RunEndpointInstituteForProteinDesignLigandmpnnV3201025Output impl
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputFoundryProteinDesign>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputProteinDesign>|null */
         public ?array $data,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public int $seed,
         public float $temperature,
-        public RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputFoundryProteinDesignUsage $usage,
+        public RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputProteinDesignUsage $usage,
         public ?string $providerRequestId = null,
     ) {
     }
@@ -40,13 +40,13 @@ readonly class RunEndpointInstituteForProteinDesignLigandmpnnV3201025Output impl
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputFoundryProteinDesign::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputProteinDesign::fromArray($item), $data['data']) : null,
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             seed: $data['seed'],
             temperature: $data['temperature'],
-            usage: RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputFoundryProteinDesignUsage::fromArray($data['usage']),
+            usage: RunEndpointInstituteForProteinDesignLigandmpnnV3201025OutputProteinDesignUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
         );
     }

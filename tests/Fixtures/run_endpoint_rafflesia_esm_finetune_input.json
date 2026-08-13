@@ -1,7 +1,25 @@
 {
-  "expected_optimizer_steps": 1,
-  "private_model_description": "test_private_model_description",
-  "private_model_endpoint": "test_private_model_endpoint",
-  "private_model_name": "Test",
-  "training_profile_url": "https://example.com"
+  "base_model_id": "esm2-8m",
+  "dataset_url": "https://example.com",
+  "private_model": {
+    "description": "test_description",
+    "endpoint": "test_endpoint",
+    "metadata": {
+      "key": "test_value"
+    },
+    "name": "Test"
+  },
+  "training": {
+    "alpha": 1,
+    "batch_size": 1,
+    "gradient_clip_norm": 1,
+    "learning_rate": 1,
+    "method": "full",
+    "optimizer_steps": 1,
+    "precision": "fp32",
+    "rank": 1,
+    "seed": 1,
+    "unfrozen_layers": 1,
+    "weight_decay": 1
+  }
 }

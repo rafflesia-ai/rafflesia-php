@@ -24,7 +24,7 @@ class Models
     /**
      * List callable models and tools
      *
-     * Lists every callable endpoint id accepted by runs.create, including deterministic tools such as homology and MSA construction. The default response is lightweight; use expand=openapi-3.0 to include each endpoint's exact input, output, foreground, and background queue contract.
+     * Lists every callable endpoint id accepted by runs.create, including deterministic tools such as homology and MSA construction. The default response is lightweight; use expand=openapi-3.0 to include each endpoint's exact input, output, and wait-versus-return job contract.
      * @param array<string>|null $endpointId Exact callable endpoint ids. Repeat endpoint_id to retrieve several entries.
      * @param string|null $q Search endpoint id, display name, publisher, description, category, and modalities.
      * @param string|null $category

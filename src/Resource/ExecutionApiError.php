@@ -15,6 +15,11 @@ readonly class ExecutionApiError implements \JsonSerializable
         public string $code,
         /** Stable documentation URL for this error code. */
         public string $docUrl,
+        /**
+         * One or more exact validation or execution failures. Machine logic should use type, loc, and ctx; msg is for people.
+         * @var array<\Rafflesia\Resource\ApiErrorDetail>
+         */
+        public array $errors,
         /** Whether retrying the identical pinned request may succeed without changing its input. */
         public bool $isRetryable,
         /** Human-readable actionable explanation. Do not parse this value. */
@@ -26,11 +31,6 @@ readonly class ExecutionApiError implements \JsonSerializable
          * @var array<string, mixed>|null
          */
         public ?array $details = null,
-        /**
-         * One or more exact validation or execution failures. Machine logic should use type, loc, and ctx; msg is for people.
-         * @var array<\Rafflesia\Resource\ApiErrorDetail>|null
-         */
-        public ?array $errors = null,
         /** Request field responsible for the error when known. */
         public ?string $param = null,
         /** Request identifier to provide when reporting this occurrence. */
@@ -44,6 +44,7 @@ readonly class ExecutionApiError implements \JsonSerializable
         foreach ([
             'code',
             'doc_url',
+            'errors',
             'is_retryable',
             'message',
             'type',
@@ -55,11 +56,11 @@ readonly class ExecutionApiError implements \JsonSerializable
         return new self(
             code: $data['code'],
             docUrl: $data['doc_url'],
+            errors: array_map(fn ($item) => ApiErrorDetail::fromArray($item), $data['errors']),
             isRetryable: $data['is_retryable'],
             message: $data['message'],
             type: ApiErrorBodyType::from($data['type']),
             details: $data['details'] ?? null,
-            errors: isset($data['errors']) ? array_map(fn ($item) => ApiErrorDetail::fromArray($item), $data['errors']) : null,
             param: $data['param'] ?? null,
             requestId: $data['request_id'] ?? null,
         );
@@ -71,11 +72,11 @@ readonly class ExecutionApiError implements \JsonSerializable
         return [
             'code' => $this->code,
             'doc_url' => $this->docUrl,
+            'errors' => array_map(fn ($item) => $item->toArray(), $this->errors),
             'is_retryable' => $this->isRetryable,
             'message' => $this->message,
             'type' => $this->type->value,
             'details' => $this->details,
-            'errors' => $this->errors !== null ? array_map(fn ($item) => $item->toArray(), $this->errors) : null,
             'param' => $this->param,
             'request_id' => $this->requestId,
         ];

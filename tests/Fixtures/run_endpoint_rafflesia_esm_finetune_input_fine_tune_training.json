@@ -1,0 +1,13 @@
+{
+  "alpha": 1,
+  "batch_size": 1,
+  "gradient_clip_norm": 1,
+  "learning_rate": 1,
+  "method": "full",
+  "optimizer_steps": 1,
+  "precision": "fp32",
+  "rank": 1,
+  "seed": 1,
+  "unfrozen_layers": 1,
+  "weight_decay": 1
+}

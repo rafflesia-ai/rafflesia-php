@@ -1,9 +1,0 @@
-{
-  "is_truncated": true,
-  "manifest_url": "https://example.com",
-  "maximum_sequence_count": 1,
-  "query_length": 1,
-  "sequence_count": 1,
-  "size_bytes": 1,
-  "url": "https://example.com"
-}

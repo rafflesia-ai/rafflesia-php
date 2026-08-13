@@ -16,7 +16,9 @@ class RafflesiaRateLimitException extends RafflesiaException
         string $message,
         ?array $responseBody = null,
         ?\Throwable $previous = null,
+        /** @var array<string, list<string>> */
+        array $responseHeaders = [],
     ) {
-        parent::__construct($message, 429, $responseBody, $previous);
+        parent::__construct($message, 429, $responseBody, $previous, $responseHeaders);
     }
 }

@@ -14,22 +14,22 @@ readonly class RunCreateRequest implements \JsonSerializable
         /** Canonical callable endpoint id returned by GET /v1/models, for example rafflesia/homology. */
         public string $endpoint,
         public RunInput $input,
-        /** Run as a durable background task. Omit or set false to wait for completion on this request. */
+        /** Return immediately after durable acceptance. Omit or set false to wait for the same retained job to finish. */
         public ?bool $background = null,
-        /** Disable automatic retries for this background run. Otherwise explicitly transient failures may use up to ten total attempts. */
+        /** Disable automatic retries. Otherwise explicitly transient failures may use up to ten total attempts. */
         public ?bool $isRetryDisabled = null,
         /**
          * Caller-defined labels stored on the run and included in idempotency identity, but not scientific execution identity.
          * @var array<string, string>|null
          */
         public ?array $metadata = null,
-        /** Background queue priority. Omit for normal; low work starts only when no normal work for the same endpoint is pending. */
+        /** Queue priority before provider handoff. Omit for normal foreground work or low background work; an explicit value overrides that default. */
         public ?RunQueuePriority $priority = null,
-        /** Background-only absolute RFC 3339 alternative to start_timeout_ms. The retained run fails if no execution slot opens first. */
+        /** Absolute RFC 3339 alternative to start_timeout_ms. The retained run fails if no execution slot opens first. */
         public ?\DateTimeImmutable $startDeadlineAt = null,
         /** Maximum time to start. Queue wait and failed attempts count, but execution may continue after a runner starts. Omit for no caller start deadline. */
         public ?int $startTimeoutMs = null,
-        /** Background-only registered webhook endpoint that receives this run's enabled lifecycle events. Raw callback URLs are never accepted here. */
+        /** Registered webhook endpoint that receives this run's enabled lifecycle events. Raw callback URLs are never accepted here. */
         public ?string $webhookEndpointId = null,
     ) {
     }

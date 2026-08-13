@@ -1,0 +1,15 @@
+{
+  "ccd": [
+    "test_ccd"
+  ],
+  "id": "01234",
+  "modifications": [
+    {
+      "ccd": "test_ccd",
+      "position": 1
+    }
+  ],
+  "sequence": "test_sequence",
+  "smiles": "test_smiles",
+  "type": "protein"
+}

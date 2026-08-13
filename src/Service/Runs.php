@@ -8,9 +8,10 @@ namespace Rafflesia\Service;
 
 use Rafflesia\Resource\ExecutionEnvelopeRun;
 use Rafflesia\Resource\ExecutionEnvelopeRunList;
-use Rafflesia\Resource\ExecutionEnvelopeRunOutput;
-use Rafflesia\Resource\ExecutionEnvelopeRunStatus;
-use Rafflesia\Resource\RunStatus;
+use Rafflesia\Resource\RunCancelResponse;
+use Rafflesia\Resource\RunCreateResponse;
+use Rafflesia\Resource\RunQueueStatus;
+use Rafflesia\Resource\RunResultResponse;
 
 class Runs
 {
@@ -23,7 +24,7 @@ class Runs
      * List runs
      *
      * Lists retained foreground and background runs newest first. status and endpoint are optional filters; starting_after is an opaque run cursor from the previous page.
-     * @param \Rafflesia\Resource\RunState|null $status
+     * @param \Rafflesia\Resource\RunStatus|null $status
      * @param string|null $endpoint
      * @param int|null $limit Defaults to 20.
      * @param string|null $startingAfter
@@ -31,7 +32,7 @@ class Runs
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function list(
-        ?\Rafflesia\Resource\RunState $status = null,
+        ?\Rafflesia\Resource\RunStatus $status = null,
         ?string $endpoint = null,
         ?int $limit = null,
         ?string $startingAfter = null,
@@ -55,27 +56,25 @@ class Runs
     /**
      * Create a run
      *
-     * Creates one retained run for any endpoint. By default the request executes the exact pinned endpoint release and waits for completion. Set background=true to enqueue the identical normalized request and return the same resource shape immediately. A background run may select one existing webhook_endpoint_id; raw callback URLs are not accepted. Endpoint-specific input and output JSON Schemas are published on the endpoint descriptor. File-like inputs and outputs use URLs. Idempotent retries replay the original create status, body, and Rafflesia response headers.
+     * Durably creates and queues one retained job for any endpoint before execution begins. By default the request waits and returns request_id plus endpoint-specific data; set background=true to return request_id and lifecycle URLs immediately after acceptance. Detailed execution state remains available through runs.retrieve. Disconnecting a waiting caller never cancels the job. Idempotent retries replay the original create status, body, and Rafflesia response headers.
      * @param string|null $idempotencyKey Retry identity for foreground or background creation. The original status, body, and Rafflesia response headers are replayed exactly; a different complete create request returns a conflict.
      * @param float|null $rafflesiaRequestTimeout Caller start deadline in seconds. Queue wait and failed attempts count; execution may continue after a runner starts.
-     * @param string|null $rafflesiaRunnerHint Best-effort affinity hint for a warm execution worker. It never blocks fallback to another worker.
-     * @param \Rafflesia\Resource\RunQueuePriority|null $rafflesiaQueuePriority Background queue priority. Low-priority runs start after normal-priority work for the same endpoint.
-     * @param string|null $rafflesiaObjectLifecyclePreference JSON object whose initial_acl and expiration_duration_seconds apply to every file produced by this run.
+     * @param \Rafflesia\Resource\RunQueuePriority|null $rafflesiaQueuePriority Durable run priority before execution handoff. Omit for normal foreground work or low background work; an explicit value overrides that default.
+     * @param string|null $rafflesiaObjectLifecyclePreference JSON object whose initial_acl and expiration_duration_seconds apply to every file produced by this run. Omitted fields use organization storage settings; the deployment default is private access.
      * @param \Rafflesia\Resource\RunsRafflesiaStoreIo|null $rafflesiaStoreIo Set to 0 to prevent retention of JSON request and response payloads. Generated files remain governed by the object lifecycle preference.
      * @param string|null $rafflesiaNoRetry Set to 1, true, or yes to disable automatic retries. This takes precedence over Rafflesia-Retry-Config.
-     * @param string|null $rafflesiaRetryConfig JSON retry budgets for server_error, timeout, and connection_error. Each retries value counts additional attempts; ten total attempts is the ceiling.
-     * @param string|null $xRafflesiaDisableFallback Accepted for portability. Rafflesia never substitutes an unpinned endpoint, so fallback is already disabled.
-     * @param bool|null $background Run as a durable background task. Omit or set false to wait for completion on this request.
+     * @param string|null $rafflesiaRetryConfig JSON retry budgets for server_error, timeout, and connection_error. Each retries value counts additional attempts; ten total attempts is the ceiling. Rafflesia owns every endpoint queue, so this applies to public and private endpoints alike.
+     * @param bool|null $background Return immediately after durable acceptance. Omit or set false to wait for the same retained job to finish.
      * @param string $endpoint Canonical callable endpoint id returned by GET /v1/models, for example rafflesia/homology.
      * @param \Rafflesia\Resource\RunInput $input
-     * @param bool|null $isRetryDisabled Disable automatic retries for this background run. Otherwise explicitly transient failures may use up to ten total attempts.
+     * @param bool|null $isRetryDisabled Disable automatic retries. Otherwise explicitly transient failures may use up to ten total attempts.
      * @param array<string, string>|null $metadata Caller-defined labels stored on the run and included in idempotency identity, but not scientific execution identity.
-     * @param \Rafflesia\Resource\RunQueuePriority|null $priority Background queue priority. Omit for normal; low work starts only when no normal work for the same endpoint is pending.
-     * @param \DateTimeImmutable|null $startDeadlineAt Background-only absolute RFC 3339 alternative to start_timeout_ms. The retained run fails if no execution slot opens first.
+     * @param \Rafflesia\Resource\RunQueuePriority|null $priority Queue priority before provider handoff. Omit for normal foreground work or low background work; an explicit value overrides that default.
+     * @param \DateTimeImmutable|null $startDeadlineAt Absolute RFC 3339 alternative to start_timeout_ms. The retained run fails if no execution slot opens first.
      * @param int|null $startTimeoutMs Maximum time to start. Queue wait and failed attempts count, but execution may continue after a runner starts. Omit for no caller start deadline.
-     * @param string|null $webhookEndpointId Background-only registered webhook endpoint that receives this run's enabled lifecycle events. Raw callback URLs are never accepted here.
+     * @param string|null $webhookEndpointId Registered webhook endpoint that receives this run's enabled lifecycle events. Raw callback URLs are never accepted here.
      * @param int|null $rafflesiaMaxQueueLength Reject with 429 when this endpoint already has more queued runs than the supplied non-negative integer across all callers.
-     * @return \Rafflesia\Resource\ExecutionEnvelopeRun
+     * @return \Rafflesia\Resource\RunCreateResponse
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function create(
@@ -83,13 +82,11 @@ class Runs
         \Rafflesia\Resource\RunInput $input,
         ?string $idempotencyKey = null,
         ?float $rafflesiaRequestTimeout = null,
-        ?string $rafflesiaRunnerHint = null,
         ?\Rafflesia\Resource\RunQueuePriority $rafflesiaQueuePriority = null,
         ?string $rafflesiaObjectLifecyclePreference = null,
         ?\Rafflesia\Resource\RunsRafflesiaStoreIo $rafflesiaStoreIo = null,
         ?string $rafflesiaNoRetry = null,
         ?string $rafflesiaRetryConfig = null,
-        ?string $xRafflesiaDisableFallback = null,
         ?bool $background = null,
         ?bool $isRetryDisabled = null,
         ?array $metadata = null,
@@ -99,17 +96,15 @@ class Runs
         ?string $webhookEndpointId = null,
         ?int $rafflesiaMaxQueueLength = null,
         ?\Rafflesia\RequestOptions $options = null,
-    ): \Rafflesia\Resource\ExecutionEnvelopeRun {
+    ): \Rafflesia\Resource\RunCreateResponse {
         $headers = array_filter([
             'Idempotency-Key' => $idempotencyKey,
             'Rafflesia-Request-Timeout' => $rafflesiaRequestTimeout,
-            'Rafflesia-Runner-Hint' => $rafflesiaRunnerHint,
             'Rafflesia-Queue-Priority' => $rafflesiaQueuePriority?->value,
             'Rafflesia-Object-Lifecycle-Preference' => $rafflesiaObjectLifecyclePreference,
             'Rafflesia-Store-IO' => $rafflesiaStoreIo?->value,
             'Rafflesia-No-Retry' => $rafflesiaNoRetry,
             'Rafflesia-Retry-Config' => $rafflesiaRetryConfig,
-            'X-Rafflesia-Disable-Fallback' => $xRafflesiaDisableFallback,
         ], fn ($v) => $v !== null);
         $body = array_filter([
             'background' => $background,
@@ -133,7 +128,7 @@ class Runs
             headers: $headers,
             options: $options,
         );
-        return ExecutionEnvelopeRun::fromArray($response);
+        return RunCreateResponse::fromArray($response);
     }
 
     /**
@@ -166,23 +161,23 @@ class Runs
     }
 
     /**
-     * Cancel a background run
+     * Cancel a run
      *
-     * Cancels queued or running background work and returns the updated run. Repeating cancellation is idempotent; completed or failed runs return a conflict because no work remains to cancel.
+     * Explicitly requests cancellation of queued or running work and returns a small acknowledgement. Repeating cancellation is idempotent; completed or failed runs return a conflict because no work remains to cancel. Retrieve the run for detailed state.
      * @param string $runId
-     * @return \Rafflesia\Resource\ExecutionEnvelopeRun
+     * @return \Rafflesia\Resource\RunCancelResponse
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function cancel(
         string $runId,
         ?\Rafflesia\RequestOptions $options = null,
-    ): \Rafflesia\Resource\ExecutionEnvelopeRun {
+    ): \Rafflesia\Resource\RunCancelResponse {
         $response = $this->client->request(
             method: 'POST',
             path: 'v1/runs/' . rawurlencode((string) $runId) . '/cancel',
             options: $options,
         );
-        return ExecutionEnvelopeRun::fromArray($response);
+        return RunCancelResponse::fromArray($response);
     }
 
     /**
@@ -190,30 +185,30 @@ class Runs
      *
      * Returns endpoint-specific output after completion. A failed run replays its terminal execution error and HTTP status; queued or in-progress work returns a retryable conflict and status_url remains authoritative.
      * @param string $runId
-     * @return \Rafflesia\Resource\ExecutionEnvelopeRunOutput
+     * @return \Rafflesia\Resource\RunResultResponse
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function resultRetrieve(
         string $runId,
         ?\Rafflesia\RequestOptions $options = null,
-    ): \Rafflesia\Resource\ExecutionEnvelopeRunOutput {
+    ): \Rafflesia\Resource\RunResultResponse {
         $response = $this->client->request(
             method: 'GET',
             path: 'v1/runs/' . rawurlencode((string) $runId) . '/result',
             options: $options,
         );
-        return ExecutionEnvelopeRunOutput::fromArray($response);
+        return RunResultResponse::fromArray($response);
     }
 
     /**
      * Retrieve run queue status
      *
-     * Returns a lightweight status resource with queue position, attempt count, retry budget, timing metrics, and lifecycle URLs. Set logs=true to include retained execution logs; wait_ms and since_version provide bounded long polling.
+     * Returns a small queue status with lifecycle URLs, optional queue position, logs, terminal error, and inference time. Detailed retry and execution state is available through runs.retrieve. wait_ms and since_version remain available for bounded long polling.
      * @param string $runId
      * @param bool|null $logs Include retained execution logs.
      * @param int|null $waitMs
      * @param int|null $sinceVersion
-     * @return \Rafflesia\Resource\ExecutionEnvelopeRunStatus
+     * @return \Rafflesia\Resource\RunQueueStatus
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function statusRetrieve(
@@ -222,7 +217,7 @@ class Runs
         ?int $waitMs = null,
         ?int $sinceVersion = null,
         ?\Rafflesia\RequestOptions $options = null,
-    ): \Rafflesia\Resource\ExecutionEnvelopeRunStatus {
+    ): \Rafflesia\Resource\RunQueueStatus {
         $query = array_filter([
             'logs' => $logs,
             'wait_ms' => $waitMs,
@@ -234,17 +229,17 @@ class Runs
             query: $query,
             options: $options,
         );
-        return ExecutionEnvelopeRunStatus::fromArray($response);
+        return RunQueueStatus::fromArray($response);
     }
 
     /**
      * Stream run queue status
      *
-     * Streams the same versioned status shape as text/event-stream and closes after completed, failed, or canceled. since_version resumes after a previously observed version.
+     * Streams the same small queue status as text/event-stream and closes at a terminal state. since_version resumes after a previously observed event id without exposing internal versions in the payload.
      * @param string $runId
      * @param bool|null $logs Include retained execution logs in each status event.
      * @param int|null $sinceVersion Resume after a previously observed status version.
-     * @return \Rafflesia\Resource\RunStatus
+     * @return \Rafflesia\Resource\RunQueueStatus
      * @throws \Rafflesia\Exception\RafflesiaException
      */
     public function statusStream(
@@ -252,7 +247,7 @@ class Runs
         ?bool $logs = null,
         ?int $sinceVersion = null,
         ?\Rafflesia\RequestOptions $options = null,
-    ): \Rafflesia\Resource\RunStatus {
+    ): \Rafflesia\Resource\RunQueueStatus {
         $query = array_filter([
             'logs' => $logs,
             'since_version' => $sinceVersion,
@@ -263,6 +258,6 @@ class Runs
             query: $query,
             options: $options,
         );
-        return RunStatus::fromArray($response);
+        return RunQueueStatus::fromArray($response);
     }
 }

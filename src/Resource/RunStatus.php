@@ -6,109 +6,11 @@ declare(strict_types=1);
 
 namespace Rafflesia\Resource;
 
-readonly class RunStatus implements \JsonSerializable
+enum RunStatus: string
 {
-    use JsonSerializableTrait;
-
-    public function __construct(
-        public int $attempt,
-        public string $cancelUrl,
-        public \DateTimeImmutable $createdAt,
-        public string $id,
-        public int $maxRetries,
-        public string $resultUrl,
-        public RunState $status,
-        public string $statusStreamUrl,
-        public string $statusUrl,
-        public int $version,
-        public ?\DateTimeImmutable $canceledAt = null,
-        public ?\DateTimeImmutable $completedAt = null,
-        public ?ExecutionApiError $error = null,
-        /** @var array<\Rafflesia\Resource\JobEvent>|null */
-        public ?array $logs = null,
-        /** @var array<string, int>|null */
-        public ?array $metricsMs = null,
-        public ?RunProgress $progress = null,
-        public ?RunQueue $queue = null,
-        public ?string $runnerHint = null,
-        public ?string $servedFrom = null,
-        public ?\DateTimeImmutable $startDeadlineAt = null,
-        public ?\DateTimeImmutable $startedAt = null,
-        public string $object = 'run_status',
-    ) {
-    }
-
-    /** @param array<string, mixed> $data */
-    public static function fromArray(array $data): self
-    {
-        foreach ([
-            'attempt',
-            'cancel_url',
-            'created_at',
-            'id',
-            'max_retries',
-            'result_url',
-            'status',
-            'status_stream_url',
-            'status_url',
-            'version',
-        ] as $__required) {
-            if (!array_key_exists($__required, $data)) {
-                throw new \UnexpectedValueException("Missing required field '$__required' for RunStatus::fromArray()");
-            }
-        }
-        return new self(
-            attempt: $data['attempt'],
-            cancelUrl: $data['cancel_url'],
-            createdAt: new \DateTimeImmutable($data['created_at']),
-            id: $data['id'],
-            maxRetries: $data['max_retries'],
-            resultUrl: $data['result_url'],
-            status: RunState::from($data['status']),
-            statusStreamUrl: $data['status_stream_url'],
-            statusUrl: $data['status_url'],
-            version: $data['version'],
-            canceledAt: isset($data['canceled_at']) ? new \DateTimeImmutable($data['canceled_at']) : null,
-            completedAt: isset($data['completed_at']) ? new \DateTimeImmutable($data['completed_at']) : null,
-            error: isset($data['error']) ? ExecutionApiError::fromArray($data['error']) : null,
-            logs: isset($data['logs']) ? array_map(fn ($item) => JobEvent::fromArray($item), $data['logs']) : null,
-            metricsMs: $data['metrics_ms'] ?? null,
-            progress: isset($data['progress']) ? RunProgress::fromArray($data['progress']) : null,
-            queue: isset($data['queue']) ? RunQueue::fromArray($data['queue']) : null,
-            runnerHint: $data['runner_hint'] ?? null,
-            servedFrom: $data['served_from'] ?? null,
-            startDeadlineAt: isset($data['start_deadline_at']) ? new \DateTimeImmutable($data['start_deadline_at']) : null,
-            startedAt: isset($data['started_at']) ? new \DateTimeImmutable($data['started_at']) : null,
-            object: $data['object'] ?? 'run_status',
-        );
-    }
-
-    /** @return array<string, mixed> */
-    public function toArray(): array
-    {
-        return [
-            'attempt' => $this->attempt,
-            'cancel_url' => $this->cancelUrl,
-            'created_at' => $this->createdAt->format(\DateTimeInterface::RFC3339_EXTENDED),
-            'id' => $this->id,
-            'max_retries' => $this->maxRetries,
-            'result_url' => $this->resultUrl,
-            'status' => $this->status->value,
-            'status_stream_url' => $this->statusStreamUrl,
-            'status_url' => $this->statusUrl,
-            'version' => $this->version,
-            'canceled_at' => $this->canceledAt?->format(\DateTimeInterface::RFC3339_EXTENDED),
-            'completed_at' => $this->completedAt?->format(\DateTimeInterface::RFC3339_EXTENDED),
-            'error' => $this->error?->toArray(),
-            'logs' => $this->logs !== null ? array_map(fn ($item) => $item->toArray(), $this->logs) : null,
-            'metrics_ms' => $this->metricsMs,
-            'progress' => $this->progress?->toArray(),
-            'queue' => $this->queue?->toArray(),
-            'runner_hint' => $this->runnerHint,
-            'served_from' => $this->servedFrom,
-            'start_deadline_at' => $this->startDeadlineAt?->format(\DateTimeInterface::RFC3339_EXTENDED),
-            'started_at' => $this->startedAt?->format(\DateTimeInterface::RFC3339_EXTENDED),
-            'object' => $this->object,
-        ];
-    }
+    case Queued = 'queued';
+    case InProgress = 'in_progress';
+    case Completed = 'completed';
+    case Failed = 'failed';
+    case Canceled = 'canceled';
 }

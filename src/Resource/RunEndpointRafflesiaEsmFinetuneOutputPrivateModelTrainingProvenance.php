@@ -18,10 +18,12 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutputPrivateModelTrainingProvenan
         public string $trainerRunId,
         /** Pinned trainer.manifest.v1 artifact that names and hashes every checkpoint payload. */
         public ?RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact $manifest = null,
-        /** Immutable source checkpoint prefix retained for scientific provenance; never sent to an inference provider. */
+        /** Immutable gs:// or s3:// source checkpoint prefix retained for scientific provenance; never sent to an inference provider. */
         public ?string $sourceUri = null,
-        /** Optional pinned trainer spec needed to reconstruct the serving architecture. */
+        /** Pinned trainer.run.v3 spec needed to reconstruct the serving architecture and EMA selection. */
         public ?RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact $spec = null,
+        /** Pinned trainer.checkpoint.v1 state that proves the trainer run ID and selected checkpoint step. */
+        public ?RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact $state = null,
         public ?string $trainerVersion = null,
     ) {
     }
@@ -47,6 +49,7 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutputPrivateModelTrainingProvenan
             manifest: isset($data['manifest']) ? RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact::fromArray($data['manifest']) : null,
             sourceUri: $data['source_uri'] ?? null,
             spec: isset($data['spec']) ? RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact::fromArray($data['spec']) : null,
+            state: isset($data['state']) ? RunEndpointRafflesiaEsmFinetuneOutputPrivateModelArtifact::fromArray($data['state']) : null,
             trainerVersion: $data['trainer_version'] ?? null,
         );
     }
@@ -62,6 +65,7 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutputPrivateModelTrainingProvenan
             'manifest' => $this->manifest?->toArray(),
             'source_uri' => $this->sourceUri,
             'spec' => $this->spec?->toArray(),
+            'state' => $this->state?->toArray(),
             'trainer_version' => $this->trainerVersion,
         ];
     }

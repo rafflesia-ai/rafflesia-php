@@ -13,6 +13,8 @@ readonly class RunEndpointAiriInstituteModerngenaBaseInput implements \JsonSeria
     public function __construct(
         /** @var array<\Rafflesia\Resource\RunEndpointAiriInstituteModerngenaBaseInputRunEmbeddingInput>|null */
         public ?array $inputs,
+        /** Embedding row policy. tomato_contextual_tokens_v1 emits normalized CLS, right-truncated residues, then EOS for Tomato pack construction. */
+        public ?RunEndpointBiohubEsmc6BInputRepresentation $representation = null,
         public string $layer = 'last_hidden_state',
         /** Inline embedding output defaults to json. File batches require npz. */
         public string $outputFormat = 'json',
@@ -33,6 +35,7 @@ readonly class RunEndpointAiriInstituteModerngenaBaseInput implements \JsonSeria
         }
         return new self(
             inputs: isset($data['inputs']) ? array_map(fn ($item) => RunEndpointAiriInstituteModerngenaBaseInputRunEmbeddingInput::fromArray($item), $data['inputs']) : null,
+            representation: isset($data['representation']) ? RunEndpointBiohubEsmc6BInputRepresentation::from($data['representation']) : null,
             layer: $data['layer'] ?? 'last_hidden_state',
             outputFormat: $data['output_format'] ?? 'json',
             pooling: $data['pooling'] ?? 'mean',
@@ -44,6 +47,7 @@ readonly class RunEndpointAiriInstituteModerngenaBaseInput implements \JsonSeria
     {
         return [
             'inputs' => $this->inputs !== null ? array_map(fn ($item) => $item->toArray(), $this->inputs) : null,
+            'representation' => $this->representation?->value,
             'layer' => $this->layer,
             'output_format' => $this->outputFormat,
             'pooling' => $this->pooling,

@@ -6,6 +6,25 @@
   "grafana_url": "https://example.com",
   "is_training_reused": true,
   "object": "fine_tuning",
+  "plan": {
+    "base_model_id": "base_model_id_01234",
+    "dataset_sha256": "test_dataset_sha256",
+    "optimizer_steps": 1,
+    "training": {
+      "alpha": 1,
+      "batch_size": 1,
+      "gradient_clip_norm": 1,
+      "learning_rate": 1,
+      "method": "full",
+      "optimizer_steps": 1,
+      "precision": "fp32",
+      "rank": 1,
+      "seed": 1,
+      "unfrozen_layers": 1,
+      "weight_decay": 1
+    },
+    "training_rows": 1
+  },
   "private_model": {
     "active_revision_id": "active_revision_id_01234",
     "base_model_id": "base_model_id_01234",
@@ -96,6 +115,13 @@
       "manifest_sha256": "test_manifest_sha256",
       "source_uri": "https://example.com",
       "spec": {
+        "content_type": "test_content_type",
+        "file_name": "Test",
+        "sha256": "test_sha256",
+        "size_bytes": 1,
+        "url": "https://example.com"
+      },
+      "state": {
         "content_type": "test_content_type",
         "file_name": "Test",
         "sha256": "test_sha256",

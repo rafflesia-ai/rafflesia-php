@@ -28,8 +28,8 @@ readonly class RunEndpointChaidiscoveryChai1Input implements \JsonSerializable
          * @var array<\Rafflesia\Resource\RunEndpointChaidiscoveryChai1InputRunMsaInput>|null
          */
         public ?array $msaInputs = null,
-        public ?RunEndpointChaidiscoveryChai1InputMsaMode $msaMode = null,
-        public ?RunEndpointChaidiscoveryChai1InputMsaPairingBundleRole $msaPairingBundleRole = null,
+        public ?RunEndpointBiohubEsmfold2InputMsaMode $msaMode = null,
+        public ?RunEndpointBiohubEsmfold2InputMsaPairingBundleRole $msaPairingBundleRole = null,
         /** Predictor-native ZIP bundle file URL. */
         public ?string $msaPairingBundleUrl = null,
         /** HTTPS ColabFold-compatible MSA service URL for explicit mmseqs2 modes. */
@@ -40,7 +40,7 @@ readonly class RunEndpointChaidiscoveryChai1Input implements \JsonSerializable
         public ?int $numRecycles = null,
         public ?int $numSamplingSteps = null,
         public ?int $numSeeds = null,
-        public ?RunEndpointChaidiscoveryChai1InputPairMode $pairMode = null,
+        public ?RunEndpointBiohubEsmfold2InputPairMode $pairMode = null,
         public ?bool $predictAffinity = null,
         public ?int $randomSeed = null,
         public ?int $relaxTopN = null,
@@ -66,8 +66,8 @@ readonly class RunEndpointChaidiscoveryChai1Input implements \JsonSerializable
             modelMsaId: $data['model_msa_id'] ?? null,
             modelType: $data['model_type'] ?? null,
             msaInputs: isset($data['msa_inputs']) ? array_map(fn ($item) => RunEndpointChaidiscoveryChai1InputRunMsaInput::fromArray($item), $data['msa_inputs']) : null,
-            msaMode: isset($data['msa_mode']) ? RunEndpointChaidiscoveryChai1InputMsaMode::from($data['msa_mode']) : null,
-            msaPairingBundleRole: isset($data['msa_pairing_bundle_role']) ? RunEndpointChaidiscoveryChai1InputMsaPairingBundleRole::from($data['msa_pairing_bundle_role']) : null,
+            msaMode: isset($data['msa_mode']) ? RunEndpointBiohubEsmfold2InputMsaMode::from($data['msa_mode']) : null,
+            msaPairingBundleRole: isset($data['msa_pairing_bundle_role']) ? RunEndpointBiohubEsmfold2InputMsaPairingBundleRole::from($data['msa_pairing_bundle_role']) : null,
             msaPairingBundleUrl: $data['msa_pairing_bundle_url'] ?? null,
             msaServerUrl: $data['msa_server_url'] ?? null,
             numDiffusionSamples: $data['num_diffusion_samples'] ?? null,
@@ -76,7 +76,7 @@ readonly class RunEndpointChaidiscoveryChai1Input implements \JsonSerializable
             numRecycles: $data['num_recycles'] ?? null,
             numSamplingSteps: $data['num_sampling_steps'] ?? null,
             numSeeds: $data['num_seeds'] ?? null,
-            pairMode: isset($data['pair_mode']) ? RunEndpointChaidiscoveryChai1InputPairMode::from($data['pair_mode']) : null,
+            pairMode: isset($data['pair_mode']) ? RunEndpointBiohubEsmfold2InputPairMode::from($data['pair_mode']) : null,
             predictAffinity: $data['predict_affinity'] ?? null,
             randomSeed: $data['random_seed'] ?? null,
             relaxTopN: $data['relax_top_n'] ?? null,

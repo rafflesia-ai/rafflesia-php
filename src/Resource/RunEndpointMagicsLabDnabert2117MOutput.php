@@ -11,15 +11,21 @@ readonly class RunEndpointMagicsLabDnabert2117MOutput implements \JsonSerializab
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointMagicsLabDnabert2117MOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointMagicsLabDnabert2117MOutputEmbeddingVector>|null */
         public ?array $data,
         public string $layer,
         public string $modelId,
         public string $modelRelease,
         public string $object,
         public string $pooling,
-        public RunEndpointMagicsLabDnabert2117MOutputFoundryEmbeddingUsage $usage,
+        public string $representation,
+        public RunEndpointMagicsLabDnabert2117MOutputEmbeddingUsage $usage,
         public ?string $providerRequestId = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointMagicsLabDnabert2117MOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
     ) {
     }
 
@@ -33,6 +39,7 @@ readonly class RunEndpointMagicsLabDnabert2117MOutput implements \JsonSerializab
             'model_release',
             'object',
             'pooling',
+            'representation',
             'usage',
         ] as $__required) {
             if (!array_key_exists($__required, $data)) {
@@ -40,14 +47,16 @@ readonly class RunEndpointMagicsLabDnabert2117MOutput implements \JsonSerializab
             }
         }
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMagicsLabDnabert2117MOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointMagicsLabDnabert2117MOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'],
             modelId: $data['model_id'],
             modelRelease: $data['model_release'],
             object: $data['object'],
             pooling: $data['pooling'],
-            usage: RunEndpointMagicsLabDnabert2117MOutputFoundryEmbeddingUsage::fromArray($data['usage']),
+            representation: $data['representation'],
+            usage: RunEndpointMagicsLabDnabert2117MOutputEmbeddingUsage::fromArray($data['usage']),
             providerRequestId: $data['provider_request_id'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointMagicsLabDnabert2117MOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
         );
     }
 
@@ -61,8 +70,10 @@ readonly class RunEndpointMagicsLabDnabert2117MOutput implements \JsonSerializab
             'model_release' => $this->modelRelease,
             'object' => $this->object,
             'pooling' => $this->pooling,
+            'representation' => $this->representation,
             'usage' => $this->usage->toArray(),
             'provider_request_id' => $this->providerRequestId,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
         ];
     }
 }

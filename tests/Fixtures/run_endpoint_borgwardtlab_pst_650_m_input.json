@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "structure_url": "https://example.com"
+    }
+  ],
+  "layer": "last_hidden_state",
+  "output_format": "json",
+  "pooling": "mean",
+  "representation": "residue"
+}

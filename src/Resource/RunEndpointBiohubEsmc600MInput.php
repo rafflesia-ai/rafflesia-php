@@ -15,9 +15,11 @@ readonly class RunEndpointBiohubEsmc600MInput implements \JsonSerializable
         public ?array $inputs = null,
         /** Embedding pooling; omit for mean. */
         public ?RunEndpointBiohubEsmc6BInputPooling $pooling = null,
+        /** Embedding row policy. tomato_contextual_tokens_v1 emits normalized CLS, right-truncated residues, then EOS for Tomato pack construction. */
+        public ?RunEndpointBiohubEsmc6BInputRepresentation $representation = null,
         /** Required with input_url. */
         public ?RunEndpointBiohubEsmc6BInputInputFormat $inputFormat = null,
-        /** Organization-private Foundry file URL containing a large FASTA or JSONL embedding batch. Mutually exclusive with inputs. */
+        /** Organization-private Rafflesia file URL containing a large FASTA or JSONL embedding batch. Mutually exclusive with inputs. */
         public ?string $inputUrl = null,
         public string $layer = 'last_hidden_state',
         /** Inline embedding output defaults to json. File batches require npz. */
@@ -31,6 +33,7 @@ readonly class RunEndpointBiohubEsmc600MInput implements \JsonSerializable
         return new self(
             inputs: isset($data['inputs']) ? array_map(fn ($item) => RunEndpointBiohubEsmc600MInputRunEmbeddingInput::fromArray($item), $data['inputs']) : null,
             pooling: isset($data['pooling']) ? RunEndpointBiohubEsmc6BInputPooling::from($data['pooling']) : null,
+            representation: isset($data['representation']) ? RunEndpointBiohubEsmc6BInputRepresentation::from($data['representation']) : null,
             inputFormat: isset($data['input_format']) ? RunEndpointBiohubEsmc6BInputInputFormat::from($data['input_format']) : null,
             inputUrl: $data['input_url'] ?? null,
             layer: $data['layer'] ?? 'last_hidden_state',
@@ -44,6 +47,7 @@ readonly class RunEndpointBiohubEsmc600MInput implements \JsonSerializable
         return [
             'inputs' => $this->inputs !== null ? array_map(fn ($item) => $item->toArray(), $this->inputs) : null,
             'pooling' => $this->pooling?->value,
+            'representation' => $this->representation?->value,
             'input_format' => $this->inputFormat?->value,
             'input_url' => $this->inputUrl,
             'layer' => $this->layer,

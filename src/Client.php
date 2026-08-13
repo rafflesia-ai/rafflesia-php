@@ -16,7 +16,6 @@ use Rafflesia\Service\HomologySearches;
 use Rafflesia\Service\Limits;
 use Rafflesia\Service\Models;
 use Rafflesia\Service\Runs;
-use Rafflesia\Service\SqlCredentialService;
 use Rafflesia\Service\Storage;
 use Rafflesia\Service\WebhookDeliveries;
 use Rafflesia\Service\WebhookEndpoints;
@@ -26,6 +25,7 @@ class Client
     private static ?string $apiKey = null;
     private static ?string $clientId = null;
     private ?HttpClient $httpClient = null;
+    private ?RunLifecycle $runLifecycle = null;
 
     public static function getApiKey(): ?string
     {
@@ -64,16 +64,40 @@ class Client
     private ?Service\Limits $limits = null;
     private ?Service\Models $models = null;
     private ?Service\Runs $runs = null;
-    private ?Service\SqlCredentialService $sqlCredential = null;
     private ?Service\WebhookDeliveries $webhookDeliveries = null;
     private ?Service\WebhookEndpoints $webhookEndpoints = null;
+
+    private function runLifecycle(): RunLifecycle
+    {
+        return $this->runLifecycle ??= new RunLifecycle($this->httpClient);
+    }
+
+    public function queue(): RunLifecycle
+    {
+        return $this->runLifecycle();
+    }
+
+    public function run(string $endpoint, mixed $input, array $options = []): array
+    {
+        return $this->runLifecycle()->run($endpoint, $input, $options);
+    }
+
+    public function submit(string $endpoint, mixed $input, array $options = []): array
+    {
+        return $this->runLifecycle()->submit($endpoint, $input, $options);
+    }
+
+    public function subscribe(string $endpoint, mixed $input, array $options = []): array
+    {
+        return $this->runLifecycle()->subscribe($endpoint, $input, $options);
+    }
 
     public function __construct(
         ?string $apiKey = null,
         ?string $clientId = null,
         string $baseUrl = 'https://api.rafflesia.ai',
         int $timeout = 60,
-        int $maxRetries = 3,
+        int $maxRetries = 9,
         ?\GuzzleHttp\HandlerStack $handler = null,
         ?string $userAgent = null,
     ) {
@@ -141,11 +165,6 @@ class Client
     public function runs(): Runs
     {
         return $this->runs ??= new Service\Runs($this->httpClient);
-    }
-
-    public function sqlCredential(): SqlCredentialService
-    {
-        return $this->sqlCredential ??= new Service\SqlCredentialService($this->httpClient);
     }
 
     public function webhookDeliveries(): WebhookDeliveries

@@ -1,0 +1,8 @@
+{
+  "cancel_url": "https://example.com",
+  "data": {},
+  "queue_position": 1,
+  "request_id": "request_id_01234",
+  "response_url": "https://example.com",
+  "status_url": "https://example.com"
+}

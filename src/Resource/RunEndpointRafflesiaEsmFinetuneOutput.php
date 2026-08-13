@@ -12,19 +12,20 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutput implements \JsonSerializabl
 
     public function __construct(
         /**
-         * Artifact name to organization-private Foundry file URL.
+         * Artifact name to organization-private Rafflesia file URL.
          * @var array<string, string>
          */
         public array $artifacts,
         public string $baseModelId,
         /** True when this request reused a previously completed deterministic trainer run and incurred zero optimizer-step usage. */
         public bool $isTrainingReused,
+        public RunEndpointRafflesiaEsmFinetuneOutputFineTunePlan $plan,
         public RunEndpointRafflesiaEsmFinetuneOutputPrivateModel $privateModel,
         public RunEndpointRafflesiaEsmFinetuneOutputPrivateModelRevision $privateModelRevision,
         public string $publicationManifestUri,
         public int $selectedCheckpointStep,
         public string $trainerRunId,
-        public RunEndpointRafflesiaEsmFinetuneOutputFoundryFineTuneUsage $usage,
+        public RunEndpointRafflesiaEsmFinetuneOutputFineTuneUsage $usage,
         public ?string $grafanaUrl = null,
         public string $object = 'fine_tuning',
     ) {
@@ -37,6 +38,7 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutput implements \JsonSerializabl
             'artifacts',
             'base_model_id',
             'is_training_reused',
+            'plan',
             'private_model',
             'private_model_revision',
             'publication_manifest_uri',
@@ -52,12 +54,13 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutput implements \JsonSerializabl
             artifacts: $data['artifacts'],
             baseModelId: $data['base_model_id'],
             isTrainingReused: $data['is_training_reused'],
+            plan: RunEndpointRafflesiaEsmFinetuneOutputFineTunePlan::fromArray($data['plan']),
             privateModel: RunEndpointRafflesiaEsmFinetuneOutputPrivateModel::fromArray($data['private_model']),
             privateModelRevision: RunEndpointRafflesiaEsmFinetuneOutputPrivateModelRevision::fromArray($data['private_model_revision']),
             publicationManifestUri: $data['publication_manifest_uri'],
             selectedCheckpointStep: $data['selected_checkpoint_step'],
             trainerRunId: $data['trainer_run_id'],
-            usage: RunEndpointRafflesiaEsmFinetuneOutputFoundryFineTuneUsage::fromArray($data['usage']),
+            usage: RunEndpointRafflesiaEsmFinetuneOutputFineTuneUsage::fromArray($data['usage']),
             grafanaUrl: $data['grafana_url'] ?? null,
             object: $data['object'] ?? 'fine_tuning',
         );
@@ -70,6 +73,7 @@ readonly class RunEndpointRafflesiaEsmFinetuneOutput implements \JsonSerializabl
             'artifacts' => $this->artifacts,
             'base_model_id' => $this->baseModelId,
             'is_training_reused' => $this->isTrainingReused,
+            'plan' => $this->plan->toArray(),
             'private_model' => $this->privateModel->toArray(),
             'private_model_revision' => $this->privateModelRevision->toArray(),
             'publication_manifest_uri' => $this->publicationManifestUri,

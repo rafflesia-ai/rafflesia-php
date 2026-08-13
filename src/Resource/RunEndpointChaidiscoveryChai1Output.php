@@ -20,7 +20,6 @@ readonly class RunEndpointChaidiscoveryChai1Output implements \JsonSerializable
         public string $predictionId,
         public string $structureUrl,
         public RunEndpointChaidiscoveryChai1OutputRunUsage $usage,
-        public ?RunEndpointChaidiscoveryChai1OutputStructureRunInferenceMsa $inferenceMsa = null,
         public ?string $manifestUrl = null,
         /** @var array<string, float>|null */
         public ?array $metrics = null,
@@ -54,7 +53,6 @@ readonly class RunEndpointChaidiscoveryChai1Output implements \JsonSerializable
             predictionId: $data['prediction_id'],
             structureUrl: $data['structure_url'],
             usage: RunEndpointChaidiscoveryChai1OutputRunUsage::fromArray($data['usage']),
-            inferenceMsa: isset($data['inference_msa']) ? RunEndpointChaidiscoveryChai1OutputStructureRunInferenceMsa::fromArray($data['inference_msa']) : null,
             manifestUrl: $data['manifest_url'] ?? null,
             metrics: $data['metrics'] ?? null,
             msa: isset($data['msa']) ? RunEndpointChaidiscoveryChai1OutputStructureRunMsa::fromArray($data['msa']) : null,
@@ -75,7 +73,6 @@ readonly class RunEndpointChaidiscoveryChai1Output implements \JsonSerializable
             'prediction_id' => $this->predictionId,
             'structure_url' => $this->structureUrl,
             'usage' => $this->usage->toArray(),
-            'inference_msa' => $this->inferenceMsa?->toArray(),
             'manifest_url' => $this->manifestUrl,
             'metrics' => $this->metrics,
             'msa' => $this->msa?->toArray(),

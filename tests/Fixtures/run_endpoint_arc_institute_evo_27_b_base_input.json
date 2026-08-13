@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "sequence": "test_sequence"
+    }
+  ],
+  "layer": "blocks.28.mlp.l3",
+  "output_format": "json",
+  "pooling": "mean",
+  "representation": "residue"
+}

@@ -1,0 +1,9 @@
+{
+  "cache_key": "test_cache_key",
+  "is_cache_hit": true,
+  "is_coalesced": true,
+  "lookup_ms": 1,
+  "manifest_sha256": "test_manifest_sha256",
+  "validation_ms": 1,
+  "wait_ms": 1
+}

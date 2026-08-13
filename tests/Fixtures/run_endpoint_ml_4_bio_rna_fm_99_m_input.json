@@ -1,0 +1,12 @@
+{
+  "inputs": [
+    {
+      "id": "01234",
+      "sequence": "test_sequence"
+    }
+  ],
+  "layer": "repr_layer_12",
+  "output_format": "json",
+  "pooling": "mean",
+  "representation": "residue"
+}

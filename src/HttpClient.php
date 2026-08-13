@@ -22,7 +22,7 @@ class HttpClient
         private readonly ?string $clientId,
         string $baseUrl,
         private readonly int $timeout = 60,
-        private readonly int $maxRetries = 3,
+        private readonly int $maxRetries = 9,
         ?HandlerStack $handler = null,
         private readonly ?string $userAgent = null,
     ) {
@@ -116,13 +116,18 @@ class HttpClient
                     'body' => $decoded,
                 ];
             } catch (GuzzleException $error) {
-                if ($attempt >= $this->maxRetries) {
+                $response = $error instanceof BadResponseException ? $error->getResponse() : null;
+                $statusCode = $response?->getStatusCode();
+                $isCallerTimeout = $statusCode === 504 && strtolower($response?->getHeaderLine('Rafflesia-Request-Timeout-Type') ?? '') === 'user';
+                $isTransient = $response === null || in_array($statusCode, [429, 502, 503, 504], true);
+                $isSafe = in_array(strtoupper($method), ['GET', 'HEAD', 'OPTIONS'], true)
+                    || array_key_exists('Idempotency-Key', $requestOptions['headers'] ?? []);
+                if ($attempt >= $this->maxRetries || !$isTransient || !$isSafe || $isCallerTimeout) {
                     // Surface the typed subclass (RetabNotFoundException,
                     // RetabAuthenticationException, ...) for HTTP responses
                     // so consumers can catch by class. Non-HTTP failures
                     // (DNS, connect timeout, ...) fall back to the base.
-                    if ($error instanceof BadResponseException) {
-                        $response = $error->getResponse();
+                    if ($response !== null) {
                         $rawBody = (string) $response->getBody();
                         $decoded = json_decode($rawBody, true);
                         throw RafflesiaException::fromStatusCode(
@@ -130,11 +135,19 @@ class HttpClient
                             message: $error->getMessage(),
                             responseBody: is_array($decoded) ? $decoded : null,
                             previous: $error,
+                            responseHeaders: $response->getHeaders(),
                         );
                     }
                     throw new RafflesiaException($error->getMessage(), null, null, $error);
                 }
                 $attempt++;
+                $retryAfter = $response?->getHeaderLine('Retry-After');
+                if ($retryAfter !== null && $retryAfter !== '' && is_numeric($retryAfter)) {
+                    usleep(max(0, (int) ((float) $retryAfter * 1_000_000)));
+                } else {
+                    $ceilingMicros = (int) (min(10.0, 0.25 * (2 ** min($attempt - 1, 5))) * 1_000_000);
+                    usleep(random_int(0, max(1, $ceilingMicros)));
+                }
             }
         }
     }

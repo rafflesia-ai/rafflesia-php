@@ -11,7 +11,7 @@ readonly class RunEndpointBiohubEsm314BOpenOutput implements \JsonSerializable
     use JsonSerializableTrait;
 
     public function __construct(
-        /** @var array<\Rafflesia\Resource\RunEndpointBiohubEsm314BOpenOutputFoundryEmbeddingVector>|null */
+        /** @var array<\Rafflesia\Resource\RunEndpointBiohubEsm314BOpenOutputEmbeddingVector>|null */
         public ?array $data = null,
         public ?string $layer = null,
         public ?string $modelId = null,
@@ -19,7 +19,13 @@ readonly class RunEndpointBiohubEsm314BOpenOutput implements \JsonSerializable
         public ?string $object = null,
         public ?string $pooling = null,
         public ?string $providerRequestId = null,
-        public ?RunEndpointBiohubEsm314BOpenOutputFoundryEmbeddingUsage $usage = null,
+        public ?string $representation = null,
+        /**
+         * Permanent immutable computation segments. Present on completed Runs; provider transport never supplies these URLs.
+         * @var array<\Rafflesia\Resource\RunEndpointBiohubEsm314BOpenOutputEmbeddingSegment>|null
+         */
+        public ?array $segments = null,
+        public ?RunEndpointBiohubEsm314BOpenOutputEmbeddingUsage $usage = null,
         public ?string $embeddingsUrl = null,
         public ?string $manifestUrl = null,
         public string $outputFormat = 'npz',
@@ -30,14 +36,16 @@ readonly class RunEndpointBiohubEsm314BOpenOutput implements \JsonSerializable
     public static function fromArray(array $data): self
     {
         return new self(
-            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointBiohubEsm314BOpenOutputFoundryEmbeddingVector::fromArray($item), $data['data']) : null,
+            data: isset($data['data']) ? array_map(fn ($item) => RunEndpointBiohubEsm314BOpenOutputEmbeddingVector::fromArray($item), $data['data']) : null,
             layer: $data['layer'] ?? null,
             modelId: $data['model_id'] ?? null,
             modelRelease: $data['model_release'] ?? null,
             object: $data['object'] ?? null,
             pooling: $data['pooling'] ?? null,
             providerRequestId: $data['provider_request_id'] ?? null,
-            usage: isset($data['usage']) ? RunEndpointBiohubEsm314BOpenOutputFoundryEmbeddingUsage::fromArray($data['usage']) : null,
+            representation: $data['representation'] ?? null,
+            segments: isset($data['segments']) ? array_map(fn ($item) => RunEndpointBiohubEsm314BOpenOutputEmbeddingSegment::fromArray($item), $data['segments']) : null,
+            usage: isset($data['usage']) ? RunEndpointBiohubEsm314BOpenOutputEmbeddingUsage::fromArray($data['usage']) : null,
             embeddingsUrl: $data['embeddings_url'] ?? null,
             manifestUrl: $data['manifest_url'] ?? null,
             outputFormat: $data['output_format'] ?? 'npz',
@@ -55,6 +63,8 @@ readonly class RunEndpointBiohubEsm314BOpenOutput implements \JsonSerializable
             'object' => $this->object,
             'pooling' => $this->pooling,
             'provider_request_id' => $this->providerRequestId,
+            'representation' => $this->representation,
+            'segments' => $this->segments !== null ? array_map(fn ($item) => $item->toArray(), $this->segments) : null,
             'usage' => $this->usage?->toArray(),
             'embeddings_url' => $this->embeddingsUrl,
             'manifest_url' => $this->manifestUrl,
